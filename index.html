@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEXUS — The Future Is Here</title>
+<meta name="description" content="NEXUS is an experimental digital experience: a neon gateway to artificial intelligence, digital worlds and future technology.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23050814'/%3E%3Cpath d='M9 23V9l14 14V9' stroke='%232ee6ff' stroke-width='3.4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Skip link for keyboard users -->
+<a class="skip-link" href="#explore">Skip to content</a>
+
+<!-- ================= HEADER / NAVIGATION ================= -->
+<header class="site-header" id="top">
+  <nav class="nav container" aria-label="Main navigation">
+    <a class="wordmark" href="#home" aria-label="NEXUS home">
+      <span class="wordmark-mark" aria-hidden="true">N</span>
+      <span class="wordmark-text">NEXUS</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#explore">Explore</a></li>
+      <li><a href="#technology">Technology</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+<!-- ================= HERO ================= -->
+<section class="hero" id="home" aria-label="NEXUS hero">
+  <!-- Animated neon city rendered on canvas by script.js -->
+  <canvas id="cityCanvas" class="city-canvas" aria-hidden="true"></canvas>
+  <div class="hero-fog" aria-hidden="true"></div>
+
+  <!-- Floating HUD labels -->
+  <div class="hud hud-tl" aria-hidden="true"><span class="hud-dot"></span>NEURAL LINK · ACTIVE</div>
+  <div class="hud hud-tr" aria-hidden="true">SECTOR 07 // GRID 51.5072° N</div>
+  <div class="hud hud-bl" aria-hidden="true">AI CORE <strong>v2.6</strong></div>
+  <div class="hud hud-br" aria-hidden="true">PWR ▮▮▮▮▯ 98%</div>
+
+  <div class="hero-inner container">
+    <div class="hero-copy">
+      <p class="status-label"><span class="status-dot" aria-hidden="true"></span>SYSTEM ONLINE</p>
+      <h1 class="hero-title">THE FUTURE<br>IS <span class="grad-text">HERE.</span></h1>
+      <p class="hero-sub">Step into a new dimension of digital experience.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#explore" id="enterBtn">ENTER THE FUTURE</a>
+        <a class="btn btn-ghost" href="#technology">EXPLORE NEXUS</a>
+      </div>
+      <p class="hero-note">An experimental digital experience — no downloads, no sign-up.</p>
+    </div>
+
+    <!-- ===== Friendly AI robot (layered SVG, animated by CSS/JS) ===== -->
+    <div class="robot-wrap" id="robotWrap" aria-hidden="true">
+      <div class="robot-halo"></div>
+      <svg class="robot" viewBox="0 0 420 540" role="img" aria-label="NEXUS AI robot">
+        <defs>
+          <linearGradient id="bodyGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#2a3f66"/>
+            <stop offset=".55" stop-color="#16233f"/>
+            <stop offset="1" stop-color="#0b1226"/>
+          </linearGradient>
+          <linearGradient id="faceGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#0e2a3f"/>
+            <stop offset="1" stop-color="#06101f"/>
+          </linearGradient>
+          <linearGradient id="accentGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#2ee6ff"/>
+            <stop offset="1" stop-color="#b45cff"/>
+          </linearGradient>
+          <radialGradient id="coreGrad" cx=".5" cy=".5" r=".5">
+            <stop offset="0" stop-color="#eafcff"/>
+            <stop offset=".45" stop-color="#2ee6ff"/>
+            <stop offset="1" stop-color="#0e5a74"/>
+          </radialGradient>
+          <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
+            <feGaussianBlur stdDeviation="5" result="b"/>
+            <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+
+        <!-- hover glow disc -->
+        <ellipse class="hover-disc" cx="210" cy="498" rx="105" ry="17" fill="#123" opacity=".55"/>
+        <ellipse class="hover-ring" cx="210" cy="495" rx="86" ry="13" fill="none" stroke="#2ee6ff" stroke-width="2.5" filter="url(#softGlow)"/>
+
+        <!-- left arm (viewer left, resting) -->
+        <g class="arm arm-left">
+          <circle cx="106" cy="300" r="21" fill="url(#bodyGrad)" stroke="#3f5f8f" stroke-width="2"/>
+          <rect x="88" y="306" width="34" height="86" rx="17" fill="url(#bodyGrad)" stroke="#3f5f8f" stroke-width="2" transform="rotate(9 105 349)"/>
+          <circle cx="118" cy="398" r="15" fill="#101c33" stroke="#2ee6ff" stroke-width="2"/>
+        </g>
+        <!-- right arm (viewer right, friendly wave) -->
+        <g class="arm arm-right">
+          <circle cx="314" cy="300" r="21" fill="url(#bodyGrad)" stroke="#3f5f8f" stroke-width="2"/>
+          <rect x="300" y="212" width="34" height="88" rx="17" fill="url(#bodyGrad)" stroke="#3f5f8f" stroke-width="2" transform="rotate(-24 317 256)"/>
+          <circle cx="352" cy="212" r="16" fill="#101c33" stroke="#2ee6ff" stroke-width="2"/>
+          <path d="M352 196 v-14 M340 200 l-8-11 M364 200 l8-11" stroke="#2ee6ff" stroke-width="3.4" stroke-linecap="round"/>
+        </g>
+
+        <!-- torso -->
+        <path d="M128 268 Q210 246 292 268 L306 420 Q210 448 114 420 Z" fill="url(#bodyGrad)" stroke="#3f5f8f" stroke-width="2.5"/>
+        <path d="M140 300 H280 M146 396 H274" stroke="#27405f" stroke-width="2"/>
+        <!-- chest core -->
+        <circle class="core-ring" cx="210" cy="345" r="34" fill="none" stroke="url(#accentGrad)" stroke-width="3"/>
+        <circle class="core" cx="210" cy="345" r="21" fill="url(#coreGrad)" filter="url(#softGlow)"/>
+        <!-- waist light strip -->
+        <rect x="168" y="424" width="84" height="8" rx="4" fill="#2ee6ff" opacity=".65" filter="url(#softGlow)"/>
+
+        <!-- neck -->
+        <rect x="188" y="228" width="44" height="26" rx="8" fill="#0d1730" stroke="#3f5f8f" stroke-width="2"/>
+
+        <!-- head group (gentle tilt via CSS) -->
+        <g class="robot-head">
+          <!-- antenna -->
+          <line x1="210" y1="58" x2="210" y2="26" stroke="#3f5f8f" stroke-width="5" stroke-linecap="round"/>
+          <circle class="antenna-orb" cx="210" cy="20" r="9" fill="#ff4fd8" filter="url(#softGlow)"/>
+          <!-- ear pods -->
+          <rect x="96" y="118" width="20" height="58" rx="10" fill="#101c33" stroke="#3f5f8f" stroke-width="2"/>
+          <rect x="304" y="118" width="20" height="58" rx="10" fill="#101c33" stroke="#3f5f8f" stroke-width="2"/>
+          <circle cx="106" cy="147" r="5.5" fill="#2ee6ff" filter="url(#softGlow)"/>
+          <circle cx="314" cy="147" r="5.5" fill="#b45cff" filter="url(#softGlow)"/>
+          <!-- head shell -->
+          <rect x="112" y="52" width="196" height="182" rx="58" fill="url(#bodyGrad)" stroke="#4d6f9e" stroke-width="2.5"/>
+          <!-- face screen -->
+          <rect x="132" y="76" width="156" height="134" rx="44" fill="url(#faceGrad)" stroke="#1d4b63" stroke-width="2"/>
+          <!-- eyes -->
+          <g class="eyes">
+            <ellipse class="eye" cx="176" cy="138" rx="13" ry="17" fill="#2ee6ff" filter="url(#softGlow)"/>
+            <ellipse class="eye" cx="244" cy="138" rx="13" ry="17" fill="#2ee6ff" filter="url(#softGlow)"/>
+          </g>
+          <!-- smile -->
+          <path d="M188 176 Q210 192 232 176" fill="none" stroke="#2ee6ff" stroke-width="4.5" stroke-linecap="round" filter="url(#softGlow)"/>
+          <!-- cheeks -->
+          <circle cx="152" cy="170" r="6" fill="#ff4fd8" opacity=".55"/>
+          <circle cx="268" cy="170" r="6" fill="#ff4fd8" opacity=".55"/>
+        </g>
+      </svg>
+      <p class="robot-tag">UNIT N-X1 · “NEXA”</p>
+    </div>
+  </div>
+
+  <a class="scroll-cue" href="#explore" aria-label="Scroll down to explore">
+    <span></span>
+  </a>
+</section>
+
+<!-- ================= DISCOVER ================= -->
+<section class="section" id="explore" aria-labelledby="discoverTitle">
+  <div class="container">
+    <p class="section-kicker reveal">01 · DISCOVER</p>
+    <h2 class="section-title reveal" id="discoverTitle">Choose your <span class="grad-text">dimension</span></h2>
+    <p class="section-sub reveal">Three gateways into the NEXUS grid. Select a card to open its briefing.</p>
+
+    <div class="cards">
+      <article class="card reveal" tabindex="0" role="button" aria-expanded="false" data-card>
+        <div class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="5.5"/><circle cx="10" cy="13" r="3.4"/><circle cx="38" cy="12" r="3.4"/><circle cx="12" cy="37" r="3.4"/><circle cx="37" cy="36" r="3.4"/><path d="M19 21 12.5 15.5M29 20.5 35 15M20 28.5 14 34.5M28.5 28 34.5 33.5"/></svg>
+        </div>
+        <h3>Artificial Intelligence</h3>
+        <p>Machines that learn, reason and create — the minds now woven into everyday life.</p>
+        <div class="card-more">
+          <p>From language models to vision systems, modern AI predicts, generates and decides in milliseconds. NEXUS maps where this intelligence is heading next — and what it means for the humans guiding it.</p>
+        </div>
+        <span class="card-cta">OPEN BRIEFING +</span>
+      </article>
+
+      <article class="card reveal" tabindex="0" role="button" aria-expanded="false" data-card>
+        <div class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="17"/><path d="M7 24h34M24 7c5 5.4 5 28.6 0 34M24 7c-5 5.4-5 28.6 0 34"/></svg>
+        </div>
+        <h3>Digital Worlds</h3>
+        <p>Virtual cities, immersive realities and persistent universes built from pure light.</p>
+        <div class="card-more">
+          <p>Digital worlds are no longer games alone — they are workplaces, classrooms and concert halls. Step through the portal and explore how entire societies are being prototyped inside simulated space.</p>
+        </div>
+        <span class="card-cta">OPEN BRIEFING +</span>
+      </article>
+
+      <article class="card reveal" tabindex="0" role="button" aria-expanded="false" data-card>
+        <div class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><rect x="15" y="15" width="18" height="18" rx="3"/><path d="M21 15V7M27 15V7M21 41v-8M27 41v-8M15 21H7M15 27H7M41 21h-8M41 27h-8"/></svg>
+        </div>
+        <h3>Future Technology</h3>
+        <p>Quantum leaps, neural interfaces and the hardware quietly rewriting tomorrow.</p>
+        <div class="card-more">
+          <p>Chips that think, networks that feel instant, machines that build machines. This briefing tracks the inventions moving from laboratory prototypes to the device in your pocket.</p>
+        </div>
+        <span class="card-cta">OPEN BRIEFING +</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= NEXUS CORE ================= -->
+<section class="section core-section" id="technology" aria-labelledby="coreTitle">
+  <div class="container core-grid">
+    <div class="core-visual reveal" aria-hidden="true">
+      <div class="core-orb">
+        <div class="ring ring-1"></div>
+        <div class="ring ring-2"></div>
+        <div class="ring ring-3"></div>
+        <div class="core-center">N</div>
+      </div>
+      <div class="core-chip chip-a">NEURAL MESH · LIVE</div>
+      <div class="core-chip chip-b">LATENCY 12ms</div>
+    </div>
+    <div class="core-copy">
+      <p class="section-kicker reveal">02 · NEXUS CORE</p>
+      <h2 class="section-title reveal" id="coreTitle">One core.<br><span class="grad-text">Infinite signals.</span></h2>
+      <p class="reveal">NEXUS is an experimental digital experience — a living interface between imagination and machine. It is not a product and it sells nothing; it is a window, opened briefly, onto the world now being built.</p>
+      <p class="reveal">Every light on this page is generated live in your browser. No servers, no tracking, no accounts — just code, colour and motion.</p>
+      <dl class="stats reveal">
+        <div><dt><span data-count="128">0</span></dt><dd>Neural nodes simulated</dd></div>
+        <div><dt><span data-count="12">0</span>ms</dt><dd>Core response time</dd></div>
+        <div><dt><span data-count="100">0</span>%</dt><dd>Rendered locally, privately</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SIGNAL (demo subscribe) ================= -->
+<section class="section" id="signal" aria-labelledby="signalTitle">
+  <div class="container">
+    <div class="signal-panel reveal">
+      <p class="section-kicker">03 · SIGNAL</p>
+      <h2 class="section-title" id="signalTitle">Join the <span class="grad-text">transmission</span></h2>
+      <p class="section-sub">Leave a frequency and the grid will answer. <strong>Demo only</strong> — this form is not connected to any service; nothing you type is sent or stored.</p>
+      <form class="signal-form" id="signalForm" novalidate>
+        <label class="visually-hidden" for="signalEmail">Email address (demo)</label>
+        <input type="email" id="signalEmail" name="email" placeholder="you@future.net" autocomplete="email">
+        <button class="btn btn-primary" type="submit">TRANSMIT</button>
+      </form>
+      <p class="signal-msg" id="signalMsg" role="status" aria-live="polite"></p>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ================= FOOTER / ABOUT ================= -->
+<footer class="site-footer" id="about">
+  <div class="container footer-grid">
+    <div>
+      <a class="wordmark" href="#home" aria-label="Back to top — NEXUS home">
+        <span class="wordmark-mark" aria-hidden="true">N</span>
+        <span class="wordmark-text">NEXUS</span>
+      </a>
+      <p class="footer-about">NEXUS is a concept experience crafted with plain HTML, CSS and JavaScript. Built as a tribute to the neon futures we were promised — and the real one we are building.</p>
+    </div>
+    <nav aria-label="Footer navigation">
+      <h3 class="footer-h">Navigate</h3>
+      <ul class="footer-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#explore">Explore</a></li>
+        <li><a href="#technology">Technology</a></li>
+        <li><a href="#signal">Signal</a></li>
+      </ul>
+    </nav>
+    <div>
+      <h3 class="footer-h">Status</h3>
+      <p class="footer-status"><span class="status-dot" aria-hidden="true"></span>All systems nominal</p>
+      <p class="footer-status">Grid time · <span id="gridClock">--:--:--</span></p>
+    </div>
+  </div>
+  <p class="footer-base container">© 2026 NEXUS — a fictional concept experience. Crafted in the browser.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
