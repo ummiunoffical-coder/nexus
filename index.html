@@ -74,6 +74,7 @@
       <div class="hero-actions">
         <a class="btn btn-primary" href="#explore" id="enterBtn">ENTER THE FUTURE</a>
         <a class="btn btn-ghost" href="#technology">EXPLORE NEXUS</a>
+        <a class="btn btn-ghost" href="https://wa.me/?text=NEXUS%20%E2%80%94%20The%20Future%20Is%20Here.%20Step%20into%20a%20new%20dimension%20of%20digital%20experience%3A%20https%3A%2F%2Fummiunoffical-coder.github.io%2Fnexus%2F" target="_blank" rel="noopener">SHARE</a>
       </div>
       <p class="hero-note">An experimental digital experience — no downloads, no sign-up.</p>
     </div>
@@ -254,10 +255,30 @@
 </section>
 
 <!-- ================= SIGNAL (demo subscribe) ================= -->
+<section class="section" id="quiz" aria-labelledby="quizTitle">
+  <div class="container">
+    <p class="section-kicker reveal">03 · THE GRID TEST</p>
+    <h2 class="section-title reveal" id="quizTitle">Test your <span class="grad-text">signal</span></h2>
+    <p class="section-sub reveal">Five questions from the future. No pressure — the grid is watching, kindly.</p>
+    <div class="quiz-panel reveal" id="quizPanel">
+      <p class="quiz-progress" id="quizProgress">Question 1 of 5</p>
+      <h3 class="quiz-q" id="quizQ"></h3>
+      <div class="quiz-opts" id="quizOpts"></div>
+      <p class="quiz-feedback" id="quizFeedback" role="status" aria-live="polite"></p>
+      <button class="btn btn-primary quiz-next" id="quizNext" type="button" hidden>NEXT</button>
+      <div class="quiz-result" id="quizResult" hidden>
+        <p class="quiz-score" id="quizScore"></p>
+        <p class="quiz-rank" id="quizRank"></p>
+        <button class="btn btn-ghost" id="quizRestart" type="button">PLAY AGAIN</button>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section" id="signal" aria-labelledby="signalTitle">
   <div class="container">
     <div class="signal-panel reveal">
-      <p class="section-kicker">03 · SIGNAL</p>
+      <p class="section-kicker">04 · SIGNAL</p>
       <h2 class="section-title" id="signalTitle">Join the <span class="grad-text">transmission</span></h2>
       <p class="section-sub">Leave your name, email and a message — the signal lands directly in the keeper's inbox, and the grid will answer.</p>
       <form class="signal-form signal-form-v2" id="signalForm" novalidate>
@@ -279,7 +300,7 @@
 <!-- ================= OFFICIAL POSTER ================= -->
 <section class="section" id="poster" aria-labelledby="posterTitle">
   <div class="container poster-wrap">
-    <p class="section-kicker reveal">04 · OFFICIAL POSTER</p>
+    <p class="section-kicker reveal">05 · OFFICIAL POSTER</p>
     <h2 class="section-title reveal" id="posterTitle">The face of the <span class="grad-text">grid</span></h2>
     <p class="section-sub reveal">NEXA, standing in the neon rain — the official poster of the NEXUS experience.</p>
     <figure class="poster-frame reveal">
@@ -306,6 +327,7 @@
         <li><a href="#home">Home</a></li>
         <li><a href="#explore">Explore</a></li>
         <li><a href="#technology">Technology</a></li>
+        <li><a href="#quiz">Quiz</a></li>
         <li><a href="#signal">Signal</a></li>
         <li><a href="#poster">Poster</a></li>
       </ul>
@@ -319,6 +341,11 @@
   <p class="footer-base container">© 2026 NEXUS — a fictional concept experience. Crafted in the browser.</p>
 </footer>
 
+
+<!-- Ambient sound toggle (sound is generated live by script.js) -->
+<button class="music-btn" id="musicBtn" type="button" aria-pressed="false" title="Ambient sound, generated live in your browser — no audio files">
+  <span aria-hidden="true">&#9836;</span> AMBIENCE <span class="music-state" id="musicState">OFF</span>
+</button>
 
 <!-- ================= NEXA GUIDE BOT ================= -->
 <div class="nexa" id="nexa">
@@ -337,6 +364,7 @@
       <button type="button" class="nexa-chip" data-q="Tell me about Artificial Intelligence">Artificial Intelligence</button>
       <button type="button" class="nexa-chip" data-q="Is NEXUS free?">Is it free?</button>
       <button type="button" class="nexa-chip" data-q="How do I join the signal?">Join the signal</button>
+      <button type="button" class="nexa-chip" data-q="نیکسس کیا ہے؟">نیکسس کیا ہے؟</button>
     </div>
     <form class="nexa-form" id="nexaForm">
       <label class="visually-hidden" for="nexaInput">Ask NEXA a question</label>

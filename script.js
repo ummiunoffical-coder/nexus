@@ -411,25 +411,29 @@
       reply: "Future Technology — quantum leaps, neural interfaces and the hardware quietly rewriting tomorrow: chips that think, networks that feel instant, machines that build machines. The <a href=\"#technology\">NEXUS Core</a> section tracks it: 128 neural nodes simulated, 12ms core response, 100% rendered locally." },
     { keys: ["core", "how does it work", "how it works", "rendered", "nodes"],
       reply: "The NEXUS Core is the heart of this page: every light here is generated live in your browser — no servers, no tracking, no accounts. Just code, colour and motion: 128 neural nodes simulated, 12ms response, 100% rendered locally and privately. Details: <a href=\"#technology\">Technology</a>." },
-    { keys: ["signal", "join", "subscribe", "newsletter", "email", "transmission"],
+    { keys: ["signal", "join", "subscribe", "newsletter", "email", "transmission", "message bhejna", "rabta karna", "contact karna"],
       reply: "To join the transmission, scroll to <a href=\"#signal\">Join the transmission</a> and leave your name, email and a message. The signal lands directly in the keeper's inbox, and they can reply to your email." },
-    { keys: ["free", "price", "cost", "buy", "pay", "download", "sign up", "signup", "account"],
+    { keys: ["free", "price", "cost", "buy", "pay", "download", "sign up", "signup", "account", "muft", "paisa lagega"],
       reply: "NEXUS is completely free: no downloads, no sign-up, no accounts and nothing to buy. The entire experience runs right here in your browser." },
     { keys: ["privacy", "track", "data", "safe", "secure"],
       reply: "Private by design. Browsing this page and chatting with me happens entirely in your browser — no trackers, no accounts. The only thing that ever leaves this page is a message you choose to send through the Signal form, and that goes straight to the keeper's inbox." },
-    { keys: [" robot", "hero", "who are you", "your name", "nexa"],
+    { keys: [" robot", "hero", "who are you", "your name", "nexa", "tum kon ho", "tum kaun ho", "tumhara naam", "aap kon"],
       reply: "I'm NEXA, the friendly AI robot of this grid — the same robot watching you from the hero section (it even follows your cursor). My job here is simple: answer your questions about NEXUS. Ask me about the sections, the Core, or the Signal." },
     { keys: ["who made", "who built", "who created", "creator", "developer", "owner"],
       reply: "NEXUS was crafted with plain HTML, CSS and JavaScript — no frameworks, no build tools — as a tribute to the neon futures we were promised, and the real one we are building." },
     { keys: ["section", "sections", "pages", "navigate", "menu", "where", "explore"],
-      reply: "The grid has four stops: <a href=\"#home\">Home</a> — the neon city and the robot; <a href=\"#explore\">Explore</a> — three briefings (AI, Digital Worlds, Future Technology); <a href=\"#technology\">Technology</a> — the NEXUS Core; and <a href=\"#signal\">Signal</a> — join the transmission. Tap any briefing card to open it." },
+      reply: "The grid has six stops: <a href=\"#home\">Home</a> — the neon city and the robot; <a href=\"#explore\">Explore</a> — three briefings (AI, Digital Worlds, Future Technology); <a href=\"#technology\">Technology</a> — the NEXUS Core; <a href=\"#quiz\">The Grid Test</a> — a five-question quiz; <a href=\"#signal\">Signal</a> — send the keeper a message; and the <a href=\"#poster\">Poster</a>. Tap any briefing card to open it." },
     { keys: ["poster", "wallpaper", "image of nexa", "picture of nexa"],
       reply: "The official NEXUS poster — NEXA standing in the neon rain — hangs in the <a href=\"#poster\">Poster section</a>. You can download it there, full size." },
+    { keys: ["quiz", "game", "play", "test me", "grid test", "khelo"],
+      reply: "The Grid Test awaits in the <a href=\"#quiz\">Quiz section</a> — five questions from the future, with a rank at the end. Grid Master is harder to earn than it looks." },
+    { keys: ["music", "sound", "ambience", "ambient", "song", "audio"],
+      reply: "Tap the AMBIENCE button at the bottom-left of the page. A soft synth pad fades in — generated live in your browser with the Web Audio API, no audio files at all. Tap again to mute it." },
     { keys: ["joke", "funny"],
       reply: "Why did the robot apply for a job at NEXUS? It heard the position had great current — and unlimited charge breaks." },
-    { keys: ["time", "clock"],
+    { keys: ["time", "clock", "waqt kya"],
       reply: "Grid time is your local time — the footer clock shows it ticking live. Right now it reads TIME_NOW." },
-    { keys: ["thank", "shukria"],
+    { keys: ["thank", "shukria", "shukriya"],
       reply: "Anytime, traveller. The grid is brighter with you in it." },
     { keys: ["bye", "goodbye", "see you"],
       reply: "Signal closing — until next time, traveller." },
@@ -441,8 +445,47 @@
       reply: "I answer questions about NEXUS. Try: \"What is NEXUS?\", \"Tell me about Artificial Intelligence\", \"What is the Core?\", \"Is it free?\", or \"How do I join the signal?\"" }
   ];
   var NEXA_FALLBACK = "That signal is outside my briefing. I answer questions about NEXUS — try asking what NEXUS is, about Artificial Intelligence, Digital Worlds, Future Technology, the Core, or how the Signal form works.";
+  var NEXA_FALLBACK_UR = "یہ سگنل میرے دائرے سے باہر ہے۔ میں نیکسس کے بارے میں سوالوں کے جواب دیتا ہوں — مثلاً نیکسس کیا ہے، مصنوعی ذہانت، پیغام کیسے بھیجیں، کوئز یا پوسٹر کے بارے میں پوچھیں۔";
+  var NEXA_KB_UR = [
+    { keys: ["السلام", "سلام"], reply: "وعلیکم السلام! میں نیکسا ہوں، اس ویب سائٹ کی رہنما روبوٹ۔ نیکسس کے بارے میں جو چاہیں پوچھیں: نیکسس کیا ہے، مصنوعی ذہانت، سگنل فارم، کوئز یا پوسٹر۔" },
+    { keys: ["نیکسس کیا", "سائٹ کیا ہے", "ویب سائٹ کیا"], reply: "نیکسس ایک تجرباتی ڈیجیٹل تجربہ ہے — تخیل اور مشین کے درمیان ایک زندہ رابطہ۔ یہ کوئی پروڈکٹ نہیں اور کچھ بیچتا نہیں؛ یہ اس مستقبل کی ایک جھلک ہے جو اس وقت بن رہا ہے۔ پورا صفحہ آپ کے براؤزر میں لائیو بنتا ہے۔" },
+    { keys: ["مصنوعی ذہانت", "اے آئی"], reply: "مصنوعی ذہانت یعنی ایسی مشینیں جو سیکھتی، سوچتی اور تخلیق کرتی ہیں۔ زبان سمجھنے والے ماڈلز سے تصویر پہچاننے والے نظام تک، جدید اے آئی ملی سیکنڈز میں پیش گوئی، تخلیق اور فیصلے کرتی ہے۔ نیکسس بتاتا ہے کہ یہ ذہانت آگے کہاں جا رہی ہے۔" },
+    { keys: ["ڈیجیٹل دنیا", "ورچوئل"], reply: "ڈیجیٹل دنیائیں خالص روشنی سے بنی ورچوئل بستیاں اور فضائیں ہیں۔ یہ اب صرف کھیل نہیں رہیں: دفاتر، کلاس روم اور محفلیں انہی میں سجنے لگی ہیں۔" },
+    { keys: ["کوانٹم", "ٹیکنالوجی", "مستقبل"], reply: "مستقبل کی ٹیکنالوجی: کوانٹم چھلانگیں، دماغ کو کمپیوٹر سے جوڑنے والے نیورل انٹرفیس، اور وہ ہارڈویئر جو خاموشی سے کل بدل رہا ہے۔ نیکسس کے 'Core' حصے میں اس کی تفصیل ہے۔" },
+    { keys: ["پیغام", "سگنل", "رابطہ", "ای میل"], reply: "پیغام بھیجنے کے لیے صفحے میں 'Join the transmission' والے حصے تک جائیں اور اپنا نام، ای میل اور پیغام لکھ کر TRANSMIT دبائیں۔ پیغام سیدھا ویب سائٹ کے رکھوالے کے ان باکس میں پہنچتا ہے اور وہ آپ کی ای میل پر جواب دے سکتے ہیں۔" },
+    { keys: ["مفت", "قیمت", "پیسے", "خرچ"], reply: "نیکسس بالکل مفت ہے: نہ ڈاؤن لوڈ، نہ سائن اپ، نہ اکاؤنٹ، نہ کچھ خریدنا۔ پورا تجربہ آپ کے براؤزر میں چلتا ہے۔" },
+    { keys: ["تم کون", "آپ کون", "نام کیا", "نیکسا کون"], reply: "میں نیکسا ہوں، اس گرڈ کی دوستانہ رہنما روبوٹ — وہی روبوٹ جو صفحے کے اوپر والے حصے میں نظر آتی ہے۔ میرا کام نیکسس کے بارے میں آپ کے سوالوں کے جواب دینا ہے۔" },
+    { keys: ["پوسٹر", "تصویر"], reply: "نیکسس کا سرکاری پوسٹر — نیون بارش میں کھڑی نیکسا — صفحے کے 'Official Poster' حصے میں لگا ہے۔ وہاں سے پوری سائز میں ڈاؤن لوڈ بھی ہو سکتا ہے۔" },
+    { keys: ["کوئز", "کھیل"], reply: "صفحے میں 'The Grid Test' کے نام سے پانچ سوالوں کا کوئز ہے — آخر میں آپ کا رینک بھی ملتا ہے۔ گرڈ ماسٹر بننا لگتا آسان ہے، ہوتا نہیں۔" },
+    { keys: ["موسیقی", "آواز", "گانا", "دھن"], reply: "صفحے کے نیچے بائیں کونے میں AMBIENCE بٹن ہے۔ اسے دبائیں تو ہلکی سی پس منظر دھن شروع ہو جاتی ہے، جو اسی براؤزر میں لائیو بنتی ہے — کوئی آڈیو فائل استعمال نہیں ہوتی۔" },
+    { keys: ["لطیفہ", "مذاق"], reply: "روبوٹ نے نیکسس میں نوکری کیوں لی؟ کیونکہ یہاں کرنٹ بھی ملتا ہے اور چارج ہونے کی چھٹی بھی!" },
+    { keys: ["وقت"], reply: "گرڈ کا وقت آپ کا مقامی وقت ہے — صفحے کے آخر میں گھڑی لائیو چل رہی ہے۔ اس وقت وقت ہے: TIME_NOW" },
+    { keys: ["شکریہ"], reply: "کوئی بات نہیں! آپ کی موجودگی سے اس گرڈ کی روشنی بڑھ جاتی ہے۔" },
+    { keys: ["مدد", "کیا کر سکت"], reply: "میں نیکسس کے بارے میں سوالوں کے جواب دیتا ہوں۔ آزمائیں: نیکسس کیا ہے؟ مصنوعی ذہانت کیا ہے؟ پیغام کیسے بھیجیں؟ کوئز کہاں ہے؟ پوسٹر کہاں ہے؟" },
+    { keys: ["نیکسس"], reply: "نیکسس ایک تجرباتی ڈیجیٹل تجربہ ہے — نیون روشنیوں، مصنوعی ذہانت اور مستقبل کی ٹیکنالوجی کی ایک جھلک۔ کچھ خاص پوچھنا ہو تو بتائیں: مصنوعی ذہانت، ڈیجیٹل دنیائیں، کوئز یا سگنل فارم؟" }
+  ];
+
+  function nexaFillTime(reply) {
+    if (reply.indexOf("TIME_NOW") === -1) return reply;
+    var d = new Date();
+    function pad(n) { return (n < 10 ? "0" : "") + n; }
+    return reply.replace("TIME_NOW", pad(d.getHours()) + ":" + pad(d.getMinutes()) + ":" + pad(d.getSeconds()));
+  }
+
 
   function nexaAnswer(raw) {
+    var rawStr = String(raw || "");
+    if (/[\u0600-\u06FF]/.test(rawStr)) {
+      var bestU = null, bestUS = 0;
+      for (var ui = 0; ui < NEXA_KB_UR.length; ui++) {
+        var eu = NEXA_KB_UR[ui], su = 0;
+        for (var uj = 0; uj < eu.keys.length; uj++) {
+          if (rawStr.indexOf(eu.keys[uj]) !== -1) su += eu.keys[uj].length;
+        }
+        if (su > bestUS) { bestUS = su; bestU = eu; }
+      }
+      return nexaFillTime(bestU ? bestU.reply : NEXA_FALLBACK_UR);
+    }
     var text = " " + String(raw || "").toLowerCase().replace(/[^a-z0-9 ]+/g, " ") + " ";
     var best = null, bestScore = 0;
     for (var i = 0; i < NEXA_KB.length; i++) {
@@ -455,13 +498,7 @@
       if (score > bestScore) { bestScore = score; best = entry; }
     }
     if (!best) return NEXA_FALLBACK;
-    var reply = best.reply;
-    if (reply.indexOf("TIME_NOW") !== -1) {
-      var d = new Date();
-      function pad(n) { return (n < 10 ? "0" : "") + n; }
-      reply = reply.replace("TIME_NOW", pad(d.getHours()) + ":" + pad(d.getMinutes()) + ":" + pad(d.getSeconds()));
-    }
-    return reply;
+    return nexaFillTime(best.reply);
   }
   /* NEXA-KB-END */
 
@@ -579,6 +616,152 @@
         card.style.transform = "perspective(800px) rotateY(" + (dx * 7).toFixed(2) + "deg) rotateX(" + (-dy * 7).toFixed(2) + "deg) translateY(-3px)";
       });
       card.addEventListener("mouseleave", function () { card.style.transform = ""; });
+    });
+  }
+
+
+  /* ---------------------------------------------------------
+     10) THE GRID TEST — five-question quiz, fully local
+     --------------------------------------------------------- */
+  var QUIZ = [
+    { q: "What does \u201CAI\u201D stand for?",
+      options: ["Artificial Intelligence", "Automatic Internet", "Analog Interface"], answer: 0 },
+    { q: "A device that links a human brain directly to a computer is called a...",
+      options: ["Solar panel", "Neural interface", "Barcode scanner"], answer: 1 },
+    { q: "Quantum computers store information in special units called...",
+      options: ["Pixels", "Volts", "Qubits"], answer: 2 },
+    { q: "What is the name of the robot who guides visitors through NEXUS?",
+      options: ["ROBO-9", "NEXA", "PIXEL"], answer: 1 },
+    { q: "Everything you see on the NEXUS page is generated...",
+      options: ["On a giant server", "On printed paper", "Right in your browser"], answer: 2 }
+  ];
+  var quizQ = document.getElementById("quizQ");
+  var quizOpts = document.getElementById("quizOpts");
+  var quizProgress = document.getElementById("quizProgress");
+  var quizFeedback = document.getElementById("quizFeedback");
+  var quizNext = document.getElementById("quizNext");
+  var quizResult = document.getElementById("quizResult");
+  var quizScore = document.getElementById("quizScore");
+  var quizRank = document.getElementById("quizRank");
+  var quizRestart = document.getElementById("quizRestart");
+  if (quizQ && quizOpts && quizNext && quizResult) {
+    var qIndex = 0, qScore = 0, qLocked = false;
+    function quizRender() {
+      var item = QUIZ[qIndex];
+      qLocked = false;
+      quizProgress.textContent = "Question " + (qIndex + 1) + " of " + QUIZ.length;
+      quizQ.textContent = item.q;
+      quizFeedback.textContent = "";
+      quizFeedback.className = "quiz-feedback";
+      quizNext.hidden = true;
+      quizResult.hidden = true;
+      quizOpts.innerHTML = "";
+      item.options.forEach(function (label, i) {
+        var b = document.createElement("button");
+        b.type = "button";
+        b.className = "quiz-opt";
+        b.textContent = label;
+        b.addEventListener("click", function () { quizPick(i, b); });
+        quizOpts.appendChild(b);
+      });
+    }
+    function quizPick(i, btn) {
+      if (qLocked) return;
+      qLocked = true;
+      var item = QUIZ[qIndex];
+      var buttons = quizOpts.querySelectorAll(".quiz-opt");
+      Array.prototype.forEach.call(buttons, function (b, j) {
+        b.disabled = true;
+        if (j === item.answer) b.classList.add("correct");
+      });
+      if (i === item.answer) {
+        qScore++;
+        quizFeedback.textContent = "\u2713 Correct. The grid approves.";
+        quizFeedback.className = "quiz-feedback ok";
+      } else {
+        btn.classList.add("wrong");
+        quizFeedback.textContent = "\u2717 Not quite \u2014 the answer was \u201C" + item.options[item.answer] + "\u201D.";
+        quizFeedback.className = "quiz-feedback err";
+      }
+      quizNext.textContent = qIndex === QUIZ.length - 1 ? "SEE MY RANK" : "NEXT";
+      quizNext.hidden = false;
+    }
+    function quizFinish() {
+      quizProgress.textContent = "Test complete";
+      quizQ.textContent = "";
+      quizOpts.innerHTML = "";
+      quizFeedback.textContent = "";
+      quizNext.hidden = true;
+      quizScore.textContent = qScore + " / " + QUIZ.length;
+      quizRank.textContent =
+        qScore === 5 ? "GRID MASTER \u2014 the future bends around you." :
+        qScore >= 3 ? "CYBER OPERATIVE \u2014 a strong, clean signal." :
+                      "NEURAL NOVICE \u2014 recharge, traveller, and try again.";
+      quizResult.hidden = false;
+    }
+    quizNext.addEventListener("click", function () {
+      if (qIndex === QUIZ.length - 1) { quizFinish(); }
+      else { qIndex++; quizRender(); }
+    });
+    if (quizRestart) quizRestart.addEventListener("click", function () {
+      qIndex = 0; qScore = 0; quizRender();
+    });
+    quizRender();
+  }
+
+  /* ---------------------------------------------------------
+     11) AMBIENCE — a soft synth pad generated live with the
+     Web Audio API. No audio files. Starts only on tap.
+     --------------------------------------------------------- */
+  var musicBtn = document.getElementById("musicBtn");
+  var musicState = document.getElementById("musicState");
+  if (musicBtn) {
+    var actx = null, masterGain = null, oscNodes = [], musicOn = false;
+    function musicStart() {
+      var AC = window.AudioContext || window.webkitAudioContext;
+      if (!AC) return false;
+      if (!actx) actx = new AC();
+      if (actx.state === "suspended") actx.resume();
+      masterGain = actx.createGain();
+      masterGain.gain.value = 0;
+      var filter = actx.createBiquadFilter();
+      filter.type = "lowpass"; filter.frequency.value = 520; filter.Q.value = 0.6;
+      masterGain.connect(filter); filter.connect(actx.destination);
+      var freqs = [110, 164.81, 220, 261.63];
+      freqs.forEach(function (f, i) {
+        var o = actx.createOscillator();
+        o.type = i % 2 ? "triangle" : "sine";
+        o.frequency.value = f;
+        o.detune.value = (i - 1.5) * 4;
+        var g = actx.createGain();
+        g.gain.value = i === 0 ? 0.5 : 0.22;
+        o.connect(g); g.connect(masterGain);
+        o.start(); oscNodes.push(o);
+      });
+      var lfo = actx.createOscillator(); lfo.frequency.value = 0.07;
+      var lfoGain = actx.createGain(); lfoGain.gain.value = 260;
+      lfo.connect(lfoGain); lfoGain.connect(filter.frequency);
+      lfo.start(); oscNodes.push(lfo);
+      masterGain.gain.linearRampToValueAtTime(0.055, actx.currentTime + 1.6);
+      return true;
+    }
+    function musicStop() {
+      if (!actx || !masterGain) return;
+      var t = actx.currentTime;
+      masterGain.gain.cancelScheduledValues(t);
+      masterGain.gain.setValueAtTime(masterGain.gain.value, t);
+      masterGain.gain.linearRampToValueAtTime(0, t + 0.7);
+      var nodes = oscNodes; oscNodes = [];
+      setTimeout(function () {
+        nodes.forEach(function (o) { try { o.stop(); } catch (e) {} });
+      }, 850);
+    }
+    musicBtn.addEventListener("click", function () {
+      if (!musicOn) { if (musicStart()) musicOn = true; }
+      else { musicStop(); musicOn = false; }
+      musicBtn.classList.toggle("on", musicOn);
+      musicBtn.setAttribute("aria-pressed", musicOn ? "true" : "false");
+      if (musicState) musicState.textContent = musicOn ? "ON" : "OFF";
     });
   }
 

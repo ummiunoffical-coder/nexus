@@ -444,3 +444,46 @@ a{color:var(--cyan)}
 .signal-form-v2 textarea::placeholder{color:#5f7699}
 .signal-form-v2 .btn{align-self:center;min-width:210px}
 .signal-form-v2 .btn[disabled]{opacity:.55;pointer-events:none}
+
+/* ---------- Grid Test (quiz) ---------- */
+.quiz-panel{
+  max-width:640px;margin:2rem auto 0;text-align:left;
+  border:1px solid var(--line);border-radius:calc(var(--radius) + 6px);
+  background:linear-gradient(160deg,rgba(16,26,54,.85),rgba(8,12,28,.9));
+  padding:clamp(1.4rem,3.5vw,2.2rem);
+  box-shadow:0 24px 60px rgba(0,0,0,.45),inset 0 0 0 1px rgba(255,255,255,.03);
+}
+.quiz-progress{color:var(--cyan);font-size:.78rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase}
+.quiz-q{font-size:1.25rem;line-height:1.45;margin:.7rem 0 1.1rem}
+.quiz-opts{display:grid;gap:.6rem}
+.quiz-opt{
+  cursor:pointer;text-align:left;font-family:inherit;font-size:1rem;color:var(--ink);
+  background:rgba(4,8,18,.8);border:1px solid var(--line);border-radius:12px;padding:.8rem 1rem;
+  transition:border-color .2s ease,background .2s ease;
+}
+.quiz-opt:hover{border-color:var(--cyan)}
+.quiz-opt.correct{border-color:#37ff9a;background:rgba(55,255,154,.12);color:#b9ffd9}
+.quiz-opt.wrong{border-color:#ff7aa8;background:rgba(255,122,168,.12);color:#ffd3e2}
+.quiz-opt[disabled]{cursor:default;opacity:.92}
+.quiz-feedback{min-height:1.5em;margin-top:.9rem;font-weight:600}
+.quiz-feedback.ok{color:#39ffb0}
+.quiz-feedback.err{color:#ff7aa8}
+.quiz-next{margin-top:.6rem}
+.quiz-result{text-align:center;padding-top:.6rem}
+.quiz-score{font-size:2rem;font-weight:900;letter-spacing:.06em}
+.quiz-rank{color:var(--muted);margin:.4rem 0 1.1rem}
+
+/* ---------- Ambience toggle ---------- */
+.music-btn{
+  position:fixed;left:1rem;bottom:1rem;z-index:150;cursor:pointer;
+  display:inline-flex;align-items:center;gap:.5rem;
+  font-family:var(--font);font-size:.8rem;font-weight:700;letter-spacing:.12em;color:var(--cyan);
+  background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:.55rem .95rem;
+  backdrop-filter:blur(8px);box-shadow:0 8px 24px rgba(0,0,0,.4);
+  transition:border-color .2s ease,color .2s ease;
+}
+.music-btn:hover{border-color:var(--cyan)}
+.music-btn .music-state{color:var(--muted)}
+.music-btn.on{color:#37ff9a;border-color:rgba(55,255,154,.5)}
+.music-btn.on .music-state{color:#37ff9a}
+@media (max-width:520px){.music-btn{left:.6rem;bottom:.6rem}}

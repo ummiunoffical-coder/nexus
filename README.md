@@ -58,6 +58,10 @@ npx serve .
   rule-based chat that answers questions about NEXUS — sections, the
   Core, the Signal, pricing and privacy. Fully local, like everything
   else here: no server, no data leaves the browser.
+- **Extras:** WhatsApp share button in the hero; "The Grid Test"
+  five-question quiz with ranks; an AMBIENCE toggle whose synth pad
+  is generated live with the Web Audio API (no audio files); and
+  NEXA answers questions in English, Roman Urdu and Urdu script.
 - **Signal form:** real — name/email/message are delivered to the
   site keeper's inbox via FormSubmit (AJAX endpoint). Browsing and
   the NEXA chat stay fully local; only a message a visitor chooses
