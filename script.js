@@ -394,6 +394,8 @@
       reply: "NEXUS was crafted with plain HTML, CSS and JavaScript — no frameworks, no build tools — as a tribute to the neon futures we were promised, and the real one we are building." },
     { keys: ["section", "sections", "pages", "navigate", "menu", "where", "explore"],
       reply: "The grid has four stops: <a href=\"#home\">Home</a> — the neon city and the robot; <a href=\"#explore\">Explore</a> — three briefings (AI, Digital Worlds, Future Technology); <a href=\"#technology\">Technology</a> — the NEXUS Core; and <a href=\"#signal\">Signal</a> — join the transmission. Tap any briefing card to open it." },
+    { keys: ["poster", "wallpaper", "image of nexa", "picture of nexa"],
+      reply: "The official NEXUS poster — NEXA standing in the neon rain — hangs in the <a href=\"#poster\">Poster section</a>. You can download it there, full size." },
     { keys: ["joke", "funny"],
       reply: "Why did the robot apply for a job at NEXUS? It heard the position had great current — and unlimited charge breaks." },
     { keys: ["time", "clock"],
