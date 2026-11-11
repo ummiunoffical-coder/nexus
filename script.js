@@ -269,7 +269,7 @@
   }
 
   /* ---------------------------------------------------------
-     4) INTERACTIVE CARDS — tilt on hover, click/Enter expands
+     4) INTERACTIVE CARDS — click/Enter expands
      --------------------------------------------------------- */
   var cards = document.querySelectorAll("[data-card]");
   cards.forEach(function (card) {
@@ -283,15 +283,6 @@
     card.addEventListener("keydown", function (e) {
       if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggleCard(); }
     });
-    if (!reduceMotion && window.matchMedia("(pointer: fine)").matches) {
-      card.addEventListener("pointermove", function (e) {
-        var r = card.getBoundingClientRect();
-        var rx = ((e.clientY - r.top) / r.height - 0.5) * -7;
-        var ry = ((e.clientX - r.left) / r.width - 0.5) * 9;
-        card.style.transform = "perspective(800px) rotateX(" + rx + "deg) rotateY(" + ry + "deg) translateY(-4px)";
-      });
-      card.addEventListener("pointerleave", function () { card.style.transform = ""; });
-    }
   });
 
   /* ---------------------------------------------------------
@@ -577,7 +568,7 @@
 
 
   /* ---------------------------------------------------------
-     9) MOTION PACK — boot intro, scroll progress, card tilt
+     9) MOTION PACK — boot intro, scroll progress
      --------------------------------------------------------- */
   var boot = document.getElementById("bootOverlay");
   if (boot) {
@@ -590,7 +581,7 @@
     };
     if (reduceMotion) { hideBoot(); }
     else {
-      setTimeout(hideBoot, 1250);
+      setTimeout(hideBoot, 800);
       boot.addEventListener("click", hideBoot);
     }
   }
@@ -606,18 +597,6 @@
     onScroll();
   }
 
-  if (!reduceMotion && window.matchMedia("(pointer: fine)").matches) {
-    var tiltCards = document.querySelectorAll("[data-card]");
-    Array.prototype.forEach.call(tiltCards, function (card) {
-      card.addEventListener("mousemove", function (e) {
-        var r = card.getBoundingClientRect();
-        var dx = (e.clientX - r.left) / r.width - 0.5;
-        var dy = (e.clientY - r.top) / r.height - 0.5;
-        card.style.transform = "perspective(800px) rotateY(" + (dx * 7).toFixed(2) + "deg) rotateX(" + (-dy * 7).toFixed(2) + "deg) translateY(-3px)";
-      });
-      card.addEventListener("mouseleave", function () { card.style.transform = ""; });
-    });
-  }
 
 
   /* ---------------------------------------------------------
