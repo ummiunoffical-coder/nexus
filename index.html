@@ -271,6 +271,38 @@
   <p class="footer-base container">© 2026 NEXUS — a fictional concept experience. Crafted in the browser.</p>
 </footer>
 
+
+<!-- ================= NEXA GUIDE BOT ================= -->
+<div class="nexa" id="nexa">
+  <div class="nexa-panel" id="nexaPanel" hidden role="dialog" aria-label="Chat with NEXA, the NEXUS guide bot">
+    <div class="nexa-head">
+      <div class="nexa-avatar" aria-hidden="true">N</div>
+      <div class="nexa-head-copy">
+        <p class="nexa-name">NEXA</p>
+        <p class="nexa-status"><span class="status-dot" aria-hidden="true"></span>Online · answers NEXUS questions</p>
+      </div>
+      <button class="nexa-close" id="nexaClose" type="button" aria-label="Close chat">&times;</button>
+    </div>
+    <div class="nexa-msgs" id="nexaMsgs" aria-live="polite"></div>
+    <div class="nexa-chips" id="nexaChips">
+      <button type="button" class="nexa-chip" data-q="What is NEXUS?">What is NEXUS?</button>
+      <button type="button" class="nexa-chip" data-q="Tell me about Artificial Intelligence">Artificial Intelligence</button>
+      <button type="button" class="nexa-chip" data-q="Is NEXUS free?">Is it free?</button>
+      <button type="button" class="nexa-chip" data-q="How do I join the signal?">Join the signal</button>
+    </div>
+    <form class="nexa-form" id="nexaForm">
+      <label class="visually-hidden" for="nexaInput">Ask NEXA a question</label>
+      <input type="text" id="nexaInput" placeholder="Ask NEXA about NEXUS..." autocomplete="off" maxlength="300">
+      <button class="nexa-send" type="submit" aria-label="Send message">&#10148;</button>
+    </form>
+  </div>
+  <button class="nexa-launch" id="nexaLaunch" type="button" aria-expanded="false" aria-controls="nexaPanel" aria-label="Open chat with NEXA">
+    <span class="nexa-launch-mark" aria-hidden="true">N</span>
+    <span class="nexa-launch-text">Ask NEXA</span>
+    <span class="nexa-launch-dot" aria-hidden="true"></span>
+  </button>
+</div>
+
 <script src="script.js"></script>
 </body>
 </html>

@@ -364,4 +364,147 @@
     tick();
     setInterval(tick, 1000);
   }
+
+  /* ---------------------------------------------------------
+     8) NEXA GUIDE BOT — answers questions about NEXUS.
+     Rule-based and fully local, like the rest of this page:
+     no server, no tracking, nothing leaves the browser.
+     --------------------------------------------------------- */
+  /* NEXA-KB-START */
+  var NEXA_KB = [
+    { keys: ["what is nexus", "about nexus", "nexus kya", "explain nexus", "tell me about nexus"],
+      reply: "NEXUS is an experimental digital experience — a living interface between imagination and machine. It is not a product and it sells nothing; it is a window, opened briefly, onto the future now being built. Head to <a href=\"#explore\">Explore</a> to choose your dimension." },
+    { keys: ["artificial intelligence", " ai ", "machine learning", "language model"],
+      reply: "Artificial Intelligence — machines that learn, reason and create, now woven into everyday life. From language models to vision systems, modern AI predicts, generates and decides in milliseconds. NEXUS maps where this intelligence is heading next. Full briefing: <a href=\"#explore\">Explore</a>." },
+    { keys: ["digital world", "digital worlds", "virtual", "metaverse", "immersive"],
+      reply: "Digital Worlds — virtual cities, immersive realities and persistent universes built from pure light. They are no longer games alone: they are workplaces, classrooms and concert halls, where entire societies are being prototyped inside simulated space. See the briefing in <a href=\"#explore\">Explore</a>." },
+    { keys: ["future technology", "quantum", "neural interface", "future tech", "technology", "technologies"],
+      reply: "Future Technology — quantum leaps, neural interfaces and the hardware quietly rewriting tomorrow: chips that think, networks that feel instant, machines that build machines. The <a href=\"#technology\">NEXUS Core</a> section tracks it: 128 neural nodes simulated, 12ms core response, 100% rendered locally." },
+    { keys: ["core", "how does it work", "how it works", "rendered", "nodes"],
+      reply: "The NEXUS Core is the heart of this page: every light here is generated live in your browser — no servers, no tracking, no accounts. Just code, colour and motion: 128 neural nodes simulated, 12ms response, 100% rendered locally and privately. Details: <a href=\"#technology\">Technology</a>." },
+    { keys: ["signal", "join", "subscribe", "newsletter", "email", "transmission"],
+      reply: "To join the transmission, scroll to <a href=\"#signal\">Join the transmission</a> and leave an email — but here is the honest part: the form is a demo. It is not connected to any service, so nothing you type is sent or stored anywhere." },
+    { keys: ["free", "price", "cost", "buy", "pay", "download", "sign up", "signup", "account"],
+      reply: "NEXUS is completely free: no downloads, no sign-up, no accounts and nothing to buy. The entire experience runs right here in your browser." },
+    { keys: ["privacy", "track", "data", "safe", "secure"],
+      reply: "Private by design. Everything on this page — even my answers — is generated locally in your browser. No servers receive your words, no trackers watch, and no account exists to leak." },
+    { keys: [" robot", "hero", "who are you", "your name", "nexa"],
+      reply: "I'm NEXA, the friendly AI robot of this grid — the same robot watching you from the hero section (it even follows your cursor). My job here is simple: answer your questions about NEXUS. Ask me about the sections, the Core, or the Signal." },
+    { keys: ["who made", "who built", "who created", "creator", "developer", "owner"],
+      reply: "NEXUS was crafted with plain HTML, CSS and JavaScript — no frameworks, no build tools — as a tribute to the neon futures we were promised, and the real one we are building." },
+    { keys: ["section", "sections", "pages", "navigate", "menu", "where", "explore"],
+      reply: "The grid has four stops: <a href=\"#home\">Home</a> — the neon city and the robot; <a href=\"#explore\">Explore</a> — three briefings (AI, Digital Worlds, Future Technology); <a href=\"#technology\">Technology</a> — the NEXUS Core; and <a href=\"#signal\">Signal</a> — join the transmission. Tap any briefing card to open it." },
+    { keys: ["joke", "funny"],
+      reply: "Why did the robot apply for a job at NEXUS? It heard the position had great current — and unlimited charge breaks." },
+    { keys: ["time", "clock"],
+      reply: "Grid time is your local time — the footer clock shows it ticking live. Right now it reads TIME_NOW." },
+    { keys: ["thank", "shukria"],
+      reply: "Anytime, traveller. The grid is brighter with you in it." },
+    { keys: ["bye", "goodbye", "see you"],
+      reply: "Signal closing — until next time, traveller." },
+    { keys: ["human", "real person", "real ai", "chatgpt", "gpt", "llm"],
+      reply: "Honest answer: no human and no giant AI hides behind this panel. I'm a rule-based guide built into the page — I match your words to briefings about NEXUS, computed locally in your browser." },
+    { keys: ["hello", "hi", "hey", "salam", "aoa", "assalam"],
+      reply: "Hello, traveller. I'm NEXA, the guide of this grid. Ask me anything about NEXUS — what it is, what each section shows, or how the Signal works. The chips below are a good start." },
+    { keys: ["help", "what can you do", "options", "questions"],
+      reply: "I answer questions about NEXUS. Try: \"What is NEXUS?\", \"Tell me about Artificial Intelligence\", \"What is the Core?\", \"Is it free?\", or \"How do I join the signal?\"" }
+  ];
+  var NEXA_FALLBACK = "That signal is outside my briefing. I answer questions about NEXUS — try asking what NEXUS is, about Artificial Intelligence, Digital Worlds, Future Technology, the Core, or how the Signal form works.";
+
+  function nexaAnswer(raw) {
+    var text = " " + String(raw || "").toLowerCase().replace(/[^a-z0-9 ]+/g, " ") + " ";
+    var best = null, bestScore = 0;
+    for (var i = 0; i < NEXA_KB.length; i++) {
+      var entry = NEXA_KB[i], score = 0;
+      for (var j = 0; j < entry.keys.length; j++) {
+        var k = entry.keys[j];
+        var needle = k.charAt(0) === " " || k.charAt(k.length - 1) === " " ? k : " " + k + " ";
+        if (text.indexOf(needle) !== -1) score += k.trim().length;
+      }
+      if (score > bestScore) { bestScore = score; best = entry; }
+    }
+    if (!best) return NEXA_FALLBACK;
+    var reply = best.reply;
+    if (reply.indexOf("TIME_NOW") !== -1) {
+      var d = new Date();
+      function pad(n) { return (n < 10 ? "0" : "") + n; }
+      reply = reply.replace("TIME_NOW", pad(d.getHours()) + ":" + pad(d.getMinutes()) + ":" + pad(d.getSeconds()));
+    }
+    return reply;
+  }
+  /* NEXA-KB-END */
+
+  var nexaLaunch = document.getElementById("nexaLaunch");
+  var nexaPanel = document.getElementById("nexaPanel");
+  var nexaClose = document.getElementById("nexaClose");
+  var nexaMsgs = document.getElementById("nexaMsgs");
+  var nexaForm = document.getElementById("nexaForm");
+  var nexaInput = document.getElementById("nexaInput");
+  var nexaChips = document.getElementById("nexaChips");
+  var nexaGreeted = false;
+
+  if (nexaLaunch && nexaPanel && nexaMsgs && nexaForm && nexaInput) {
+    function nexaScroll() { nexaMsgs.scrollTop = nexaMsgs.scrollHeight; }
+    function nexaAddMsg(html, who) {
+      var div = document.createElement("div");
+      div.className = "nexa-msg " + (who === "user" ? "nexa-msg-user" : "nexa-msg-bot");
+      if (who === "user") { div.textContent = html; } else { div.innerHTML = html; }
+      nexaMsgs.appendChild(div);
+      nexaScroll();
+      return div;
+    }
+    function nexaReply(question) {
+      var typing = document.createElement("div");
+      typing.className = "nexa-msg-typing";
+      typing.innerHTML = "<span></span><span></span><span></span>";
+      nexaMsgs.appendChild(typing);
+      nexaScroll();
+      var delay = reduceMotion ? 60 : 550 + Math.random() * 450;
+      setTimeout(function () {
+        if (typing.parentNode) typing.parentNode.removeChild(typing);
+        nexaAddMsg(nexaAnswer(question), "bot");
+      }, delay);
+    }
+    function nexaAsk(question) {
+      var q = String(question || "").trim();
+      if (!q) return;
+      nexaAddMsg(q, "user");
+      nexaReply(q);
+    }
+    function nexaOpen() {
+      nexaPanel.hidden = false;
+      nexaLaunch.setAttribute("aria-expanded", "true");
+      if (!nexaGreeted) {
+        nexaGreeted = true;
+        nexaReply("hello");
+      }
+      setTimeout(function () { nexaInput.focus(); }, 60);
+    }
+    function nexaShut() {
+      nexaPanel.hidden = true;
+      nexaLaunch.setAttribute("aria-expanded", "false");
+      nexaLaunch.focus();
+    }
+    nexaLaunch.addEventListener("click", function () {
+      if (nexaPanel.hidden) { nexaOpen(); } else { nexaShut(); }
+    });
+    if (nexaClose) nexaClose.addEventListener("click", nexaShut);
+    nexaForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var q = nexaInput.value;
+      nexaInput.value = "";
+      nexaAsk(q);
+    });
+    if (nexaChips) {
+      nexaChips.addEventListener("click", function (e) {
+        var btn = e.target;
+        while (btn && btn !== nexaChips && !btn.getAttribute("data-q")) btn = btn.parentNode;
+        if (btn && btn.getAttribute) nexaAsk(btn.getAttribute("data-q"));
+      });
+    }
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && !nexaPanel.hidden) nexaShut();
+    });
+  }
+
 })();

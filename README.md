@@ -53,6 +53,10 @@ npx serve .
 
 ## Notes
 
+- **NEXA guide bot:** the "Ask NEXA" button (bottom-right) opens a
+  rule-based chat that answers questions about NEXUS — sections, the
+  Core, the Signal, pricing and privacy. Fully local, like everything
+  else here: no server, no data leaves the browser.
 - **No data collection:** the "Signal" form is a labelled demo.
   Nothing typed into it is sent or stored anywhere.
 - **Performance:** the city, stars and particles are drawn on a single
