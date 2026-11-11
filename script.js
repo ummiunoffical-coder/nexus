@@ -356,7 +356,7 @@
       if (btn) { btn.disabled = true; btn.textContent = "TRANSMITTING..."; }
       msg.textContent = "Sending your signal...";
       msg.className = "signal-msg";
-      fetch("https://formsubmit.co/ajax/ummi.unoffical@gmail.com", {
+      fetch("https://formsubmit.co/ajax/a18ab7ca741e9be92b844a5c58481a23", {
         method: "POST",
         headers: { "Content-Type": "application/json", "Accept": "application/json" },
         body: JSON.stringify({
