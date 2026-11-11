@@ -47,7 +47,7 @@ a{color:var(--cyan)}
 
 /* ---------- Header ---------- */
 .site-header{
-  position:fixed;inset:0 0 auto 0;z-index:100;
+  position:absolute;inset:0 0 auto 0;z-index:100;
   background:linear-gradient(180deg,rgba(4,6,15,.88),rgba(4,6,15,.55) 70%,transparent);
   backdrop-filter:blur(6px);
 }
@@ -270,7 +270,7 @@ a{color:var(--cyan)}
 .signal-msg.err{color:#ff7aa8}
 
 /* ---------- Footer ---------- */
-.site-footer{background:#03040a;border-top:1px solid rgba(46,230,255,.14);padding:3.6rem 0 1.6rem}
+.site-footer{background:#03040a;border-top:1px solid rgba(46,230,255,.14);padding:3.6rem 0 6.5rem}
 .footer-grid{display:grid;gap:2.2rem}
 @media (min-width:820px){.footer-grid{grid-template-columns:1.4fr .7fr .9fr}}
 .footer-about{color:var(--muted);margin-top:1rem;max-width:42ch}
@@ -328,7 +328,7 @@ a{color:var(--cyan)}
 }
 .nexa-launch:hover{transform:translateY(-2px);box-shadow:0 0 30px rgba(46,230,255,.65),0 10px 26px rgba(0,0,0,.5)}
 .nexa-launch-mark{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:rgba(3,16,24,.85);color:var(--cyan);font-weight:900}
-.nexa-launch-dot{width:9px;height:9px;border-radius:50%;background:#37ff9a;box-shadow:0 0 8px #37ff9a;animation:nexaPulse 2s infinite}
+.nexa-launch-dot{width:9px;height:9px;border-radius:50%;background:#37ff9a;box-shadow:0 0 8px #37ff9a}
 @keyframes nexaPulse{0%,100%{opacity:1}50%{opacity:.35}}
 .nexa-panel{
   width:min(360px,calc(100vw - 2rem));max-height:min(70vh,560px);
@@ -462,7 +462,7 @@ a{color:var(--cyan)}
 
 /* ---------- Ambience toggle ---------- */
 .music-btn{
-  position:fixed;left:1rem;bottom:1rem;z-index:150;cursor:pointer;
+  position:static;cursor:pointer;margin-top:1rem;
   display:inline-flex;align-items:center;gap:.5rem;
   font-family:var(--font);font-size:.8rem;font-weight:700;letter-spacing:.12em;color:var(--cyan);
   background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:.55rem .95rem;
@@ -473,4 +473,3 @@ a{color:var(--cyan)}
 .music-btn .music-state{color:var(--muted)}
 .music-btn.on{color:#37ff9a;border-color:rgba(55,255,154,.5)}
 .music-btn.on .music-state{color:#37ff9a}
-@media (max-width:520px){.music-btn{left:.6rem;bottom:.6rem}}
