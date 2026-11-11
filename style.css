@@ -387,3 +387,60 @@ a{color:var(--cyan)}
   box-shadow:0 24px 60px rgba(0,0,0,.55),0 0 34px rgba(46,230,255,.22),0 0 90px rgba(180,92,255,.14);
 }
 .poster-frame img{width:100%;height:auto}
+
+/* ---------- Motion pack: boot, progress, glitch, marquee ---------- */
+.boot{
+  position:fixed;inset:0;z-index:400;display:grid;place-items:center;
+  background:var(--bg);transition:opacity .55s ease,visibility .55s;
+  animation:bootSafety .6s ease 3.4s forwards;
+}
+.boot.done{opacity:0;visibility:hidden;pointer-events:none}
+@keyframes bootSafety{to{opacity:0;visibility:hidden;pointer-events:none}}
+.boot-inner{text-align:center}
+.boot-logo{
+  font-size:clamp(2.2rem,7vw,3.4rem);font-weight:900;letter-spacing:.28em;color:var(--ink);
+  text-shadow:0 0 22px rgba(46,230,255,.75),0 0 60px rgba(180,92,255,.45);
+}
+.boot-line{color:var(--cyan);letter-spacing:.42em;font-size:.78rem;margin-top:.4rem;animation:nexaBlink 1s infinite}
+.boot-bar{width:min(280px,70vw);height:5px;margin:1.1rem auto 0;border:1px solid var(--line);border-radius:99px;overflow:hidden;background:rgba(7,11,26,.8)}
+.boot-bar span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--cyan),var(--violet),var(--magenta));animation:bootFill 1.15s ease forwards}
+@keyframes bootFill{to{width:100%}}
+.scroll-progress{
+  position:fixed;top:0;left:0;height:3px;width:100%;z-index:300;transform-origin:0 50%;transform:scaleX(0);
+  background:linear-gradient(90deg,var(--cyan),var(--violet),var(--magenta));
+  box-shadow:0 0 12px rgba(46,230,255,.55);
+}
+.hero-title{animation:titleGlitch 5.2s infinite}
+@keyframes titleGlitch{
+  0%,91%,100%{text-shadow:none;transform:none}
+  92%{text-shadow:-3px 0 rgba(46,230,255,.85),3px 0 rgba(255,79,216,.85);transform:translateX(1px)}
+  94%{text-shadow:3px 0 rgba(46,230,255,.85),-3px 0 rgba(255,79,216,.85);transform:translateX(-1px)}
+  96%{text-shadow:-1px 0 rgba(46,230,255,.6),1px 0 rgba(255,79,216,.6);transform:none}
+}
+.grad-text{background-size:220% auto;animation:gradShift 7s linear infinite}
+@keyframes gradShift{to{background-position:220% center}}
+.marquee{
+  overflow:hidden;border-block:1px solid var(--line);background:rgba(7,11,26,.55);
+  padding:.65rem 0;white-space:nowrap;
+}
+.marquee-track{display:inline-flex;align-items:center;gap:1.6rem;padding-right:1.6rem;animation:marqueeMove 26s linear infinite;will-change:transform}
+.marquee-track span{font-weight:800;letter-spacing:.3em;font-size:.8rem;color:var(--muted)}
+.marquee-track i{color:var(--cyan);font-style:normal;text-shadow:0 0 10px rgba(46,230,255,.7)}
+@keyframes marqueeMove{to{transform:translateX(-50%)}}
+.card{transition:transform .3s ease,box-shadow .3s ease;transform-style:preserve-3d}
+@media (prefers-reduced-motion: reduce){
+  .boot{display:none}
+  .hero-title,.grad-text,.marquee-track,.boot-line{animation:none}
+}
+
+/* ---------- Signal form v2 ---------- */
+.signal-form-v2{flex-direction:column;align-items:stretch;max-width:580px;margin-inline:auto}
+.signal-row{display:flex;flex-wrap:wrap;gap:.9rem}
+.signal-form-v2 textarea{
+  width:100%;padding:.95rem 1.1rem;border-radius:12px;resize:vertical;min-height:110px;
+  border:1px solid var(--line);background:rgba(4,8,18,.8);color:var(--ink);
+  font-size:1rem;font-family:inherit;
+}
+.signal-form-v2 textarea::placeholder{color:#5f7699}
+.signal-form-v2 .btn{align-self:center;min-width:210px}
+.signal-form-v2 .btn[disabled]{opacity:.55;pointer-events:none}

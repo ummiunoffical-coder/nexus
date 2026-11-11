@@ -4,7 +4,7 @@
       lit windows, stars, drifting particles, shooting star)
    2) Mouse parallax for the robot + hero glow
    3) Mobile menu, interactive cards, scroll reveal,
-      animated counters, demo form, footer grid clock
+      animated counters, signal form, footer grid clock
    Everything is dependency-free. If canvas/WebGL is missing,
    the CSS gradient sky + SVG robot still carry the hero.
    ============================================================ */
@@ -329,25 +329,54 @@
   }
 
   /* ---------------------------------------------------------
-     6) SIGNAL FORM — demo only, nothing leaves the browser
+     6) SIGNAL FORM — real: messages are delivered to the
+     keeper's inbox via the FormSubmit AJAX endpoint.
      --------------------------------------------------------- */
   var form = document.getElementById("signalForm");
   var msg = document.getElementById("signalMsg");
   if (form && msg) {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
-      var input = document.getElementById("signalEmail");
-      var value = (input.value || "").trim();
-      var valid = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value);
-      if (!valid) {
-        msg.textContent = "⚠ That frequency looks off — enter a valid email format and try again.";
+      var nameEl = document.getElementById("signalName");
+      var emailEl = document.getElementById("signalEmail");
+      var textEl = document.getElementById("signalMessage");
+      var btn = document.getElementById("signalBtn");
+      var name = (nameEl.value || "").trim();
+      var email = (emailEl.value || "").trim();
+      var text = (textEl.value || "").trim();
+      var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email);
+      function fail(text2, el) {
+        msg.textContent = "\u26A0 " + text2;
         msg.className = "signal-msg err";
-        input.focus();
-        return;
+        if (el) el.focus();
       }
-      msg.textContent = "✓ Signal received, traveller. (Demo only — nothing was sent or stored.)";
-      msg.className = "signal-msg ok";
-      form.reset();
+      if (!name) { fail("Tell the grid your name first, traveller.", nameEl); return; }
+      if (!emailOk) { fail("That frequency looks off - enter a valid email so the grid can answer.", emailEl); return; }
+      if (!text) { fail("Your message is empty - give the grid something to answer.", textEl); return; }
+      if (btn) { btn.disabled = true; btn.textContent = "TRANSMITTING..."; }
+      msg.textContent = "Sending your signal...";
+      msg.className = "signal-msg";
+      fetch("https://formsubmit.co/ajax/ummi.unoffical@gmail.com", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify({
+          name: name, email: email, message: text,
+          _subject: "New signal via NEXUS - from " + name,
+          _template: "table"
+        })
+      }).then(function (r) {
+        if (!r.ok) throw new Error("send failed");
+        return r.json();
+      }).then(function () {
+        msg.textContent = "\u2713 Signal received, " + name + ". The keeper has your message and can reply to your email.";
+        msg.className = "signal-msg ok";
+        form.reset();
+      }).catch(function () {
+        msg.textContent = "\u26A0 The signal could not get through just now. Check your connection and try again.";
+        msg.className = "signal-msg err";
+      }).then(function () {
+        if (btn) { btn.disabled = false; btn.textContent = "TRANSMIT"; }
+      });
     });
   }
 
@@ -383,11 +412,11 @@
     { keys: ["core", "how does it work", "how it works", "rendered", "nodes"],
       reply: "The NEXUS Core is the heart of this page: every light here is generated live in your browser — no servers, no tracking, no accounts. Just code, colour and motion: 128 neural nodes simulated, 12ms response, 100% rendered locally and privately. Details: <a href=\"#technology\">Technology</a>." },
     { keys: ["signal", "join", "subscribe", "newsletter", "email", "transmission"],
-      reply: "To join the transmission, scroll to <a href=\"#signal\">Join the transmission</a> and leave an email — but here is the honest part: the form is a demo. It is not connected to any service, so nothing you type is sent or stored anywhere." },
+      reply: "To join the transmission, scroll to <a href=\"#signal\">Join the transmission</a> and leave your name, email and a message. The signal lands directly in the keeper's inbox, and they can reply to your email." },
     { keys: ["free", "price", "cost", "buy", "pay", "download", "sign up", "signup", "account"],
       reply: "NEXUS is completely free: no downloads, no sign-up, no accounts and nothing to buy. The entire experience runs right here in your browser." },
     { keys: ["privacy", "track", "data", "safe", "secure"],
-      reply: "Private by design. Everything on this page — even my answers — is generated locally in your browser. No servers receive your words, no trackers watch, and no account exists to leak." },
+      reply: "Private by design. Browsing this page and chatting with me happens entirely in your browser — no trackers, no accounts. The only thing that ever leaves this page is a message you choose to send through the Signal form, and that goes straight to the keeper's inbox." },
     { keys: [" robot", "hero", "who are you", "your name", "nexa"],
       reply: "I'm NEXA, the friendly AI robot of this grid — the same robot watching you from the hero section (it even follows your cursor). My job here is simple: answer your questions about NEXUS. Ask me about the sections, the Core, or the Signal." },
     { keys: ["who made", "who built", "who created", "creator", "developer", "owner"],
@@ -506,6 +535,50 @@
     }
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape" && !nexaPanel.hidden) nexaShut();
+    });
+  }
+
+
+  /* ---------------------------------------------------------
+     9) MOTION PACK — boot intro, scroll progress, card tilt
+     --------------------------------------------------------- */
+  var boot = document.getElementById("bootOverlay");
+  if (boot) {
+    var bootDone = false;
+    var hideBoot = function () {
+      if (bootDone) return;
+      bootDone = true;
+      boot.classList.add("done");
+      setTimeout(function () { if (boot.parentNode) boot.parentNode.removeChild(boot); }, 700);
+    };
+    if (reduceMotion) { hideBoot(); }
+    else {
+      setTimeout(hideBoot, 1250);
+      boot.addEventListener("click", hideBoot);
+    }
+  }
+
+  var progress = document.getElementById("scrollProgress");
+  if (progress) {
+    var onScroll = function () {
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      var ratio = max > 0 ? (window.scrollY || 0) / max : 0;
+      progress.style.transform = "scaleX(" + Math.min(1, Math.max(0, ratio)) + ")";
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  }
+
+  if (!reduceMotion && window.matchMedia("(pointer: fine)").matches) {
+    var tiltCards = document.querySelectorAll("[data-card]");
+    Array.prototype.forEach.call(tiltCards, function (card) {
+      card.addEventListener("mousemove", function (e) {
+        var r = card.getBoundingClientRect();
+        var dx = (e.clientX - r.left) / r.width - 0.5;
+        var dy = (e.clientY - r.top) / r.height - 0.5;
+        card.style.transform = "perspective(800px) rotateY(" + (dx * 7).toFixed(2) + "deg) rotateX(" + (-dy * 7).toFixed(2) + "deg) translateY(-3px)";
+      });
+      card.addEventListener("mouseleave", function () { card.style.transform = ""; });
     });
   }
 

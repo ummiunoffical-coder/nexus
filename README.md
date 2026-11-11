@@ -58,7 +58,10 @@ npx serve .
   rule-based chat that answers questions about NEXUS — sections, the
   Core, the Signal, pricing and privacy. Fully local, like everything
   else here: no server, no data leaves the browser.
-- **No data collection:** the "Signal" form is a labelled demo.
+- **Signal form:** real — name/email/message are delivered to the
+  site keeper's inbox via FormSubmit (AJAX endpoint). Browsing and
+  the NEXA chat stay fully local; only a message a visitor chooses
+  to send leaves the page.
   Nothing typed into it is sent or stored anywhere.
 - **Performance:** the city, stars and particles are drawn on a single
   canvas with capped counts and pixel ratio; the animation pauses

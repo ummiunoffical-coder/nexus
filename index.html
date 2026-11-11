@@ -21,6 +21,16 @@
 </head>
 <body>
 
+<!-- Boot intro + scroll progress -->
+<div class="boot" id="bootOverlay" aria-hidden="true">
+  <div class="boot-inner">
+    <p class="boot-logo">NEXUS</p>
+    <p class="boot-line">SYSTEM BOOTING</p>
+    <div class="boot-bar"><span></span></div>
+  </div>
+</div>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
 <!-- Skip link for keyboard users -->
 <a class="skip-link" href="#explore">Skip to content</a>
 
@@ -163,6 +173,13 @@
 </section>
 
 <!-- ================= DISCOVER ================= -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>ARTIFICIAL INTELLIGENCE</span><i>//</i><span>DIGITAL WORLDS</span><i>//</i><span>FUTURE TECHNOLOGY</span><i>//</i><span>NEXA ONLINE</span><i>//</i><span>THE FUTURE IS HERE</span><i>//</i>
+    <span>ARTIFICIAL INTELLIGENCE</span><i>//</i><span>DIGITAL WORLDS</span><i>//</i><span>FUTURE TECHNOLOGY</span><i>//</i><span>NEXA ONLINE</span><i>//</i><span>THE FUTURE IS HERE</span><i>//</i>
+  </div>
+</div>
+
 <section class="section" id="explore" aria-labelledby="discoverTitle">
   <div class="container">
     <p class="section-kicker reveal">01 · DISCOVER</p>
@@ -242,11 +259,17 @@
     <div class="signal-panel reveal">
       <p class="section-kicker">03 · SIGNAL</p>
       <h2 class="section-title" id="signalTitle">Join the <span class="grad-text">transmission</span></h2>
-      <p class="section-sub">Leave a frequency and the grid will answer. <strong>Demo only</strong> — this form is not connected to any service; nothing you type is sent or stored.</p>
-      <form class="signal-form" id="signalForm" novalidate>
-        <label class="visually-hidden" for="signalEmail">Email address (demo)</label>
-        <input type="email" id="signalEmail" name="email" placeholder="you@future.net" autocomplete="email">
-        <button class="btn btn-primary" type="submit">TRANSMIT</button>
+      <p class="section-sub">Leave your name, email and a message — the signal lands directly in the keeper's inbox, and the grid will answer.</p>
+      <form class="signal-form signal-form-v2" id="signalForm" novalidate>
+        <div class="signal-row">
+          <label class="visually-hidden" for="signalName">Your name</label>
+          <input type="text" id="signalName" name="name" placeholder="Your name" autocomplete="name" maxlength="80">
+          <label class="visually-hidden" for="signalEmail">Email address</label>
+          <input type="email" id="signalEmail" name="email" placeholder="you@future.net" autocomplete="email">
+        </div>
+        <label class="visually-hidden" for="signalMessage">Your message</label>
+        <textarea id="signalMessage" name="message" rows="4" placeholder="Your message for the grid..." maxlength="1500"></textarea>
+        <button class="btn btn-primary" type="submit" id="signalBtn">TRANSMIT</button>
       </form>
       <p class="signal-msg" id="signalMsg" role="status" aria-live="polite"></p>
     </div>
