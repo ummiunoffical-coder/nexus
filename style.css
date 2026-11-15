@@ -432,6 +432,11 @@ a{color:var(--cyan)}
 .signal-form-v2 textarea::placeholder{color:#5f7699}
 .signal-form-v2 .btn{align-self:center;min-width:210px}
 .signal-form-v2 .btn[disabled]{opacity:.55;pointer-events:none}
+.signal-form input{min-width:0}
+@media (max-width:760px){
+  .signal-row{flex-direction:column}
+  .signal-form input{flex:none;width:100%;max-width:100%}
+}
 
 /* ---------- Grid Test (quiz) ---------- */
 .quiz-panel{
