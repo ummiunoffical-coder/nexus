@@ -347,9 +347,15 @@
       if (btn) { btn.disabled = true; btn.textContent = "TRANSMITTING..."; }
       msg.textContent = "Sending your signal...";
       msg.className = "signal-msg";
+      var ctrl = ("AbortController" in window) ? new AbortController() : null;
+      var slowTimer = setTimeout(function () {
+        msg.textContent = "Still transmitting - the connection is slow, please wait...";
+      }, 8000);
+      var killTimer = setTimeout(function () { if (ctrl) ctrl.abort(); }, 25000);
       fetch("https://formsubmit.co/ajax/a18ab7ca741e9be92b844a5c58481a23", {
         method: "POST",
         headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        signal: ctrl ? ctrl.signal : undefined,
         body: JSON.stringify({
           name: name, email: email, message: text,
           _subject: "New signal via NEXUS - from " + name,
@@ -366,6 +372,8 @@
         msg.textContent = "\u26A0 The signal could not get through just now. Check your connection and try again.";
         msg.className = "signal-msg err";
       }).then(function () {
+        clearTimeout(slowTimer);
+        clearTimeout(killTimer);
         if (btn) { btn.disabled = false; btn.textContent = "TRANSMIT"; }
       });
     });
