@@ -48,6 +48,7 @@
       <li><a href="#home">Home</a></li>
       <li><a href="#explore">Explore</a></li>
       <li><a href="#technology">Technology</a></li>
+      <li><a href="#tools">Tools</a></li>
       <li><a href="#about">About</a></li>
     </ul>
   </nav>
@@ -297,6 +298,49 @@
   </div>
 </section>
 
+<!-- ================= TOOLS ================= -->
+<section class="section" id="tools" aria-labelledby="toolsTitle">
+  <div class="container">
+    <p class="section-kicker reveal">05 · TOOLKIT</p>
+    <h2 class="section-title reveal" id="toolsTitle">Tools that <span class="grad-text">work</span></h2>
+    <p class="section-sub reveal">Two instruments from the grid, free for every traveller: a word counter that prices your writing, and a typing test that times your fingers.</p>
+
+    <div class="tools-grid">
+      <div class="tool-card reveal">
+        <h3 class="tool-title">Word Counter</h3>
+        <p class="tool-sub">Paste or type any text — Urdu or English. It counts the words and prices the piece at the writer's rate of Rs 1,000 per 1,000 words.</p>
+        <label class="visually-hidden" for="wcInput">Your text</label>
+        <textarea id="wcInput" class="tool-area" rows="7" placeholder="اپنا مضمون یہاں لکھیں یا پیسٹ کریں… / Paste your article here..."></textarea>
+        <div class="tool-stats">
+          <div><span class="ts-num" id="wcWords">0</span><span class="ts-label">Words</span></div>
+          <div><span class="ts-num" id="wcChars">0</span><span class="ts-label">Characters</span></div>
+          <div><span class="ts-num" id="wcSentences">0</span><span class="ts-label">Sentences</span></div>
+          <div><span class="ts-num" id="wcRead">0 min</span><span class="ts-label">Reading time</span></div>
+        </div>
+        <p class="tool-price">Writing value at Rs 1,000 / 1,000 words: <strong id="wcPrice">Rs 0</strong></p>
+      </div>
+
+      <div class="tool-card reveal">
+        <h3 class="tool-title">Typing Test</h3>
+        <p class="tool-sub">Type the line below as fast as you can. The clock starts with your first keystroke — 60 seconds on the grid.</p>
+        <p class="type-sample" id="ttSample" aria-label="Text to type"></p>
+        <label class="visually-hidden" for="ttInput">Type here</label>
+        <textarea id="ttInput" class="tool-area" rows="3" placeholder="Start typing here..." autocomplete="off" autocapitalize="off" spellcheck="false"></textarea>
+        <div class="tool-stats three">
+          <div><span class="ts-num" id="ttTime">60</span><span class="ts-label">Seconds left</span></div>
+          <div><span class="ts-num" id="ttWpm">0</span><span class="ts-label">WPM</span></div>
+          <div><span class="ts-num" id="ttAcc">100%</span><span class="ts-label">Accuracy</span></div>
+        </div>
+        <p class="tool-price" id="ttResult" role="status" aria-live="polite">Your rank will appear here.</p>
+        <p class="tool-actions">
+          <button class="btn btn-ghost" type="button" id="ttRestart">RESTART</button>
+          <button class="btn btn-ghost" type="button" id="ttNew">NEW TEXT</button>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
 </main>
 
 <!-- ================= FOOTER / ABOUT ================= -->
@@ -317,6 +361,7 @@
         <li><a href="#technology">Technology</a></li>
         <li><a href="#quiz">Quiz</a></li>
         <li><a href="#signal">Signal</a></li>
+        <li><a href="#tools">Tools</a></li>
       </ul>
     </nav>
     <div>

@@ -745,3 +745,132 @@
   }
 
 })();
+
+/* ---------- Tools: word counter + typing test ---------- */
+(function () {
+  "use strict";
+
+  /* Word counter — counts words/chars/sentences and prices the text
+     at the writer's rate of Rs 1,000 per 1,000 words (= Rs 1 per word). */
+  var wcInput = document.getElementById("wcInput");
+  if (wcInput) {
+    var wcWords = document.getElementById("wcWords"),
+        wcChars = document.getElementById("wcChars"),
+        wcSentences = document.getElementById("wcSentences"),
+        wcRead = document.getElementById("wcRead"),
+        wcPrice = document.getElementById("wcPrice");
+    function wcUpdate() {
+      var text = wcInput.value;
+      var trimmed = text.trim();
+      var words = trimmed ? trimmed.split(/\s+/).length : 0;
+      var sentences = trimmed ? trimmed.split(/[.!?؟۔]+/).filter(function (s) { return s.trim().length > 0; }).length : 0;
+      var mins = words / 180;
+      wcWords.textContent = words;
+      wcChars.textContent = text.length;
+      wcSentences.textContent = sentences;
+      wcRead.textContent = words === 0 ? "0 min" : (mins < 1 ? "<1 min" : Math.round(mins) + " min");
+      wcPrice.textContent = "Rs " + words.toLocaleString();
+    }
+    wcInput.addEventListener("input", wcUpdate);
+    wcUpdate();
+  }
+
+  /* Typing test — 60 seconds, clock starts on the first keystroke.
+     WPM = (correct characters / 5) / minutes. Paste is blocked. */
+  var ttInput = document.getElementById("ttInput");
+  if (ttInput) {
+    var samples = [
+      "The quick brown fox jumps over the lazy dog while the bright sun rises over the quiet hills of the north.",
+      "Technology is not just about machines and wires; it is about ideas that travel faster than light and change every life they touch.",
+      "Practice makes the fingers remember what the mind already knows, so type a little every day and watch your speed grow.",
+      "A good writer counts words the way a careful shopkeeper counts coins, because every word must earn its place on the page."
+    ];
+    var ttSample = document.getElementById("ttSample"),
+        ttTime = document.getElementById("ttTime"),
+        ttWpm = document.getElementById("ttWpm"),
+        ttAcc = document.getElementById("ttAcc"),
+        ttResult = document.getElementById("ttResult"),
+        ttRestart = document.getElementById("ttRestart"),
+        ttNew = document.getElementById("ttNew");
+    var sampleIdx = 0, sample = "", started = false, finished = false,
+        startTime = 0, timerId = null, TIME_LIMIT = 60;
+
+    function renderSample() {
+      var typed = ttInput.value;
+      ttSample.textContent = "";
+      for (var i = 0; i < sample.length; i++) {
+        var span = document.createElement("span");
+        span.textContent = sample[i];
+        if (i < typed.length) span.className = typed[i] === sample[i] ? "ok" : "bad";
+        ttSample.appendChild(span);
+      }
+    }
+    function correctChars() {
+      var typed = ttInput.value, n = 0;
+      for (var i = 0; i < typed.length && i < sample.length; i++) {
+        if (typed[i] === sample[i]) n++;
+      }
+      return n;
+    }
+    function elapsedSec() { return started ? (Date.now() - startTime) / 1000 : 0; }
+    function liveStats() {
+      var typedLen = ttInput.value.length;
+      var corr = correctChars();
+      var mins = elapsedSec() / 60;
+      var wpm = mins > 0 ? Math.round((corr / 5) / mins) : 0;
+      var acc = typedLen ? Math.round((corr / typedLen) * 100) : 100;
+      ttWpm.textContent = wpm;
+      ttAcc.textContent = acc + "%";
+      return { wpm: wpm, acc: acc };
+    }
+    function rankFor(wpm) {
+      if (wpm < 15) return "TURTLE — every master started slow. Keep going!";
+      if (wpm < 25) return "STEADY — the grid feels your rhythm.";
+      if (wpm < 35) return "SWIFT — your fingers are waking up.";
+      if (wpm < 45) return "RAPID — seriously quick. The grid approves.";
+      return "LIGHTNING — elite speed. NEXA is impressed.";
+    }
+    function finish() {
+      if (finished) return;
+      finished = true;
+      if (timerId) { clearInterval(timerId); timerId = null; }
+      ttInput.disabled = true;
+      var s = liveStats();
+      ttTime.textContent = Math.max(0, TIME_LIMIT - Math.floor(elapsedSec()));
+      ttResult.textContent = "Time! " + s.wpm + " WPM · " + s.acc + "% accuracy · Rank: " + rankFor(s.wpm);
+    }
+    function tick() {
+      var left = TIME_LIMIT - Math.floor(elapsedSec());
+      ttTime.textContent = Math.max(0, left);
+      liveStats();
+      if (left <= 0) finish();
+    }
+    function reset(newText) {
+      if (timerId) { clearInterval(timerId); timerId = null; }
+      if (newText) sampleIdx = (sampleIdx + 1) % samples.length;
+      sample = samples[sampleIdx];
+      ttInput.value = "";
+      ttInput.disabled = false;
+      started = false; finished = false;
+      ttTime.textContent = TIME_LIMIT;
+      ttWpm.textContent = "0";
+      ttAcc.textContent = "100%";
+      ttResult.textContent = "Your rank will appear here.";
+      renderSample();
+    }
+    ttInput.addEventListener("input", function () {
+      if (finished) return;
+      if (!started) {
+        started = true; startTime = Date.now();
+        timerId = setInterval(tick, 250);
+      }
+      renderSample();
+      liveStats();
+      if (ttInput.value.length >= sample.length) finish();
+    });
+    ttInput.addEventListener("paste", function (e) { e.preventDefault(); });
+    ttRestart.addEventListener("click", function () { reset(false); ttInput.focus(); });
+    ttNew.addEventListener("click", function () { reset(true); ttInput.focus(); });
+    reset(false);
+  }
+})();

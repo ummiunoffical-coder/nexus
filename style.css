@@ -474,3 +474,23 @@ a{color:var(--cyan)}
 .music-btn .music-state{color:var(--muted)}
 .music-btn.on{color:#37ff9a;border-color:rgba(55,255,154,.5)}
 .music-btn.on .music-state{color:#37ff9a}
+
+/* ---------- Tools ---------- */
+.tools-grid{display:grid;gap:1.4rem;margin-top:2.2rem}
+@media (min-width:900px){.tools-grid{grid-template-columns:1fr 1fr}}
+.tool-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:1.5rem;backdrop-filter:blur(8px)}
+.tool-title{font-size:1.25rem;margin-bottom:.4rem}
+.tool-sub{color:var(--muted);font-size:.92rem;margin-bottom:1rem}
+.tool-area{width:100%;font-family:var(--font);font-size:.95rem;color:var(--ink);background:rgba(3,10,20,.55);border:1px solid var(--line);border-radius:12px;padding:.8rem .9rem;resize:vertical}
+.tool-area:focus{outline:none;border-color:var(--cyan)}
+.tool-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:.6rem;margin-top:1rem;text-align:center}
+.tool-stats.three{grid-template-columns:repeat(3,1fr)}
+.tool-stats>div{background:rgba(3,10,20,.45);border:1px solid var(--line);border-radius:12px;padding:.55rem .2rem}
+.ts-num{display:block;font-size:1.15rem;font-weight:800;color:var(--cyan)}
+.ts-label{display:block;font-size:.68rem;letter-spacing:.08em;color:var(--muted);margin-top:.15rem;text-transform:uppercase}
+.tool-price{margin-top:1rem;color:var(--muted);font-size:.95rem}
+.tool-price strong{color:#37ff9a}
+.type-sample{font-size:1.02rem;line-height:1.7;background:rgba(3,10,20,.45);border:1px solid var(--line);border-radius:12px;padding:.8rem .9rem;margin-bottom:.8rem;user-select:none}
+.type-sample .ok{color:#37ff9a}
+.type-sample .bad{color:#ff5d7a}
+.tool-actions{display:flex;gap:.7rem;margin-top:1rem;flex-wrap:wrap}
