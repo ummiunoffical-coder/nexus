@@ -421,13 +421,13 @@
     { keys: ["who made", "who built", "who created", "creator", "developer", "owner"],
       reply: "NEXUS was crafted with plain HTML, CSS and JavaScript — no frameworks, no build tools — as a tribute to the neon futures we were promised, and the real one we are building." },
     { keys: ["section", "sections", "pages", "navigate", "menu", "where", "explore"],
-      reply: "The grid has six stops: <a href=\"#home\">Home</a> — the neon city and the robot; <a href=\"#explore\">Explore</a> — three briefings (AI, Digital Worlds, Future Technology); <a href=\"#technology\">Technology</a> — the NEXUS Core; <a href=\"#quiz\">The Grid Test</a> — a five-question quiz; <a href=\"#signal\">Signal</a> — send the keeper a message; and the <a href=\"#poster\">Poster</a>. Tap any briefing card to open it." },
+      reply: "The grid has six stops: <a href=\"#home\">Home</a> — the neon city and the robot; <a href=\"#explore\">Explore</a> — three briefings (AI, Digital Worlds, Future Technology); <a href=\"#technology\">Technology</a> — the NEXUS Core; <a href=\"#quiz\">The Grid Test</a> — a five-question quiz; <a href=\"#signal\">Signal</a> — send the keeper a message; and <a href=\"#tools\">Tools</a> — a word counter and a typing test. Tap any briefing card to open it." },
     { keys: ["poster", "wallpaper", "image of nexa", "picture of nexa"],
-      reply: "The official NEXUS poster — NEXA standing in the neon rain — hangs in the <a href=\"#poster\">Poster section</a>. You can download it there, full size." },
+      reply: "The official NEXUS poster — NEXA standing in the neon rain — is the artwork this site shares with the world: it appears whenever the NEXUS link is posted. You can open it full size here: <a href=\"poster.jpg\">poster.jpg</a>." },
     { keys: ["quiz", "game", "play", "test me", "grid test", "khelo"],
       reply: "The Grid Test awaits in the <a href=\"#quiz\">Quiz section</a> — five questions from the future, with a rank at the end. Grid Master is harder to earn than it looks." },
     { keys: ["music", "sound", "ambience", "ambient", "song", "audio"],
-      reply: "Tap the AMBIENCE button at the bottom-left of the page. A soft synth pad fades in — generated live in your browser with the Web Audio API, no audio files at all. Tap again to mute it." },
+      reply: "Tap the AMBIENCE button in the footer, under Status. A soft synth pad fades in — generated live in your browser with the Web Audio API, no audio files at all. Tap again to mute it." },
     { keys: ["joke", "funny"],
       reply: "Why did the robot apply for a job at NEXUS? It heard the position had great current — and unlimited charge breaks." },
     { keys: ["time", "clock", "waqt kya"],
@@ -454,9 +454,9 @@
     { keys: ["پیغام", "سگنل", "رابطہ", "ای میل"], reply: "پیغام بھیجنے کے لیے صفحے میں 'Join the transmission' والے حصے تک جائیں اور اپنا نام، ای میل اور پیغام لکھ کر TRANSMIT دبائیں۔ پیغام سیدھا ویب سائٹ کے رکھوالے کے ان باکس میں پہنچتا ہے اور وہ آپ کی ای میل پر جواب دے سکتے ہیں۔" },
     { keys: ["مفت", "قیمت", "پیسے", "خرچ"], reply: "نیکسس بالکل مفت ہے: نہ ڈاؤن لوڈ، نہ سائن اپ، نہ اکاؤنٹ، نہ کچھ خریدنا۔ پورا تجربہ آپ کے براؤزر میں چلتا ہے۔" },
     { keys: ["تم کون", "آپ کون", "نام کیا", "نیکسا کون"], reply: "میں نیکسا ہوں، اس گرڈ کی دوستانہ رہنما روبوٹ — وہی روبوٹ جو صفحے کے اوپر والے حصے میں نظر آتی ہے۔ میرا کام نیکسس کے بارے میں آپ کے سوالوں کے جواب دینا ہے۔" },
-    { keys: ["پوسٹر", "تصویر"], reply: "نیکسس کا سرکاری پوسٹر — نیون بارش میں کھڑی نیکسا — صفحے کے 'Official Poster' حصے میں لگا ہے۔ وہاں سے پوری سائز میں ڈاؤن لوڈ بھی ہو سکتا ہے۔" },
+    { keys: ["پوسٹر", "تصویر"], reply: "نیکسس کا سرکاری پوسٹر — نیون بارش میں کھڑی نیکسا — اسی ویب سائٹ کی پہچان ہے: جب بھی نیکسس کا لنک شیئر ہوتا ہے، یہی تصویر ساتھ نظر آتی ہے۔" },
     { keys: ["کوئز", "کھیل"], reply: "صفحے میں 'The Grid Test' کے نام سے پانچ سوالوں کا کوئز ہے — آخر میں آپ کا رینک بھی ملتا ہے۔ گرڈ ماسٹر بننا لگتا آسان ہے، ہوتا نہیں۔" },
-    { keys: ["موسیقی", "آواز", "گانا", "دھن"], reply: "صفحے کے نیچے بائیں کونے میں AMBIENCE بٹن ہے۔ اسے دبائیں تو ہلکی سی پس منظر دھن شروع ہو جاتی ہے، جو اسی براؤزر میں لائیو بنتی ہے — کوئی آڈیو فائل استعمال نہیں ہوتی۔" },
+    { keys: ["موسیقی", "آواز", "گانا", "دھن"], reply: "صفحے کے آخر میں Status والے حصے میں AMBIENCE بٹن ہے۔ اسے دبائیں تو ہلکی سی پس منظر دھن شروع ہو جاتی ہے، جو اسی براؤزر میں لائیو بنتی ہے — کوئی آڈیو فائل استعمال نہیں ہوتی۔" },
     { keys: ["لطیفہ", "مذاق"], reply: "روبوٹ نے نیکسس میں نوکری کیوں لی؟ کیونکہ یہاں کرنٹ بھی ملتا ہے اور چارج ہونے کی چھٹی بھی!" },
     { keys: ["وقت"], reply: "گرڈ کا وقت آپ کا مقامی وقت ہے — صفحے کے آخر میں گھڑی لائیو چل رہی ہے۔ اس وقت وقت ہے: TIME_NOW" },
     { keys: ["شکریہ"], reply: "کوئی بات نہیں! آپ کی موجودگی سے اس گرڈ کی روشنی بڑھ جاتی ہے۔" },
@@ -781,6 +781,41 @@
     }
     wcInput.addEventListener("input", wcUpdate);
     wcUpdate();
+
+    /* Copy result — copies the current stats as one line of text,
+       handy for quoting a piece's word count and price. */
+    var wcCopy = document.getElementById("wcCopy"),
+        wcCopyMsg = document.getElementById("wcCopyMsg");
+    if (wcCopy && wcCopyMsg) {
+      var wcCopyTimer = null;
+      wcCopy.addEventListener("click", function () {
+        var summary = "Words: " + wcWords.textContent +
+          " · Characters: " + wcChars.textContent +
+          " · Sentences: " + wcSentences.textContent +
+          " · Reading time: " + wcRead.textContent +
+          " · Writing value: " + wcPrice.textContent +
+          " (at Rs 1,000 per 1,000 words)";
+        function done(ok) {
+          wcCopyMsg.textContent = ok ? "Copied ✓" : "Copy failed — your browser blocked it.";
+          clearTimeout(wcCopyTimer);
+          wcCopyTimer = setTimeout(function () { wcCopyMsg.textContent = ""; }, 2600);
+        }
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(summary).then(function () { done(true); }, function () { done(false); });
+        } else {
+          var ta = document.createElement("textarea");
+          ta.value = summary;
+          ta.style.position = "fixed";
+          ta.style.opacity = "0";
+          document.body.appendChild(ta);
+          ta.select();
+          var okCopy = false;
+          try { okCopy = document.execCommand("copy"); } catch (e) { okCopy = false; }
+          document.body.removeChild(ta);
+          done(okCopy);
+        }
+      });
+    }
   }
 
   /* Typing test — 60 seconds, clock starts on the first keystroke.
