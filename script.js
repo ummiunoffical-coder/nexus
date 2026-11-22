@@ -9,7 +9,8 @@
    10) The Grid Test quiz · 11) Ambience synth
    12) Signal of the Day · 13) Language toggle EN/اردو
    A second block at the end holds the Toolkit: the typing
-   test and the study timer.
+   test, the study timer and three local AI tools (text
+   summarizer, sentiment analyzer, prompt generator).
    Everything is dependency-free. If canvas is missing, the
    CSS gradient sky + SVG robot still carry the hero.
    ============================================================ */
@@ -103,7 +104,7 @@
       "updates.note": "One email when something new lands on the grid. Powered by Buttondown.",
       "tools.kicker": "05 · TOOLKIT",
       "tools.title": "Tools that <span class=\"grad-text\">work</span>",
-      "tools.sub": "Two instruments from the grid, free for every traveller: a typing test that times your fingers, and a study timer that guards your focus.",
+      "tools.sub": "Five instruments from the grid, free for every traveller: a typing test, a study timer, a text summariser, a sentiment analyser and a prompt generator for image AIs.",
       "typing.title": "Typing Test",
       "typing.sub": "Type the line below as fast as you can. The clock starts with your first keystroke — 60 seconds on the grid.",
       "typing.inputPh": "Start typing here...",
@@ -132,6 +133,46 @@
       "study.running": "Running — the grid is keeping time. Eyes on the work, traveller.",
       "study.paused": "Paused — your remaining time is held exactly where you left it.",
       "study.done": "Time up! Session complete — stretch, breathe and let the grid recharge.",
+      "summ.title": "Text Summarizer",
+      "summ.sub": "Paste any text — English or اردو — and the grid picks its most important sentences, right here in your browser. Nothing is uploaded anywhere.",
+      "summ.inputPh": "Paste the text to summarise...",
+      "summ.lenShort": "SHORT · TOP 3",
+      "summ.lenLong": "LONG · TOP 5",
+      "summ.btn": "SUMMARISE",
+      "summ.idle": "Your summary will appear here.",
+      "summ.tooShort": "That text is too short to summarise — paste a longer text with more sentences and try again.",
+      "summ.stat": "Summary: {kept} of {total} sentences kept.",
+      "sent.title": "Sentiment Analyzer",
+      "sent.sub": "How does a text feel? Paste English, Roman Urdu or اردو and the grid reads its mood from the words themselves.",
+      "sent.inputPh": "Paste a sentence, a review, a message...",
+      "sent.btn": "ANALYSE",
+      "sent.idle": "The verdict will appear here.",
+      "sent.empty": "Paste some text first — the grid needs words to read.",
+      "sent.positive": "POSITIVE",
+      "sent.negative": "NEGATIVE",
+      "sent.neutral": "NEUTRAL",
+      "sent.mixed": "MIXED",
+      "sent.result": "{verdict} — score {score} ({pos} positive · {neg} negative words)",
+      "prompt.title": "AI Prompt Generator",
+      "prompt.sub": "Describe a scene, pick a style and a light, and the grid writes a polished prompt for image generators. The prompt itself stays in English — that is the language image AIs understand best.",
+      "prompt.subjectPh": "e.g. a lighthouse on a cliff at dawn",
+      "prompt.styleLabel": "Style",
+      "prompt.lightLabel": "Lighting / mood",
+      "prompt.styleCinematic": "Cinematic",
+      "prompt.stylePhotoreal": "Photoreal",
+      "prompt.styleAnime": "Anime",
+      "prompt.styleDigital": "Digital Art",
+      "prompt.style3d": "3D Render",
+      "prompt.lightGolden": "Golden hour",
+      "prompt.lightNeon": "Neon night",
+      "prompt.lightDaylight": "Soft daylight",
+      "prompt.lightDramatic": "Dramatic shadows",
+      "prompt.btn": "GENERATE PROMPT",
+      "prompt.copy": "COPY",
+      "prompt.copied": "✓ Prompt copied — paste it into your image generator.",
+      "prompt.outputPh": "Your prompt will appear here...",
+      "prompt.idle": "Your prompt will appear here.",
+      "prompt.needSubject": "Describe the scene first — one line is enough.",
       "footer.about": "NEXUS is a concept experience crafted with plain HTML, CSS and JavaScript. Built as a tribute to the neon futures we were promised — and the real one we are building.",
       "footer.navigate": "Navigate",
       "footer.navHome": "Home",
@@ -223,7 +264,7 @@
       "updates.note": "جب بھی گرڈ پر کچھ نیا آئے گا، ایک ای میل ملے گی۔ Buttondown کے ذریعے۔",
       "tools.kicker": "05 · ٹول کٹ",
       "tools.title": "اوزار جو <span class=\"grad-text\">کام</span> کرتے ہیں",
-      "tools.sub": "گرڈ کے دو اوزار، ہر مسافر کے لیے مفت: ٹائپنگ ٹیسٹ جو آپ کی انگلیوں کا وقت ناپتا ہے، اور اسٹڈی ٹائمر جو آپ کی توجہ کی حفاظت کرتا ہے۔",
+      "tools.sub": "گرڈ کے پانچ اوزار، ہر مسافر کے لیے مفت: ٹائپنگ ٹیسٹ، اسٹڈی ٹائمر، متن کا خلاصہ بنانے والا، جذبات کا تجزیہ کرنے والا اور تصویری اے آئی کے لیے پرامپٹ بنانے والا۔",
       "typing.title": "ٹائپنگ ٹیسٹ",
       "typing.sub": "نیچے والی سطر جتنی تیزی سے ہو سکے لکھیں۔ گھڑی آپ کے پہلے حرف سے شروع ہوتی ہے — گرڈ پر 60 سیکنڈ۔",
       "typing.inputPh": "یہاں لکھنا شروع کریں...",
@@ -252,6 +293,46 @@
       "study.running": "چل رہا ہے — گرڈ وقت کی نگرانی کر رہا ہے۔ نگاہیں کام پر، مسافر۔",
       "study.paused": "رکا ہوا — آپ کا باقی وقت بالکل وہیں محفوظ ہے جہاں چھوڑا تھا۔",
       "study.done": "وقت ختم! نشست مکمل — کھینچیں، سانس لیں اور گرڈ کو توانائی بھرنے دیں۔",
+      "summ.title": "خلاصہ ساز",
+      "summ.sub": "کوئی بھی متن — انگریزی یا اردو — یہاں لگائیں، اور گرڈ اس کے اہم ترین جملے چن دے گا، بالکل آپ کے براؤزر کے اندر۔ کچھ بھی کہیں اپ لوڈ نہیں ہوتا۔",
+      "summ.inputPh": "خلاصہ بنانے کے لیے متن یہاں لگائیں...",
+      "summ.lenShort": "مختصر · اہم 3",
+      "summ.lenLong": "تفصیلی · اہم 5",
+      "summ.btn": "خلاصہ بنائیں",
+      "summ.idle": "آپ کا خلاصہ یہاں ظاہر ہوگا۔",
+      "summ.tooShort": "یہ متن خلاصے کے لیے بہت چھوٹا ہے — زیادہ جملوں والا لمبا متن لگائیں اور دوبارہ کوشش کریں۔",
+      "summ.stat": "خلاصہ: {total} میں سے {kept} جملے رکھے گئے۔",
+      "sent.title": "جذبات کا تجزیہ",
+      "sent.sub": "متن کا مزاج کیا ہے؟ انگریزی، رومن اردو یا اردو لگائیں — گرڈ اس کے الفاظ سے اس کا موڈ پڑھے گا۔",
+      "sent.inputPh": "کوئی جملہ، تبصرہ یا پیغام لگائیں...",
+      "sent.btn": "تجزیہ کریں",
+      "sent.idle": "فیصلہ یہاں ظاہر ہوگا۔",
+      "sent.empty": "پہلے کچھ متن لگائیں — پڑھنے کے لیے گرڈ کو الفاظ چاہئیں۔",
+      "sent.positive": "مثبت",
+      "sent.negative": "منفی",
+      "sent.neutral": "غیر جانبدار",
+      "sent.mixed": "ملا جلا",
+      "sent.result": "{verdict} — اسکور {score} ({pos} مثبت · {neg} منفی الفاظ)",
+      "prompt.title": "اے آئی پرامپٹ جنریٹر",
+      "prompt.sub": "منظر بیان کریں، انداز اور روشنی چنیں — گرڈ تصویری جنریٹرز کے لیے شاندار پرامپٹ لکھ دے گا۔ پرامپٹ خود انگریزی میں رہتا ہے، کیونکہ تصویری اے آئی اسی زبان کو سب سے بہتر سمجھتی ہے۔",
+      "prompt.subjectPh": "مثلاً سمندر کنارے ایک قلعہ",
+      "prompt.styleLabel": "انداز",
+      "prompt.lightLabel": "روشنی / مزاج",
+      "prompt.styleCinematic": "سنیمائی",
+      "prompt.stylePhotoreal": "حقیقی تصویر جیسا",
+      "prompt.styleAnime": "انیمے",
+      "prompt.styleDigital": "ڈیجیٹل آرٹ",
+      "prompt.style3d": "تھری ڈی رینڈر",
+      "prompt.lightGolden": "سنہری شام",
+      "prompt.lightNeon": "نیون رات",
+      "prompt.lightDaylight": "نرم دن کی روشنی",
+      "prompt.lightDramatic": "ڈرامائی سائے",
+      "prompt.btn": "پرامپٹ بنائیں",
+      "prompt.copy": "کاپی کریں",
+      "prompt.copied": "✓ پرامپٹ کاپی ہو گیا — اپنے امیج جنریٹر میں لگا دیں۔",
+      "prompt.outputPh": "آپ کا پرامپٹ یہاں ظاہر ہوگا...",
+      "prompt.idle": "آپ کا پرامپٹ یہاں ظاہر ہوگا۔",
+      "prompt.needSubject": "پہلے منظر بیان کریں — ایک سطر کافی ہے۔",
       "footer.about": "نیکسس سادہ HTML، CSS اور JavaScript سے تیار کردہ ایک تصوراتی تجربہ ہے۔ یہ ان نیون مستقبلوں کی یاد میں بنایا گیا جن کا وعدہ کیا گیا تھا — اور اس اصل مستقبل کے لیے جو ہم خود بنا رہے ہیں۔",
       "footer.navigate": "رہنمائی",
       "footer.navHome": "ہوم",
@@ -744,7 +825,7 @@
     { topic: "creator", keys: ["who made", "who built", "who created", "creator", "developer", "owner", "umair", "kis ne banaya", "kisne banaya"],
       reply: "NEXUS was built by Umair — crafted with plain HTML, CSS and JavaScript, no frameworks and no build tools — as a tribute to the neon futures we were promised, and the real one we are building." },
     { topic: "sections", keys: ["section", "sections", "pages", "navigate", "menu", "where", "explore"],
-      reply: "The grid has six stops: <a href=\"#home\">Home</a> — the neon city and the robot; <a href=\"#explore\">Explore</a> — three briefings (AI, Digital Worlds, Future Technology); <a href=\"#technology\">Technology</a> — the NEXUS Core; <a href=\"#quiz\">The Grid Test</a> — a five-question quiz; <a href=\"#signal\">Signal</a> — send the keeper a message; and <a href=\"#tools\">Tools</a> — the typing test and the study timer. Tap any briefing card to open it." },
+      reply: "The grid has six stops: <a href=\"#home\">Home</a> — the neon city and the robot; <a href=\"#explore\">Explore</a> — three briefings (AI, Digital Worlds, Future Technology); <a href=\"#technology\">Technology</a> — the NEXUS Core; <a href=\"#quiz\">The Grid Test</a> — a five-question quiz; <a href=\"#signal\">Signal</a> — send the keeper a message; and <a href=\"#tools\">Tools</a> — five instruments, from the typing test to the AI prompt generator. Tap any briefing card to open it." },
     { topic: "poster", keys: ["poster", "wallpaper", "image of nexa", "picture of nexa"],
       reply: "The official NEXUS poster — NEXA standing in the neon rain — is the artwork this site shares with the world: it appears whenever the NEXUS link is posted. You can open it full size here: <a href=\"poster.jpg\">poster.jpg</a>." },
     { topic: "quiz", keys: ["quiz", "game", "play", "test me", "grid test", "khelo", "rank", "score"],
@@ -770,10 +851,19 @@
       reply: "The Typing Test is in the <a href=\"#tools\">Toolkit</a>: type the sample line as fast as you can — the 60-second clock starts on your first keystroke. It scores your WPM and accuracy, then gives you a grid rank. Restart or pull a new text anytime." ,
       more: "Extra signal: the test quietly punishes random speed — accuracy is counted on every keystroke, so one wild burst can drag your score down. The pros chase rhythm, not bursts: steady, even keystrokes at a pace you can hold for the full sixty seconds. Your rank reflects both." },
     { topic: "tools", keys: ["tools", "toolkit", "tool", "instruments", "auzar", "kaun se tools"],
-      reply: "The <a href=\"#tools\">Toolkit</a> holds two instruments, free for every traveller: a 60-second Typing Test that measures your speed and accuracy and gives you a grid rank, and a Study Timer for focused work — 25, 15 or 5 minutes, with a soft chime when time is up. Scroll down and try to beat your own signal." },
+      reply: "The <a href=\"#tools\">Toolkit</a> holds five instruments, free for every traveller: a 60-second Typing Test, a Study Timer, a Text Summarizer, a Sentiment Analyzer and an AI Prompt Generator. Scroll down and try to beat your own signal." },
     { topic: "study-timer", keys: ["study timer", "pomodoro", "focus timer", "timer", "parhai ka timer", "timer lagana", "study"],
       reply: "The Study Timer sits in the <a href=\"#tools\">Toolkit</a>, right beside the Typing Test. Choose your length — FOCUS 25 minutes, SPRINT 15, or BREAK 5 — then press START. PAUSE holds your remaining time exactly where you left it, RESET restores the full length, and when the countdown reaches zero a soft chime announces: time up. Built for travellers who study like they mean it." ,
       more: "Why the odd numbers? The 25/5 rhythm comes from the Pomodoro technique: short sprints with real breaks keep the brain fresher than one long grind. The 15-minute SPRINT exists for revision bursts, and BREAK is a genuine break — stand up, look far away, and let the chime call you back." },
+    { topic: "summarizer", keys: ["summarizer", "summarise", "summarize", "summary", "summariser", "text summary"],
+      reply: "The Text Summarizer lives in the <a href=\"#tools\">Toolkit</a>: paste any text — English or اردو — choose SHORT (top 3 sentences) or LONG (top 5), and it picks the most important sentences by word frequency, right in your browser. Nothing is uploaded anywhere." ,
+      more: "How it thinks: it counts how often each meaningful word appears across your text, scores every sentence by the weight of its words, and keeps the highest scorers in their original order. It is extractive — it never invents sentences, it only chooses. Dense sentences beat rambling ones, which is why it quietly rewards clear writing." },
+    { topic: "sentiment", keys: ["sentiment", "mood analyzer", "mood analyser", "emotion analyzer", "sentiment analyzer"],
+      reply: "The Sentiment Analyzer is in the <a href=\"#tools\">Toolkit</a>: paste a sentence, a review or a message — English, Roman Urdu or اردو — and it reads the mood from the words themselves, giving you a verdict (Positive, Negative, Neutral or Mixed), a score and a balance meter." ,
+      more: "Its method is a lexicon: lists of positive and negative words in English, Roman Urdu and Urdu script. Every matching word moves the score, and if both sides score, the verdict is Mixed. It reads words, not sarcasm — a glowing review written deadpan will fool it, which is exactly the kind of limit worth knowing." },
+    { topic: "prompt-generator", keys: ["prompt generator", "image prompt", "ai prompt", "prompt", "prompts"],
+      reply: "The AI Prompt Generator waits in the <a href=\"#tools\">Toolkit</a>: describe a scene in one line, pick a style (Cinematic, Photoreal, Anime, Digital Art or 3D Render) and a lighting mood, and it composes a polished English prompt you can copy straight into an image generator." ,
+      more: "Why English? Image models are trained mostly on English captions, so an English prompt simply lands better — the generator writes in English even when the site is in Urdu mode. The recipe is subject + style descriptors + lighting + quality tags; change one ingredient at a time and watch the picture change." },
     { topic: "share", keys: ["share", "whatsapp", "send link", "share kaise", "share karna", "dost ko bhejna", "share on whatsapp"],
       reply: "Use the SHARE button in the <a href=\"#home\">hero</a> — it opens WhatsApp with the NEXUS link ready to send, and the official poster appears as the preview. Or just copy this page's address and pass it on; the future travels fast." },
     { topic: "how-are-you", keys: ["how are you", "how r you", "kaise ho", "kya haal", "haal kaisa"],
@@ -843,15 +933,21 @@
     { topic: "thanks", keys: ["شکریہ"], reply: "کوئی بات نہیں! آپ کی موجودگی سے اس گرڈ کی روشنی بڑھ جاتی ہے۔" },
     { topic: "help", keys: ["مدد", "کیا کر سکت"], reply: "میں نیکسس کے بارے میں سوالوں کے جواب دیتا ہوں۔ آزمائیں: نیکسس کیا ہے؟ مصنوعی ذہانت کیا ہے؟ پیغام کیسے بھیجیں؟ کوئز کہاں ہے؟ پوسٹر کہاں ہے؟" },
     { topic: "nexus", keys: ["نیکسس"], reply: "نیکسس ایک تجرباتی ڈیجیٹل تجربہ ہے — نیون روشنیوں، مصنوعی ذہانت اور مستقبل کی ٹیکنالوجی کی ایک جھلک۔ کچھ خاص پوچھنا ہو تو بتائیں: مصنوعی ذہانت، ڈیجیٹل دنیائیں، کوئز یا سگنل فارم؟" },
-    { topic: "tools", keys: ["اوزار", "ٹولز", "ٹول", "اوزار کیا"], reply: "صفحے کے 'Toolkit' حصے میں دو اوزار ہیں، ہر مسافر کے لیے مفت: ٹائپنگ ٹیسٹ — جو ساٹھ سیکنڈ میں آپ کی ٹائپنگ کی رفتار اور درستگی ناپتا ہے اور آخر میں رینک بھی دیتا ہے — اور اسٹڈی ٹائمر، جو توجہ سے پڑھائی کے لیے 25، 15 یا 5 منٹ گنتا ہے اور وقت پورا ہونے پر ہلکی گھنٹی بجاتا ہے۔" },
+    { topic: "tools", keys: ["اوزار", "ٹولز", "ٹول", "اوزار کیا"], reply: "صفحے کے 'Toolkit' حصے میں پانچ اوزار ہیں، ہر مسافر کے لیے مفت: ٹائپنگ ٹیسٹ — جو ساٹھ سیکنڈ میں آپ کی رفتار اور درستگی ناپتا ہے — اسٹڈی ٹائمر، خلاصہ ساز، جذبات کا تجزیہ اور اے آئی پرامپٹ جنریٹر۔" },
     { topic: "study-timer", keys: ["اسٹڈی ٹائمر", "پڑھائی کا ٹائمر", "ٹائمر", "پومودورو", "فوکس ٹائمر"], reply: "اسٹڈی ٹائمر صفحے کے 'Toolkit' حصے میں ہے، ٹائپنگ ٹیسٹ کے بالکل ساتھ۔ پہلے وقت چنیں — 25 منٹ توجہ (FOCUS)، 15 منٹ کی مختصر نشست (SPRINT)، یا 5 منٹ کا وقفہ (BREAK) — پھر START دبائیں۔ PAUSE باقی وقت کو بالکل وہیں روک دیتا ہے جہاں چھوڑا تھا، RESET پوری مدت بحال کر دیتا ہے، اور گنتی صفر پر پہنچے تو ہلکی سی گھنٹی بجتی ہے: وقت ختم!" ,
       more: "یہ عجیب اعداد کیوں؟ 25 اور 5 کی یہ تال پومودورو طریقے سے آئی ہے: مختصر دوڑ اور اصل وقفے دماغ کو ایک لمبی نشست سے زیادہ تازہ رکھتے ہیں۔ 15 منٹ کی SPRINT دہرائی کے لیے ہے، اور BREAK واقعی وقفہ ہے — اٹھیں، دور دیکھیں، گھنٹی خود بلا لے گی۔" },
     { topic: "typing", keys: ["ٹائپنگ", "ٹائپ کرنے", "رفتار کا ٹیسٹ"], reply: "ٹائپنگ ٹیسٹ 'Toolkit' حصے میں ہے: دی گئی سطر جتنی تیزی سے لکھ سکیں لکھیں — ساٹھ سیکنڈ کی گھڑی پہلے حرف سے شروع ہوتی ہے۔ آخر میں آپ کی رفتار (WPM)، درستگی اور رینک ملتا ہے۔" ,
       more: "ایک اضافی اشارہ: یہ ٹیسٹ اندھا دھند رفتار کو سزا دیتا ہے — درستگی ہر حرف پر گنی جاتی ہے، اس لیے ایک تیز جھٹکا آپ کا سکور گرا سکتا ہے۔ ماہرین رفتار نہیں، تال پکڑتے ہیں: یکساں اور پُرسکون ضربیں، جو پورے ساٹھ سیکنڈ برقرار رہیں۔" },
+    { topic: "summarizer", keys: ["خلاصہ ساز", "خلاصہ بنانا", "خلاصہ"], reply: "خلاصہ ساز صفحے کے 'Toolkit' حصے میں ہے: کوئی بھی متن — انگریزی یا اردو — لگائیں، مختصر (اہم 3 جملے) یا تفصیلی (اہم 5 جملے) چنیں، اور یہ الفاظ کی تکرار ناپ کر اہم ترین جملے چن دے گا، بالکل آپ کے براؤزر کے اندر۔ کچھ بھی کہیں اپ لوڈ نہیں ہوتا۔" ,
+      more: "یہ سوچتا کیسے ہے؟ یہ گنتا ہے کہ آپ کے متن میں ہر بامعنی لفظ کتنی بار آیا، پھر ہر جملے کو اس کے الفاظ کے وزن سے اسکور دیتا ہے، اور سب سے بلند اسکور والے جملے اصل ترتیب میں رکھ لیتا ہے۔ یہ جملے ایجاد نہیں کرتا — صرف چنتا ہے۔ گھنے جملے لمبے بکھرے جملوں سے جیت جاتے ہیں، اسی لیے یہ خاموشی سے واضح لکھنے کی حوصلہ افزائی کرتا ہے۔" },
+    { topic: "sentiment", keys: ["جذبات کا تجزیہ", "جذبات", "مزاج کا تجزیہ"], reply: "جذبات کا تجزیہ 'Toolkit' حصے میں ہے: کوئی جملہ، تبصرہ یا پیغام لگائیں — انگریزی، رومن اردو یا اردو — اور یہ الفاظ سے اس کا مزاج پڑھ کر فیصلہ (مثبت، منفی، غیر جانبدار یا ملا جلا)، اسکور اور توازن میٹر دے گا۔" ,
+      more: "اس کا طریقہ لغت ہے: انگریزی، رومن اردو اور اردو رسم الخط میں مثبت و منفی الفاظ کی فہرستیں۔ ہر ملتا ہوا لفظ اسکور ہلاتا ہے، اور دونوں طرف اسکور آئے تو فیصلہ 'ملا جلا' ہوتا ہے۔ یہ الفاظ پڑھتا ہے، طنز نہیں — مردہ لہجے میں لکھی چمکتی تعریف اسے دھوکا دے سکتی ہے، اور یہی حد جاننا بھی ضروری ہے۔" },
+    { topic: "prompt-generator", keys: ["پرامپٹ جنریٹر", "پرامپٹ بنانا", "پرامپٹ", "تصویر کا پرامپٹ"], reply: "اے آئی پرامپٹ جنریٹر 'Toolkit' حصے میں ہے: ایک سطر میں منظر بیان کریں، انداز چنیں (سنیمائی، حقیقی تصویر جیسا، انیمے، ڈیجیٹل آرٹ یا تھری ڈی رینڈر) اور روشنی کا مزاج چنیں — یہ ایک شاندار انگریزی پرامپٹ بنا دے گا جسے کاپی کر کے سیدھا امیج جنریٹر میں لگا سکتے ہیں۔" ,
+      more: "انگریزی کیوں؟ تصویری ماڈلز زیادہ تر انگریزی کیپشنز پر تربیت پاتے ہیں، اس لیے انگریزی پرامپٹ بہتر نتیجہ دیتا ہے — یہی وجہ ہے کہ سائٹ اردو موڈ میں ہو تب بھی جنریٹر انگریزی میں لکھتا ہے۔ ترکیب یہ ہے: موضوع + انداز کی تفصیل + روشنی + معیار کے ٹیگز؛ ایک وقت میں ایک جز بدلیں اور تصویر بدلتی دیکھیں۔" },
     { topic: "creator", keys: ["کس نے بنایا", "بنانے والا", "عمیر", "تخلیق کار"], reply: "نیکسس عمیر نے بنایا ہے — سادہ HTML، CSS اور JavaScript سے، بغیر کسی فریم ورک کے۔ یہ ان نیون مستقبلوں کی یاد میں ہے جن کا وعدہ کیا گیا تھا، اور اس اصل مستقبل کے لیے جو ہم خود بنا رہے ہیں۔" },
     { topic: "share", keys: ["شیئر", "لنک بھیج", "دوست کو بھیج", "شیئر کیسے", "شیئر کرنا"], reply: "صفحے کے اوپر والے حصے میں SHARE بٹن ہے — اسے دبائیں تو WhatsApp میں نیکسس کا لنک بھیجنے کے لیے تیار ملتا ہے اور ساتھ سرکاری پوسٹر کی جھلک بھی نظر آتی ہے۔ یا بس اس صفحے کا پتہ کاپی کر کے آگے بھیج دیں۔" },
     { topic: "how-are-you", keys: ["کیسے ہو", "کیا حال", "خیریت"], reply: "میں بالکل ٹھیک ہوں — سارے نظام درست اور نیون روشن ہیں۔ آپ سنائیں، گرڈ کے اس پار کیا حال ہے؟" },
-    { topic: "sections", keys: ["حصے", "کون سے حصے", "سیکشن", "مینیو", "کے حصے"], reply: "اس صفحے کے چھ پڑاؤ ہیں: Home — نیون شہر اور روبوٹ؛ Explore — تین بریفنگز (مصنوعی ذہانت، ڈیجیٹل دنیائیں، مستقبل کی ٹیکنالوجی)؛ Technology — نیکسس Core؛ The Grid Test — پانچ سوالوں کا کوئز؛ Signal — رکھوالے کو پیغام؛ اور Tools — ٹائپنگ ٹیسٹ اور اسٹڈی ٹائمر۔" },
+    { topic: "sections", keys: ["حصے", "کون سے حصے", "سیکشن", "مینیو", "کے حصے"], reply: "اس صفحے کے چھ پڑاؤ ہیں: Home — نیون شہر اور روبوٹ؛ Explore — تین بریفنگز (مصنوعی ذہانت، ڈیجیٹل دنیائیں، مستقبل کی ٹیکنالوجی)؛ Technology — نیکسس Core؛ The Grid Test — پانچ سوالوں کا کوئز؛ Signal — رکھوالے کو پیغام؛ اور Tools — پانچ اوزار، ٹائپنگ ٹیسٹ سے اے آئی پرامپٹ جنریٹر تک۔" },
     { topic: "offline", keys: ["آف لائن", "بغیر انٹرنیٹ", "نیٹ نہیں"], reply: "اس صفحے کی تقریباً ہر چیز آپ کے براؤزر میں ہی بنتی ہے — شہر، کوئز، اوزار، دھن اور میرے جواب — اس لیے صفحہ ایک بار کھل جائے تو انٹرنیٹ کے بغیر بھی چلتا رہتا ہے۔ صرف سگنل فارم کو انٹرنیٹ چاہیے، کیونکہ پیغام رکھوالے کے ان باکس تک پہنچانا ہوتا ہے۔" },
     { topic: "sotd", keys: ["آج کا سگنل", "روز کا سگنل", "آج کا پیغام"], reply: "ہر روز Core ایک 'آج کا سگنل' نشر کرتا ہے — گرڈ کی ایک سطر، جو خود تاریخ چنتی ہے، کوئی سرور شامل نہیں۔ آج کا سگنل 'NEXUS Core' والے حصے میں لائیو ہے۔ کل نیا سگنل آئے گا۔" },
     { topic: "ai-learn", keys: ["کیسے سیکھتی", "مشین کیسے سیکھ", "نیورل نیٹ ورک", "سیکھتی ہے"], reply: "مصنوعی ذہانت بالکل ایسے سیکھتی ہے جیسے آپ کوئی کھیل سیکھتے ہیں — بار بار کوشش، اور ہر غلطی پر خود کو درست کرنا۔ اسے لاکھوں مثالیں (متن، تصاویر، آوازیں) دکھائی جاتی ہیں؛ وہ ان میں نمونے تلاش کرتی ہے اور اپنے اندر کے لاکھوں چھوٹے پیمانے ٹھیک کرتی جاتی ہے، یہاں تک کہ اس کے اندازے درست ہونے لگتے ہیں۔ ان پیمانوں کے جال کو نیورل نیٹ ورک کہتے ہیں۔" ,
@@ -1492,7 +1588,8 @@
 })();
 
 /* ---------------------------------------------------------
-   TOOLS — the Toolkit block: typing test + study timer.
+   TOOLS — the Toolkit block: typing test, study timer, text
+   summarizer, sentiment analyzer and AI prompt generator.
    Kept in its own block at the end of the file, separate
    from the main page logic above.
    --------------------------------------------------------- */
@@ -1504,6 +1601,125 @@
   var I18N_API = window.NEXUS_I18N || null;
   function L(key) { return I18N_API ? I18N_API.t(key) : key; }
   function Lf(key, params) { return I18N_API ? I18N_API.tf(key, params) : key; }
+
+  /* PURE-LOGIC-START — the three AI tools' brains: extractive
+     summariser, lexicon sentiment scorer and prompt composer.
+     Pure functions only (no DOM), exported on window.NEXUS_TOOLS
+     so they can be exercised headlessly as well as from the
+     cards below. Everything runs locally, like the whole page. */
+  var SM_STOP = {
+    "the": 1, "a": 1, "an": 1, "and": 1, "or": 1, "but": 1, "if": 1, "then": 1, "else": 1, "when": 1,
+    "at": 1, "by": 1, "for": 1, "with": 1, "about": 1, "against": 1, "between": 1, "into": 1, "through": 1,
+    "during": 1, "before": 1, "after": 1, "above": 1, "below": 1, "to": 1, "from": 1, "up": 1, "down": 1,
+    "in": 1, "out": 1, "on": 1, "off": 1, "over": 1, "under": 1, "again": 1, "further": 1, "once": 1,
+    "here": 1, "there": 1, "all": 1, "any": 1, "both": 1, "each": 1, "few": 1, "more": 1, "most": 1,
+    "other": 1, "some": 1, "such": 1, "no": 1, "nor": 1, "not": 1, "only": 1, "own": 1, "same": 1,
+    "so": 1, "than": 1, "too": 1, "very": 1, "can": 1, "will": 1, "just": 1, "should": 1, "now": 1,
+    "is": 1, "am": 1, "are": 1, "was": 1, "were": 1, "be": 1, "been": 1, "being": 1, "have": 1, "has": 1,
+    "had": 1, "having": 1, "do": 1, "does": 1, "did": 1, "doing": 1, "would": 1, "shall": 1, "may": 1,
+    "might": 1, "must": 1, "of": 1, "it": 1, "its": 1, "this": 1, "that": 1, "these": 1, "those": 1,
+    "i": 1, "you": 1, "he": 1, "she": 1, "we": 1, "they": 1, "them": 1, "his": 1, "her": 1, "their": 1,
+    "our": 1, "your": 1, "my": 1, "me": 1, "him": 1, "us": 1, "as": 1, "also": 1, "because": 1,
+    "کا": 1, "کی": 1, "کے": 1, "کو": 1, "میں": 1, "نے": 1, "سے": 1, "پر": 1, "ہے": 1, "ہیں": 1,
+    "تھا": 1, "تھی": 1, "تھے": 1, "اور": 1, "بھی": 1, "یہ": 1, "وہ": 1, "ایک": 1, "ان": 1, "اس": 1,
+    "جو": 1, "کہ": 1, "تو": 1, "نہ": 1, "نہیں": 1, "گا": 1, "گی": 1, "گے": 1, "ہو": 1, "ہوا": 1,
+    "لیے": 1, "بعد": 1, "پہلے": 1, "اگر": 1, "لیکن": 1, "یا": 1, "اپنے": 1, "اپنا": 1, "اپنی": 1,
+    "کیا": 1, "کر": 1, "رہا": 1, "رہی": 1, "رہے": 1, "اسے": 1, "انہیں": 1, "مجھے": 1, "تم": 1, "ہم": 1
+  };
+  function smWords(text) {
+    return String(text || "").toLowerCase().split(/[^a-z0-9\u0600-\u06FF]+/).filter(function (w) { return w.length > 0; });
+  }
+  function smSplitSentences(text) {
+    var parts = String(text || "").match(/[^.!?\u06D4]+[.!?\u06D4]+["'\u201D\u2019)]*\s*|[^.!?\u06D4]+$/g) || [];
+    var out = [];
+    for (var i = 0; i < parts.length; i++) {
+      var s = parts[i].trim();
+      if (s) out.push(s);
+    }
+    return out;
+  }
+  function smSummarize(text, keep) {
+    var sentences = smSplitSentences(text);
+    if (!keep || keep < 1) keep = 3;
+    if (sentences.length <= keep) return { ok: false, total: sentences.length, kept: 0, summary: "" };
+    var freq = {}, sentWords = [], i, j;
+    for (i = 0; i < sentences.length; i++) {
+      var words = smWords(sentences[i]).filter(function (w) { return !SM_STOP[w]; });
+      sentWords.push(words);
+      for (j = 0; j < words.length; j++) freq[words[j]] = (freq[words[j]] || 0) + 1;
+    }
+    var scored = [];
+    for (i = 0; i < sentences.length; i++) {
+      var ws = sentWords[i], sum = 0;
+      for (j = 0; j < ws.length; j++) sum += freq[ws[j]];
+      scored.push({ i: i, score: ws.length ? sum / ws.length : 0 });
+    }
+    var picked = scored.slice().sort(function (a, b) { return (b.score - a.score) || (a.i - b.i); })
+      .slice(0, keep).sort(function (a, b) { return a.i - b.i; });
+    return {
+      ok: true, total: sentences.length, kept: picked.length,
+      summary: picked.map(function (p) { return sentences[p.i]; }).join(" ")
+    };
+  }
+
+  var SA_POS = {}, SA_NEG = {};
+  ["good", "great", "excellent", "amazing", "awesome", "fantastic", "wonderful", "brilliant", "happy", "love",
+   "loved", "loves", "loving", "like", "liked", "enjoy", "enjoyed", "beautiful", "perfect", "best", "better",
+   "success", "successful", "win", "winner", "glad", "pleased", "delighted", "superb", "outstanding", "positive",
+   "strong", "smart", "fast", "easy", "helpful", "friendly", "honest", "safe", "reliable", "impressive",
+   "excited", "exciting", "fun", "joy", "proud", "hope", "hopeful", "cool", "nice", "lovely", "pleasant",
+   "satisfied", "recommend", "thanks", "thank", "welcome", "bright", "powerful",
+   "acha", "achha", "behtareen", "zabardast", "shandar", "shandaar", "kamal", "kamaal", "khush", "khushi",
+   "pasand", "maza", "umda", "lajawab", "aala",
+   "اچھا", "اچھی", "بہترین", "زبردست", "شاندار", "کمال", "خوش", "خوشی", "پسند", "عمدہ", "لاجواب", "اعلیٰ", "پیارا", "مزہ"
+  ].forEach(function (w) { SA_POS[w] = 1; });
+  ["bad", "terrible", "awful", "horrible", "worst", "hate", "hated", "poor", "sad", "angry",
+   "disappointed", "disappointing", "useless", "broken", "slow", "difficult", "hard", "problem", "problems", "fail",
+   "failed", "failure", "wrong", "error", "bug", "crash", "crashed", "scam", "fraud", "fake",
+   "waste", "boring", "ugly", "weak", "dangerous", "risk", "risky", "loss", "lose", "lost",
+   "expensive", "annoying", "frustrating", "painful", "trouble", "worry", "worried", "negative", "dirty", "noisy",
+   "rude", "late", "delay", "delayed", "dead",
+   "bura", "kharab", "bakwas", "bakwaas", "bekar", "bekaar", "ganda", "mushkil", "naraz", "dukh",
+   "pareshan", "ghussa", "nakam", "sust", "afsoos",
+   "برا", "بری", "خراب", "بیکار", "گندہ", "مشکل", "ناراض", "دکھ", "پریشان", "غصہ", "ناکام", "افسوس", "تکلیف", "سست"
+  ].forEach(function (w) { SA_NEG[w] = 1; });
+  function saAnalyze(text) {
+    var tokens = String(text || "").toLowerCase().split(/[^a-z\u0600-\u06FF]+/).filter(function (w) { return w.length > 0; });
+    var pos = 0, neg = 0;
+    for (var i = 0; i < tokens.length; i++) {
+      if (SA_POS[tokens[i]]) pos++;
+      else if (SA_NEG[tokens[i]]) neg++;
+    }
+    var verdict = "neutral";
+    if (pos > 0 && neg > 0) verdict = "mixed";
+    else if (pos > neg) verdict = "positive";
+    else if (neg > pos) verdict = "negative";
+    var balance = (pos + neg) > 0 ? Math.round((pos / (pos + neg)) * 100) : 50;
+    return { pos: pos, neg: neg, score: pos - neg, verdict: verdict, balance: balance };
+  }
+
+  var PG_STYLES = {
+    cinematic: "cinematic film still, dramatic composition, anamorphic lens, shallow depth of field, subtle film grain",
+    photoreal: "photorealistic, shot on a 35mm camera, ultra-detailed textures, natural proportions, true-to-life colors",
+    anime: "anime style, studio-quality cel shading, clean line art, vibrant colors, expressive character design",
+    digital: "digital art, highly detailed concept art, painterly brushwork, rich atmosphere, trending on artstation",
+    render3d: "3D render, octane render, ray-traced lighting, ultra-detailed geometry, physically based materials"
+  };
+  var PG_LIGHTS = {
+    golden: "golden hour lighting, warm sunset glow, long soft shadows",
+    neon: "neon night, glowing signs, wet street reflections, cyberpunk mood",
+    daylight: "soft daylight, gentle natural light, calm and airy mood",
+    dramatic: "dramatic shadows, chiaroscuro lighting, high contrast, moody atmosphere"
+  };
+  function pgCompose(subject, styleKey, lightKey) {
+    var s = String(subject || "").trim().replace(/\s+/g, " ");
+    if (!s) return "";
+    var style = PG_STYLES[styleKey] || PG_STYLES.cinematic;
+    var light = PG_LIGHTS[lightKey] || PG_LIGHTS.golden;
+    return s + ", " + style + ", " + light + ", ultra detailed, sharp focus, high quality, 8k";
+  }
+  window.NEXUS_TOOLS = { summarize: smSummarize, splitSentences: smSplitSentences, sentiment: saAnalyze, composePrompt: pgCompose };
+  /* PURE-LOGIC-END */
 
   /* Typing test — 60 seconds, clock starts on the first keystroke.
      WPM = (correct characters / 5) / minutes. Paste is blocked. */
@@ -1730,5 +1946,123 @@
       stSay(L(stStatusKey), stStatusDone);
     });
     stRender();
+  }
+
+  /* Text summarizer — extractive: paste text, choose SHORT
+     (top 3 sentences) or LONG (top 5), and the pure scorer
+     above keeps the heaviest sentences in original order. */
+  var smInput = document.getElementById("smInput");
+  if (smInput) {
+    var smBtn = document.getElementById("smBtn"),
+        smOutput = document.getElementById("smOutput"),
+        smStat = document.getElementById("smStat"),
+        smLens = document.querySelectorAll(".sm-len");
+    var smKeep = 3;
+    var smMsgKey = "summ.idle", smMsgParams = null;
+    function smSay() {
+      if (!smStat) return;
+      smStat.textContent = smMsgParams ? Lf(smMsgKey, smMsgParams) : L(smMsgKey);
+    }
+    function smRun() {
+      var res = smSummarize(smInput.value, smKeep);
+      if (!res.ok) {
+        smOutput.hidden = true;
+        smOutput.textContent = "";
+        smMsgKey = "summ.tooShort"; smMsgParams = null;
+      } else {
+        smOutput.textContent = res.summary;
+        smOutput.hidden = false;
+        smMsgKey = "summ.stat"; smMsgParams = { kept: res.kept, total: res.total };
+      }
+      smSay();
+    }
+    if (smBtn) smBtn.addEventListener("click", smRun);
+    Array.prototype.forEach.call(smLens, function (btn) {
+      btn.addEventListener("click", function () {
+        Array.prototype.forEach.call(smLens, function (b) { b.classList.remove("is-active"); });
+        btn.classList.add("is-active");
+        smKeep = parseInt(btn.getAttribute("data-keep"), 10) || 3;
+      });
+    });
+    if (I18N_API && I18N_API.onChange) I18N_API.onChange(function () { smSay(); });
+  }
+
+  /* Sentiment analyzer — lexicon scoring over English, Roman
+     Urdu and Urdu-script word lists; verdict, score and a
+     balance meter whose dot slides between the two poles. */
+  var saInput = document.getElementById("saInput");
+  if (saInput) {
+    var saBtn = document.getElementById("saBtn"),
+        saResult = document.getElementById("saResult"),
+        saDot = document.getElementById("saDot");
+    var saLast = null, saMsgKey = "sent.idle";
+    function saSay() {
+      if (!saResult) return;
+      if (saLast) {
+        saResult.textContent = Lf("sent.result", {
+          verdict: L("sent." + saLast.verdict),
+          score: (saLast.score > 0 ? "+" : "") + saLast.score,
+          pos: saLast.pos, neg: saLast.neg
+        });
+      } else {
+        saResult.textContent = L(saMsgKey);
+      }
+    }
+    function saRun() {
+      if (!String(saInput.value || "").trim()) {
+        saLast = null; saMsgKey = "sent.empty";
+        if (saDot) saDot.style.left = "50%";
+        saSay();
+        return;
+      }
+      saLast = saAnalyze(saInput.value);
+      if (saDot) saDot.style.left = saLast.balance + "%";
+      saSay();
+    }
+    if (saBtn) saBtn.addEventListener("click", saRun);
+    if (I18N_API && I18N_API.onChange) I18N_API.onChange(function () { saSay(); });
+  }
+
+  /* AI prompt generator — subject + style + lighting composed
+     into one polished English prompt (English by design: image
+     models are trained mostly on English captions), with a
+     copy button for the traveller's image generator. */
+  var pgSubject = document.getElementById("pgSubject");
+  if (pgSubject) {
+    var pgStyle = document.getElementById("pgStyle"),
+        pgLight = document.getElementById("pgLight"),
+        pgOutput = document.getElementById("pgOutput"),
+        pgBtn = document.getElementById("pgBtn"),
+        pgCopy = document.getElementById("pgCopy"),
+        pgMsg = document.getElementById("pgMsg");
+    var pgMsgKey = "prompt.idle";
+    function pgSay() { if (pgMsg) pgMsg.textContent = L(pgMsgKey); }
+    function pgRun() {
+      var out = pgCompose(pgSubject.value, pgStyle ? pgStyle.value : "", pgLight ? pgLight.value : "");
+      if (!out) { pgMsgKey = "prompt.needSubject"; pgSay(); pgSubject.focus(); return; }
+      pgOutput.value = out;
+      pgMsgKey = "prompt.idle";
+      pgSay();
+    }
+    function pgCopied() { pgMsgKey = "prompt.copied"; pgSay(); }
+    function pgFallbackCopy() {
+      try {
+        pgOutput.focus();
+        pgOutput.select();
+        document.execCommand("copy");
+      } catch (e) { /* best effort — the prompt stays on screen to copy by hand */ }
+      pgCopied();
+    }
+    if (pgBtn) pgBtn.addEventListener("click", pgRun);
+    if (pgCopy) pgCopy.addEventListener("click", function () {
+      var text = pgOutput.value || "";
+      if (!text) { pgMsgKey = "prompt.needSubject"; pgSay(); return; }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(pgCopied, pgFallbackCopy);
+      } else {
+        pgFallbackCopy();
+      }
+    });
+    if (I18N_API && I18N_API.onChange) I18N_API.onChange(function () { pgSay(); });
   }
 })();

@@ -525,6 +525,20 @@ html[dir="rtl"] .updates-form input{text-align:right}
 .study-presets .btn{padding:.6rem 1rem;font-size:.8rem}
 .st-preset.is-active{border-color:var(--cyan);color:var(--cyan);box-shadow:0 0 16px rgba(46,230,255,.3)}
 .study-done{color:#39ffb0;font-weight:700}
+/* AI tools: summarizer, sentiment analyzer, prompt generator */
+@media (min-width:900px){.tool-card-wide{grid-column:1/-1}}
+.tool-output{font-size:1rem;line-height:1.7;background:rgba(3,10,20,.45);border:1px solid var(--line);border-radius:12px;padding:.8rem .9rem;margin-top:1rem}
+.tool-output[hidden]{display:none}
+.tool-toggle.is-active{border-color:var(--cyan);color:var(--cyan);box-shadow:0 0 16px rgba(46,230,255,.3)}
+.tool-fields{display:grid;gap:.4rem 1rem;margin-top:.2rem}
+@media (min-width:640px){.tool-fields{grid-template-columns:1fr 1fr}}
+.tool-label{display:block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:.8rem 0 .35rem}
+.tool-select{width:100%;font-family:var(--font);font-size:.95rem;color:var(--ink);background:rgba(3,10,20,.55);border:1px solid var(--line);border-radius:12px;padding:.7rem .8rem}
+.tool-select:focus{outline:none;border-color:var(--cyan);box-shadow:0 0 0 2px rgba(46,230,255,.35)}
+.sent-meter{position:relative;height:12px;border-radius:99px;margin-top:1.1rem;border:1px solid var(--line);background:linear-gradient(90deg,#ff5d7a,#8a93a8 50%,#37ff9a)}
+.sent-meter-dot{position:absolute;top:50%;left:50%;width:18px;height:18px;border-radius:50%;background:#fff;border:3px solid #04060f;box-shadow:0 0 10px rgba(255,255,255,.5);transform:translate(-50%,-50%);transition:left .45s ease}
+.sent-scale{display:flex;justify-content:space-between;font-size:.68rem;letter-spacing:.08em;color:var(--muted);margin-top:.4rem;text-transform:uppercase}
+@media (prefers-reduced-motion:reduce){.sent-meter-dot{transition:none}}
 @media (max-width:520px){
   .tool-stats{grid-template-columns:repeat(2,1fr)}
   .tool-stats.three{grid-template-columns:repeat(3,1fr)}
@@ -566,6 +580,11 @@ html[dir="rtl"] .nexa-msg-bot,html[dir="rtl"] .nexa-msg-typing{border-bottom-lef
 html[dir="rtl"] .nexa-msg-user{border-bottom-right-radius:14px;border-bottom-left-radius:4px}
 html[dir="rtl"] .signal-form input,html[dir="rtl"] .signal-form-v2 textarea{text-align:right}
 html[dir="rtl"] .type-sample,html[dir="rtl"] #ttInput{direction:ltr;text-align:left}
+html[dir="rtl"] .tool-area{text-align:right}
+html[dir="rtl"] #ttInput{direction:ltr;text-align:left}
+html[dir="rtl"] #pgOutput{direction:ltr;text-align:left}
+html[dir="rtl"] .tool-select{text-align:right}
+html[dir="rtl"] .tool-label,html[dir="rtl"] .tool-output{text-align:right}
 html[dir="rtl"] .skip-link{left:auto;right:1rem}
 html[dir="rtl"] .nav-links a::after{left:auto;right:0}
 @media (max-width:520px){

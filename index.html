@@ -22,7 +22,7 @@
 <link rel="canonical" href="https://ummiunoffical-coder.github.io/nexus/">
 <meta name="robots" content="index, follow">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23050814'/%3E%3Cpath d='M9 23V9l14 14V9' stroke='%232ee6ff' stroke-width='3.4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
-<link rel="stylesheet" href="style.css?v=20261115-14">
+<link rel="stylesheet" href="style.css?v=20261115-15">
 </head>
 <body>
 
@@ -326,7 +326,7 @@
   <div class="container">
     <p class="section-kicker reveal" data-i18n="tools.kicker">05 · TOOLKIT</p>
     <h2 class="section-title reveal" id="toolsTitle" data-i18n="tools.title">Tools that <span class="grad-text">work</span></h2>
-    <p class="section-sub reveal" data-i18n="tools.sub">Two instruments from the grid, free for every traveller: a typing test that times your fingers, and a study timer that guards your focus.</p>
+    <p class="section-sub reveal" data-i18n="tools.sub">Five instruments from the grid, free for every traveller: a typing test, a study timer, a text summariser, a sentiment analyser and a prompt generator for image AIs.</p>
 
     <div class="tools-grid">
       <div class="tool-card reveal">
@@ -361,6 +361,68 @@
           <button class="btn btn-primary" type="button" id="stToggle" data-i18n="study.start">START</button>
           <button class="btn btn-ghost" type="button" id="stReset" data-i18n="study.reset">RESET</button>
         </p>
+      </div>
+
+      <div class="tool-card reveal">
+        <h3 class="tool-title" data-i18n="summ.title">Text Summarizer</h3>
+        <p class="tool-sub" data-i18n="summ.sub">Paste any text — English or اردو — and the grid picks its most important sentences, right here in your browser. Nothing is uploaded anywhere.</p>
+        <label class="visually-hidden" for="smInput">Text to summarise</label>
+        <textarea id="smInput" class="tool-area" rows="5" data-i18n-ph="summ.inputPh" placeholder="Paste the text to summarise..." autocomplete="off" spellcheck="false"></textarea>
+        <p class="tool-actions">
+          <button class="btn btn-ghost tool-toggle sm-len is-active" type="button" data-keep="3" data-i18n="summ.lenShort">SHORT · TOP 3</button>
+          <button class="btn btn-ghost tool-toggle sm-len" type="button" data-keep="5" data-i18n="summ.lenLong">LONG · TOP 5</button>
+          <button class="btn btn-primary" type="button" id="smBtn" data-i18n="summ.btn">SUMMARISE</button>
+        </p>
+        <div class="tool-output" id="smOutput" hidden></div>
+        <p class="tool-result" id="smStat" role="status" aria-live="polite" data-i18n="summ.idle">Your summary will appear here.</p>
+      </div>
+
+      <div class="tool-card reveal">
+        <h3 class="tool-title" data-i18n="sent.title">Sentiment Analyzer</h3>
+        <p class="tool-sub" data-i18n="sent.sub">How does a text feel? Paste English, Roman Urdu or اردو and the grid reads its mood from the words themselves.</p>
+        <label class="visually-hidden" for="saInput">Text to analyse</label>
+        <textarea id="saInput" class="tool-area" rows="4" data-i18n-ph="sent.inputPh" placeholder="Paste a sentence, a review, a message..." autocomplete="off" spellcheck="false"></textarea>
+        <p class="tool-actions">
+          <button class="btn btn-primary" type="button" id="saBtn" data-i18n="sent.btn">ANALYSE</button>
+        </p>
+        <div class="sent-meter" aria-hidden="true"><div class="sent-meter-dot" id="saDot"></div></div>
+        <div class="sent-scale" aria-hidden="true"><span data-i18n="sent.negative">NEGATIVE</span><span data-i18n="sent.positive">POSITIVE</span></div>
+        <p class="tool-result" id="saResult" role="status" aria-live="polite" data-i18n="sent.idle">The verdict will appear here.</p>
+      </div>
+
+      <div class="tool-card tool-card-wide reveal">
+        <h3 class="tool-title" data-i18n="prompt.title">AI Prompt Generator</h3>
+        <p class="tool-sub" data-i18n="prompt.sub">Describe a scene, pick a style and a light, and the grid writes a polished prompt for image generators. The prompt itself stays in English — that is the language image AIs understand best.</p>
+        <label class="visually-hidden" for="pgSubject">Scene to describe</label>
+        <input type="text" id="pgSubject" class="tool-area" data-i18n-ph="prompt.subjectPh" placeholder="e.g. a lighthouse on a cliff at dawn" autocomplete="off" maxlength="160">
+        <div class="tool-fields">
+          <div>
+            <label class="tool-label" for="pgStyle" data-i18n="prompt.styleLabel">Style</label>
+            <select id="pgStyle" class="tool-select">
+              <option value="cinematic" data-i18n="prompt.styleCinematic">Cinematic</option>
+              <option value="photoreal" data-i18n="prompt.stylePhotoreal">Photoreal</option>
+              <option value="anime" data-i18n="prompt.styleAnime">Anime</option>
+              <option value="digital" data-i18n="prompt.styleDigital">Digital Art</option>
+              <option value="render3d" data-i18n="prompt.style3d">3D Render</option>
+            </select>
+          </div>
+          <div>
+            <label class="tool-label" for="pgLight" data-i18n="prompt.lightLabel">Lighting / mood</label>
+            <select id="pgLight" class="tool-select">
+              <option value="golden" data-i18n="prompt.lightGolden">Golden hour</option>
+              <option value="neon" data-i18n="prompt.lightNeon">Neon night</option>
+              <option value="daylight" data-i18n="prompt.lightDaylight">Soft daylight</option>
+              <option value="dramatic" data-i18n="prompt.lightDramatic">Dramatic shadows</option>
+            </select>
+          </div>
+        </div>
+        <label class="visually-hidden" for="pgOutput">Generated prompt</label>
+        <textarea id="pgOutput" class="tool-area" rows="3" readonly data-i18n-ph="prompt.outputPh" placeholder="Your prompt will appear here..."></textarea>
+        <p class="tool-actions">
+          <button class="btn btn-primary" type="button" id="pgBtn" data-i18n="prompt.btn">GENERATE PROMPT</button>
+          <button class="btn btn-ghost" type="button" id="pgCopy" data-i18n="prompt.copy">COPY</button>
+        </p>
+        <p class="tool-result" id="pgMsg" role="status" aria-live="polite" data-i18n="prompt.idle">Your prompt will appear here.</p>
       </div>
     </div>
   </div>
@@ -442,6 +504,6 @@
   </button>
 </div>
 
-<script src="script.js?v=20261115-14"></script>
+<script src="script.js?v=20261115-15"></script>
 </body>
 </html>
