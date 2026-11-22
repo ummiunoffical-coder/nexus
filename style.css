@@ -336,7 +336,6 @@ a{color:var(--cyan)}
 .nexa-launch:hover{transform:translateY(-2px);box-shadow:0 0 30px rgba(46,230,255,.65),0 10px 26px rgba(0,0,0,.5)}
 .nexa-launch-mark{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:rgba(3,16,24,.85);color:var(--cyan);font-weight:900}
 .nexa-launch-dot{width:9px;height:9px;border-radius:50%;background:#37ff9a;box-shadow:0 0 8px #37ff9a}
-@keyframes nexaPulse{0%,100%{opacity:1}50%{opacity:.35}}
 .nexa-panel{
   width:min(360px,calc(100vw - 2rem));max-height:min(70vh,560px);
   display:flex;flex-direction:column;overflow:hidden;
@@ -382,20 +381,11 @@ a{color:var(--cyan)}
   .nexa-launch-text{display:none}
   .nexa-launch{padding:.55rem}
 }
-@media (prefers-reduced-motion: reduce){
+@media (prefers-reduced-motion:reduce){
   .nexa-launch-dot,.nexa-msg-typing span{animation:none}
 }
 
-/* ---------- Official poster ---------- */
-.poster-wrap{text-align:center}
-.poster-frame{
-  max-width:520px;margin:1.6rem auto 1.4rem;border-radius:var(--radius);overflow:hidden;
-  border:1px solid var(--line);
-  box-shadow:0 24px 60px rgba(0,0,0,.55),0 0 34px rgba(46,230,255,.22),0 0 90px rgba(180,92,255,.14);
-}
-.poster-frame img{width:100%;height:auto}
-
-/* ---------- Motion pack: boot, progress, glitch, marquee ---------- */
+/* ---------- Motion pack: boot, progress, marquee ---------- */
 .boot{
   position:fixed;inset:0;z-index:400;display:grid;place-items:center;
   background:var(--bg);transition:opacity .55s ease,visibility .55s;
@@ -422,7 +412,7 @@ a{color:var(--cyan)}
 .marquee-track span{font-weight:800;letter-spacing:.3em;font-size:.8rem;color:var(--muted)}
 .marquee-track i{color:var(--cyan);font-style:normal;text-shadow:0 0 10px rgba(46,230,255,.7)}
 @keyframes marqueeMove{to{transform:translateX(-50%)}}
-@media (prefers-reduced-motion: reduce){
+@media (prefers-reduced-motion:reduce){
   .boot{display:none}
   .marquee-track,.boot-line{animation:none}
 }

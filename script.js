@@ -2,11 +2,16 @@
    NEXUS — script.js
    1) Procedural neon city on <canvas> (3 parallax layers,
       lit windows, stars, drifting particles, shooting star)
-   2) Mouse parallax for the robot + hero glow
-   3) Mobile menu, interactive cards, scroll reveal,
-      animated counters, signal form, footer grid clock
-   Everything is dependency-free. If canvas/WebGL is missing,
-   the CSS gradient sky + SVG robot still carry the hero.
+   2) Pointer parallax for the robot + hero glow
+   3) Mobile menu · 4) Interactive cards · 5) Scroll reveal
+      and animated counters · 6) Signal form · 7) Footer clock
+   8) NEXA guide bot · 9) Boot intro + scroll progress
+   10) The Grid Test quiz · 11) Ambience synth
+   12) Signal of the Day
+   A second block at the end holds the Toolkit: the typing
+   test and the study timer.
+   Everything is dependency-free. If canvas is missing, the
+   CSS gradient sky + SVG robot still carry the hero.
    ============================================================ */
 (function () {
   "use strict";
@@ -342,14 +347,14 @@
         if (el) el.focus();
       }
       if (!name) { fail("Tell the grid your name first, traveller.", nameEl); return; }
-      if (!emailOk) { fail("That frequency looks off - enter a valid email so the grid can answer.", emailEl); return; }
-      if (!text) { fail("Your message is empty - give the grid something to answer.", textEl); return; }
+      if (!emailOk) { fail("That frequency looks off — enter a valid email so the grid can answer.", emailEl); return; }
+      if (!text) { fail("Your message is empty — give the grid something to answer.", textEl); return; }
       if (btn) { btn.disabled = true; btn.textContent = "TRANSMITTING..."; }
       msg.textContent = "Sending your signal...";
       msg.className = "signal-msg";
       var ctrl = ("AbortController" in window) ? new AbortController() : null;
       var slowTimer = setTimeout(function () {
-        msg.textContent = "Still transmitting - the connection is slow, please wait...";
+        msg.textContent = "Still transmitting — the connection is slow, please wait...";
       }, 8000);
       var killTimer = setTimeout(function () { if (ctrl) ctrl.abort(); }, 25000);
       fetch("https://formsubmit.co/ajax/a18ab7ca741e9be92b844a5c58481a23", {
@@ -688,7 +693,7 @@
       options: ["ROBO-9", "NEXA", "PIXEL"], answer: 1 },
     { q: "Everything you see on the NEXUS page is generated...",
       options: ["On a giant server", "On printed paper", "Right in your browser"], answer: 2 },
-    { q: "Which of these is artificial intelligence actually at work?",
+    { q: "Which of these shows artificial intelligence actually at work?",
       options: ["A calculator adding numbers", "A program learning to recognise faces", "A switch turning on a light"], answer: 1 },
     { q: "In AI, the huge web of tiny adjustable dials that learns from examples is called a...",
       options: ["Neural network", "Spreadsheet", "Search engine"], answer: 0 },
@@ -881,7 +886,11 @@
 
 })();
 
-/* ---------- Tools: typing test + study timer ---------- */
+/* ---------------------------------------------------------
+   TOOLS — the Toolkit block: typing test + study timer.
+   Kept in its own block at the end of the file, separate
+   from the main page logic above.
+   --------------------------------------------------------- */
 (function () {
   "use strict";
 
@@ -1046,7 +1055,7 @@
       stLeftMs = 0;
       stDisplay.textContent = "00:00";
       stToggle.textContent = "START";
-      stSay("Time up! Session complete — stretch, breathe, and let the grid recharge.", true);
+      stSay("Time up! Session complete — stretch, breathe and let the grid recharge.", true);
       stChime();
     }
     function stTick() {
