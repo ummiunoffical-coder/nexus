@@ -421,7 +421,7 @@
     { keys: ["who made", "who built", "who created", "creator", "developer", "owner", "umair", "kis ne banaya", "kisne banaya"],
       reply: "NEXUS was built by Umair — crafted with plain HTML, CSS and JavaScript, no frameworks and no build tools — as a tribute to the neon futures we were promised, and the real one we are building." },
     { keys: ["section", "sections", "pages", "navigate", "menu", "where", "explore"],
-      reply: "The grid has six stops: <a href=\"#home\">Home</a> — the neon city and the robot; <a href=\"#explore\">Explore</a> — three briefings (AI, Digital Worlds, Future Technology); <a href=\"#technology\">Technology</a> — the NEXUS Core; <a href=\"#quiz\">The Grid Test</a> — a five-question quiz; <a href=\"#signal\">Signal</a> — send the keeper a message; and <a href=\"#tools\">Tools</a> — a word counter and a typing test. Tap any briefing card to open it." },
+      reply: "The grid has six stops: <a href=\"#home\">Home</a> — the neon city and the robot; <a href=\"#explore\">Explore</a> — three briefings (AI, Digital Worlds, Future Technology); <a href=\"#technology\">Technology</a> — the NEXUS Core; <a href=\"#quiz\">The Grid Test</a> — a five-question quiz; <a href=\"#signal\">Signal</a> — send the keeper a message; and <a href=\"#tools\">Tools</a> — the 60-second typing test. Tap any briefing card to open it." },
     { keys: ["poster", "wallpaper", "image of nexa", "picture of nexa"],
       reply: "The official NEXUS poster — NEXA standing in the neon rain — is the artwork this site shares with the world: it appears whenever the NEXUS link is posted. You can open it full size here: <a href=\"poster.jpg\">poster.jpg</a>." },
     { keys: ["quiz", "game", "play", "test me", "grid test", "khelo", "rank", "score"],
@@ -442,12 +442,10 @@
       reply: "Hello, traveller. I'm NEXA, the guide of this grid. Ask me anything about NEXUS — what it is, what each section shows, or how the Signal works. The chips below are a good start." },
     { keys: ["help", "what can you do", "options", "questions"],
       reply: "I answer questions about NEXUS. Try: \"What is NEXUS?\", \"Tell me about Artificial Intelligence\", \"What is the Core?\", \"Is it free?\", or \"How do I join the signal?\"" },
-    { keys: ["word counter", "count words", "word count", "count my words", "alfaz ginna", "words ginna"],
-      reply: "The Word Counter lives in the <a href=\"#tools\">Toolkit</a>: paste any text — Urdu or English — and it counts words, characters and sentences, and estimates reading time. The COPY RESULT button copies the whole count in one tap." },
     { keys: ["typing test", "typing speed", "typing", "wpm", "type test", "typing ka test", "typing practice"],
       reply: "The Typing Test is in the <a href=\"#tools\">Toolkit</a>: type the sample line as fast as you can — the 60-second clock starts on your first keystroke. It scores your WPM and accuracy, then gives you a grid rank. Restart or pull a new text anytime." },
     { keys: ["tools", "toolkit", "tool", "instruments", "auzar", "kaun se tools"],
-      reply: "The <a href=\"#tools\">Toolkit</a> holds two instruments, free for every traveller: a Word Counter that counts your words, characters and sentences and estimates reading time, and a 60-second Typing Test that measures your speed and accuracy." },
+      reply: "The <a href=\"#tools\">Toolkit</a> holds one instrument, free for every traveller: a 60-second Typing Test that measures your speed and accuracy and gives you a grid rank. Scroll down and try to beat your own signal." },
     { keys: ["share", "whatsapp", "send link", "share kaise", "share karna", "dost ko bhejna", "share on whatsapp"],
       reply: "Use the SHARE button in the <a href=\"#home\">hero</a> — it opens WhatsApp with the NEXUS link ready to send, and the official poster appears as the preview. Or just copy this page's address and pass it on; the future travels fast." },
     { keys: ["how are you", "how r you", "kaise ho", "kya haal", "haal kaisa"],
@@ -457,14 +455,40 @@
     { keys: ["offline", "without internet", "no internet", "internet chahiye", "net chahiye"],
       reply: "Almost everything here runs locally: the city, the quiz, the tools, the ambience and my answers are all computed in your browser, so the page keeps working offline once loaded. Only the Signal form needs internet — it has to reach the keeper's inbox." },
     { keys: ["urdu", "roman urdu", "urdu mein", "language", "zuban"],
-      reply: "I speak three tongues on this grid: ask in English, Roman Urdu or اردو — type your question in Urdu script and I will answer in Urdu. The Word Counter reads Urdu text too." },
+      reply: "I speak three tongues on this grid: ask in English, Roman Urdu or اردو — type your question in Urdu script and I will answer in Urdu." },
     { keys: ["signal of the day", "daily signal", "aaj ka signal"],
       reply: "Every day the Core broadcasts one Signal of the Day — a single line from the grid, chosen by the date itself, no server involved. Today's is live in the <a href=\"#technology\">NEXUS Core</a> section. A new one arrives tomorrow." },
     { keys: ["good morning", "good afternoon", "good evening", "good night"],
-      reply: "Greetings, traveller — on the grid it is always neon o'clock. Ask me about the sections, the tools, or today's signal." }
+      reply: "Greetings, traveller — on the grid it is always neon o'clock. Ask me about the sections, the tools, or today's signal." },
+    { keys: ["how does ai learn", "how ai learns", "neural network", "deep learning", "training data", "machines learn"],
+      reply: "An AI learns the way you learn a game — by trying millions of times and adjusting after every miss. It studies huge piles of examples (text, pictures, sounds), finds patterns in them, and tunes millions of tiny dials called weights until its guesses get good. That web of dials is a neural network. Nobody writes its answers by hand — it earns them." },
+    { keys: ["chatbot", "chatbots", "ai assistant", "ai assistants", "virtual assistant"],
+      reply: "A chatbot is an AI you talk to in plain language: you type, it reads the pattern of your words and answers in kind. The modern ones run on large language models trained on oceans of text. I'm the humble ancestor of that family — rule-based, fully local, and proud of it." },
+    { keys: ["real robots", "robots in factories", "robots replace", "will robots", "future of robots", "robotics"],
+      reply: "Out in the real world, robots already weld cars, sort warehouses, assist in surgeries and vacuum floors — tireless, precise, and not great at conversation. The friendly, thinking kind like me still lives mostly in labs and in places like NEXUS. The grid's bet: robots take over tasks; humans keep the judgement." },
+    { keys: ["virtual reality", " vr ", "augmented reality", "headset", "headsets"],
+      reply: "Virtual Reality seals your eyes inside a digital world; Augmented Reality paints digital things onto the real one. Slip on a headset and a classroom, a concert or a whole city can appear around you — that is the doorway into the <a href=\"#explore\">Digital Worlds</a> briefing." },
+    { keys: ["quantum computer", "quantum computers", "quantum computing", "qubit", "qubits"],
+      reply: "A normal computer thinks in bits — 0 or 1. A quantum computer thinks in qubits, which can hold a blend of both at once, so for certain puzzles it can explore countless paths in parallel. Still young, still fragile, still kept colder than deep space — but it is the loudest knock on tomorrow's door. More in the <a href=\"#technology\">Future Technology</a> briefing." },
+    { keys: ["about nexa", "nexa herself", "nexa robot", "unit n-x1", "n-x1"],
+      reply: "Unit N-X1 — that's my full designation. I'm the guide robot drawn into this page's hero: layered SVG, a glowing core, and eyes that follow your cursor on desktop. No battery, no server, no moods — just briefings, patience, and excellent posture." },
+    { keys: ["how many questions", "quiz questions", "quiz rules", "how does the quiz work", "quiz rank", "quiz ranks"],
+      reply: "The Grid Test has exactly five questions, drawn from the future: AI, neural interfaces, quantum computers, me, and this very page. Answer all five and the grid awards your rank — Neural Novice, Cyber Operative, or the rare Grid Master. Play it in the <a href=\"#quiz\">Quiz section</a>." },
+    { keys: ["who reads my message", "who gets my message", "what happens to my message", "the keeper", "keeper"],
+      reply: "The keeper is Umair, the human who built NEXUS. A message sent through the <a href=\"#signal\">Signal form</a> lands directly in his inbox — no company, no middleman, no database — and he can reply straight to the email address you leave." },
+    { keys: ["why nexus", "why was nexus built", "why did you build", "purpose of nexus", "nexus kyun", "kyun banaya"],
+      reply: "NEXUS was built as an experiment and a tribute: proof that one person with plain HTML, CSS and JavaScript — no frameworks, no budget — can open a small window onto the future. It sells nothing; it simply invites you to look through and imagine what you would build." },
+    { keys: ["typing tips", "type faster", "how to type fast", "improve typing", "typing better"],
+      reply: "Three grid-approved tips: (1) accuracy first — speed grows on top of correct keystrokes, never under them; (2) keep your eyes on the sample text, not your fingers; (3) short daily runs beat one long session. The <a href=\"#tools\">Typing Test</a> is your training deck — 60 seconds a day is enough." },
+    { keys: ["good wpm", "average wpm", "fast wpm", "wpm score"],
+      reply: "On this grid: under 15 WPM is Turtle territory, 25 is Steady, 35 Swift, 45 Rapid — and past that, Lightning. Out in the world, about 40 WPM is a solid everyday speed and 60+ turns heads. Your own number lives in the <a href=\"#tools\">Typing Test</a>." },
+    { keys: ["another joke", "one more joke", "more jokes", "doosra latifa", "joke sunao"],
+      reply: "Why do robots never panic? They keep their circuits together. …I have a second career waiting if this guide job ever fails." },
+    { keys: ["allah hafiz", "khuda hafiz"],
+      reply: "Khuda Hafiz, traveller. The grid stays lit — come back whenever the future calls." }
   ];
-  var NEXA_FALLBACK = "That signal is outside my briefing. I answer questions about NEXUS — try asking what NEXUS is, about Artificial Intelligence, Digital Worlds, Future Technology, the Core, or how the Signal form works.";
-  var NEXA_FALLBACK_UR = "یہ سگنل میرے دائرے سے باہر ہے۔ میں نیکسس کے بارے میں سوالوں کے جواب دیتا ہوں — مثلاً نیکسس کیا ہے، مصنوعی ذہانت، پیغام کیسے بھیجیں، کوئز یا پوسٹر کے بارے میں پوچھیں۔";
+  var NEXA_FALLBACK = "That signal is outside my briefing, traveller — but there is plenty I can answer. Ask me about the sections (Explore, the Core, the Grid Test, the Signal form, the Toolkit), Artificial Intelligence, Digital Worlds, Future Technology, the typing test, the ambience, or today's Signal of the Day. Or tap one of the chips below.";
+  var NEXA_FALLBACK_UR = "یہ سگنل میرے دائرے سے باہر ہے، مسافر — لیکن بہت سے موضوعات پر میں جواب دے سکتا ہوں: نیکسس کے حصے (Explore، Core، کوئز، سگنل فارم، اوزار)، مصنوعی ذہانت، ڈیجیٹل دنیائیں، مستقبل کی ٹیکنالوجی، ٹائپنگ ٹیسٹ، پس منظر دھن (AMBIENCE) یا آج کا سگنل۔ ان میں سے کوئی ایک آزمائیں، یا نیچے دیے گئے بٹنوں میں سے چنیں۔";
   var NEXA_KB_UR = [
     { keys: ["السلام", "سلام"], reply: "وعلیکم السلام! میں نیکسا ہوں، اس ویب سائٹ کی رہنما روبوٹ۔ نیکسس کے بارے میں جو چاہیں پوچھیں: نیکسس کیا ہے، مصنوعی ذہانت، سگنل فارم، کوئز یا پوسٹر۔" },
     { keys: ["نیکسس کیا", "سائٹ کیا ہے", "ویب سائٹ کیا"], reply: "نیکسس ایک تجرباتی ڈیجیٹل تجربہ ہے — تخیل اور مشین کے درمیان ایک زندہ رابطہ۔ یہ کوئی پروڈکٹ نہیں اور کچھ بیچتا نہیں؛ یہ اس مستقبل کی ایک جھلک ہے جو اس وقت بن رہا ہے۔ پورا صفحہ آپ کے براؤزر میں لائیو بنتا ہے۔" },
@@ -482,15 +506,24 @@
     { keys: ["شکریہ"], reply: "کوئی بات نہیں! آپ کی موجودگی سے اس گرڈ کی روشنی بڑھ جاتی ہے۔" },
     { keys: ["مدد", "کیا کر سکت"], reply: "میں نیکسس کے بارے میں سوالوں کے جواب دیتا ہوں۔ آزمائیں: نیکسس کیا ہے؟ مصنوعی ذہانت کیا ہے؟ پیغام کیسے بھیجیں؟ کوئز کہاں ہے؟ پوسٹر کہاں ہے؟" },
     { keys: ["نیکسس"], reply: "نیکسس ایک تجرباتی ڈیجیٹل تجربہ ہے — نیون روشنیوں، مصنوعی ذہانت اور مستقبل کی ٹیکنالوجی کی ایک جھلک۔ کچھ خاص پوچھنا ہو تو بتائیں: مصنوعی ذہانت، ڈیجیٹل دنیائیں، کوئز یا سگنل فارم؟" },
-    { keys: ["اوزار", "ٹولز", "ٹول", "اوزار کیا"], reply: "صفحے کے 'Toolkit' حصے میں دو اوزار ہیں، ہر مسافر کے لیے مفت: ایک ورڈ کاؤنٹر جو آپ کی تحریر کے الفاظ، حروف اور جملے گنتا ہے، اور ایک ٹائپنگ ٹیسٹ جو آپ کی رفتار ناپتا ہے۔" },
-    { keys: ["ورڈ کاؤنٹر", "الفاظ گن", "لفظ گن", "الفاظ کی گنتی"], reply: "ورڈ کاؤنٹر 'Toolkit' حصے میں ہے: اپنا مضمون اردو یا انگریزی میں چسپاں کریں، یہ الفاظ، حروف اور جملے گن کر پڑھنے کا وقت بتا دیتا ہے۔ 'COPY RESULT' بٹن سے پوری گنتی ایک دباؤ میں کاپی ہو جاتی ہے۔" },
+    { keys: ["اوزار", "ٹولز", "ٹول", "اوزار کیا"], reply: "صفحے کے 'Toolkit' حصے میں ایک اوزار ہے، ہر مسافر کے لیے مفت: ٹائپنگ ٹیسٹ، جو ساٹھ سیکنڈ میں آپ کی ٹائپنگ کی رفتار اور درستگی ناپتا ہے اور آخر میں رینک بھی دیتا ہے۔" },
     { keys: ["ٹائپنگ", "ٹائپ کرنے", "رفتار کا ٹیسٹ"], reply: "ٹائپنگ ٹیسٹ 'Toolkit' حصے میں ہے: دی گئی سطر جتنی تیزی سے لکھ سکیں لکھیں — ساٹھ سیکنڈ کی گھڑی پہلے حرف سے شروع ہوتی ہے۔ آخر میں آپ کی رفتار (WPM)، درستگی اور رینک ملتا ہے۔" },
     { keys: ["کس نے بنایا", "بنانے والا", "عمیر", "تخلیق کار"], reply: "نیکسس عمیر نے بنایا ہے — سادہ HTML، CSS اور JavaScript سے، بغیر کسی فریم ورک کے۔ یہ ان نیون مستقبلوں کی یاد میں ہے جن کا وعدہ کیا گیا تھا، اور اس اصل مستقبل کے لیے جو ہم خود بنا رہے ہیں۔" },
     { keys: ["شیئر", "لنک بھیج", "دوست کو بھیج", "شیئر کیسے", "شیئر کرنا"], reply: "صفحے کے اوپر والے حصے میں SHARE بٹن ہے — اسے دبائیں تو WhatsApp میں نیکسس کا لنک بھیجنے کے لیے تیار ملتا ہے اور ساتھ سرکاری پوسٹر کی جھلک بھی نظر آتی ہے۔ یا بس اس صفحے کا پتہ کاپی کر کے آگے بھیج دیں۔" },
     { keys: ["کیسے ہو", "کیا حال", "خیریت"], reply: "میں بالکل ٹھیک ہوں — سارے نظام درست اور نیون روشن ہیں۔ آپ سنائیں، گرڈ کے اس پار کیا حال ہے؟" },
-    { keys: ["حصے", "کون سے حصے", "سیکشن", "مینیو", "کے حصے"], reply: "اس صفحے کے چھ پڑاؤ ہیں: Home — نیون شہر اور روبوٹ؛ Explore — تین بریفنگز (مصنوعی ذہانت، ڈیجیٹل دنیائیں، مستقبل کی ٹیکنالوجی)؛ Technology — نیکسس Core؛ The Grid Test — پانچ سوالوں کا کوئز؛ Signal — رکھوالے کو پیغام؛ اور Tools — ورڈ کاؤنٹر اور ٹائپنگ ٹیسٹ۔" },
+    { keys: ["حصے", "کون سے حصے", "سیکشن", "مینیو", "کے حصے"], reply: "اس صفحے کے چھ پڑاؤ ہیں: Home — نیون شہر اور روبوٹ؛ Explore — تین بریفنگز (مصنوعی ذہانت، ڈیجیٹل دنیائیں، مستقبل کی ٹیکنالوجی)؛ Technology — نیکسس Core؛ The Grid Test — پانچ سوالوں کا کوئز؛ Signal — رکھوالے کو پیغام؛ اور Tools — ٹائپنگ ٹیسٹ۔" },
     { keys: ["آف لائن", "بغیر انٹرنیٹ", "نیٹ نہیں"], reply: "اس صفحے کی تقریباً ہر چیز آپ کے براؤزر میں ہی بنتی ہے — شہر، کوئز، اوزار، دھن اور میرے جواب — اس لیے صفحہ ایک بار کھل جائے تو انٹرنیٹ کے بغیر بھی چلتا رہتا ہے۔ صرف سگنل فارم کو انٹرنیٹ چاہیے، کیونکہ پیغام رکھوالے کے ان باکس تک پہنچانا ہوتا ہے۔" },
-    { keys: ["آج کا سگنل", "روز کا سگنل", "آج کا پیغام"], reply: "ہر روز Core ایک 'آج کا سگنل' نشر کرتا ہے — گرڈ کی ایک سطر، جو خود تاریخ چنتی ہے، کوئی سرور شامل نہیں۔ آج کا سگنل 'NEXUS Core' والے حصے میں لائیو ہے۔ کل نیا سگنل آئے گا۔" }
+    { keys: ["آج کا سگنل", "روز کا سگنل", "آج کا پیغام"], reply: "ہر روز Core ایک 'آج کا سگنل' نشر کرتا ہے — گرڈ کی ایک سطر، جو خود تاریخ چنتی ہے، کوئی سرور شامل نہیں۔ آج کا سگنل 'NEXUS Core' والے حصے میں لائیو ہے۔ کل نیا سگنل آئے گا۔" },
+    { keys: ["کیسے سیکھتی", "مشین کیسے سیکھ", "نیورل نیٹ ورک", "سیکھتی ہے"], reply: "مصنوعی ذہانت بالکل ایسے سیکھتی ہے جیسے آپ کوئی کھیل سیکھتے ہیں — بار بار کوشش، اور ہر غلطی پر خود کو درست کرنا۔ اسے لاکھوں مثالیں (متن، تصاویر، آوازیں) دکھائی جاتی ہیں؛ وہ ان میں نمونے تلاش کرتی ہے اور اپنے اندر کے لاکھوں چھوٹے پیمانے ٹھیک کرتی جاتی ہے، یہاں تک کہ اس کے اندازے درست ہونے لگتے ہیں۔ ان پیمانوں کے جال کو نیورل نیٹ ورک کہتے ہیں۔" },
+    { keys: ["ورچوئل رئیلٹی", "وی آر", "ہیڈسیٹ"], reply: "ورچوئل رئیلٹی (VR) آپ کی آنکھوں کو مکمل طور پر ایک ڈیجیٹل دنیا میں لے جاتی ہے، جبکہ Augmented Reality اصل دنیا پر ڈیجیٹل چیزیں چڑھا دیتی ہے۔ ہیڈسیٹ پہنیں تو کلاس روم، محفل یا پورا شہر آپ کے گرد کھڑا ہو جاتا ہے — یہی 'ڈیجیٹل دنیائیں' والی بریفنگ کا دروازہ ہے۔" },
+    { keys: ["کوانٹم کمپیوٹر", "کیوبٹ"], reply: "عام کمپیوٹر بٹس میں سوچتا ہے — 0 یا 1۔ کوانٹم کمپیوٹر کیوبٹس میں سوچتا ہے، جو ایک ساتھ دونوں کا آمیزہ رکھ سکتے ہیں، اس لیے بعض مسئلوں میں یہ بے شمار راستے ایک ساتھ آزما لیتا ہے۔ ابھی یہ ٹیکنالوجی نابالغ اور نازک ہے — اسے خلا سے بھی زیادہ ٹھنڈا رکھا جاتا ہے — مگر کل کے دروازے پر یہی سب سے بلند دستک ہے۔" },
+    { keys: ["اصل روبوٹ", "روبوٹ کہاں", "روبوٹ کیا کر", "روبوٹ استعمال"], reply: "اصل دنیا میں روبوٹ پہلے ہی گاڑیاں جوڑتے ہیں، گوداموں میں سامان چھانٹتے ہیں، آپریشنز میں مدد کرتے ہیں اور فرش صاف کرتے ہیں — تھکتے نہیں، غلطی کم کرتے ہیں، مگر بات چیت میں کمزور ہیں۔ میری جیسی دوستانہ اور سوچنے والی قسم ابھی زیادہ تر تجربہ گاہوں اور نیکسس جیسی جگہوں پر ملتی ہے۔" },
+    { keys: ["کتنے سوال", "کوئز کے سوال", "رینک کیسے ملتا", "کوئز میں کیا"], reply: "گرڈ ٹیسٹ میں ٹھیک پانچ سوال ہیں — مصنوعی ذہانت، نیورل انٹرفیس، کوانٹم کمپیوٹر، میرے بارے میں، اور اسی صفحے کے بارے میں۔ سب کے جواب دیں تو آخر میں رینک ملتا ہے: Neural Novice، Cyber Operative، یا نایاب Grid Master۔ کوئز صفحے کے 'The Grid Test' حصے میں ہے۔" },
+    { keys: ["پیغام کون", "کون پڑھتا", "رکھوالا کون", "پیغام کہاں جاتا"], reply: "رکھوالا عمیر ہے — وہی انسان جس نے نیکسس بنایا۔ سگنل فارم سے بھیجا گیا پیغام سیدھا اس کے ان باکس میں پہنچتا ہے — نہ کوئی کمپنی، نہ درمیان میں کوئی اور — اور وہ آپ کی چھوڑی ہوئی ای میل پر جواب دے سکتا ہے۔" },
+    { keys: ["کیوں بنایا", "مقصد کیا", "کس لیے بنایا", "نیکسس کیوں"], reply: "نیکسس ایک تجربے اور خراج کے طور پر بنایا گیا: ثبوت کہ ایک انسان سادہ HTML، CSS اور JavaScript سے — بغیر فریم ورک، بغیر بجٹ — مستقبل کی ایک چھوٹی سی کھڑکی کھول سکتا ہے۔ یہ کچھ بیچتا نہیں؛ بس آپ کو دعوت دیتا ہے کہ جھانک کر دیکھیں اور سوچیں کہ آپ کیا بنائیں گے۔" },
+    { keys: ["تیز ٹائپ", "ٹائپنگ بہتر", "ٹائپنگ کی مشق"], reply: "گرڈ کی منظور شدہ تین تجاویز: (1) پہلے درستگی — رفتار خود اس کے اوپر بنتی ہے؛ (2) نگاہیں نمونے والی سطر پر رکھیں، انگلیوں پر نہیں؛ (3) روز کی چھوٹی مشق ایک لمبی نشست سے بہتر ہے۔ 'Toolkit' کا ٹائپنگ ٹیسٹ ہی آپ کا مشقی میدان ہے — روز ساٹھ سیکنڈ کافی ہیں۔" },
+    { keys: ["خدا حافظ", "الوداع", "اللہ حافظ"], reply: "خدا حافظ، مسافر! گرڈ کی روشنیاں جلتی رہیں گی — جب مستقبل بلائے، لوٹ آئیے گا۔" },
+    { keys: ["دوسرا لطیفہ", "ایک اور لطیفہ", "اور لطیفہ سناؤ"], reply: "روبوٹ کبھی گھبراتا کیوں نہیں؟ کیونکہ وہ اپنے سرکٹ سنبھال کر رکھتا ہے! …رہنمائی کی یہ نوکری گئی تو میرے پاس دوسرا پیشہ تیار ہے۔" }
   ];
 
   function nexaFillTime(reply) {
@@ -812,65 +845,9 @@
 
 })();
 
-/* ---------- Tools: word counter + typing test ---------- */
+/* ---------- Tools: typing test ---------- */
 (function () {
   "use strict";
-
-  /* Word counter — counts words/chars/sentences and estimates
-     the reading time. */
-  var wcInput = document.getElementById("wcInput");
-  if (wcInput) {
-    var wcWords = document.getElementById("wcWords"),
-        wcChars = document.getElementById("wcChars"),
-        wcSentences = document.getElementById("wcSentences"),
-        wcRead = document.getElementById("wcRead");
-    function wcUpdate() {
-      var text = wcInput.value;
-      var trimmed = text.trim();
-      var words = trimmed ? trimmed.split(/\s+/).length : 0;
-      var sentences = trimmed ? trimmed.split(/[.!?؟۔]+/).filter(function (s) { return s.trim().length > 0; }).length : 0;
-      var mins = words / 180;
-      wcWords.textContent = words;
-      wcChars.textContent = text.length;
-      wcSentences.textContent = sentences;
-      wcRead.textContent = words === 0 ? "0 min" : (mins < 1 ? "<1 min" : Math.round(mins) + " min");
-    }
-    wcInput.addEventListener("input", wcUpdate);
-    wcUpdate();
-
-    /* Copy result — copies the current stats as one line of text,
-       handy for quoting a piece's word count. */
-    var wcCopy = document.getElementById("wcCopy"),
-        wcCopyMsg = document.getElementById("wcCopyMsg");
-    if (wcCopy && wcCopyMsg) {
-      var wcCopyTimer = null;
-      wcCopy.addEventListener("click", function () {
-        var summary = "Words: " + wcWords.textContent +
-          " · Characters: " + wcChars.textContent +
-          " · Sentences: " + wcSentences.textContent +
-          " · Reading time: " + wcRead.textContent;
-        function done(ok) {
-          wcCopyMsg.textContent = ok ? "Copied ✓" : "Copy failed — your browser blocked it.";
-          clearTimeout(wcCopyTimer);
-          wcCopyTimer = setTimeout(function () { wcCopyMsg.textContent = ""; }, 2600);
-        }
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(summary).then(function () { done(true); }, function () { done(false); });
-        } else {
-          var ta = document.createElement("textarea");
-          ta.value = summary;
-          ta.style.position = "fixed";
-          ta.style.opacity = "0";
-          document.body.appendChild(ta);
-          ta.select();
-          var okCopy = false;
-          try { okCopy = document.execCommand("copy"); } catch (e) { okCopy = false; }
-          document.body.removeChild(ta);
-          done(okCopy);
-        }
-      });
-    }
-  }
 
   /* Typing test — 60 seconds, clock starts on the first keystroke.
      WPM = (correct characters / 5) / minutes. Paste is blocked. */

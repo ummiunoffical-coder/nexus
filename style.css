@@ -487,8 +487,7 @@ a{color:var(--cyan)}
 .music-btn.on .music-state{color:#37ff9a}
 
 /* ---------- Tools ---------- */
-.tools-grid{display:grid;gap:1.4rem;margin-top:2.2rem}
-@media (min-width:900px){.tools-grid{grid-template-columns:1fr 1fr}}
+.tools-grid{display:grid;gap:1.4rem;margin-top:2.2rem;max-width:680px;margin-left:auto;margin-right:auto}
 .tool-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:1.5rem;backdrop-filter:blur(8px);min-width:0}
 .tool-title{font-size:1.25rem;margin-bottom:.4rem}
 .tool-sub{color:var(--muted);font-size:.92rem;margin-bottom:1rem}
@@ -505,7 +504,6 @@ a{color:var(--cyan)}
 .type-sample .ok{color:#37ff9a}
 .type-sample .bad{color:#ff5d7a}
 .tool-actions{display:flex;gap:.7rem;margin-top:1rem;flex-wrap:wrap;align-items:center}
-.wc-copy-msg{color:#37ff9a;font-size:.88rem;font-weight:600}
 @media (max-width:520px){
   .tool-stats{grid-template-columns:repeat(2,1fr)}
   .tool-stats.three{grid-template-columns:repeat(3,1fr)}
