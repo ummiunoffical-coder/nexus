@@ -519,3 +519,44 @@ a{color:var(--cyan)}
   .tool-stats.three{grid-template-columns:repeat(3,1fr)}
   .ts-label{letter-spacing:.04em}
 }
+
+/* ---------- Language toggle + Urdu (RTL) ----------
+   The toggle swaps <html lang/dir>; script.js fills every
+   data-i18n element from its dictionary. Urdu uses a system
+   Nastaliq/Naskh stack (no webfonts — zero dependencies),
+   letter-spacing is dropped (it breaks Arabic-script joins)
+   and the few physical leftovers are mirrored by hand. */
+.nav-right{display:flex;align-items:center;gap:1.1rem}
+.lang-toggle{
+  cursor:pointer;font-family:var(--font);font-weight:700;font-size:.92rem;color:var(--ink);
+  background:rgba(10,16,34,.4);border:1px solid var(--line);border-radius:999px;
+  padding:.5rem 1.05rem;line-height:1.2;
+  transition:border-color .2s ease,color .2s ease,box-shadow .2s ease;
+}
+.lang-toggle:hover{border-color:var(--cyan);color:var(--cyan);box-shadow:0 0 16px rgba(46,230,255,.25)}
+html[lang="ur"]{
+  --font:"Noto Nastaliq Urdu","Noto Naskh Arabic","Urdu Typesetting","Segoe UI",system-ui,sans-serif;
+  --font-display:"Noto Nastaliq Urdu","Noto Naskh Arabic","Urdu Typesetting","Segoe UI",system-ui,sans-serif;
+}
+html[lang="ur"] body{line-height:1.9}
+html[lang="ur"] .hero-title{font-family:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;line-height:1.02}
+html[lang="ur"] .section-title{line-height:1.55}
+html[lang="ur"] .section-kicker,html[lang="ur"] .nav-links a,html[lang="ur"] .btn,
+html[lang="ur"] .card-cta,html[lang="ur"] .quiz-progress,html[lang="ur"] .footer-h,
+html[lang="ur"] .ts-label,html[lang="ur"] .sotd-label,html[lang="ur"] .status-label,
+html[lang="ur"] .robot-tag,html[lang="ur"] .music-btn,html[lang="ur"] .nexa-name,
+html[lang="ur"] .lang-toggle{letter-spacing:0}
+html[dir="rtl"] .marquee{direction:ltr}
+html[dir="rtl"] .quiz-panel{text-align:right}
+html[dir="rtl"] .quiz-opt{text-align:right}
+html[dir="rtl"] .nexa{right:auto;left:1rem;align-items:flex-start}
+html[dir="rtl"] .nexa-launch{padding:.6rem .65rem .6rem 1.1rem}
+html[dir="rtl"] .nexa-msg-bot,html[dir="rtl"] .nexa-msg-typing{border-bottom-left-radius:14px;border-bottom-right-radius:4px}
+html[dir="rtl"] .nexa-msg-user{border-bottom-right-radius:14px;border-bottom-left-radius:4px}
+html[dir="rtl"] .signal-form input,html[dir="rtl"] .signal-form-v2 textarea{text-align:right}
+html[dir="rtl"] .type-sample,html[dir="rtl"] #ttInput{direction:ltr;text-align:left}
+html[dir="rtl"] .skip-link{left:auto;right:1rem}
+html[dir="rtl"] .nav-links a::after{left:auto;right:0}
+@media (max-width:520px){
+  html[dir="rtl"] .nexa{left:.6rem}
+}
