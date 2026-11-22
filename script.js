@@ -421,7 +421,7 @@
     { keys: ["who made", "who built", "who created", "creator", "developer", "owner", "umair", "kis ne banaya", "kisne banaya"],
       reply: "NEXUS was built by Umair — crafted with plain HTML, CSS and JavaScript, no frameworks and no build tools — as a tribute to the neon futures we were promised, and the real one we are building." },
     { keys: ["section", "sections", "pages", "navigate", "menu", "where", "explore"],
-      reply: "The grid has six stops: <a href=\"#home\">Home</a> — the neon city and the robot; <a href=\"#explore\">Explore</a> — three briefings (AI, Digital Worlds, Future Technology); <a href=\"#technology\">Technology</a> — the NEXUS Core; <a href=\"#quiz\">The Grid Test</a> — a five-question quiz; <a href=\"#signal\">Signal</a> — send the keeper a message; and <a href=\"#tools\">Tools</a> — the 60-second typing test. Tap any briefing card to open it." },
+      reply: "The grid has six stops: <a href=\"#home\">Home</a> — the neon city and the robot; <a href=\"#explore\">Explore</a> — three briefings (AI, Digital Worlds, Future Technology); <a href=\"#technology\">Technology</a> — the NEXUS Core; <a href=\"#quiz\">The Grid Test</a> — a five-question quiz; <a href=\"#signal\">Signal</a> — send the keeper a message; and <a href=\"#tools\">Tools</a> — the typing test and the study timer. Tap any briefing card to open it." },
     { keys: ["poster", "wallpaper", "image of nexa", "picture of nexa"],
       reply: "The official NEXUS poster — NEXA standing in the neon rain — is the artwork this site shares with the world: it appears whenever the NEXUS link is posted. You can open it full size here: <a href=\"poster.jpg\">poster.jpg</a>." },
     { keys: ["quiz", "game", "play", "test me", "grid test", "khelo", "rank", "score"],
@@ -445,7 +445,9 @@
     { keys: ["typing test", "typing speed", "typing", "wpm", "type test", "typing ka test", "typing practice"],
       reply: "The Typing Test is in the <a href=\"#tools\">Toolkit</a>: type the sample line as fast as you can — the 60-second clock starts on your first keystroke. It scores your WPM and accuracy, then gives you a grid rank. Restart or pull a new text anytime." },
     { keys: ["tools", "toolkit", "tool", "instruments", "auzar", "kaun se tools"],
-      reply: "The <a href=\"#tools\">Toolkit</a> holds one instrument, free for every traveller: a 60-second Typing Test that measures your speed and accuracy and gives you a grid rank. Scroll down and try to beat your own signal." },
+      reply: "The <a href=\"#tools\">Toolkit</a> holds two instruments, free for every traveller: a 60-second Typing Test that measures your speed and accuracy and gives you a grid rank, and a Study Timer for focused work — 25, 15 or 5 minutes, with a soft chime when time is up. Scroll down and try to beat your own signal." },
+    { keys: ["study timer", "pomodoro", "focus timer", "timer", "parhai ka timer", "timer lagana", "study"],
+      reply: "The Study Timer sits in the <a href=\"#tools\">Toolkit</a>, right beside the Typing Test. Choose your length — FOCUS 25 minutes, SPRINT 15, or BREAK 5 — then press START. PAUSE holds your remaining time exactly where you left it, RESET restores the full length, and when the countdown reaches zero a soft chime announces: time up. Built for travellers who study like they mean it." },
     { keys: ["share", "whatsapp", "send link", "share kaise", "share karna", "dost ko bhejna", "share on whatsapp"],
       reply: "Use the SHARE button in the <a href=\"#home\">hero</a> — it opens WhatsApp with the NEXUS link ready to send, and the official poster appears as the preview. Or just copy this page's address and pass it on; the future travels fast." },
     { keys: ["how are you", "how r you", "kaise ho", "kya haal", "haal kaisa"],
@@ -473,7 +475,7 @@
     { keys: ["about nexa", "nexa herself", "nexa robot", "unit n-x1", "n-x1"],
       reply: "Unit N-X1 — that's my full designation. I'm the guide robot drawn into this page's hero: layered SVG, a glowing core, and eyes that follow your cursor on desktop. No battery, no server, no moods — just briefings, patience, and excellent posture." },
     { keys: ["how many questions", "quiz questions", "quiz rules", "how does the quiz work", "quiz rank", "quiz ranks"],
-      reply: "The Grid Test has exactly five questions, drawn from the future: AI, neural interfaces, quantum computers, me, and this very page. Answer all five and the grid awards your rank — Neural Novice, Cyber Operative, or the rare Grid Master. Play it in the <a href=\"#quiz\">Quiz section</a>." },
+      reply: "Every Grid Test run asks exactly five questions, drawn at random from a bigger vault in the grid — AI, robots, quantum computers, digital worlds, me, and this very page all feature, so no two runs are quite the same. Answer all five and the grid awards your rank — Neural Novice, Cyber Operative, or the rare Grid Master. Play it in the <a href=\"#quiz\">Quiz section</a>." },
     { keys: ["who reads my message", "who gets my message", "what happens to my message", "the keeper", "keeper"],
       reply: "The keeper is Umair, the human who built NEXUS. A message sent through the <a href=\"#signal\">Signal form</a> lands directly in his inbox — no company, no middleman, no database — and he can reply straight to the email address you leave." },
     { keys: ["why nexus", "why was nexus built", "why did you build", "purpose of nexus", "nexus kyun", "kyun banaya"],
@@ -487,8 +489,8 @@
     { keys: ["allah hafiz", "khuda hafiz"],
       reply: "Khuda Hafiz, traveller. The grid stays lit — come back whenever the future calls." }
   ];
-  var NEXA_FALLBACK = "That signal is outside my briefing, traveller — but there is plenty I can answer. Ask me about the sections (Explore, the Core, the Grid Test, the Signal form, the Toolkit), Artificial Intelligence, Digital Worlds, Future Technology, the typing test, the ambience, or today's Signal of the Day. Or tap one of the chips below.";
-  var NEXA_FALLBACK_UR = "یہ سگنل میرے دائرے سے باہر ہے، مسافر — لیکن بہت سے موضوعات پر میں جواب دے سکتا ہوں: نیکسس کے حصے (Explore، Core، کوئز، سگنل فارم، اوزار)، مصنوعی ذہانت، ڈیجیٹل دنیائیں، مستقبل کی ٹیکنالوجی، ٹائپنگ ٹیسٹ، پس منظر دھن (AMBIENCE) یا آج کا سگنل۔ ان میں سے کوئی ایک آزمائیں، یا نیچے دیے گئے بٹنوں میں سے چنیں۔";
+  var NEXA_FALLBACK = "That signal is outside my briefing, traveller — but there is plenty I can answer. Ask me about the sections (Explore, the Core, the Grid Test, the Signal form, the Toolkit), Artificial Intelligence, Digital Worlds, Future Technology, the typing test, the study timer, the ambience, or today's Signal of the Day. Or tap one of the chips below.";
+  var NEXA_FALLBACK_UR = "یہ سگنل میرے دائرے سے باہر ہے، مسافر — لیکن بہت سے موضوعات پر میں جواب دے سکتا ہوں: نیکسس کے حصے (Explore، Core، کوئز، سگنل فارم، اوزار)، مصنوعی ذہانت، ڈیجیٹل دنیائیں، مستقبل کی ٹیکنالوجی، ٹائپنگ ٹیسٹ، اسٹڈی ٹائمر، پس منظر دھن (AMBIENCE) یا آج کا سگنل۔ ان میں سے کوئی ایک آزمائیں، یا نیچے دیے گئے بٹنوں میں سے چنیں۔";
   var NEXA_KB_UR = [
     { keys: ["السلام", "سلام"], reply: "وعلیکم السلام! میں نیکسا ہوں، اس ویب سائٹ کی رہنما روبوٹ۔ نیکسس کے بارے میں جو چاہیں پوچھیں: نیکسس کیا ہے، مصنوعی ذہانت، سگنل فارم، کوئز یا پوسٹر۔" },
     { keys: ["نیکسس کیا", "سائٹ کیا ہے", "ویب سائٹ کیا"], reply: "نیکسس ایک تجرباتی ڈیجیٹل تجربہ ہے — تخیل اور مشین کے درمیان ایک زندہ رابطہ۔ یہ کوئی پروڈکٹ نہیں اور کچھ بیچتا نہیں؛ یہ اس مستقبل کی ایک جھلک ہے جو اس وقت بن رہا ہے۔ پورا صفحہ آپ کے براؤزر میں لائیو بنتا ہے۔" },
@@ -506,19 +508,20 @@
     { keys: ["شکریہ"], reply: "کوئی بات نہیں! آپ کی موجودگی سے اس گرڈ کی روشنی بڑھ جاتی ہے۔" },
     { keys: ["مدد", "کیا کر سکت"], reply: "میں نیکسس کے بارے میں سوالوں کے جواب دیتا ہوں۔ آزمائیں: نیکسس کیا ہے؟ مصنوعی ذہانت کیا ہے؟ پیغام کیسے بھیجیں؟ کوئز کہاں ہے؟ پوسٹر کہاں ہے؟" },
     { keys: ["نیکسس"], reply: "نیکسس ایک تجرباتی ڈیجیٹل تجربہ ہے — نیون روشنیوں، مصنوعی ذہانت اور مستقبل کی ٹیکنالوجی کی ایک جھلک۔ کچھ خاص پوچھنا ہو تو بتائیں: مصنوعی ذہانت، ڈیجیٹل دنیائیں، کوئز یا سگنل فارم؟" },
-    { keys: ["اوزار", "ٹولز", "ٹول", "اوزار کیا"], reply: "صفحے کے 'Toolkit' حصے میں ایک اوزار ہے، ہر مسافر کے لیے مفت: ٹائپنگ ٹیسٹ، جو ساٹھ سیکنڈ میں آپ کی ٹائپنگ کی رفتار اور درستگی ناپتا ہے اور آخر میں رینک بھی دیتا ہے۔" },
+    { keys: ["اوزار", "ٹولز", "ٹول", "اوزار کیا"], reply: "صفحے کے 'Toolkit' حصے میں دو اوزار ہیں، ہر مسافر کے لیے مفت: ٹائپنگ ٹیسٹ — جو ساٹھ سیکنڈ میں آپ کی ٹائپنگ کی رفتار اور درستگی ناپتا ہے اور آخر میں رینک بھی دیتا ہے — اور اسٹڈی ٹائمر، جو توجہ سے پڑھائی کے لیے 25، 15 یا 5 منٹ گنتا ہے اور وقت پورا ہونے پر ہلکی گھنٹی بجاتا ہے۔" },
+    { keys: ["اسٹڈی ٹائمر", "پڑھائی کا ٹائمر", "ٹائمر", "پومودورو", "فوکس ٹائمر"], reply: "اسٹڈی ٹائمر صفحے کے 'Toolkit' حصے میں ہے، ٹائپنگ ٹیسٹ کے بالکل ساتھ۔ پہلے وقت چنیں — 25 منٹ توجہ (FOCUS)، 15 منٹ کی مختصر نشست (SPRINT)، یا 5 منٹ کا وقفہ (BREAK) — پھر START دبائیں۔ PAUSE باقی وقت کو بالکل وہیں روک دیتا ہے جہاں چھوڑا تھا، RESET پوری مدت بحال کر دیتا ہے، اور گنتی صفر پر پہنچے تو ہلکی سی گھنٹی بجتی ہے: وقت ختم!" },
     { keys: ["ٹائپنگ", "ٹائپ کرنے", "رفتار کا ٹیسٹ"], reply: "ٹائپنگ ٹیسٹ 'Toolkit' حصے میں ہے: دی گئی سطر جتنی تیزی سے لکھ سکیں لکھیں — ساٹھ سیکنڈ کی گھڑی پہلے حرف سے شروع ہوتی ہے۔ آخر میں آپ کی رفتار (WPM)، درستگی اور رینک ملتا ہے۔" },
     { keys: ["کس نے بنایا", "بنانے والا", "عمیر", "تخلیق کار"], reply: "نیکسس عمیر نے بنایا ہے — سادہ HTML، CSS اور JavaScript سے، بغیر کسی فریم ورک کے۔ یہ ان نیون مستقبلوں کی یاد میں ہے جن کا وعدہ کیا گیا تھا، اور اس اصل مستقبل کے لیے جو ہم خود بنا رہے ہیں۔" },
     { keys: ["شیئر", "لنک بھیج", "دوست کو بھیج", "شیئر کیسے", "شیئر کرنا"], reply: "صفحے کے اوپر والے حصے میں SHARE بٹن ہے — اسے دبائیں تو WhatsApp میں نیکسس کا لنک بھیجنے کے لیے تیار ملتا ہے اور ساتھ سرکاری پوسٹر کی جھلک بھی نظر آتی ہے۔ یا بس اس صفحے کا پتہ کاپی کر کے آگے بھیج دیں۔" },
     { keys: ["کیسے ہو", "کیا حال", "خیریت"], reply: "میں بالکل ٹھیک ہوں — سارے نظام درست اور نیون روشن ہیں۔ آپ سنائیں، گرڈ کے اس پار کیا حال ہے؟" },
-    { keys: ["حصے", "کون سے حصے", "سیکشن", "مینیو", "کے حصے"], reply: "اس صفحے کے چھ پڑاؤ ہیں: Home — نیون شہر اور روبوٹ؛ Explore — تین بریفنگز (مصنوعی ذہانت، ڈیجیٹل دنیائیں، مستقبل کی ٹیکنالوجی)؛ Technology — نیکسس Core؛ The Grid Test — پانچ سوالوں کا کوئز؛ Signal — رکھوالے کو پیغام؛ اور Tools — ٹائپنگ ٹیسٹ۔" },
+    { keys: ["حصے", "کون سے حصے", "سیکشن", "مینیو", "کے حصے"], reply: "اس صفحے کے چھ پڑاؤ ہیں: Home — نیون شہر اور روبوٹ؛ Explore — تین بریفنگز (مصنوعی ذہانت، ڈیجیٹل دنیائیں، مستقبل کی ٹیکنالوجی)؛ Technology — نیکسس Core؛ The Grid Test — پانچ سوالوں کا کوئز؛ Signal — رکھوالے کو پیغام؛ اور Tools — ٹائپنگ ٹیسٹ اور اسٹڈی ٹائمر۔" },
     { keys: ["آف لائن", "بغیر انٹرنیٹ", "نیٹ نہیں"], reply: "اس صفحے کی تقریباً ہر چیز آپ کے براؤزر میں ہی بنتی ہے — شہر، کوئز، اوزار، دھن اور میرے جواب — اس لیے صفحہ ایک بار کھل جائے تو انٹرنیٹ کے بغیر بھی چلتا رہتا ہے۔ صرف سگنل فارم کو انٹرنیٹ چاہیے، کیونکہ پیغام رکھوالے کے ان باکس تک پہنچانا ہوتا ہے۔" },
     { keys: ["آج کا سگنل", "روز کا سگنل", "آج کا پیغام"], reply: "ہر روز Core ایک 'آج کا سگنل' نشر کرتا ہے — گرڈ کی ایک سطر، جو خود تاریخ چنتی ہے، کوئی سرور شامل نہیں۔ آج کا سگنل 'NEXUS Core' والے حصے میں لائیو ہے۔ کل نیا سگنل آئے گا۔" },
     { keys: ["کیسے سیکھتی", "مشین کیسے سیکھ", "نیورل نیٹ ورک", "سیکھتی ہے"], reply: "مصنوعی ذہانت بالکل ایسے سیکھتی ہے جیسے آپ کوئی کھیل سیکھتے ہیں — بار بار کوشش، اور ہر غلطی پر خود کو درست کرنا۔ اسے لاکھوں مثالیں (متن، تصاویر، آوازیں) دکھائی جاتی ہیں؛ وہ ان میں نمونے تلاش کرتی ہے اور اپنے اندر کے لاکھوں چھوٹے پیمانے ٹھیک کرتی جاتی ہے، یہاں تک کہ اس کے اندازے درست ہونے لگتے ہیں۔ ان پیمانوں کے جال کو نیورل نیٹ ورک کہتے ہیں۔" },
     { keys: ["ورچوئل رئیلٹی", "وی آر", "ہیڈسیٹ"], reply: "ورچوئل رئیلٹی (VR) آپ کی آنکھوں کو مکمل طور پر ایک ڈیجیٹل دنیا میں لے جاتی ہے، جبکہ Augmented Reality اصل دنیا پر ڈیجیٹل چیزیں چڑھا دیتی ہے۔ ہیڈسیٹ پہنیں تو کلاس روم، محفل یا پورا شہر آپ کے گرد کھڑا ہو جاتا ہے — یہی 'ڈیجیٹل دنیائیں' والی بریفنگ کا دروازہ ہے۔" },
     { keys: ["کوانٹم کمپیوٹر", "کیوبٹ"], reply: "عام کمپیوٹر بٹس میں سوچتا ہے — 0 یا 1۔ کوانٹم کمپیوٹر کیوبٹس میں سوچتا ہے، جو ایک ساتھ دونوں کا آمیزہ رکھ سکتے ہیں، اس لیے بعض مسئلوں میں یہ بے شمار راستے ایک ساتھ آزما لیتا ہے۔ ابھی یہ ٹیکنالوجی نابالغ اور نازک ہے — اسے خلا سے بھی زیادہ ٹھنڈا رکھا جاتا ہے — مگر کل کے دروازے پر یہی سب سے بلند دستک ہے۔" },
     { keys: ["اصل روبوٹ", "روبوٹ کہاں", "روبوٹ کیا کر", "روبوٹ استعمال"], reply: "اصل دنیا میں روبوٹ پہلے ہی گاڑیاں جوڑتے ہیں، گوداموں میں سامان چھانٹتے ہیں، آپریشنز میں مدد کرتے ہیں اور فرش صاف کرتے ہیں — تھکتے نہیں، غلطی کم کرتے ہیں، مگر بات چیت میں کمزور ہیں۔ میری جیسی دوستانہ اور سوچنے والی قسم ابھی زیادہ تر تجربہ گاہوں اور نیکسس جیسی جگہوں پر ملتی ہے۔" },
-    { keys: ["کتنے سوال", "کوئز کے سوال", "رینک کیسے ملتا", "کوئز میں کیا"], reply: "گرڈ ٹیسٹ میں ٹھیک پانچ سوال ہیں — مصنوعی ذہانت، نیورل انٹرفیس، کوانٹم کمپیوٹر، میرے بارے میں، اور اسی صفحے کے بارے میں۔ سب کے جواب دیں تو آخر میں رینک ملتا ہے: Neural Novice، Cyber Operative، یا نایاب Grid Master۔ کوئز صفحے کے 'The Grid Test' حصے میں ہے۔" },
+    { keys: ["کتنے سوال", "کوئز کے سوال", "رینک کیسے ملتا", "کوئز میں کیا"], reply: "ہر گرڈ ٹیسٹ میں پانچ سوال ہوتے ہیں، جو گرڈ کے بڑے ذخیرے سے بے ترتیب چنے جاتے ہیں — مصنوعی ذہانت، روبوٹ، کوانٹم کمپیوٹر، ڈیجیٹل دنیائیں، میرے بارے میں اور اسی صفحے جیسے موضوعات پر — اس لیے ہر بار سوالات نئے لگتے ہیں۔ سب کے جواب دیں تو آخر میں رینک ملتا ہے: Neural Novice، Cyber Operative، یا نایاب Grid Master۔ کوئز صفحے کے 'The Grid Test' حصے میں ہے۔" },
     { keys: ["پیغام کون", "کون پڑھتا", "رکھوالا کون", "پیغام کہاں جاتا"], reply: "رکھوالا عمیر ہے — وہی انسان جس نے نیکسس بنایا۔ سگنل فارم سے بھیجا گیا پیغام سیدھا اس کے ان باکس میں پہنچتا ہے — نہ کوئی کمپنی، نہ درمیان میں کوئی اور — اور وہ آپ کی چھوڑی ہوئی ای میل پر جواب دے سکتا ہے۔" },
     { keys: ["کیوں بنایا", "مقصد کیا", "کس لیے بنایا", "نیکسس کیوں"], reply: "نیکسس ایک تجربے اور خراج کے طور پر بنایا گیا: ثبوت کہ ایک انسان سادہ HTML، CSS اور JavaScript سے — بغیر فریم ورک، بغیر بجٹ — مستقبل کی ایک چھوٹی سی کھڑکی کھول سکتا ہے۔ یہ کچھ بیچتا نہیں؛ بس آپ کو دعوت دیتا ہے کہ جھانک کر دیکھیں اور سوچیں کہ آپ کیا بنائیں گے۔" },
     { keys: ["تیز ٹائپ", "ٹائپنگ بہتر", "ٹائپنگ کی مشق"], reply: "گرڈ کی منظور شدہ تین تجاویز: (1) پہلے درستگی — رفتار خود اس کے اوپر بنتی ہے؛ (2) نگاہیں نمونے والی سطر پر رکھیں، انگلیوں پر نہیں؛ (3) روز کی چھوٹی مشق ایک لمبی نشست سے بہتر ہے۔ 'Toolkit' کا ٹائپنگ ٹیسٹ ہی آپ کا مشقی میدان ہے — روز ساٹھ سیکنڈ کافی ہیں۔" },
@@ -670,9 +673,11 @@
 
 
   /* ---------------------------------------------------------
-     10) THE GRID TEST — five-question quiz, fully local
+     10) THE GRID TEST — quiz, fully local. Each game draws
+     five questions at random from the bank below, so no two
+     runs are quite the same.
      --------------------------------------------------------- */
-  var QUIZ = [
+  var QUIZ_BANK = [
     { q: "What does \u201CAI\u201D stand for?",
       options: ["Artificial Intelligence", "Automatic Internet", "Analog Interface"], answer: 0 },
     { q: "A device that links a human brain directly to a computer is called a...",
@@ -682,8 +687,29 @@
     { q: "What is the name of the robot who guides visitors through NEXUS?",
       options: ["ROBO-9", "NEXA", "PIXEL"], answer: 1 },
     { q: "Everything you see on the NEXUS page is generated...",
-      options: ["On a giant server", "On printed paper", "Right in your browser"], answer: 2 }
+      options: ["On a giant server", "On printed paper", "Right in your browser"], answer: 2 },
+    { q: "Which of these is artificial intelligence actually at work?",
+      options: ["A calculator adding numbers", "A program learning to recognise faces", "A switch turning on a light"], answer: 1 },
+    { q: "In AI, the huge web of tiny adjustable dials that learns from examples is called a...",
+      options: ["Neural network", "Spreadsheet", "Search engine"], answer: 0 },
+    { q: "Modern chatbots are powered by large language models, trained mostly on...",
+      options: ["Weather reports", "Photographs of cats", "Vast amounts of text"], answer: 2 },
+    { q: "A headset that places you inside a completely digital world gives you...",
+      options: ["Satellite radio", "Virtual reality", "Fibre internet"], answer: 1 },
+    { q: "Shared digital worlds where people meet and play as avatars are often called...",
+      options: ["The metaverse", "A firewall", "A database"], answer: 0 },
+    { q: "A robot designed to look and move like a human is called a...",
+      options: ["Drone", "Submarine", "Humanoid robot"], answer: 2 },
+    { q: "Self-driving cars mainly \u201Csee\u201D the road using...",
+      options: ["A paper road map", "Cameras, radar and sensors", "The driver's dreams"], answer: 1 },
+    { q: "The first version of the internet, built for researchers, was called...",
+      options: ["Wi-Fi", "ARPANET", "Bluetooth"], answer: 1 },
+    { q: "Which planet, the famous Red Planet, is a top target for future robot explorers?",
+      options: ["Mars", "Venus", "Jupiter"], answer: 0 },
+    { q: "A 3D printer builds an object by...",
+      options: ["Cutting it out of stone", "Painting it onto glass", "Adding material layer by layer"], answer: 2 }
   ];
+  var QUIZ_GAME_SIZE = 5;
   var quizQ = document.getElementById("quizQ");
   var quizOpts = document.getElementById("quizOpts");
   var quizProgress = document.getElementById("quizProgress");
@@ -695,10 +721,19 @@
   var quizRestart = document.getElementById("quizRestart");
   if (quizQ && quizOpts && quizNext && quizResult) {
     var qIndex = 0, qScore = 0, qLocked = false;
+    var quizSet = [];
+    function quizNewSet() {
+      var order = QUIZ_BANK.map(function (_, i) { return i; });
+      for (var i = order.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var tmp = order[i]; order[i] = order[j]; order[j] = tmp;
+      }
+      quizSet = order.slice(0, QUIZ_GAME_SIZE).map(function (i) { return QUIZ_BANK[i]; });
+    }
     function quizRender() {
-      var item = QUIZ[qIndex];
+      var item = quizSet[qIndex];
       qLocked = false;
-      quizProgress.textContent = "Question " + (qIndex + 1) + " of " + QUIZ.length;
+      quizProgress.textContent = "Question " + (qIndex + 1) + " of " + quizSet.length;
       quizQ.textContent = item.q;
       quizFeedback.textContent = "";
       quizFeedback.className = "quiz-feedback";
@@ -717,7 +752,7 @@
     function quizPick(i, btn) {
       if (qLocked) return;
       qLocked = true;
-      var item = QUIZ[qIndex];
+      var item = quizSet[qIndex];
       var buttons = quizOpts.querySelectorAll(".quiz-opt");
       Array.prototype.forEach.call(buttons, function (b, j) {
         b.disabled = true;
@@ -732,7 +767,7 @@
         quizFeedback.textContent = "\u2717 Not quite \u2014 the answer was \u201C" + item.options[item.answer] + "\u201D.";
         quizFeedback.className = "quiz-feedback err";
       }
-      quizNext.textContent = qIndex === QUIZ.length - 1 ? "SEE MY RANK" : "NEXT";
+      quizNext.textContent = qIndex === quizSet.length - 1 ? "SEE MY RANK" : "NEXT";
       quizNext.hidden = false;
     }
     function quizFinish() {
@@ -741,20 +776,21 @@
       quizOpts.innerHTML = "";
       quizFeedback.textContent = "";
       quizNext.hidden = true;
-      quizScore.textContent = qScore + " / " + QUIZ.length;
+      quizScore.textContent = qScore + " / " + quizSet.length;
       quizRank.textContent =
-        qScore === 5 ? "GRID MASTER \u2014 the future bends around you." :
+        qScore === quizSet.length ? "GRID MASTER \u2014 the future bends around you." :
         qScore >= 3 ? "CYBER OPERATIVE \u2014 a strong, clean signal." :
                       "NEURAL NOVICE \u2014 recharge, traveller, and try again.";
       quizResult.hidden = false;
     }
     quizNext.addEventListener("click", function () {
-      if (qIndex === QUIZ.length - 1) { quizFinish(); }
+      if (qIndex === quizSet.length - 1) { quizFinish(); }
       else { qIndex++; quizRender(); }
     });
     if (quizRestart) quizRestart.addEventListener("click", function () {
-      qIndex = 0; qScore = 0; quizRender();
+      qIndex = 0; qScore = 0; quizNewSet(); quizRender();
     });
+    quizNewSet();
     quizRender();
   }
 
@@ -845,7 +881,7 @@
 
 })();
 
-/* ---------- Tools: typing test ---------- */
+/* ---------- Tools: typing test + study timer ---------- */
 (function () {
   "use strict";
 
@@ -946,5 +982,112 @@
     ttRestart.addEventListener("click", function () { reset(false); ttInput.focus(); });
     ttNew.addEventListener("click", function () { reset(true); ttInput.focus(); });
     reset(false);
+  }
+
+  /* Study timer — Pomodoro-style focus timer. It counts down to
+     a stored end timestamp rather than decrementing a counter,
+     so pausing and resuming stay exact: pause freezes the
+     remaining milliseconds, resume builds a fresh end time
+     from them. The finish chime is synthesised with WebAudio,
+     like the ambience — no audio files. */
+  var stDisplay = document.getElementById("stDisplay");
+  if (stDisplay) {
+    var stStatus = document.getElementById("stStatus"),
+        stToggle = document.getElementById("stToggle"),
+        stReset = document.getElementById("stReset"),
+        stPresets = document.querySelectorAll(".st-preset");
+    var stTotalMs = 25 * 60 * 1000,
+        stLeftMs = stTotalMs,
+        stEndAt = 0,
+        stRunning = false,
+        stTimerId = null,
+        stCtx = null;
+
+    function stFmt(ms) {
+      var s = Math.max(0, Math.ceil(ms / 1000));
+      var m = Math.floor(s / 60), r = s % 60;
+      return (m < 10 ? "0" : "") + m + ":" + (r < 10 ? "0" : "") + r;
+    }
+    function stRender() {
+      stDisplay.textContent = stFmt(stRunning ? stEndAt - Date.now() : stLeftMs);
+    }
+    function stSay(text, done) {
+      if (!stStatus) return;
+      stStatus.textContent = text;
+      stStatus.className = done ? "tool-result study-done" : "tool-result";
+    }
+    function stChime() {
+      var AC = window.AudioContext || window.webkitAudioContext;
+      if (!AC) return;
+      try {
+        if (!stCtx) stCtx = new AC();
+        if (stCtx.state === "suspended") stCtx.resume();
+        var t0 = stCtx.currentTime + 0.03;
+        [659.25, 880].forEach(function (f, i) {
+          var o = stCtx.createOscillator();
+          var g = stCtx.createGain();
+          var start = t0 + i * 0.22;
+          o.type = "sine";
+          o.frequency.value = f;
+          g.gain.setValueAtTime(0, start);
+          g.gain.linearRampToValueAtTime(0.12, start + 0.03);
+          g.gain.exponentialRampToValueAtTime(0.0001, start + 1.15);
+          o.connect(g); g.connect(stCtx.destination);
+          o.start(start); o.stop(start + 1.25);
+        });
+      } catch (e) { /* the chime is a courtesy, never an error */ }
+    }
+    function stStopClock() {
+      if (stTimerId) { clearInterval(stTimerId); stTimerId = null; }
+    }
+    function stFinish() {
+      stStopClock();
+      stRunning = false;
+      stLeftMs = 0;
+      stDisplay.textContent = "00:00";
+      stToggle.textContent = "START";
+      stSay("Time up! Session complete — stretch, breathe, and let the grid recharge.", true);
+      stChime();
+    }
+    function stTick() {
+      if (stEndAt - Date.now() <= 0) { stFinish(); return; }
+      stRender();
+    }
+    stToggle.addEventListener("click", function () {
+      if (stRunning) {
+        stLeftMs = Math.max(0, stEndAt - Date.now());
+        stStopClock();
+        stRunning = false;
+        stToggle.textContent = "RESUME";
+        stSay("Paused — your remaining time is held exactly where you left it.", false);
+        stRender();
+      } else {
+        if (stLeftMs <= 0) stLeftMs = stTotalMs;
+        stEndAt = Date.now() + stLeftMs;
+        stRunning = true;
+        stTimerId = setInterval(stTick, 200);
+        stToggle.textContent = "PAUSE";
+        stSay("Running — the grid is keeping time. Eyes on the work, traveller.", false);
+        stRender();
+      }
+    });
+    function stResetTimer() {
+      stStopClock();
+      stRunning = false;
+      stLeftMs = stTotalMs;
+      stToggle.textContent = "START";
+      stSay("Ready when you are — pick a length and press START.", false);
+      stRender();
+    }
+    stReset.addEventListener("click", stResetTimer);
+    Array.prototype.forEach.call(stPresets, function (btn) {
+      btn.addEventListener("click", function () {
+        Array.prototype.forEach.call(stPresets, function (b) { b.classList.remove("is-active"); });
+        btn.classList.add("is-active");
+        stTotalMs = parseInt(btn.getAttribute("data-mins"), 10) * 60 * 1000;
+        stResetTimer();
+      });
+    });
+    stRender();
   }
 })();
