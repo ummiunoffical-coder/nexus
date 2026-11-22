@@ -443,13 +443,11 @@
     { keys: ["help", "what can you do", "options", "questions"],
       reply: "I answer questions about NEXUS. Try: \"What is NEXUS?\", \"Tell me about Artificial Intelligence\", \"What is the Core?\", \"Is it free?\", or \"How do I join the signal?\"" },
     { keys: ["word counter", "count words", "word count", "count my words", "alfaz ginna", "words ginna"],
-      reply: "The Word Counter lives in the <a href=\"#tools\">Toolkit</a>: paste any text — Urdu or English — and it counts words, characters and sentences, estimates reading time, and prices the piece at the writer's rate of Rs 1,000 per 1,000 words. The COPY RESULT button copies the whole count in one tap." },
+      reply: "The Word Counter lives in the <a href=\"#tools\">Toolkit</a>: paste any text — Urdu or English — and it counts words, characters and sentences, and estimates reading time. The COPY RESULT button copies the whole count in one tap." },
     { keys: ["typing test", "typing speed", "typing", "wpm", "type test", "typing ka test", "typing practice"],
       reply: "The Typing Test is in the <a href=\"#tools\">Toolkit</a>: type the sample line as fast as you can — the 60-second clock starts on your first keystroke. It scores your WPM and accuracy, then gives you a grid rank. Restart or pull a new text anytime." },
     { keys: ["tools", "toolkit", "tool", "instruments", "auzar", "kaun se tools"],
-      reply: "The <a href=\"#tools\">Toolkit</a> holds two instruments, free for every traveller: a Word Counter that counts and prices your writing at Rs 1,000 per 1,000 words, and a 60-second Typing Test that measures your speed and accuracy." },
-    { keys: ["writing rate", "word rate", "1000 words", "per 1000", "article rate", "rate kya", "mazmoon rate", "likhne ke paise"],
-      reply: "The writer's rate on this grid is Rs 1,000 per 1,000 words — one rupee a word. The <a href=\"#tools\">Word Counter</a> does the maths for you: paste a piece and it shows its writing value instantly." },
+      reply: "The <a href=\"#tools\">Toolkit</a> holds two instruments, free for every traveller: a Word Counter that counts your words, characters and sentences and estimates reading time, and a 60-second Typing Test that measures your speed and accuracy." },
     { keys: ["share", "whatsapp", "send link", "share kaise", "share karna", "dost ko bhejna", "share on whatsapp"],
       reply: "Use the SHARE button in the <a href=\"#home\">hero</a> — it opens WhatsApp with the NEXUS link ready to send, and the official poster appears as the preview. Or just copy this page's address and pass it on; the future travels fast." },
     { keys: ["how are you", "how r you", "kaise ho", "kya haal", "haal kaisa"],
@@ -484,10 +482,9 @@
     { keys: ["شکریہ"], reply: "کوئی بات نہیں! آپ کی موجودگی سے اس گرڈ کی روشنی بڑھ جاتی ہے۔" },
     { keys: ["مدد", "کیا کر سکت"], reply: "میں نیکسس کے بارے میں سوالوں کے جواب دیتا ہوں۔ آزمائیں: نیکسس کیا ہے؟ مصنوعی ذہانت کیا ہے؟ پیغام کیسے بھیجیں؟ کوئز کہاں ہے؟ پوسٹر کہاں ہے؟" },
     { keys: ["نیکسس"], reply: "نیکسس ایک تجرباتی ڈیجیٹل تجربہ ہے — نیون روشنیوں، مصنوعی ذہانت اور مستقبل کی ٹیکنالوجی کی ایک جھلک۔ کچھ خاص پوچھنا ہو تو بتائیں: مصنوعی ذہانت، ڈیجیٹل دنیائیں، کوئز یا سگنل فارم؟" },
-    { keys: ["اوزار", "ٹولز", "ٹول", "اوزار کیا"], reply: "صفحے کے 'Toolkit' حصے میں دو اوزار ہیں، ہر مسافر کے لیے مفت: ایک ورڈ کاؤنٹر جو آپ کی تحریر گن کر اس کی قیمت بھی بتاتا ہے، اور ایک ٹائپنگ ٹیسٹ جو آپ کی رفتار ناپتا ہے۔" },
-    { keys: ["ورڈ کاؤنٹر", "الفاظ گن", "لفظ گن", "الفاظ کی گنتی"], reply: "ورڈ کاؤنٹر 'Toolkit' حصے میں ہے: اپنا مضمون اردو یا انگریزی میں چسپاں کریں، یہ الفاظ، حروف اور جملے گن کر پڑھنے کا وقت اور تحریر کی قیمت بتا دیتا ہے۔ قیمت کا اصول فی ہزار الفاظ ایک ہزار روپے ہے۔ 'COPY RESULT' بٹن سے پوری گنتی ایک دباؤ میں کاپی ہو جاتی ہے۔" },
+    { keys: ["اوزار", "ٹولز", "ٹول", "اوزار کیا"], reply: "صفحے کے 'Toolkit' حصے میں دو اوزار ہیں، ہر مسافر کے لیے مفت: ایک ورڈ کاؤنٹر جو آپ کی تحریر کے الفاظ، حروف اور جملے گنتا ہے، اور ایک ٹائپنگ ٹیسٹ جو آپ کی رفتار ناپتا ہے۔" },
+    { keys: ["ورڈ کاؤنٹر", "الفاظ گن", "لفظ گن", "الفاظ کی گنتی"], reply: "ورڈ کاؤنٹر 'Toolkit' حصے میں ہے: اپنا مضمون اردو یا انگریزی میں چسپاں کریں، یہ الفاظ، حروف اور جملے گن کر پڑھنے کا وقت بتا دیتا ہے۔ 'COPY RESULT' بٹن سے پوری گنتی ایک دباؤ میں کاپی ہو جاتی ہے۔" },
     { keys: ["ٹائپنگ", "ٹائپ کرنے", "رفتار کا ٹیسٹ"], reply: "ٹائپنگ ٹیسٹ 'Toolkit' حصے میں ہے: دی گئی سطر جتنی تیزی سے لکھ سکیں لکھیں — ساٹھ سیکنڈ کی گھڑی پہلے حرف سے شروع ہوتی ہے۔ آخر میں آپ کی رفتار (WPM)، درستگی اور رینک ملتا ہے۔" },
-    { keys: ["مضمون کی قیمت", "ریٹ", "فی ہزار الفاظ", "لکھنے کی قیمت", "ریٹ کیا"], reply: "اس گرڈ پر لکھنے کا ریٹ فی ہزار الفاظ ایک ہزار روپے ہے — یعنی ایک لفظ، ایک روپیہ۔ ورڈ کاؤنٹر یہ حساب خود کر دیتا ہے: مضمون چسپاں کریں، قیمت فوراً سامنے آ جائے گی۔" },
     { keys: ["کس نے بنایا", "بنانے والا", "عمیر", "تخلیق کار"], reply: "نیکسس عمیر نے بنایا ہے — سادہ HTML، CSS اور JavaScript سے، بغیر کسی فریم ورک کے۔ یہ ان نیون مستقبلوں کی یاد میں ہے جن کا وعدہ کیا گیا تھا، اور اس اصل مستقبل کے لیے جو ہم خود بنا رہے ہیں۔" },
     { keys: ["شیئر", "لنک بھیج", "دوست کو بھیج", "شیئر کیسے", "شیئر کرنا"], reply: "صفحے کے اوپر والے حصے میں SHARE بٹن ہے — اسے دبائیں تو WhatsApp میں نیکسس کا لنک بھیجنے کے لیے تیار ملتا ہے اور ساتھ سرکاری پوسٹر کی جھلک بھی نظر آتی ہے۔ یا بس اس صفحے کا پتہ کاپی کر کے آگے بھیج دیں۔" },
     { keys: ["کیسے ہو", "کیا حال", "خیریت"], reply: "میں بالکل ٹھیک ہوں — سارے نظام درست اور نیون روشن ہیں۔ آپ سنائیں، گرڈ کے اس پار کیا حال ہے؟" },
@@ -819,15 +816,14 @@
 (function () {
   "use strict";
 
-  /* Word counter — counts words/chars/sentences and prices the text
-     at the writer's rate of Rs 1,000 per 1,000 words (= Rs 1 per word). */
+  /* Word counter — counts words/chars/sentences and estimates
+     the reading time. */
   var wcInput = document.getElementById("wcInput");
   if (wcInput) {
     var wcWords = document.getElementById("wcWords"),
         wcChars = document.getElementById("wcChars"),
         wcSentences = document.getElementById("wcSentences"),
-        wcRead = document.getElementById("wcRead"),
-        wcPrice = document.getElementById("wcPrice");
+        wcRead = document.getElementById("wcRead");
     function wcUpdate() {
       var text = wcInput.value;
       var trimmed = text.trim();
@@ -838,13 +834,12 @@
       wcChars.textContent = text.length;
       wcSentences.textContent = sentences;
       wcRead.textContent = words === 0 ? "0 min" : (mins < 1 ? "<1 min" : Math.round(mins) + " min");
-      wcPrice.textContent = "Rs " + words.toLocaleString();
     }
     wcInput.addEventListener("input", wcUpdate);
     wcUpdate();
 
     /* Copy result — copies the current stats as one line of text,
-       handy for quoting a piece's word count and price. */
+       handy for quoting a piece's word count. */
     var wcCopy = document.getElementById("wcCopy"),
         wcCopyMsg = document.getElementById("wcCopyMsg");
     if (wcCopy && wcCopyMsg) {
@@ -853,9 +848,7 @@
         var summary = "Words: " + wcWords.textContent +
           " · Characters: " + wcChars.textContent +
           " · Sentences: " + wcSentences.textContent +
-          " · Reading time: " + wcRead.textContent +
-          " · Writing value: " + wcPrice.textContent +
-          " (at Rs 1,000 per 1,000 words)";
+          " · Reading time: " + wcRead.textContent;
         function done(ok) {
           wcCopyMsg.textContent = ok ? "Copied ✓" : "Copy failed — your browser blocked it.";
           clearTimeout(wcCopyTimer);
