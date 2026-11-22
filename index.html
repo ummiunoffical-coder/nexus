@@ -20,7 +20,7 @@
 <meta name="twitter:description" content="Step into a new dimension of digital experience. Meet NEXA, the guide bot of the grid.">
 <meta name="twitter:image" content="https://ummiunoffical-coder.github.io/nexus/poster.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23050814'/%3E%3Cpath d='M9 23V9l14 14V9' stroke='%232ee6ff' stroke-width='3.4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
-<link rel="stylesheet" href="style.css?v=20261115-7">
+<link rel="stylesheet" href="style.css?v=20261115-8">
 </head>
 <body>
 
@@ -310,12 +310,12 @@
   <div class="container">
     <p class="section-kicker reveal">05 · TOOLKIT</p>
     <h2 class="section-title reveal" id="toolsTitle">Tools that <span class="grad-text">work</span></h2>
-    <p class="section-sub reveal">Two instruments from the grid, free for every traveller: a word counter that prices your writing, and a typing test that times your fingers.</p>
+    <p class="section-sub reveal">Two instruments from the grid, free for every traveller: a word counter that tallies your text, and a typing test that times your fingers.</p>
 
     <div class="tools-grid">
       <div class="tool-card reveal">
         <h3 class="tool-title">Word Counter</h3>
-        <p class="tool-sub">Paste or type any text — Urdu or English. It counts the words and prices the piece at the writer's rate of Rs 1,000 per 1,000 words.</p>
+        <p class="tool-sub">Paste or type any text — Urdu or English. It counts the words, characters and sentences, and estimates the reading time.</p>
         <label class="visually-hidden" for="wcInput">Your text</label>
         <textarea id="wcInput" class="tool-area" rows="7" placeholder="اپنا مضمون یہاں لکھیں یا پیسٹ کریں… / Paste your article here..."></textarea>
         <div class="tool-stats">
@@ -324,7 +324,6 @@
           <div><span class="ts-num" id="wcSentences">0</span><span class="ts-label">Sentences</span></div>
           <div><span class="ts-num" id="wcRead">0 min</span><span class="ts-label">Reading time</span></div>
         </div>
-        <p class="tool-price">Writing value at Rs 1,000 / 1,000 words: <strong id="wcPrice">Rs 0</strong></p>
         <p class="tool-actions">
           <button class="btn btn-ghost" type="button" id="wcCopy">COPY RESULT</button>
           <span class="wc-copy-msg" id="wcCopyMsg" role="status" aria-live="polite"></span>
@@ -342,7 +341,7 @@
           <div><span class="ts-num" id="ttWpm">0</span><span class="ts-label">WPM</span></div>
           <div><span class="ts-num" id="ttAcc">100%</span><span class="ts-label">Accuracy</span></div>
         </div>
-        <p class="tool-price" id="ttResult" role="status" aria-live="polite">Your rank will appear here.</p>
+        <p class="tool-result" id="ttResult" role="status" aria-live="polite">Your rank will appear here.</p>
         <p class="tool-actions">
           <button class="btn btn-ghost" type="button" id="ttRestart">RESTART</button>
           <button class="btn btn-ghost" type="button" id="ttNew">NEW TEXT</button>
@@ -423,6 +422,6 @@
   </button>
 </div>
 
-<script src="script.js?v=20261115-7"></script>
+<script src="script.js?v=20261115-8"></script>
 </body>
 </html>
