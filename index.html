@@ -20,7 +20,7 @@
 <meta name="twitter:description" content="Step into a new dimension of digital experience. Meet NEXA, the guide bot of the grid.">
 <meta name="twitter:image" content="https://ummiunoffical-coder.github.io/nexus/poster.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23050814'/%3E%3Cpath d='M9 23V9l14 14V9' stroke='%232ee6ff' stroke-width='3.4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
-<link rel="stylesheet" href="style.css?v=20261115-9">
+<link rel="stylesheet" href="style.css?v=20261115-10">
 </head>
 <body>
 
@@ -310,7 +310,7 @@
   <div class="container">
     <p class="section-kicker reveal">05 · TOOLKIT</p>
     <h2 class="section-title reveal" id="toolsTitle">Tools that <span class="grad-text">work</span></h2>
-    <p class="section-sub reveal">One instrument from the grid, free for every traveller: a typing test that times your fingers.</p>
+    <p class="section-sub reveal">Two instruments from the grid, free for every traveller: a typing test that times your fingers, and a study timer that guards your focus.</p>
 
     <div class="tools-grid">
       <div class="tool-card reveal">
@@ -328,6 +328,22 @@
         <p class="tool-actions">
           <button class="btn btn-ghost" type="button" id="ttRestart">RESTART</button>
           <button class="btn btn-ghost" type="button" id="ttNew">NEW TEXT</button>
+        </p>
+      </div>
+
+      <div class="tool-card reveal">
+        <h3 class="tool-title">Study Timer</h3>
+        <p class="tool-sub">Focus in sprints, rest on schedule — the Pomodoro rhythm. Pick a length, press start, and the grid keeps time while you study.</p>
+        <p class="study-display" id="stDisplay">25:00</p>
+        <p class="tool-actions study-presets">
+          <button class="btn btn-ghost st-preset is-active" type="button" data-mins="25">FOCUS · 25 MIN</button>
+          <button class="btn btn-ghost st-preset" type="button" data-mins="15">SPRINT · 15 MIN</button>
+          <button class="btn btn-ghost st-preset" type="button" data-mins="5">BREAK · 5 MIN</button>
+        </p>
+        <p class="tool-result" id="stStatus" role="status" aria-live="polite">Ready when you are — pick a length and press START.</p>
+        <p class="tool-actions">
+          <button class="btn btn-primary" type="button" id="stToggle">START</button>
+          <button class="btn btn-ghost" type="button" id="stReset">RESET</button>
         </p>
       </div>
     </div>
@@ -408,6 +424,6 @@
   </button>
 </div>
 
-<script src="script.js?v=20261115-9"></script>
+<script src="script.js?v=20261115-10"></script>
 </body>
 </html>
