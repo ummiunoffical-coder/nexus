@@ -22,7 +22,7 @@
 <link rel="canonical" href="https://ummiunoffical-coder.github.io/nexus/">
 <meta name="robots" content="index, follow">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23050814'/%3E%3Cpath d='M9 23V9l14 14V9' stroke='%232ee6ff' stroke-width='3.4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
-<link rel="stylesheet" href="style.css?v=20261115-12">
+<link rel="stylesheet" href="style.css?v=20261115-13">
 </head>
 <body>
 
@@ -37,7 +37,7 @@
 <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
 <!-- Skip link for keyboard users -->
-<a class="skip-link" href="#explore">Skip to content</a>
+<a class="skip-link" href="#explore" data-i18n="skip">Skip to content</a>
 
 <!-- ================= HEADER / NAVIGATION ================= -->
 <header class="site-header" id="top">
@@ -46,16 +46,19 @@
       <span class="wordmark-mark" aria-hidden="true">N</span>
       <span class="wordmark-text">NEXUS</span>
     </a>
+    <div class="nav-right">
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" data-i18n="nav.home">Home</a></li>
+      <li><a href="#explore" data-i18n="nav.explore">Explore</a></li>
+      <li><a href="#technology" data-i18n="nav.technology">Technology</a></li>
+      <li><a href="#tools" data-i18n="nav.tools">Tools</a></li>
+      <li><a href="#about" data-i18n="nav.about">About</a></li>
+    </ul>
+    <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language to Urdu">اردو</button>
     <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">
       <span></span><span></span><span></span>
     </button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#explore">Explore</a></li>
-      <li><a href="#technology">Technology</a></li>
-      <li><a href="#tools">Tools</a></li>
-      <li><a href="#about">About</a></li>
-    </ul>
+    </div>
   </nav>
 </header>
 
@@ -74,15 +77,15 @@
 
   <div class="hero-inner container">
     <div class="hero-copy">
-      <p class="status-label"><span class="status-dot" aria-hidden="true"></span>SYSTEM ONLINE</p>
+      <p class="status-label"><span class="status-dot" aria-hidden="true"></span><span data-i18n="hero.status">SYSTEM ONLINE</span></p>
       <h1 class="hero-title">THE FUTURE<br>IS <span class="grad-text">HERE.</span></h1>
-      <p class="hero-sub">Step into a new dimension of digital experience.</p>
+      <p class="hero-sub" data-i18n="hero.sub">Step into a new dimension of digital experience.</p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="#explore" id="enterBtn">ENTER THE FUTURE</a>
-        <a class="btn btn-ghost" href="#technology">EXPLORE NEXUS</a>
-        <a class="btn btn-ghost" href="https://wa.me/?text=NEXUS%20%E2%80%94%20The%20Future%20Is%20Here.%20Step%20into%20a%20new%20dimension%20of%20digital%20experience%3A%20https%3A%2F%2Fummiunoffical-coder.github.io%2Fnexus%2F" target="_blank" rel="noopener">SHARE</a>
+        <a class="btn btn-primary" href="#explore" id="enterBtn" data-i18n="hero.enter">ENTER THE FUTURE</a>
+        <a class="btn btn-ghost" href="#technology" data-i18n="hero.explore">EXPLORE NEXUS</a>
+        <a class="btn btn-ghost" href="https://wa.me/?text=NEXUS%20%E2%80%94%20The%20Future%20Is%20Here.%20Step%20into%20a%20new%20dimension%20of%20digital%20experience%3A%20https%3A%2F%2Fummiunoffical-coder.github.io%2Fnexus%2F" target="_blank" rel="noopener" data-i18n="hero.share">SHARE</a>
       </div>
-      <p class="hero-note">An experimental digital experience — no downloads, no sign-up.</p>
+      <p class="hero-note" data-i18n="hero.note">An experimental digital experience — no downloads, no sign-up.</p>
     </div>
 
     <!-- ===== Friendly AI robot (layered SVG, animated by CSS/JS) ===== -->
@@ -189,19 +192,19 @@
 
 <section class="section" id="explore" aria-labelledby="discoverTitle">
   <div class="container">
-    <p class="section-kicker reveal">01 · DISCOVER</p>
-    <h2 class="section-title reveal" id="discoverTitle">Choose your <span class="grad-text">dimension</span></h2>
-    <p class="section-sub reveal">Three gateways into the NEXUS grid. Select a card to open its briefing.</p>
+    <p class="section-kicker reveal" data-i18n="discover.kicker">01 · DISCOVER</p>
+    <h2 class="section-title reveal" id="discoverTitle" data-i18n="discover.title">Choose your <span class="grad-text">dimension</span></h2>
+    <p class="section-sub reveal" data-i18n="discover.sub">Three gateways into the NEXUS grid. Select a card to open its briefing.</p>
 
     <div class="cards">
       <article class="card reveal" tabindex="0" role="button" aria-expanded="false" data-card>
         <div class="card-icon" aria-hidden="true">
           <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="5.5"/><circle cx="10" cy="13" r="3.4"/><circle cx="38" cy="12" r="3.4"/><circle cx="12" cy="37" r="3.4"/><circle cx="37" cy="36" r="3.4"/><path d="M19 21 12.5 15.5M29 20.5 35 15M20 28.5 14 34.5M28.5 28 34.5 33.5"/></svg>
         </div>
-        <h3>Artificial Intelligence</h3>
-        <p>Machines that learn, reason and create — the minds now woven into everyday life.</p>
+        <h3 data-i18n="card1.title">Artificial Intelligence</h3>
+        <p data-i18n="card1.text">Machines that learn, reason and create — the minds now woven into everyday life.</p>
         <div class="card-more">
-          <p>From language models to vision systems, modern AI predicts, generates and decides in milliseconds. NEXUS maps where this intelligence is heading next — and what it means for the humans guiding it.</p>
+          <p data-i18n="card1.more">From language models to vision systems, modern AI predicts, generates and decides in milliseconds. NEXUS maps where this intelligence is heading next — and what it means for the humans guiding it.</p>
         </div>
         <span class="card-cta">OPEN BRIEFING +</span>
       </article>
@@ -210,10 +213,10 @@
         <div class="card-icon" aria-hidden="true">
           <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="17"/><path d="M7 24h34M24 7c5 5.4 5 28.6 0 34M24 7c-5 5.4-5 28.6 0 34"/></svg>
         </div>
-        <h3>Digital Worlds</h3>
-        <p>Virtual cities, immersive realities and persistent universes built from pure light.</p>
+        <h3 data-i18n="card2.title">Digital Worlds</h3>
+        <p data-i18n="card2.text">Virtual cities, immersive realities and persistent universes built from pure light.</p>
         <div class="card-more">
-          <p>Digital worlds are no longer games alone — they are workplaces, classrooms and concert halls. Step through the portal and explore how entire societies are being prototyped inside simulated space.</p>
+          <p data-i18n="card2.more">Digital worlds are no longer games alone — they are workplaces, classrooms and concert halls. Step through the portal and explore how entire societies are being prototyped inside simulated space.</p>
         </div>
         <span class="card-cta">OPEN BRIEFING +</span>
       </article>
@@ -222,10 +225,10 @@
         <div class="card-icon" aria-hidden="true">
           <svg viewBox="0 0 48 48"><rect x="15" y="15" width="18" height="18" rx="3"/><path d="M21 15V7M27 15V7M21 41v-8M27 41v-8M15 21H7M15 27H7M41 21h-8M41 27h-8"/></svg>
         </div>
-        <h3>Future Technology</h3>
-        <p>Quantum leaps, neural interfaces and the hardware quietly rewriting tomorrow.</p>
+        <h3 data-i18n="card3.title">Future Technology</h3>
+        <p data-i18n="card3.text">Quantum leaps, neural interfaces and the hardware quietly rewriting tomorrow.</p>
         <div class="card-more">
-          <p>Chips that think, networks that feel instant, machines that build machines. This briefing tracks the inventions moving from laboratory prototypes to the device in your pocket.</p>
+          <p data-i18n="card3.more">Chips that think, networks that feel instant, machines that build machines. This briefing tracks the inventions moving from laboratory prototypes to the device in your pocket.</p>
         </div>
         <span class="card-cta">OPEN BRIEFING +</span>
       </article>
@@ -247,17 +250,17 @@
       <div class="core-chip chip-b">LATENCY 12ms</div>
     </div>
     <div class="core-copy">
-      <p class="section-kicker reveal">02 · NEXUS CORE</p>
-      <h2 class="section-title reveal" id="coreTitle">One core.<br><span class="grad-text">Infinite signals.</span></h2>
-      <p class="reveal">NEXUS is an experimental digital experience — a living interface between imagination and machine. It is not a product and it sells nothing; it is a window, opened briefly, onto the world now being built.</p>
-      <p class="reveal">Every light on this page is generated live in your browser. No servers, no tracking, no accounts — just code, colour and motion.</p>
+      <p class="section-kicker reveal" data-i18n="core.kicker">02 · NEXUS CORE</p>
+      <h2 class="section-title reveal" id="coreTitle" data-i18n="core.title">One core.<br><span class="grad-text">Infinite signals.</span></h2>
+      <p class="reveal" data-i18n="core.p1">NEXUS is an experimental digital experience — a living interface between imagination and machine. It is not a product and it sells nothing; it is a window, opened briefly, onto the world now being built.</p>
+      <p class="reveal" data-i18n="core.p2">Every light on this page is generated live in your browser. No servers, no tracking, no accounts — just code, colour and motion.</p>
       <dl class="stats reveal">
-        <div><dt><span data-count="128">0</span></dt><dd>Neural nodes simulated</dd></div>
-        <div><dt><span data-count="12">0</span>ms</dt><dd>Core response time</dd></div>
-        <div><dt><span data-count="100">0</span>%</dt><dd>Rendered locally, privately</dd></div>
+        <div><dt><span data-count="128">0</span></dt><dd data-i18n="core.stat1">Neural nodes simulated</dd></div>
+        <div><dt><span data-count="12">0</span>ms</dt><dd data-i18n="core.stat2">Core response time</dd></div>
+        <div><dt><span data-count="100">0</span>%</dt><dd data-i18n="core.stat3">Rendered locally, privately</dd></div>
       </dl>
       <div class="sotd reveal">
-        <p class="sotd-label"><span class="status-dot" aria-hidden="true"></span>SIGNAL OF THE DAY</p>
+        <p class="sotd-label"><span class="status-dot" aria-hidden="true"></span><span data-i18n="sotd.label">SIGNAL OF THE DAY</span></p>
         <p class="sotd-text" id="sotdText">Tuning into today's frequency...</p>
       </div>
     </div>
@@ -267,9 +270,9 @@
 <!-- ================= THE GRID TEST (quiz) ================= -->
 <section class="section" id="quiz" aria-labelledby="quizTitle">
   <div class="container">
-    <p class="section-kicker reveal">03 · THE GRID TEST</p>
-    <h2 class="section-title reveal" id="quizTitle">Test your <span class="grad-text">signal</span></h2>
-    <p class="section-sub reveal">Five questions from the future. No pressure — the grid is watching, kindly.</p>
+    <p class="section-kicker reveal" data-i18n="quiz.kicker">03 · THE GRID TEST</p>
+    <h2 class="section-title reveal" id="quizTitle" data-i18n="quiz.title">Test your <span class="grad-text">signal</span></h2>
+    <p class="section-sub reveal" data-i18n="quiz.sub">Five questions from the future. No pressure — the grid is watching, kindly.</p>
     <div class="quiz-panel reveal" id="quizPanel">
       <p class="quiz-progress" id="quizProgress">Question 1 of 5</p>
       <h3 class="quiz-q" id="quizQ"></h3>
@@ -279,7 +282,7 @@
       <div class="quiz-result" id="quizResult" hidden>
         <p class="quiz-score" id="quizScore"></p>
         <p class="quiz-rank" id="quizRank"></p>
-        <button class="btn btn-ghost" id="quizRestart" type="button">PLAY AGAIN</button>
+        <button class="btn btn-ghost" id="quizRestart" type="button" data-i18n="quiz.playAgain">PLAY AGAIN</button>
       </div>
     </div>
   </div>
@@ -289,18 +292,18 @@
 <section class="section" id="signal" aria-labelledby="signalTitle">
   <div class="container">
     <div class="signal-panel reveal">
-      <p class="section-kicker">04 · SIGNAL</p>
-      <h2 class="section-title" id="signalTitle">Join the <span class="grad-text">transmission</span></h2>
-      <p class="section-sub">Leave your name, email and a message — the signal lands directly in the keeper's inbox, and the grid will answer.</p>
+      <p class="section-kicker" data-i18n="signal.kicker">04 · SIGNAL</p>
+      <h2 class="section-title" id="signalTitle" data-i18n="signal.title">Join the <span class="grad-text">transmission</span></h2>
+      <p class="section-sub" data-i18n="signal.sub">Leave your name, email and a message — the signal lands directly in the keeper's inbox, and the grid will answer.</p>
       <form class="signal-form signal-form-v2" id="signalForm" novalidate>
         <div class="signal-row">
           <label class="visually-hidden" for="signalName">Your name</label>
-          <input type="text" id="signalName" name="name" placeholder="Your name" autocomplete="name" maxlength="80">
+          <input type="text" id="signalName" name="name" data-i18n-ph="signal.namePh" placeholder="Your name" autocomplete="name" maxlength="80">
           <label class="visually-hidden" for="signalEmail">Email address</label>
-          <input type="email" id="signalEmail" name="email" placeholder="you@future.net" autocomplete="email">
+          <input type="email" id="signalEmail" name="email" data-i18n-ph="signal.emailPh" placeholder="you@future.net" autocomplete="email">
         </div>
         <label class="visually-hidden" for="signalMessage">Your message</label>
-        <textarea id="signalMessage" name="message" rows="4" placeholder="Your message for the grid..." maxlength="1500"></textarea>
+        <textarea id="signalMessage" name="message" rows="4" data-i18n-ph="signal.msgPh" placeholder="Your message for the grid..." maxlength="1500"></textarea>
         <button class="btn btn-primary" type="submit" id="signalBtn">TRANSMIT</button>
       </form>
       <p class="signal-msg" id="signalMsg" role="status" aria-live="polite"></p>
@@ -311,42 +314,42 @@
 <!-- ================= TOOLS ================= -->
 <section class="section" id="tools" aria-labelledby="toolsTitle">
   <div class="container">
-    <p class="section-kicker reveal">05 · TOOLKIT</p>
-    <h2 class="section-title reveal" id="toolsTitle">Tools that <span class="grad-text">work</span></h2>
-    <p class="section-sub reveal">Two instruments from the grid, free for every traveller: a typing test that times your fingers, and a study timer that guards your focus.</p>
+    <p class="section-kicker reveal" data-i18n="tools.kicker">05 · TOOLKIT</p>
+    <h2 class="section-title reveal" id="toolsTitle" data-i18n="tools.title">Tools that <span class="grad-text">work</span></h2>
+    <p class="section-sub reveal" data-i18n="tools.sub">Two instruments from the grid, free for every traveller: a typing test that times your fingers, and a study timer that guards your focus.</p>
 
     <div class="tools-grid">
       <div class="tool-card reveal">
-        <h3 class="tool-title">Typing Test</h3>
-        <p class="tool-sub">Type the line below as fast as you can. The clock starts with your first keystroke — 60 seconds on the grid.</p>
+        <h3 class="tool-title" data-i18n="typing.title">Typing Test</h3>
+        <p class="tool-sub" data-i18n="typing.sub">Type the line below as fast as you can. The clock starts with your first keystroke — 60 seconds on the grid.</p>
         <p class="type-sample" id="ttSample" aria-label="Text to type"></p>
         <label class="visually-hidden" for="ttInput">Type here</label>
-        <textarea id="ttInput" class="tool-area" rows="3" placeholder="Start typing here..." autocomplete="off" autocapitalize="off" spellcheck="false"></textarea>
+        <textarea id="ttInput" class="tool-area" rows="3" data-i18n-ph="typing.inputPh" placeholder="Start typing here..." autocomplete="off" autocapitalize="off" spellcheck="false"></textarea>
         <div class="tool-stats three">
-          <div><span class="ts-num" id="ttTime">60</span><span class="ts-label">Seconds left</span></div>
-          <div><span class="ts-num" id="ttWpm">0</span><span class="ts-label">WPM</span></div>
-          <div><span class="ts-num" id="ttAcc">100%</span><span class="ts-label">Accuracy</span></div>
+          <div><span class="ts-num" id="ttTime">60</span><span class="ts-label" data-i18n="typing.seconds">Seconds left</span></div>
+          <div><span class="ts-num" id="ttWpm">0</span><span class="ts-label" data-i18n="typing.wpm">WPM</span></div>
+          <div><span class="ts-num" id="ttAcc">100%</span><span class="ts-label" data-i18n="typing.accuracy">Accuracy</span></div>
         </div>
-        <p class="tool-result" id="ttResult" role="status" aria-live="polite">Your rank will appear here.</p>
+        <p class="tool-result" id="ttResult" role="status" aria-live="polite" data-i18n="typing.resultIdle">Your rank will appear here.</p>
         <p class="tool-actions">
-          <button class="btn btn-ghost" type="button" id="ttRestart">RESTART</button>
-          <button class="btn btn-ghost" type="button" id="ttNew">NEW TEXT</button>
+          <button class="btn btn-ghost" type="button" id="ttRestart" data-i18n="typing.restart">RESTART</button>
+          <button class="btn btn-ghost" type="button" id="ttNew" data-i18n="typing.newText">NEW TEXT</button>
         </p>
       </div>
 
       <div class="tool-card reveal">
-        <h3 class="tool-title">Study Timer</h3>
-        <p class="tool-sub">Focus in sprints, rest on schedule — the Pomodoro rhythm. Pick a length, press start, and the grid keeps time while you study.</p>
+        <h3 class="tool-title" data-i18n="study.title">Study Timer</h3>
+        <p class="tool-sub" data-i18n="study.sub">Focus in sprints, rest on schedule — the Pomodoro rhythm. Pick a length, press start, and the grid keeps time while you study.</p>
         <p class="study-display" id="stDisplay">25:00</p>
         <p class="tool-actions study-presets">
-          <button class="btn btn-ghost st-preset is-active" type="button" data-mins="25">FOCUS · 25 MIN</button>
-          <button class="btn btn-ghost st-preset" type="button" data-mins="15">SPRINT · 15 MIN</button>
-          <button class="btn btn-ghost st-preset" type="button" data-mins="5">BREAK · 5 MIN</button>
+          <button class="btn btn-ghost st-preset is-active" type="button" data-mins="25" data-i18n="study.presetFocus">FOCUS · 25 MIN</button>
+          <button class="btn btn-ghost st-preset" type="button" data-mins="15" data-i18n="study.presetSprint">SPRINT · 15 MIN</button>
+          <button class="btn btn-ghost st-preset" type="button" data-mins="5" data-i18n="study.presetBreak">BREAK · 5 MIN</button>
         </p>
-        <p class="tool-result" id="stStatus" role="status" aria-live="polite">Ready when you are — pick a length and press START.</p>
+        <p class="tool-result" id="stStatus" role="status" aria-live="polite" data-i18n="study.ready">Ready when you are — pick a length and press START.</p>
         <p class="tool-actions">
-          <button class="btn btn-primary" type="button" id="stToggle">START</button>
-          <button class="btn btn-ghost" type="button" id="stReset">RESET</button>
+          <button class="btn btn-primary" type="button" id="stToggle" data-i18n="study.start">START</button>
+          <button class="btn btn-ghost" type="button" id="stReset" data-i18n="study.reset">RESET</button>
         </p>
       </div>
     </div>
@@ -363,31 +366,31 @@
         <span class="wordmark-mark" aria-hidden="true">N</span>
         <span class="wordmark-text">NEXUS</span>
       </a>
-      <p class="footer-about">NEXUS is a concept experience crafted with plain HTML, CSS and JavaScript. Built as a tribute to the neon futures we were promised — and the real one we are building.</p>
+      <p class="footer-about" data-i18n="footer.about">NEXUS is a concept experience crafted with plain HTML, CSS and JavaScript. Built as a tribute to the neon futures we were promised — and the real one we are building.</p>
     </div>
     <nav aria-label="Footer navigation">
-      <h3 class="footer-h">Navigate</h3>
+      <h3 class="footer-h" data-i18n="footer.navigate">Navigate</h3>
       <ul class="footer-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#explore">Explore</a></li>
-        <li><a href="#technology">Technology</a></li>
-        <li><a href="#quiz">Quiz</a></li>
-        <li><a href="#signal">Signal</a></li>
-        <li><a href="#tools">Tools</a></li>
+        <li><a href="#home" data-i18n="footer.navHome">Home</a></li>
+        <li><a href="#explore" data-i18n="footer.navExplore">Explore</a></li>
+        <li><a href="#technology" data-i18n="footer.navTech">Technology</a></li>
+        <li><a href="#quiz" data-i18n="footer.navQuiz">Quiz</a></li>
+        <li><a href="#signal" data-i18n="footer.navSignal">Signal</a></li>
+        <li><a href="#tools" data-i18n="footer.navTools">Tools</a></li>
       </ul>
     </nav>
     <div>
-      <h3 class="footer-h">Status</h3>
-      <p class="footer-status"><span class="status-dot" aria-hidden="true"></span>All systems nominal</p>
-      <p class="footer-status">Grid time · <span id="gridClock">--:--:--</span></p>
+      <h3 class="footer-h" data-i18n="footer.status">Status</h3>
+      <p class="footer-status"><span class="status-dot" aria-hidden="true"></span><span data-i18n="footer.nominal">All systems nominal</span></p>
+      <p class="footer-status"><span data-i18n="footer.gridTime">Grid time</span> · <span id="gridClock">--:--:--</span></p>
 <!-- Ambient sound toggle (sound is generated live by script.js) -->
 <button class="music-btn" id="musicBtn" type="button" aria-pressed="false" title="Ambient sound, generated live in your browser — no audio files">
-  <span aria-hidden="true">&#9836;</span> AMBIENCE <span class="music-state" id="musicState">OFF</span>
+  <span aria-hidden="true">&#9836;</span> <span data-i18n="footer.ambience">AMBIENCE</span> <span class="music-state" id="musicState">OFF</span>
 </button>
 
     </div>
   </div>
-  <p class="footer-base container">© 2026 NEXUS · Designed &amp; built by Umair — a fictional concept experience, crafted in the browser.</p>
+  <p class="footer-base container" data-i18n="footer.credit">© 2026 NEXUS · Designed &amp; built by Umair — a fictional concept experience, crafted in the browser.</p>
 </footer>
 
 
@@ -399,7 +402,7 @@
       <div class="nexa-avatar" aria-hidden="true">N</div>
       <div class="nexa-head-copy">
         <p class="nexa-name">NEXA</p>
-        <p class="nexa-status"><span class="status-dot" aria-hidden="true"></span>Online · answers NEXUS questions</p>
+        <p class="nexa-status"><span class="status-dot" aria-hidden="true"></span><span data-i18n="nexa.status">Online · answers NEXUS questions</span></p>
       </div>
       <button class="nexa-voice" id="nexaVoice" type="button" aria-pressed="false" aria-label="Hear NEXA replies aloud" title="Hear NEXA replies aloud"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z" fill="currentColor" stroke="none"/><path class="nexa-voice-waves" d="M15.5 8.5a5 5 0 0 1 0 7"/><path class="nexa-voice-waves" d="M18.4 5.8a9.2 9.2 0 0 1 0 12.4"/></svg></button>
       <button class="nexa-close" id="nexaClose" type="button" aria-label="Close chat">&times;</button>
@@ -417,18 +420,18 @@
     </div>
     <form class="nexa-form" id="nexaForm">
       <label class="visually-hidden" for="nexaInput">Ask NEXA a question</label>
-      <input type="text" id="nexaInput" placeholder="Ask NEXA about NEXUS..." autocomplete="off" maxlength="300">
+      <input type="text" id="nexaInput" data-i18n-ph="nexa.placeholder" placeholder="Ask NEXA about NEXUS..." autocomplete="off" maxlength="300">
       <button class="nexa-mic" id="nexaMic" type="button" aria-pressed="false" aria-label="Ask NEXA by voice" title="Ask by voice"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2.5" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0"/><path d="M12 17.5V21"/></svg></button>
       <button class="nexa-send" type="submit" aria-label="Send message">&#10148;</button>
     </form>
   </div>
   <button class="nexa-launch" id="nexaLaunch" type="button" aria-expanded="false" aria-controls="nexaPanel" aria-label="Open chat with NEXA">
     <span class="nexa-launch-mark" aria-hidden="true">N</span>
-    <span class="nexa-launch-text">Ask NEXA</span>
+    <span class="nexa-launch-text" data-i18n="nexa.ask">Ask NEXA</span>
     <span class="nexa-launch-dot" aria-hidden="true"></span>
   </button>
 </div>
 
-<script src="script.js?v=20261115-12"></script>
+<script src="script.js?v=20261115-13"></script>
 </body>
 </html>
