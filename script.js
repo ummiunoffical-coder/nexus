@@ -5,7 +5,7 @@
    2) Pointer parallax for the robot + hero glow
    3) Mobile menu · 4) Interactive cards · 5) Scroll reveal
       and animated counters · 6) Signal form · 7) Footer clock
-   8) NEXA guide bot · 9) Boot intro + scroll progress
+   8) NEXA guide bot (text + voice) · 9) Boot intro + scroll progress
    10) The Grid Test quiz · 11) Ambience synth
    12) Signal of the Day
    A second block at the end holds the Toolkit: the typing
@@ -402,6 +402,9 @@
      8) NEXA GUIDE BOT — answers questions about NEXUS.
      Rule-based and fully local, like the rest of this page:
      no server, no tracking, nothing leaves the browser.
+     Voice in/out uses the browser's own Web Speech APIs and
+     is feature-detected: unsupported browsers simply never
+     see the speaker / microphone buttons.
      --------------------------------------------------------- */
   /* NEXA-KB-START */
   var NEXA_KB = [
@@ -578,6 +581,8 @@
   var nexaForm = document.getElementById("nexaForm");
   var nexaInput = document.getElementById("nexaInput");
   var nexaChips = document.getElementById("nexaChips");
+  var nexaVoiceBtn = document.getElementById("nexaVoice");
+  var nexaMicBtn = document.getElementById("nexaMic");
   var nexaGreeted = false;
 
   if (nexaLaunch && nexaPanel && nexaMsgs && nexaForm && nexaInput) {
@@ -590,6 +595,73 @@
       nexaScroll();
       return div;
     }
+    /* --- NEXA voice output: spoken replies (speechSynthesis) ---
+       Off by default; the speaker button in the panel header
+       turns it on. Everything is guarded: where the browser has
+       no speech synthesis, the button hides itself and NEXA
+       stays text-only, exactly as before. */
+    var nexaSynth = ("speechSynthesis" in window) ? window.speechSynthesis : null;
+    var nexaVoiceOn = false;
+
+    function nexaPlainText(html) {
+      var holder = document.createElement("div");
+      holder.innerHTML = String(html || "");
+      return (holder.textContent || "").replace(/\s+/g, " ").trim();
+    }
+    function nexaPickVoice(urdu) {
+      if (!nexaSynth) return null;
+      var voices = [];
+      try { voices = nexaSynth.getVoices() || []; } catch (err) { voices = []; }
+      var i, v;
+      if (urdu) {
+        for (i = 0; i < voices.length; i++) {
+          v = voices[i];
+          if (v.lang && v.lang.toLowerCase().indexOf("ur") === 0) return v;
+        }
+        return null; /* no Urdu voice installed: the ur-PK lang tag still guides some engines */
+      }
+      for (i = 0; i < voices.length; i++) {
+        v = voices[i];
+        if (v.lang && v.lang.toLowerCase().indexOf("en") === 0) return v;
+      }
+      return null;
+    }
+    function nexaSpeak(html) {
+      if (!nexaSynth || !nexaVoiceOn) return;
+      var text = nexaPlainText(html);
+      if (!text) return;
+      try {
+        nexaSynth.cancel(); /* a new reply always replaces the one before */
+        var utter = new SpeechSynthesisUtterance(text);
+        var urdu = /[\u0600-\u06FF]/.test(text);
+        utter.lang = urdu ? "ur-PK" : "en-US";
+        var voice = nexaPickVoice(urdu);
+        if (voice) utter.voice = voice;
+        nexaSynth.speak(utter);
+      } catch (err) { /* voice is a bonus layer: fail silent, never break the chat */ }
+    }
+    function nexaStopSpeaking() {
+      if (nexaSynth) { try { nexaSynth.cancel(); } catch (err) {} }
+    }
+    if (nexaVoiceBtn) {
+      if (!nexaSynth) {
+        nexaVoiceBtn.style.display = "none";
+      } else {
+        /* Some browsers fill the voice list asynchronously; warm it up. */
+        try { nexaSynth.getVoices(); } catch (err) {}
+        if (typeof nexaSynth.addEventListener === "function") {
+          nexaSynth.addEventListener("voiceschanged", function () {
+            try { nexaSynth.getVoices(); } catch (err) {}
+          });
+        }
+        nexaVoiceBtn.addEventListener("click", function () {
+          nexaVoiceOn = !nexaVoiceOn;
+          nexaVoiceBtn.setAttribute("aria-pressed", nexaVoiceOn ? "true" : "false");
+          if (!nexaVoiceOn) nexaStopSpeaking();
+        });
+      }
+    }
+
     function nexaReply(question) {
       var typing = document.createElement("div");
       typing.className = "nexa-msg-typing";
@@ -599,7 +671,9 @@
       var delay = reduceMotion ? 60 : 550 + Math.random() * 450;
       setTimeout(function () {
         if (typing.parentNode) typing.parentNode.removeChild(typing);
-        nexaAddMsg(nexaAnswer(question), "bot");
+        var answer = nexaAnswer(question);
+        nexaAddMsg(answer, "bot");
+        nexaSpeak(answer);
       }, delay);
     }
     function nexaAsk(question) {
@@ -618,6 +692,8 @@
       setTimeout(function () { nexaInput.focus(); }, 60);
     }
     function nexaShut() {
+      nexaStopSpeaking();
+      if (nexaListening && nexaRec) { try { nexaRec.stop(); } catch (err) {} }
       nexaPanel.hidden = true;
       nexaLaunch.setAttribute("aria-expanded", "false");
       nexaLaunch.focus();
@@ -639,6 +715,75 @@
         if (btn && btn.getAttribute) nexaAsk(btn.getAttribute("data-q"));
       });
     }
+    /* --- NEXA voice input: ask by microphone (SpeechRecognition) ---
+       The keeper speaks Urdu first, so listening starts in ur-PK;
+       if the device has no Urdu recogniser, it retries once in
+       en-US. Note: on some devices (Chrome on Android, for one)
+       recognition sends the audio to a server, so the microphone
+       needs an internet connection there. Where the API does not
+       exist at all (Firefox), the button hides itself — there are
+       no dead controls on this page. */
+    var NexaRecognition = window.SpeechRecognition || window.webkitSpeechRecognition || null;
+    var nexaRec = null;
+    var nexaListening = false;
+    var nexaRetryEnglish = false;
+
+    function nexaMicState(on) {
+      nexaListening = on;
+      if (nexaMicBtn) {
+        nexaMicBtn.classList.toggle("is-listening", on);
+        nexaMicBtn.setAttribute("aria-pressed", on ? "true" : "false");
+      }
+    }
+    function nexaStartListening(lang, isRetry) {
+      var rec = null;
+      try { rec = new NexaRecognition(); } catch (err) { rec = null; }
+      if (!rec) { if (nexaMicBtn) nexaMicBtn.style.display = "none"; return; }
+      nexaRec = rec;
+      rec.lang = lang;
+      rec.interimResults = false;
+      rec.maxAlternatives = 1;
+      rec.onresult = function (event) {
+        var transcript = "";
+        if (event.results && event.results[0] && event.results[0][0]) {
+          transcript = event.results[0][0].transcript || "";
+        }
+        transcript = String(transcript).trim();
+        if (transcript) {
+          nexaInput.value = transcript;
+          nexaAsk(transcript);
+          nexaInput.value = "";
+        }
+      };
+      rec.onerror = function (event) {
+        if (event && event.error === "language-not-supported" && !isRetry) {
+          nexaRetryEnglish = true; /* onend below restarts us in English */
+        }
+      };
+      rec.onend = function () {
+        nexaMicState(false);
+        if (nexaRetryEnglish) {
+          nexaRetryEnglish = false;
+          nexaStartListening("en-US", true);
+        }
+      };
+      nexaMicState(true);
+      try { rec.start(); } catch (err) { nexaMicState(false); }
+    }
+    if (nexaMicBtn) {
+      if (!NexaRecognition) {
+        nexaMicBtn.style.display = "none";
+      } else {
+        nexaMicBtn.addEventListener("click", function () {
+          if (nexaListening && nexaRec) {
+            try { nexaRec.stop(); } catch (err) {}
+            return;
+          }
+          nexaStartListening("ur-PK", false);
+        });
+      }
+    }
+
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape" && !nexaPanel.hidden) nexaShut();
     });
