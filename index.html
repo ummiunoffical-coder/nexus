@@ -22,7 +22,7 @@
 <link rel="canonical" href="https://ummiunoffical-coder.github.io/nexus/">
 <meta name="robots" content="index, follow">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23050814'/%3E%3Cpath d='M9 23V9l14 14V9' stroke='%232ee6ff' stroke-width='3.4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
-<link rel="stylesheet" href="style.css?v=20261115-15">
+<link rel="stylesheet" href="style.css?v=20261115-16">
 </head>
 <body>
 
@@ -328,9 +328,57 @@
     <h2 class="section-title reveal" id="toolsTitle" data-i18n="tools.title">Tools that <span class="grad-text">work</span></h2>
     <p class="section-sub reveal" data-i18n="tools.sub">Five instruments from the grid, free for every traveller: a typing test, a study timer, a text summariser, a sentiment analyser and a prompt generator for image AIs.</p>
 
-    <div class="tools-grid">
-      <div class="tool-card reveal">
-        <h3 class="tool-title" data-i18n="typing.title">Typing Test</h3>
+    <nav class="tools-index reveal" aria-label="Toolkit index">
+      <a class="tool-row" href="#tool-typing">
+        <span class="tool-num" aria-hidden="true">01</span>
+        <span class="tool-row-main">
+          <span class="tool-row-name" data-i18n="typing.title">Typing Test</span>
+          <span class="tool-row-desc" data-i18n="typing.sub">Type the line below as fast as you can. The clock starts with your first keystroke — 60 seconds on the grid.</span>
+        </span>
+        <span class="tool-open" data-i18n="tools.open">OPEN</span>
+      </a>
+      <a class="tool-row" href="#tool-timer">
+        <span class="tool-num" aria-hidden="true">02</span>
+        <span class="tool-row-main">
+          <span class="tool-row-name" data-i18n="study.title">Study Timer</span>
+          <span class="tool-row-desc" data-i18n="study.sub">Focus in sprints, rest on schedule — the Pomodoro rhythm. Pick a length, press start, and the grid keeps time while you study.</span>
+        </span>
+        <span class="tool-open" data-i18n="tools.open">OPEN</span>
+      </a>
+      <a class="tool-row" href="#tool-summarizer">
+        <span class="tool-num" aria-hidden="true">03</span>
+        <span class="tool-row-main">
+          <span class="tool-row-name" data-i18n="summ.title">Text Summarizer</span>
+          <span class="tool-row-desc" data-i18n="summ.sub">Paste any text — English or اردو — and the grid picks its most important sentences, right here in your browser. Nothing is uploaded anywhere.</span>
+        </span>
+        <span class="tool-open" data-i18n="tools.open">OPEN</span>
+      </a>
+      <a class="tool-row" href="#tool-sentiment">
+        <span class="tool-num" aria-hidden="true">04</span>
+        <span class="tool-row-main">
+          <span class="tool-row-name" data-i18n="sent.title">Sentiment Analyzer</span>
+          <span class="tool-row-desc" data-i18n="sent.sub">How does a text feel? Paste English, Roman Urdu or اردو and the grid reads its mood from the words themselves.</span>
+        </span>
+        <span class="tool-open" data-i18n="tools.open">OPEN</span>
+      </a>
+      <a class="tool-row" href="#tool-prompt">
+        <span class="tool-num" aria-hidden="true">05</span>
+        <span class="tool-row-main">
+          <span class="tool-row-name" data-i18n="prompt.title">AI Prompt Generator</span>
+          <span class="tool-row-desc" data-i18n="prompt.sub">Describe a scene, pick a style and a light, and the grid writes a polished prompt for image generators. The prompt itself stays in English — that is the language image AIs understand best.</span>
+        </span>
+        <span class="tool-open" data-i18n="tools.open">OPEN</span>
+      </a>
+    </nav>
+  </div>
+</section>
+
+<!-- ================= TOOL VIEW: TYPING TEST ================= -->
+<section class="tool-view" id="view-typing" hidden aria-labelledby="viewTitle-typing">
+  <div class="container">
+    <a class="tool-back" href="#tools" data-i18n="tools.back">← All tools</a>
+    <h2 class="tool-view-title" id="viewTitle-typing" data-i18n="typing.title">Typing Test</h2>
+    <div class="tool-card reveal">
         <p class="tool-sub" data-i18n="typing.sub">Type the line below as fast as you can. The clock starts with your first keystroke — 60 seconds on the grid.</p>
         <p class="type-sample" id="ttSample" aria-label="Text to type"></p>
         <label class="visually-hidden" for="ttInput">Type here</label>
@@ -345,10 +393,16 @@
           <button class="btn btn-ghost" type="button" id="ttRestart" data-i18n="typing.restart">RESTART</button>
           <button class="btn btn-ghost" type="button" id="ttNew" data-i18n="typing.newText">NEW TEXT</button>
         </p>
-      </div>
+    </div>
+  </div>
+</section>
 
-      <div class="tool-card reveal">
-        <h3 class="tool-title" data-i18n="study.title">Study Timer</h3>
+<!-- ================= TOOL VIEW: STUDY TIMER ================= -->
+<section class="tool-view" id="view-timer" hidden aria-labelledby="viewTitle-timer">
+  <div class="container">
+    <a class="tool-back" href="#tools" data-i18n="tools.back">← All tools</a>
+    <h2 class="tool-view-title" id="viewTitle-timer" data-i18n="study.title">Study Timer</h2>
+    <div class="tool-card reveal">
         <p class="tool-sub" data-i18n="study.sub">Focus in sprints, rest on schedule — the Pomodoro rhythm. Pick a length, press start, and the grid keeps time while you study.</p>
         <p class="study-display" id="stDisplay">25:00</p>
         <p class="tool-actions study-presets">
@@ -361,10 +415,16 @@
           <button class="btn btn-primary" type="button" id="stToggle" data-i18n="study.start">START</button>
           <button class="btn btn-ghost" type="button" id="stReset" data-i18n="study.reset">RESET</button>
         </p>
-      </div>
+    </div>
+  </div>
+</section>
 
-      <div class="tool-card reveal">
-        <h3 class="tool-title" data-i18n="summ.title">Text Summarizer</h3>
+<!-- ================= TOOL VIEW: TEXT SUMMARIZER ================= -->
+<section class="tool-view" id="view-summarizer" hidden aria-labelledby="viewTitle-summarizer">
+  <div class="container">
+    <a class="tool-back" href="#tools" data-i18n="tools.back">← All tools</a>
+    <h2 class="tool-view-title" id="viewTitle-summarizer" data-i18n="summ.title">Text Summarizer</h2>
+    <div class="tool-card reveal">
         <p class="tool-sub" data-i18n="summ.sub">Paste any text — English or اردو — and the grid picks its most important sentences, right here in your browser. Nothing is uploaded anywhere.</p>
         <label class="visually-hidden" for="smInput">Text to summarise</label>
         <textarea id="smInput" class="tool-area" rows="5" data-i18n-ph="summ.inputPh" placeholder="Paste the text to summarise..." autocomplete="off" spellcheck="false"></textarea>
@@ -375,10 +435,16 @@
         </p>
         <div class="tool-output" id="smOutput" hidden></div>
         <p class="tool-result" id="smStat" role="status" aria-live="polite" data-i18n="summ.idle">Your summary will appear here.</p>
-      </div>
+    </div>
+  </div>
+</section>
 
-      <div class="tool-card reveal">
-        <h3 class="tool-title" data-i18n="sent.title">Sentiment Analyzer</h3>
+<!-- ================= TOOL VIEW: SENTIMENT ANALYZER ================= -->
+<section class="tool-view" id="view-sentiment" hidden aria-labelledby="viewTitle-sentiment">
+  <div class="container">
+    <a class="tool-back" href="#tools" data-i18n="tools.back">← All tools</a>
+    <h2 class="tool-view-title" id="viewTitle-sentiment" data-i18n="sent.title">Sentiment Analyzer</h2>
+    <div class="tool-card reveal">
         <p class="tool-sub" data-i18n="sent.sub">How does a text feel? Paste English, Roman Urdu or اردو and the grid reads its mood from the words themselves.</p>
         <label class="visually-hidden" for="saInput">Text to analyse</label>
         <textarea id="saInput" class="tool-area" rows="4" data-i18n-ph="sent.inputPh" placeholder="Paste a sentence, a review, a message..." autocomplete="off" spellcheck="false"></textarea>
@@ -388,10 +454,16 @@
         <div class="sent-meter" aria-hidden="true"><div class="sent-meter-dot" id="saDot"></div></div>
         <div class="sent-scale" aria-hidden="true"><span data-i18n="sent.negative">NEGATIVE</span><span data-i18n="sent.positive">POSITIVE</span></div>
         <p class="tool-result" id="saResult" role="status" aria-live="polite" data-i18n="sent.idle">The verdict will appear here.</p>
-      </div>
+    </div>
+  </div>
+</section>
 
-      <div class="tool-card tool-card-wide reveal">
-        <h3 class="tool-title" data-i18n="prompt.title">AI Prompt Generator</h3>
+<!-- ================= TOOL VIEW: AI PROMPT GENERATOR ================= -->
+<section class="tool-view" id="view-prompt" hidden aria-labelledby="viewTitle-prompt">
+  <div class="container">
+    <a class="tool-back" href="#tools" data-i18n="tools.back">← All tools</a>
+    <h2 class="tool-view-title" id="viewTitle-prompt" data-i18n="prompt.title">AI Prompt Generator</h2>
+    <div class="tool-card tool-card-wide reveal">
         <p class="tool-sub" data-i18n="prompt.sub">Describe a scene, pick a style and a light, and the grid writes a polished prompt for image generators. The prompt itself stays in English — that is the language image AIs understand best.</p>
         <label class="visually-hidden" for="pgSubject">Scene to describe</label>
         <input type="text" id="pgSubject" class="tool-area" data-i18n-ph="prompt.subjectPh" placeholder="e.g. a lighthouse on a cliff at dawn" autocomplete="off" maxlength="160">
@@ -423,7 +495,6 @@
           <button class="btn btn-ghost" type="button" id="pgCopy" data-i18n="prompt.copy">COPY</button>
         </p>
         <p class="tool-result" id="pgMsg" role="status" aria-live="polite" data-i18n="prompt.idle">Your prompt will appear here.</p>
-      </div>
     </div>
   </div>
 </section>
@@ -504,6 +575,6 @@
   </button>
 </div>
 
-<script src="script.js?v=20261115-15"></script>
+<script src="script.js?v=20261115-16"></script>
 </body>
 </html>

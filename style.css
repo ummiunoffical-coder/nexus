@@ -545,6 +545,40 @@ html[dir="rtl"] .updates-form input{text-align:right}
   .ts-label{letter-spacing:.04em}
 }
 
+/* ---------- Toolkit index + tool views ----------
+   The Toolkit section is now an index of names: each row
+   links to a hash route (#tool-typing, ...) and the router
+   in script.js opens that tool as its own page-like view —
+   a .tool-view section that lives in <main> after #tools.
+   While a view is open, <main> carries .tool-open and every
+   other direct child is hidden; header, footer and NEXA
+   stay on screen. Views are shown/hidden only — the tool
+   cards inside are never moved or rebuilt. */
+.tools-index{margin-top:2.2rem;border:1px solid var(--line);border-radius:var(--radius);background:var(--panel);backdrop-filter:blur(8px);overflow:hidden}
+.tool-row{display:flex;align-items:center;gap:1.1rem;padding:1.05rem 1.3rem;text-decoration:none;color:var(--ink);transition:background .2s ease}
+.tool-row + .tool-row{border-top:1px solid var(--line)}
+.tool-row:hover,.tool-row:focus-visible{background:rgba(46,230,255,.07)}
+.tool-num{font-weight:900;font-size:.95rem;color:var(--cyan);letter-spacing:.08em;min-width:2.2rem}
+.tool-row-main{flex:1;min-width:0}
+.tool-row-name{display:block;font-weight:800;font-size:1.05rem}
+.tool-row-desc{display:block;color:var(--muted);font-size:.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tool-open{flex:none;display:inline-flex;align-items:center;gap:.45rem;font-size:.75rem;font-weight:800;letter-spacing:.2em;color:var(--cyan)}
+.tool-open::after{content:"→";font-size:1rem;transition:transform .2s ease}
+.tool-row:hover .tool-open::after{transform:translateX(3px)}
+main.tool-open > :not(.tool-view){display:none}
+.tool-view{display:none;padding:7rem 0 6rem;background:var(--bg-2);min-height:70vh}
+.tool-view.open{display:block;animation:toolViewIn .35s ease both}
+@keyframes toolViewIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.tool-view.open{animation:none}.tool-open::after{transition:none}}
+.tool-back{display:inline-block;color:var(--cyan);text-decoration:none;font-weight:700;letter-spacing:.06em;margin-bottom:1.3rem}
+.tool-back:hover{text-decoration:underline}
+.tool-view-title{font-size:clamp(1.9rem,4.6vw,2.9rem);font-weight:900;line-height:1.12;margin-bottom:1.6rem}
+.tool-view .tool-card{max-width:820px;margin-inline:auto}
+html[lang="ur"] .tool-view-title{line-height:1.55}
+html[lang="ur"] .tool-open,html[lang="ur"] .tool-back,html[lang="ur"] .tool-num{letter-spacing:0}
+html[dir="rtl"] .tool-open::after{content:"←"}
+html[dir="rtl"] .tool-row:hover .tool-open::after{transform:translateX(-3px)}
+
 /* ---------- Language toggle + Urdu (RTL) ----------
    The toggle swaps <html lang/dir>; script.js fills every
    data-i18n element from its dictionary. Urdu uses a system

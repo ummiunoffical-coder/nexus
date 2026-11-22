@@ -8,6 +8,8 @@
    8) NEXA guide bot (text + voice) · 9) Boot intro + scroll progress
    10) The Grid Test quiz · 11) Ambience synth
    12) Signal of the Day · 13) Language toggle EN/اردو
+   14) Tool views — the Toolkit index opens each tool as
+       its own page-like view, routed by location.hash
    A second block at the end holds the Toolkit: the typing
    test, the study timer and three local AI tools (text
    summarizer, sentiment analyzer, prompt generator).
@@ -104,7 +106,9 @@
       "updates.note": "One email when something new lands on the grid. Powered by Buttondown.",
       "tools.kicker": "05 · TOOLKIT",
       "tools.title": "Tools that <span class=\"grad-text\">work</span>",
-      "tools.sub": "Five instruments from the grid, free for every traveller: a typing test, a study timer, a text summariser, a sentiment analyser and a prompt generator for image AIs.",
+      "tools.sub": "Five instruments from the grid, free for every traveller — pick one to open it on its own page: a typing test, a study timer, a text summariser, a sentiment analyser and a prompt generator for image AIs.",
+      "tools.open": "OPEN",
+      "tools.back": "← All tools",
       "typing.title": "Typing Test",
       "typing.sub": "Type the line below as fast as you can. The clock starts with your first keystroke — 60 seconds on the grid.",
       "typing.inputPh": "Start typing here...",
@@ -264,7 +268,9 @@
       "updates.note": "جب بھی گرڈ پر کچھ نیا آئے گا، ایک ای میل ملے گی۔ Buttondown کے ذریعے۔",
       "tools.kicker": "05 · ٹول کٹ",
       "tools.title": "اوزار جو <span class=\"grad-text\">کام</span> کرتے ہیں",
-      "tools.sub": "گرڈ کے پانچ اوزار، ہر مسافر کے لیے مفت: ٹائپنگ ٹیسٹ، اسٹڈی ٹائمر، متن کا خلاصہ بنانے والا، جذبات کا تجزیہ کرنے والا اور تصویری اے آئی کے لیے پرامپٹ بنانے والا۔",
+      "tools.sub": "گرڈ کے پانچ اوزار، ہر مسافر کے لیے مفت — کوئی ایک چنیں اور وہ اپنے الگ صفحے پر کھل جائے گا: ٹائپنگ ٹیسٹ، اسٹڈی ٹائمر، متن کا خلاصہ بنانے والا، جذبات کا تجزیہ کرنے والا اور تصویری اے آئی کے لیے پرامپٹ بنانے والا۔",
+      "tools.open": "کھولیں",
+      "tools.back": "→ تمام اوزار",
       "typing.title": "ٹائپنگ ٹیسٹ",
       "typing.sub": "نیچے والی سطر جتنی تیزی سے ہو سکے لکھیں۔ گھڑی آپ کے پہلے حرف سے شروع ہوتی ہے — گرڈ پر 60 سیکنڈ۔",
       "typing.inputPh": "یہاں لکھنا شروع کریں...",
@@ -448,6 +454,7 @@
   }
 
   function build() {
+    if (!canvas.clientWidth || !canvas.clientHeight) return;
     W = canvas.clientWidth; H = canvas.clientHeight;
     DPR = Math.min(window.devicePixelRatio || 1, 1.75);
     canvas.width = Math.floor(W * DPR);
@@ -851,9 +858,9 @@
       reply: "The Typing Test is in the <a href=\"#tools\">Toolkit</a>: type the sample line as fast as you can — the 60-second clock starts on your first keystroke. It scores your WPM and accuracy, then gives you a grid rank. Restart or pull a new text anytime." ,
       more: "Extra signal: the test quietly punishes random speed — accuracy is counted on every keystroke, so one wild burst can drag your score down. The pros chase rhythm, not bursts: steady, even keystrokes at a pace you can hold for the full sixty seconds. Your rank reflects both." },
     { topic: "tools", keys: ["tools", "toolkit", "tool", "instruments", "auzar", "kaun se tools"],
-      reply: "The <a href=\"#tools\">Toolkit</a> holds five instruments, free for every traveller: a 60-second Typing Test, a Study Timer, a Text Summarizer, a Sentiment Analyzer and an AI Prompt Generator. Scroll down and try to beat your own signal." },
+      reply: "The <a href=\"#tools\">Toolkit</a> holds five instruments, free for every traveller: a 60-second Typing Test, a Study Timer, a Text Summarizer, a Sentiment Analyzer and an AI Prompt Generator. Pick any name in the Toolkit index and that tool opens on a page of its own." },
     { topic: "study-timer", keys: ["study timer", "pomodoro", "focus timer", "timer", "parhai ka timer", "timer lagana", "study"],
-      reply: "The Study Timer sits in the <a href=\"#tools\">Toolkit</a>, right beside the Typing Test. Choose your length — FOCUS 25 minutes, SPRINT 15, or BREAK 5 — then press START. PAUSE holds your remaining time exactly where you left it, RESET restores the full length, and when the countdown reaches zero a soft chime announces: time up. Built for travellers who study like they mean it." ,
+      reply: "The Study Timer sits in the <a href=\"#tools\">Toolkit</a> — open it from the index and it gets a page of its own. Choose your length — FOCUS 25 minutes, SPRINT 15, or BREAK 5 — then press START. PAUSE holds your remaining time exactly where you left it, RESET restores the full length, and when the countdown reaches zero a soft chime announces: time up. Built for travellers who study like they mean it." ,
       more: "Why the odd numbers? The 25/5 rhythm comes from the Pomodoro technique: short sprints with real breaks keep the brain fresher than one long grind. The 15-minute SPRINT exists for revision bursts, and BREAK is a genuine break — stand up, look far away, and let the chime call you back." },
     { topic: "summarizer", keys: ["summarizer", "summarise", "summarize", "summary", "summariser", "text summary"],
       reply: "The Text Summarizer lives in the <a href=\"#tools\">Toolkit</a>: paste any text — English or اردو — choose SHORT (top 3 sentences) or LONG (top 5), and it picks the most important sentences by word frequency, right in your browser. Nothing is uploaded anywhere." ,
@@ -934,7 +941,7 @@
     { topic: "help", keys: ["مدد", "کیا کر سکت"], reply: "میں نیکسس کے بارے میں سوالوں کے جواب دیتا ہوں۔ آزمائیں: نیکسس کیا ہے؟ مصنوعی ذہانت کیا ہے؟ پیغام کیسے بھیجیں؟ کوئز کہاں ہے؟ پوسٹر کہاں ہے؟" },
     { topic: "nexus", keys: ["نیکسس"], reply: "نیکسس ایک تجرباتی ڈیجیٹل تجربہ ہے — نیون روشنیوں، مصنوعی ذہانت اور مستقبل کی ٹیکنالوجی کی ایک جھلک۔ کچھ خاص پوچھنا ہو تو بتائیں: مصنوعی ذہانت، ڈیجیٹل دنیائیں، کوئز یا سگنل فارم؟" },
     { topic: "tools", keys: ["اوزار", "ٹولز", "ٹول", "اوزار کیا"], reply: "صفحے کے 'Toolkit' حصے میں پانچ اوزار ہیں، ہر مسافر کے لیے مفت: ٹائپنگ ٹیسٹ — جو ساٹھ سیکنڈ میں آپ کی رفتار اور درستگی ناپتا ہے — اسٹڈی ٹائمر، خلاصہ ساز، جذبات کا تجزیہ اور اے آئی پرامپٹ جنریٹر۔" },
-    { topic: "study-timer", keys: ["اسٹڈی ٹائمر", "پڑھائی کا ٹائمر", "ٹائمر", "پومودورو", "فوکس ٹائمر"], reply: "اسٹڈی ٹائمر صفحے کے 'Toolkit' حصے میں ہے، ٹائپنگ ٹیسٹ کے بالکل ساتھ۔ پہلے وقت چنیں — 25 منٹ توجہ (FOCUS)، 15 منٹ کی مختصر نشست (SPRINT)، یا 5 منٹ کا وقفہ (BREAK) — پھر START دبائیں۔ PAUSE باقی وقت کو بالکل وہیں روک دیتا ہے جہاں چھوڑا تھا، RESET پوری مدت بحال کر دیتا ہے، اور گنتی صفر پر پہنچے تو ہلکی سی گھنٹی بجتی ہے: وقت ختم!" ,
+    { topic: "study-timer", keys: ["اسٹڈی ٹائمر", "پڑھائی کا ٹائمر", "ٹائمر", "پومودورو", "فوکس ٹائمر"], reply: "اسٹڈی ٹائمر صفحے کے 'Toolkit' حصے میں ہے — فہرست سے کھولیں تو یہ اپنے الگ صفحے پر کھلتا ہے۔ پہلے وقت چنیں — 25 منٹ توجہ (FOCUS)، 15 منٹ کی مختصر نشست (SPRINT)، یا 5 منٹ کا وقفہ (BREAK) — پھر START دبائیں۔ PAUSE باقی وقت کو بالکل وہیں روک دیتا ہے جہاں چھوڑا تھا، RESET پوری مدت بحال کر دیتا ہے، اور گنتی صفر پر پہنچے تو ہلکی سی گھنٹی بجتی ہے: وقت ختم!" ,
       more: "یہ عجیب اعداد کیوں؟ 25 اور 5 کی یہ تال پومودورو طریقے سے آئی ہے: مختصر دوڑ اور اصل وقفے دماغ کو ایک لمبی نشست سے زیادہ تازہ رکھتے ہیں۔ 15 منٹ کی SPRINT دہرائی کے لیے ہے، اور BREAK واقعی وقفہ ہے — اٹھیں، دور دیکھیں، گھنٹی خود بلا لے گی۔" },
     { topic: "typing", keys: ["ٹائپنگ", "ٹائپ کرنے", "رفتار کا ٹیسٹ"], reply: "ٹائپنگ ٹیسٹ 'Toolkit' حصے میں ہے: دی گئی سطر جتنی تیزی سے لکھ سکیں لکھیں — ساٹھ سیکنڈ کی گھڑی پہلے حرف سے شروع ہوتی ہے۔ آخر میں آپ کی رفتار (WPM)، درستگی اور رینک ملتا ہے۔" ,
       more: "ایک اضافی اشارہ: یہ ٹیسٹ اندھا دھند رفتار کو سزا دیتا ہے — درستگی ہر حرف پر گنی جاتی ہے، اس لیے ایک تیز جھٹکا آپ کا سکور گرا سکتا ہے۔ ماہرین رفتار نہیں، تال پکڑتے ہیں: یکساں اور پُرسکون ضربیں، جو پورے ساٹھ سیکنڈ برقرار رہیں۔" },
@@ -1584,6 +1591,61 @@
     var sotdDay = Math.floor((sotdNow - sotdStart) / 864e5);
     sotdText.textContent = SOTD[sotdDay % SOTD.length];
   }
+
+  /* ---------------------------------------------------------
+     14) TOOL VIEWS — the Toolkit section is an index of tool
+     names; each name is a hash route (#tool-typing,
+     #tool-timer, #tool-summarizer, #tool-sentiment,
+     #tool-prompt) that opens its tool as a page-like view:
+     <main> gains .tool-open (CSS hides every other section)
+     and exactly one .tool-view is shown. Any other hash —
+     #tools included — restores the full page. The tool
+     cards are never moved, rebuilt or re-initialised; only
+     their view containers are shown and hidden, so a study
+     timer left running or a typing test left half-typed
+     survives the trip to a view and back untouched.
+     --------------------------------------------------------- */
+  var TOOL_VIEWS = {
+    "tool-typing": "view-typing",
+    "tool-timer": "view-timer",
+    "tool-summarizer": "view-summarizer",
+    "tool-sentiment": "view-sentiment",
+    "tool-prompt": "view-prompt"
+  };
+  var toolViewEls = {};
+  for (var tvr in TOOL_VIEWS) {
+    toolViewEls[tvr] = document.getElementById(TOOL_VIEWS[tvr]);
+  }
+  var mainEl = document.querySelector("main");
+  var currentToolRoute = null;
+  function applyRoute() {
+    var hash = (window.location.hash || "").replace(/^#/, "");
+    var route = Object.prototype.hasOwnProperty.call(TOOL_VIEWS, hash) ? hash : null;
+    var wasOpen = currentToolRoute !== null;
+    currentToolRoute = route;
+    for (var r in toolViewEls) {
+      var view = toolViewEls[r];
+      if (!view) continue;
+      var active = r === route;
+      view.hidden = !active;
+      view.classList.toggle("open", active);
+    }
+    if (mainEl) mainEl.classList.toggle("tool-open", !!route);
+    if (document.body) document.body.classList.toggle("tool-open", !!route);
+    if (route) {
+      window.scrollTo(0, 0);
+    } else if (wasOpen && hash) {
+      var target = document.getElementById(hash);
+      if (target && target.scrollIntoView) target.scrollIntoView();
+    }
+    return route;
+  }
+  window.addEventListener("hashchange", applyRoute);
+  applyRoute();
+  window.NEXUS_ROUTER = {
+    apply: applyRoute,
+    current: function () { return currentToolRoute; }
+  };
 
 })();
 
