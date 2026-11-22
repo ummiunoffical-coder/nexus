@@ -9,9 +9,9 @@ connection required.** Just open it.
 
 | File | What it is |
 |---|---|
-| `index.html` | Page structure: hero, Discover, Nexus Core, Signal, footer |
+| `index.html` | Page structure: hero, Discover, Nexus Core, Grid Test quiz, Signal, Toolkit, footer, NEXA bot |
 | `style.css` | Cyberpunk theme, layout, animations, responsive + reduced-motion rules |
-| `script.js` | Procedural neon-city canvas, parallax, cards, counters, demo form, clock |
+| `script.js` | Procedural neon-city canvas, parallax, cards, counters, quiz, tools, ambience synth, NEXA bot, signal form, clock |
 | `poster.jpg` | Official NEXUS poster (NEXA in the neon rain); also the link-share preview image |
 | `README.md` | This file |
 
