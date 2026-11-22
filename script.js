@@ -410,7 +410,7 @@
       reply: "Future Technology — quantum leaps, neural interfaces and the hardware quietly rewriting tomorrow: chips that think, networks that feel instant, machines that build machines. The <a href=\"#technology\">NEXUS Core</a> section tracks it: 128 neural nodes simulated, 12ms core response, 100% rendered locally." },
     { keys: ["core", "how does it work", "how it works", "rendered", "nodes"],
       reply: "The NEXUS Core is the heart of this page: every light here is generated live in your browser — no servers, no tracking, no accounts. Just code, colour and motion: 128 neural nodes simulated, 12ms response, 100% rendered locally and privately. Details: <a href=\"#technology\">Technology</a>." },
-    { keys: ["signal", "join", "subscribe", "newsletter", "email", "transmission", "message bhejna", "rabta karna", "contact karna"],
+    { keys: ["signal", "join", "subscribe", "newsletter", "email", "transmission", "message bhejna", "rabta karna", "contact karna", "transmit"],
       reply: "To join the transmission, scroll to <a href=\"#signal\">Join the transmission</a> and leave your name, email and a message. The signal lands directly in the keeper's inbox, and they can reply to your email." },
     { keys: ["free", "price", "cost", "buy", "pay", "download", "sign up", "signup", "account", "muft", "paisa lagega"],
       reply: "NEXUS is completely free: no downloads, no sign-up, no accounts and nothing to buy. The entire experience runs right here in your browser." },
@@ -418,15 +418,15 @@
       reply: "Private by design. Browsing this page and chatting with me happens entirely in your browser — no trackers, no accounts. The only thing that ever leaves this page is a message you choose to send through the Signal form, and that goes straight to the keeper's inbox." },
     { keys: [" robot", "hero", "who are you", "your name", "nexa", "tum kon ho", "tum kaun ho", "tumhara naam", "aap kon"],
       reply: "I'm NEXA, the friendly AI robot of this grid — the same robot watching you from the hero section (it even follows your cursor). My job here is simple: answer your questions about NEXUS. Ask me about the sections, the Core, or the Signal." },
-    { keys: ["who made", "who built", "who created", "creator", "developer", "owner"],
-      reply: "NEXUS was crafted with plain HTML, CSS and JavaScript — no frameworks, no build tools — as a tribute to the neon futures we were promised, and the real one we are building." },
+    { keys: ["who made", "who built", "who created", "creator", "developer", "owner", "umair", "kis ne banaya", "kisne banaya"],
+      reply: "NEXUS was built by Umair — crafted with plain HTML, CSS and JavaScript, no frameworks and no build tools — as a tribute to the neon futures we were promised, and the real one we are building." },
     { keys: ["section", "sections", "pages", "navigate", "menu", "where", "explore"],
       reply: "The grid has six stops: <a href=\"#home\">Home</a> — the neon city and the robot; <a href=\"#explore\">Explore</a> — three briefings (AI, Digital Worlds, Future Technology); <a href=\"#technology\">Technology</a> — the NEXUS Core; <a href=\"#quiz\">The Grid Test</a> — a five-question quiz; <a href=\"#signal\">Signal</a> — send the keeper a message; and <a href=\"#tools\">Tools</a> — a word counter and a typing test. Tap any briefing card to open it." },
     { keys: ["poster", "wallpaper", "image of nexa", "picture of nexa"],
       reply: "The official NEXUS poster — NEXA standing in the neon rain — is the artwork this site shares with the world: it appears whenever the NEXUS link is posted. You can open it full size here: <a href=\"poster.jpg\">poster.jpg</a>." },
-    { keys: ["quiz", "game", "play", "test me", "grid test", "khelo"],
+    { keys: ["quiz", "game", "play", "test me", "grid test", "khelo", "rank", "score"],
       reply: "The Grid Test awaits in the <a href=\"#quiz\">Quiz section</a> — five questions from the future, with a rank at the end. Grid Master is harder to earn than it looks." },
-    { keys: ["music", "sound", "ambience", "ambient", "song", "audio"],
+    { keys: ["music", "sound", "ambience", "ambient", "song", "audio", "background music", "ambience button"],
       reply: "Tap the AMBIENCE button in the footer, under Status. A soft synth pad fades in — generated live in your browser with the Web Audio API, no audio files at all. Tap again to mute it." },
     { keys: ["joke", "funny"],
       reply: "Why did the robot apply for a job at NEXUS? It heard the position had great current — and unlimited charge breaks." },
@@ -441,7 +441,29 @@
     { keys: ["hello", "hi", "hey", "salam", "aoa", "assalam"],
       reply: "Hello, traveller. I'm NEXA, the guide of this grid. Ask me anything about NEXUS — what it is, what each section shows, or how the Signal works. The chips below are a good start." },
     { keys: ["help", "what can you do", "options", "questions"],
-      reply: "I answer questions about NEXUS. Try: \"What is NEXUS?\", \"Tell me about Artificial Intelligence\", \"What is the Core?\", \"Is it free?\", or \"How do I join the signal?\"" }
+      reply: "I answer questions about NEXUS. Try: \"What is NEXUS?\", \"Tell me about Artificial Intelligence\", \"What is the Core?\", \"Is it free?\", or \"How do I join the signal?\"" },
+    { keys: ["word counter", "count words", "word count", "count my words", "alfaz ginna", "words ginna"],
+      reply: "The Word Counter lives in the <a href=\"#tools\">Toolkit</a>: paste any text — Urdu or English — and it counts words, characters and sentences, estimates reading time, and prices the piece at the writer's rate of Rs 1,000 per 1,000 words. The COPY RESULT button copies the whole count in one tap." },
+    { keys: ["typing test", "typing speed", "typing", "wpm", "type test", "typing ka test", "typing practice"],
+      reply: "The Typing Test is in the <a href=\"#tools\">Toolkit</a>: type the sample line as fast as you can — the 60-second clock starts on your first keystroke. It scores your WPM and accuracy, then gives you a grid rank. Restart or pull a new text anytime." },
+    { keys: ["tools", "toolkit", "tool", "instruments", "auzar", "kaun se tools"],
+      reply: "The <a href=\"#tools\">Toolkit</a> holds two instruments, free for every traveller: a Word Counter that counts and prices your writing at Rs 1,000 per 1,000 words, and a 60-second Typing Test that measures your speed and accuracy." },
+    { keys: ["writing rate", "word rate", "1000 words", "per 1000", "article rate", "rate kya", "mazmoon rate", "likhne ke paise"],
+      reply: "The writer's rate on this grid is Rs 1,000 per 1,000 words — one rupee a word. The <a href=\"#tools\">Word Counter</a> does the maths for you: paste a piece and it shows its writing value instantly." },
+    { keys: ["share", "whatsapp", "send link", "share kaise", "share karna", "dost ko bhejna", "share on whatsapp"],
+      reply: "Use the SHARE button in the <a href=\"#home\">hero</a> — it opens WhatsApp with the NEXUS link ready to send, and the official poster appears as the preview. Or just copy this page's address and pass it on; the future travels fast." },
+    { keys: ["how are you", "how r you", "kaise ho", "kya haal", "haal kaisa"],
+      reply: "Running at full charge, traveller — all systems nominal and the neon is bright. How is your side of the grid?" },
+    { keys: ["discover", "discover section", "briefing", "briefings", "dimension", "choose your dimension"],
+      reply: "Discover is the <a href=\"#explore\">Explore</a> deck: three briefing cards — Artificial Intelligence, Digital Worlds and Future Technology. Select any card and it unfolds its full briefing right there." },
+    { keys: ["offline", "without internet", "no internet", "internet chahiye", "net chahiye"],
+      reply: "Almost everything here runs locally: the city, the quiz, the tools, the ambience and my answers are all computed in your browser, so the page keeps working offline once loaded. Only the Signal form needs internet — it has to reach the keeper's inbox." },
+    { keys: ["urdu", "roman urdu", "urdu mein", "language", "zuban"],
+      reply: "I speak three tongues on this grid: ask in English, Roman Urdu or اردو — type your question in Urdu script and I will answer in Urdu. The Word Counter reads Urdu text too." },
+    { keys: ["signal of the day", "daily signal", "aaj ka signal"],
+      reply: "Every day the Core broadcasts one Signal of the Day — a single line from the grid, chosen by the date itself, no server involved. Today's is live in the <a href=\"#technology\">NEXUS Core</a> section. A new one arrives tomorrow." },
+    { keys: ["good morning", "good afternoon", "good evening", "good night"],
+      reply: "Greetings, traveller — on the grid it is always neon o'clock. Ask me about the sections, the tools, or today's signal." }
   ];
   var NEXA_FALLBACK = "That signal is outside my briefing. I answer questions about NEXUS — try asking what NEXUS is, about Artificial Intelligence, Digital Worlds, Future Technology, the Core, or how the Signal form works.";
   var NEXA_FALLBACK_UR = "یہ سگنل میرے دائرے سے باہر ہے۔ میں نیکسس کے بارے میں سوالوں کے جواب دیتا ہوں — مثلاً نیکسس کیا ہے، مصنوعی ذہانت، پیغام کیسے بھیجیں، کوئز یا پوسٹر کے بارے میں پوچھیں۔";
@@ -452,16 +474,26 @@
     { keys: ["ڈیجیٹل دنیا", "ورچوئل"], reply: "ڈیجیٹل دنیائیں خالص روشنی سے بنی ورچوئل بستیاں اور فضائیں ہیں۔ یہ اب صرف کھیل نہیں رہیں: دفاتر، کلاس روم اور محفلیں انہی میں سجنے لگی ہیں۔" },
     { keys: ["کوانٹم", "ٹیکنالوجی", "مستقبل"], reply: "مستقبل کی ٹیکنالوجی: کوانٹم چھلانگیں، دماغ کو کمپیوٹر سے جوڑنے والے نیورل انٹرفیس، اور وہ ہارڈویئر جو خاموشی سے کل بدل رہا ہے۔ نیکسس کے 'Core' حصے میں اس کی تفصیل ہے۔" },
     { keys: ["پیغام", "سگنل", "رابطہ", "ای میل"], reply: "پیغام بھیجنے کے لیے صفحے میں 'Join the transmission' والے حصے تک جائیں اور اپنا نام، ای میل اور پیغام لکھ کر TRANSMIT دبائیں۔ پیغام سیدھا ویب سائٹ کے رکھوالے کے ان باکس میں پہنچتا ہے اور وہ آپ کی ای میل پر جواب دے سکتے ہیں۔" },
-    { keys: ["مفت", "قیمت", "پیسے", "خرچ"], reply: "نیکسس بالکل مفت ہے: نہ ڈاؤن لوڈ، نہ سائن اپ، نہ اکاؤنٹ، نہ کچھ خریدنا۔ پورا تجربہ آپ کے براؤزر میں چلتا ہے۔" },
+    { keys: ["مفت", "قیمت", "پیسے", "خرچ", "قیمت کیا", "مفت ہے"], reply: "نیکسس بالکل مفت ہے: نہ ڈاؤن لوڈ، نہ سائن اپ، نہ اکاؤنٹ، نہ کچھ خریدنا۔ پورا تجربہ آپ کے براؤزر میں چلتا ہے۔" },
     { keys: ["تم کون", "آپ کون", "نام کیا", "نیکسا کون"], reply: "میں نیکسا ہوں، اس گرڈ کی دوستانہ رہنما روبوٹ — وہی روبوٹ جو صفحے کے اوپر والے حصے میں نظر آتی ہے۔ میرا کام نیکسس کے بارے میں آپ کے سوالوں کے جواب دینا ہے۔" },
     { keys: ["پوسٹر", "تصویر"], reply: "نیکسس کا سرکاری پوسٹر — نیون بارش میں کھڑی نیکسا — اسی ویب سائٹ کی پہچان ہے: جب بھی نیکسس کا لنک شیئر ہوتا ہے، یہی تصویر ساتھ نظر آتی ہے۔" },
-    { keys: ["کوئز", "کھیل"], reply: "صفحے میں 'The Grid Test' کے نام سے پانچ سوالوں کا کوئز ہے — آخر میں آپ کا رینک بھی ملتا ہے۔ گرڈ ماسٹر بننا لگتا آسان ہے، ہوتا نہیں۔" },
+    { keys: ["کوئز", "کھیل", "کوئز کہاں"], reply: "صفحے میں 'The Grid Test' کے نام سے پانچ سوالوں کا کوئز ہے — آخر میں آپ کا رینک بھی ملتا ہے۔ گرڈ ماسٹر بننا لگتا آسان ہے، ہوتا نہیں۔" },
     { keys: ["موسیقی", "آواز", "گانا", "دھن"], reply: "صفحے کے آخر میں Status والے حصے میں AMBIENCE بٹن ہے۔ اسے دبائیں تو ہلکی سی پس منظر دھن شروع ہو جاتی ہے، جو اسی براؤزر میں لائیو بنتی ہے — کوئی آڈیو فائل استعمال نہیں ہوتی۔" },
     { keys: ["لطیفہ", "مذاق"], reply: "روبوٹ نے نیکسس میں نوکری کیوں لی؟ کیونکہ یہاں کرنٹ بھی ملتا ہے اور چارج ہونے کی چھٹی بھی!" },
-    { keys: ["وقت"], reply: "گرڈ کا وقت آپ کا مقامی وقت ہے — صفحے کے آخر میں گھڑی لائیو چل رہی ہے۔ اس وقت وقت ہے: TIME_NOW" },
+    { keys: ["وقت", "وقت کیا"], reply: "گرڈ کا وقت آپ کا مقامی وقت ہے — صفحے کے آخر میں گھڑی لائیو چل رہی ہے۔ اس وقت وقت ہے: TIME_NOW" },
     { keys: ["شکریہ"], reply: "کوئی بات نہیں! آپ کی موجودگی سے اس گرڈ کی روشنی بڑھ جاتی ہے۔" },
     { keys: ["مدد", "کیا کر سکت"], reply: "میں نیکسس کے بارے میں سوالوں کے جواب دیتا ہوں۔ آزمائیں: نیکسس کیا ہے؟ مصنوعی ذہانت کیا ہے؟ پیغام کیسے بھیجیں؟ کوئز کہاں ہے؟ پوسٹر کہاں ہے؟" },
-    { keys: ["نیکسس"], reply: "نیکسس ایک تجرباتی ڈیجیٹل تجربہ ہے — نیون روشنیوں، مصنوعی ذہانت اور مستقبل کی ٹیکنالوجی کی ایک جھلک۔ کچھ خاص پوچھنا ہو تو بتائیں: مصنوعی ذہانت، ڈیجیٹل دنیائیں، کوئز یا سگنل فارم؟" }
+    { keys: ["نیکسس"], reply: "نیکسس ایک تجرباتی ڈیجیٹل تجربہ ہے — نیون روشنیوں، مصنوعی ذہانت اور مستقبل کی ٹیکنالوجی کی ایک جھلک۔ کچھ خاص پوچھنا ہو تو بتائیں: مصنوعی ذہانت، ڈیجیٹل دنیائیں، کوئز یا سگنل فارم؟" },
+    { keys: ["اوزار", "ٹولز", "ٹول", "اوزار کیا"], reply: "صفحے کے 'Toolkit' حصے میں دو اوزار ہیں، ہر مسافر کے لیے مفت: ایک ورڈ کاؤنٹر جو آپ کی تحریر گن کر اس کی قیمت بھی بتاتا ہے، اور ایک ٹائپنگ ٹیسٹ جو آپ کی رفتار ناپتا ہے۔" },
+    { keys: ["ورڈ کاؤنٹر", "الفاظ گن", "لفظ گن", "الفاظ کی گنتی"], reply: "ورڈ کاؤنٹر 'Toolkit' حصے میں ہے: اپنا مضمون اردو یا انگریزی میں چسپاں کریں، یہ الفاظ، حروف اور جملے گن کر پڑھنے کا وقت اور تحریر کی قیمت بتا دیتا ہے۔ قیمت کا اصول فی ہزار الفاظ ایک ہزار روپے ہے۔ 'COPY RESULT' بٹن سے پوری گنتی ایک دباؤ میں کاپی ہو جاتی ہے۔" },
+    { keys: ["ٹائپنگ", "ٹائپ کرنے", "رفتار کا ٹیسٹ"], reply: "ٹائپنگ ٹیسٹ 'Toolkit' حصے میں ہے: دی گئی سطر جتنی تیزی سے لکھ سکیں لکھیں — ساٹھ سیکنڈ کی گھڑی پہلے حرف سے شروع ہوتی ہے۔ آخر میں آپ کی رفتار (WPM)، درستگی اور رینک ملتا ہے۔" },
+    { keys: ["مضمون کی قیمت", "ریٹ", "فی ہزار الفاظ", "لکھنے کی قیمت", "ریٹ کیا"], reply: "اس گرڈ پر لکھنے کا ریٹ فی ہزار الفاظ ایک ہزار روپے ہے — یعنی ایک لفظ، ایک روپیہ۔ ورڈ کاؤنٹر یہ حساب خود کر دیتا ہے: مضمون چسپاں کریں، قیمت فوراً سامنے آ جائے گی۔" },
+    { keys: ["کس نے بنایا", "بنانے والا", "عمیر", "تخلیق کار"], reply: "نیکسس عمیر نے بنایا ہے — سادہ HTML، CSS اور JavaScript سے، بغیر کسی فریم ورک کے۔ یہ ان نیون مستقبلوں کی یاد میں ہے جن کا وعدہ کیا گیا تھا، اور اس اصل مستقبل کے لیے جو ہم خود بنا رہے ہیں۔" },
+    { keys: ["شیئر", "لنک بھیج", "دوست کو بھیج", "شیئر کیسے", "شیئر کرنا"], reply: "صفحے کے اوپر والے حصے میں SHARE بٹن ہے — اسے دبائیں تو WhatsApp میں نیکسس کا لنک بھیجنے کے لیے تیار ملتا ہے اور ساتھ سرکاری پوسٹر کی جھلک بھی نظر آتی ہے۔ یا بس اس صفحے کا پتہ کاپی کر کے آگے بھیج دیں۔" },
+    { keys: ["کیسے ہو", "کیا حال", "خیریت"], reply: "میں بالکل ٹھیک ہوں — سارے نظام درست اور نیون روشن ہیں۔ آپ سنائیں، گرڈ کے اس پار کیا حال ہے؟" },
+    { keys: ["حصے", "کون سے حصے", "سیکشن", "مینیو", "کے حصے"], reply: "اس صفحے کے چھ پڑاؤ ہیں: Home — نیون شہر اور روبوٹ؛ Explore — تین بریفنگز (مصنوعی ذہانت، ڈیجیٹل دنیائیں، مستقبل کی ٹیکنالوجی)؛ Technology — نیکسس Core؛ The Grid Test — پانچ سوالوں کا کوئز؛ Signal — رکھوالے کو پیغام؛ اور Tools — ورڈ کاؤنٹر اور ٹائپنگ ٹیسٹ۔" },
+    { keys: ["آف لائن", "بغیر انٹرنیٹ", "نیٹ نہیں"], reply: "اس صفحے کی تقریباً ہر چیز آپ کے براؤزر میں ہی بنتی ہے — شہر، کوئز، اوزار، دھن اور میرے جواب — اس لیے صفحہ ایک بار کھل جائے تو انٹرنیٹ کے بغیر بھی چلتا رہتا ہے۔ صرف سگنل فارم کو انٹرنیٹ چاہیے، کیونکہ پیغام رکھوالے کے ان باکس تک پہنچانا ہوتا ہے۔" },
+    { keys: ["آج کا سگنل", "روز کا سگنل", "آج کا پیغام"], reply: "ہر روز Core ایک 'آج کا سگنل' نشر کرتا ہے — گرڈ کی ایک سطر، جو خود تاریخ چنتی ہے، کوئی سرور شامل نہیں۔ آج کا سگنل 'NEXUS Core' والے حصے میں لائیو ہے۔ کل نیا سگنل آئے گا۔" }
   ];
 
   function nexaFillTime(reply) {
@@ -750,6 +782,35 @@
       musicBtn.setAttribute("aria-pressed", musicOn ? "true" : "false");
       if (musicState) musicState.textContent = musicOn ? "ON" : "OFF";
     });
+  }
+
+  /* ---------------------------------------------------------
+     12) SIGNAL OF THE DAY — one line from the grid, chosen by
+     the date itself (day-of-year modulo the list). Fully
+     local: same date, same signal, all day — no server.
+     --------------------------------------------------------- */
+  var sotdText = document.getElementById("sotdText");
+  if (sotdText) {
+    var SOTD = [
+      "The future is not found. It is built, one signal at a time.",
+      "Every grid begins as a single blinking light. Start with yours.",
+      "Tomorrow's machines are being sketched on today's paper.",
+      "A signal ignored is just noise. Listen twice.",
+      "The city of the future runs on code written by people who showed up.",
+      "Small upgrades, repeated daily, become a new dimension.",
+      "Your next idea is already transmitting. Tune in.",
+      "Robots dream of builders, not batteries.",
+      "The fastest network is still a human who keeps their word.",
+      "Charge your curiosity first; the rest of the system follows.",
+      "In the neon dark, the ones who build carry their own light.",
+      "A prototype today is a portal tomorrow.",
+      "Static is only a signal that has not found its frequency yet.",
+      "The grid rewards those who transmit, not those who wait."
+    ];
+    var sotdNow = new Date();
+    var sotdStart = new Date(sotdNow.getFullYear(), 0, 0);
+    var sotdDay = Math.floor((sotdNow - sotdStart) / 864e5);
+    sotdText.textContent = SOTD[sotdDay % SOTD.length];
   }
 
 })();

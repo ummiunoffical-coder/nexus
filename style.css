@@ -250,6 +250,13 @@ a{color:var(--cyan)}
 .stats dt span{background:linear-gradient(92deg,var(--cyan),var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
 .stats dd{color:var(--muted);font-size:.85rem}
 
+/* Signal of the day (inside the Core section; text set by script.js) */
+.sotd{margin-top:2.4rem;border:1px solid var(--line);border-radius:12px;padding:1rem 1.2rem;background:rgba(6,10,24,.55);max-width:56ch}
+.sotd .sotd-label{display:flex;align-items:center;gap:.55rem;font-size:.68rem;letter-spacing:.3em;color:var(--cyan);margin-top:0}
+.sotd .sotd-text{margin-top:.5rem;color:var(--ink);font-size:1.02rem;line-height:1.55;animation:sotdFade 1.2s ease both}
+@keyframes sotdFade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.sotd .sotd-text{animation:none}}
+
 /* Signal panel */
 .signal-panel{
   border:1px solid var(--line);border-radius:calc(var(--radius) + 6px);
