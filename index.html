@@ -22,7 +22,7 @@
 <link rel="canonical" href="https://ummiunoffical-coder.github.io/nexus/">
 <meta name="robots" content="index, follow">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23050814'/%3E%3Cpath d='M9 23V9l14 14V9' stroke='%232ee6ff' stroke-width='3.4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
-<link rel="stylesheet" href="style.css?v=20261115-13">
+<link rel="stylesheet" href="style.css?v=20261115-14">
 </head>
 <body>
 
@@ -307,6 +307,16 @@
         <button class="btn btn-primary" type="submit" id="signalBtn">TRANSMIT</button>
       </form>
       <p class="signal-msg" id="signalMsg" role="status" aria-live="polite"></p>
+      <div class="updates-box">
+        <h3 class="updates-title" data-i18n="updates.title">Get <span class="grad-text">updates</span> by email</h3>
+        <p class="updates-sub" data-i18n="updates.sub">New tools, signals and experiments from the grid — straight to your inbox. No noise, and you can leave anytime.</p>
+        <form class="updates-form embeddable-buttondown-form" action="https://buttondown.com/api/emails/embed-subscribe/nexusbyumair" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/nexusbyumair', 'popupwindow')">
+          <label class="visually-hidden" for="bdEmail">Email address for updates</label>
+          <input type="email" name="email" id="bdEmail" data-i18n-ph="updates.emailPh" placeholder="you@future.net" autocomplete="email" required>
+          <button class="btn btn-primary" type="submit" data-i18n="updates.btn">SUBSCRIBE</button>
+        </form>
+        <p class="updates-note" data-i18n="updates.note">One email when something new lands on the grid. Powered by Buttondown.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -432,6 +442,6 @@
   </button>
 </div>
 
-<script src="script.js?v=20261115-13"></script>
+<script src="script.js?v=20261115-14"></script>
 </body>
 </html>

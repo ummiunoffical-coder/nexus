@@ -276,6 +276,17 @@ a{color:var(--cyan)}
 .signal-msg.ok{color:#39ffb0}
 .signal-msg.err{color:#ff7aa8}
 
+/* Updates subscribe box (Buttondown) */
+.updates-box{margin-top:2.2rem;padding-top:1.8rem;border-top:1px solid var(--line)}
+.updates-title{font-size:1.35rem;margin-bottom:.5rem}
+.updates-sub{color:var(--muted);max-width:520px;margin-inline:auto}
+.updates-form{display:flex;flex-wrap:wrap;gap:.9rem;justify-content:center;margin-top:1.2rem}
+.updates-form input{flex:1 1 260px;max-width:420px;padding:.95rem 1.1rem;border-radius:12px;border:1px solid var(--line);background:rgba(4,8,18,.8);color:var(--ink);font-size:1rem;font-family:inherit}
+.updates-form input::placeholder{color:#7d97bd}
+.updates-note{margin-top:.9rem;font-size:.85rem;color:var(--muted)}
+@media (max-width:760px){.updates-form input{flex:none;width:100%;max-width:100%}}
+html[dir="rtl"] .updates-form input{text-align:right}
+
 /* ---------- Footer ---------- */
 .site-footer{background:#03040a;border-top:1px solid rgba(46,230,255,.14);padding:3.6rem 0 6.5rem}
 .footer-grid{display:grid;gap:2.2rem}
