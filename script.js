@@ -211,6 +211,8 @@
       "nexa.placeholder": "Ask NEXA anything…",
       "nexa.ask": "Ask NEXA",
       "nexa.thinking": "NEXA is thinking…",
+      "nexa.copy": "Copy",
+      "nexa.copied": "Copied",
       "nexa.sug1": "What is AI?",
       "nexa.sug2": "What is a black hole?",
       "nexa.sug3": "How will AI change jobs?",
@@ -398,6 +400,8 @@
       "nexa.placeholder": "نیکسا سے کچھ بھی پوچھیں…",
       "nexa.ask": "نیکسا سے پوچھیں",
       "nexa.thinking": "NEXA سوچ رہا ہے…",
+      "nexa.copy": "کاپی",
+      "nexa.copied": "کاپی ہو گیا",
       "nexa.sug1": "مصنوعی ذہانت کیا ہے؟",
       "nexa.sug2": "بلیک ہول کیا ہے؟",
       "nexa.sug3": "مصنوعی ذہانت ملازمتوں کو کیسے بدلے گی؟",
@@ -1360,13 +1364,92 @@
 
   if (nexaLaunch && nexaPanel && nexaMsgs && nexaForm && nexaInput) {
     function nexaScroll() { nexaMsgs.scrollTop = nexaMsgs.scrollHeight; }
-    function nexaAddMsg(html, who) {
+    function nexaAddMsg(html, who, copyText) {
       var div = document.createElement("div");
       div.className = "nexa-msg " + (who === "user" ? "nexa-msg-user" : "nexa-msg-bot");
       if (who === "user") { div.textContent = html; } else { div.innerHTML = html; }
       nexaMsgs.appendChild(div);
+      /* Every finished bot answer carries a quiet copy button
+         holding the message's PLAIN text. copyText === null
+         opts out (the transient "thinking" bubble); when no
+         text is passed it is derived from the markup, so a
+         built-in answer copies as clean text — its links
+         reduced to their words. The button lives only in the
+         DOM: speech and history are fed the source strings,
+         never this element, so it is never spoken or saved. */
+      if (who !== "user" && copyText !== null) {
+        var payload = (typeof copyText === "string") ? copyText : nexaPlainText(html);
+        if (payload) nexaAttachCopy(div, payload);
+      }
       nexaScroll();
       return div;
+    }
+    /* --- Copy button on bot answers ------------------------
+       Copies the answer's plain text: the async clipboard API
+       where it exists, a temporary textarea + execCommand
+       elsewhere. Success flips the label to "Copied" for a
+       moment; failure stays silent — copying is a bonus. --- */
+    function nexaAttachCopy(div, text) {
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "nexa-copy-btn";
+      btn.textContent = t("nexa.copy");
+      btn.setAttribute("aria-label", t("nexa.copy"));
+      btn.addEventListener("click", function () { nexaCopyText(text, btn); });
+      div.appendChild(btn);
+      return btn;
+    }
+    function nexaCopyDone(btn) {
+      if (!btn) return;
+      btn.textContent = t("nexa.copied");
+      btn.classList.add("is-copied");
+      if (btn._nexaCopyTimer) clearTimeout(btn._nexaCopyTimer);
+      btn._nexaCopyTimer = setTimeout(function () {
+        btn._nexaCopyTimer = null;
+        btn.textContent = t("nexa.copy");
+        btn.classList.remove("is-copied");
+      }, 1500);
+    }
+    function nexaCopyFallback(text, btn) {
+      try {
+        var ta = document.createElement("textarea");
+        ta.value = text;
+        ta.setAttribute("readonly", "");
+        ta.style.position = "fixed";
+        ta.style.opacity = "0";
+        document.body.appendChild(ta);
+        ta.select();
+        var ok = false;
+        try { ok = document.execCommand("copy"); } catch (err) { ok = false; }
+        if (ta.parentNode) ta.parentNode.removeChild(ta);
+        if (ok) nexaCopyDone(btn);
+      } catch (err) { /* fail silent */ }
+    }
+    function nexaCopyText(text, btn) {
+      var nav = (typeof navigator !== "undefined") ? navigator : null;
+      if (nav && nav.clipboard && typeof nav.clipboard.writeText === "function") {
+        try {
+          var p = nav.clipboard.writeText(text);
+          if (p && typeof p.then === "function") {
+            p.then(function () { nexaCopyDone(btn); },
+                   function () { nexaCopyFallback(text, btn); });
+            return;
+          }
+        } catch (err) { /* fall through to the legacy path */ }
+      }
+      nexaCopyFallback(text, btn);
+    }
+    /* Existing copy buttons re-label with the interface. */
+    if (window.NEXUS_I18N && typeof window.NEXUS_I18N.onChange === "function") {
+      window.NEXUS_I18N.onChange(function () {
+        var btns = nexaMsgs.querySelectorAll(".nexa-copy-btn");
+        for (var i = 0; i < btns.length; i++) {
+          if (btns[i]._nexaCopyTimer) { clearTimeout(btns[i]._nexaCopyTimer); btns[i]._nexaCopyTimer = null; }
+          btns[i].classList.remove("is-copied");
+          btns[i].textContent = t("nexa.copy");
+          btns[i].setAttribute("aria-label", t("nexa.copy"));
+        }
+      });
     }
     /* --- NEXA voice output: spoken replies (speechSynthesis) ---
        Off by default; the speaker button in the panel header
@@ -1455,6 +1538,47 @@
         .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
     }
 
+    /* --- Live AI reply renderer (markdown-lite) ------------
+       AI text is UNTRUSTED: it is escaped first, so any markup
+       inside it shows as inert words. Only then do a few plain
+       conventions become structure — blank lines split
+       paragraphs, single line breaks stay line breaks, **bold**
+       becomes <strong>, `code` becomes <code>, and lines
+       starting with "- " or "• " group into a list. Built-in
+       answers never pass through here: they keep the raw-HTML
+       path, links and all. Speech and history always receive
+       the reply's raw plain text, never this HTML. --------- */
+    function nexaRenderAi(text) {
+      function inline(s) {
+        return s
+          .replace(/`([^`]+)`/g, "<code>$1</code>")
+          .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+      }
+      var lines = nexaEscapeHtml(text).split(/\r\n|\r|\n/);
+      var out = [], para = [], list = null, i, line, m;
+      function flushPara() {
+        if (para.length) { out.push("<p>" + para.join("<br>") + "</p>"); para = []; }
+      }
+      function flushList() {
+        if (list) {
+          var items = "";
+          for (var j = 0; j < list.length; j++) items += "<li>" + list[j] + "</li>";
+          out.push("<ul>" + items + "</ul>");
+          list = null;
+        }
+      }
+      for (i = 0; i < lines.length; i++) {
+        line = lines[i];
+        if (/^\s*$/.test(line)) { flushPara(); flushList(); continue; }
+        m = line.match(/^\s*[-•]\s+(.+)$/);
+        if (m) { flushPara(); if (!list) list = []; list.push(inline(m[1])); continue; }
+        flushList();
+        para.push(inline(line.replace(/^\s+|\s+$/g, "")));
+      }
+      flushPara(); flushList();
+      return out.join("");
+    }
+
     /* --- Live AI path --------------------------------------
        Tries the Worker once; on success the reply renders
        through the same nexaAddMsg + nexaSpeak path as a
@@ -1462,7 +1586,7 @@
        removed and the built-in path runs unchanged. -------- */
     var nexaAiSeq = 0;
     function nexaAskLive(question) {
-      var indicator = nexaAddMsg(nexaEscapeHtml(t("nexa.thinking")), "bot");
+      var indicator = nexaAddMsg(nexaEscapeHtml(t("nexa.thinking")), "bot", null);
       var indId = "nexaAiThinking-" + (++nexaAiSeq);
       indicator.id = indId;
       function dropIndicator() {
@@ -1504,7 +1628,7 @@
         var reply = (typeof data.reply === "string") ? data.reply.trim() : "";
         if (!reply || data.error) { fallback(); return; }
         dropIndicator();
-        nexaAddMsg(nexaEscapeHtml(reply), "bot");
+        nexaAddMsg(nexaRenderAi(reply), "bot", reply);
         nexaSpeak(reply);
         nexaRememberTurn(question, reply);
       }).catch(function () {
