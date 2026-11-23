@@ -1544,7 +1544,7 @@
        conventions become structure — blank lines split
        paragraphs, single line breaks stay line breaks, **bold**
        becomes <strong>, `code` becomes <code>, and lines
-       starting with "- " or "• " group into a list. Built-in
+       starting with "- ", "* " or "• " group into a list. Built-in
        answers never pass through here: they keep the raw-HTML
        path, links and all. Speech and history always receive
        the reply's raw plain text, never this HTML. --------- */
@@ -1570,7 +1570,7 @@
       for (i = 0; i < lines.length; i++) {
         line = lines[i];
         if (/^\s*$/.test(line)) { flushPara(); flushList(); continue; }
-        m = line.match(/^\s*[-•]\s+(.+)$/);
+        m = line.match(/^\s*[-•*]\s+(.+)$/);
         if (m) { flushPara(); if (!list) list = []; list.push(inline(m[1])); continue; }
         flushList();
         para.push(inline(line.replace(/^\s+|\s+$/g, "")));
