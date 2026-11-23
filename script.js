@@ -209,7 +209,8 @@
       "footer.credit": "© 2026 NEXUS · Designed & built by Umair — a fictional concept experience, crafted in the browser.",
       "nexa.status": "Online · answers NEXUS questions",
       "nexa.placeholder": "Ask NEXA about NEXUS...",
-      "nexa.ask": "Ask NEXA"
+      "nexa.ask": "Ask NEXA",
+      "nexa.thinking": "NEXA is thinking…"
     },
     ur: {
       "skip": "مواد پر جائیں",
@@ -386,7 +387,8 @@
       "footer.credit": "© 2026 NEXUS · ڈیزائن اور تیاری: عمیر — ایک خیالی تصوراتی تجربہ، براؤزر میں تیار۔",
       "nexa.status": "آن لائن · نیکسس کے سوالوں کے جواب دیتی ہے",
       "nexa.placeholder": "نیکسس کے بارے میں نیکسا سے پوچھیں...",
-      "nexa.ask": "نیکسا سے پوچھیں"
+      "nexa.ask": "نیکسا سے پوچھیں",
+      "nexa.thinking": "NEXA سوچ رہا ہے…"
     }
   };
   var curLang = "en";
@@ -835,6 +837,15 @@
      is feature-detected: unsupported browsers simply never
      see the speaker / microphone buttons.
      --------------------------------------------------------- */
+  /* --- Live AI (optional) ----------------------------------
+     Set NEXA_AI_ENDPOINT to the deployed NEXA Worker URL (see
+     worker/DEPLOY.md) and NEXA answers through Workers AI,
+     with the recent conversation as context. Leave it empty
+     and NEXA answers from the built-in knowledge base below,
+     exactly as it always has. Either way, ANY failure of the
+     live call — offline, timeout, quota, bad response — falls
+     back silently to the built-in answers. Nothing is stored. */
+  const NEXA_AI_ENDPOINT = "https://nexa-worker.ummi-unoffical-30f.workers.dev";
   /* NEXA-KB-START */
   var NEXA_KB = [
     { topic: "nexus", keys: ["what is nexus", "about nexus", "nexus kya", "nexa kya", "explain nexus", "tell me about nexus"],
@@ -1405,7 +1416,85 @@
       }
     }
 
-    function nexaReply(question) {
+    /* --- Conversation turn memory (in-memory only) ---------
+       Completed question/answer pairs, kept so a Live AI call
+       can send the last few turns as context — that is what
+       lets "aur batao" work naturally in AI mode. The built-in
+       answers record here too, so the history is the same
+       whichever path answered. Nothing persists. ------------ */
+    var nexaHistory = [];
+    function nexaRememberTurn(question, answerHtml) {
+      var q = String(question || "").trim();
+      var a = nexaPlainText(answerHtml);
+      if (q) nexaHistory.push({ role: "user", content: q });
+      if (a) nexaHistory.push({ role: "assistant", content: a });
+      if (nexaHistory.length > 12) nexaHistory.splice(0, nexaHistory.length - 12);
+    }
+    function nexaEscapeHtml(str) {
+      return String(str || "")
+        .replace(/&/g, "&amp;").replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+    }
+
+    /* --- Live AI path --------------------------------------
+       Tries the Worker once; on success the reply renders
+       through the same nexaAddMsg + nexaSpeak path as a
+       built-in answer. On ANY failure the thinking bubble is
+       removed and the built-in path runs unchanged. -------- */
+    var nexaAiSeq = 0;
+    function nexaAskLive(question) {
+      var indicator = nexaAddMsg(nexaEscapeHtml(t("nexa.thinking")), "bot");
+      var indId = "nexaAiThinking-" + (++nexaAiSeq);
+      indicator.id = indId;
+      function dropIndicator() {
+        var el = document.getElementById(indId);
+        if (el && el.parentNode) el.parentNode.removeChild(el);
+        else if (indicator.parentNode) indicator.parentNode.removeChild(indicator);
+      }
+      function fallback() { dropIndicator(); nexaReply(question); }
+      var controller = null, timer = null;
+      if (typeof AbortController !== "undefined") {
+        try { controller = new AbortController(); } catch (err) { controller = null; }
+      }
+      if (controller) {
+        timer = setTimeout(function () {
+          try { controller.abort(); } catch (err) {}
+        }, 12000);
+      }
+      var opts = {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          message: question,
+          history: nexaHistory.slice(-6).map(function (h) {
+            return { role: h.role, content: h.content };
+          }),
+          lang: curLang
+        })
+      };
+      if (controller) opts.signal = controller.signal;
+      fetch(NEXA_AI_ENDPOINT.replace(/\/+$/, "") + "/chat", opts).then(function (res) {
+        if (timer) clearTimeout(timer);
+        if (!res || res.ok === false) { fallback(); return null; }
+        if (typeof res.json === "function") return res.json();
+        if (res && typeof res.reply === "string") return res;
+        fallback();
+        return null;
+      }).then(function (data) {
+        if (!data) return;
+        var reply = (typeof data.reply === "string") ? data.reply.trim() : "";
+        if (!reply || data.error) { fallback(); return; }
+        dropIndicator();
+        nexaAddMsg(nexaEscapeHtml(reply), "bot");
+        nexaSpeak(reply);
+        nexaRememberTurn(question, reply);
+      }).catch(function () {
+        if (timer) clearTimeout(timer);
+        fallback();
+      });
+    }
+
+    function nexaReply(question, skipMemory) {
       var typing = document.createElement("div");
       typing.className = "nexa-msg-typing";
       typing.innerHTML = "<span></span><span></span><span></span>";
@@ -1417,20 +1506,26 @@
         var answer = nexaAnswer(question);
         nexaAddMsg(answer, "bot");
         nexaSpeak(answer);
+        if (!skipMemory) nexaRememberTurn(question, answer);
       }, delay);
     }
     function nexaAsk(question) {
       var q = String(question || "").trim();
       if (!q) return;
       nexaAddMsg(q, "user");
-      nexaReply(q);
+      if (NEXA_AI_ENDPOINT && typeof fetch === "function" &&
+          (typeof navigator === "undefined" || navigator.onLine !== false)) {
+        nexaAskLive(q);
+      } else {
+        nexaReply(q);
+      }
     }
     function nexaOpen() {
       nexaPanel.hidden = false;
       nexaLaunch.setAttribute("aria-expanded", "true");
       if (!nexaGreeted) {
         nexaGreeted = true;
-        nexaReply("hello");
+        nexaReply("hello", true);
       }
       setTimeout(function () { nexaInput.focus(); }, 60);
     }
