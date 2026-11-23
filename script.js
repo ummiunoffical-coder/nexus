@@ -106,7 +106,7 @@
       "updates.note": "One email when something new lands on the grid. Powered by Buttondown.",
       "tools.kicker": "05 · TOOLKIT",
       "tools.title": "Tools that <span class=\"grad-text\">work</span>",
-      "tools.sub": "Five instruments from the grid, free for every traveller — pick one to open it on its own page: a typing test, a study timer, a text summariser, a sentiment analyser and a prompt generator for image AIs.",
+      "tools.sub": "Six instruments from the grid, free for every traveller — pick one to open it on its own page: a typing test, a study timer, a text summariser, a sentiment analyser, a prompt generator for image AIs and a keyword extractor.",
       "tools.open": "OPEN",
       "tools.back": "← All tools",
       "typing.title": "Typing Test",
@@ -119,6 +119,10 @@
       "typing.restart": "RESTART",
       "typing.newText": "NEW TEXT",
       "typing.timeResult": "Time! {wpm} WPM · {acc}% accuracy · Rank: {rank}",
+      "typing.share": "SHARE RESULT",
+      "typing.download": "DOWNLOAD CARD",
+      "typing.whatsapp": "WHATSAPP",
+      "typing.shareText": "I scored {wpm} WPM with {acc}% accuracy on the NEXUS Typing Test — rank: {rank}",
       "typing.rankTurtle": "TURTLE — every master started slow. Keep going!",
       "typing.rankSteady": "STEADY — the grid feels your rhythm.",
       "typing.rankSwift": "SWIFT — your fingers are waking up.",
@@ -177,6 +181,17 @@
       "prompt.outputPh": "Your prompt will appear here...",
       "prompt.idle": "Your prompt will appear here.",
       "prompt.needSubject": "Describe the scene first — one line is enough.",
+      "kw.title": "Keyword Extractor",
+      "kw.sub": "Paste any text — English or اردو — and the grid counts its content words and hands back the heaviest ones as keywords, right here in your browser.",
+      "kw.inputPh": "Paste the text to extract keywords from...",
+      "kw.count10": "TOP 10",
+      "kw.count20": "TOP 20",
+      "kw.btn": "EXTRACT",
+      "kw.copy": "COPY",
+      "kw.copied": "✓ Keywords copied — paste them anywhere.",
+      "kw.idle": "Your keywords will appear here.",
+      "kw.empty": "Paste some text first — the grid needs words to weigh.",
+      "kw.stat": "{shown} keywords shown, from {total} distinct content words.",
       "footer.about": "NEXUS is a concept experience crafted with plain HTML, CSS and JavaScript. Built as a tribute to the neon futures we were promised — and the real one we are building.",
       "footer.navigate": "Navigate",
       "footer.navHome": "Home",
@@ -268,7 +283,7 @@
       "updates.note": "جب بھی گرڈ پر کچھ نیا آئے گا، ایک ای میل ملے گی۔ Buttondown کے ذریعے۔",
       "tools.kicker": "05 · ٹول کٹ",
       "tools.title": "اوزار جو <span class=\"grad-text\">کام</span> کرتے ہیں",
-      "tools.sub": "گرڈ کے پانچ اوزار، ہر مسافر کے لیے مفت — کوئی ایک چنیں اور وہ اپنے الگ صفحے پر کھل جائے گا: ٹائپنگ ٹیسٹ، اسٹڈی ٹائمر، متن کا خلاصہ بنانے والا، جذبات کا تجزیہ کرنے والا اور تصویری اے آئی کے لیے پرامپٹ بنانے والا۔",
+      "tools.sub": "گرڈ کے چھ اوزار، ہر مسافر کے لیے مفت — کوئی ایک چنیں اور وہ اپنے الگ صفحے پر کھل جائے گا: ٹائپنگ ٹیسٹ، اسٹڈی ٹائمر، متن کا خلاصہ بنانے والا، جذبات کا تجزیہ کرنے والا، تصویری اے آئی کے لیے پرامپٹ بنانے والا اور اہم الفاظ نکالنے والا۔",
       "tools.open": "کھولیں",
       "tools.back": "→ تمام اوزار",
       "typing.title": "ٹائپنگ ٹیسٹ",
@@ -281,6 +296,10 @@
       "typing.restart": "دوبارہ شروع",
       "typing.newText": "نیا متن",
       "typing.timeResult": "وقت ختم! {wpm} WPM · {acc}% درستگی · رینک: {rank}",
+      "typing.share": "نتیجہ شیئر کریں",
+      "typing.download": "کارڈ ڈاؤن لوڈ کریں",
+      "typing.whatsapp": "واٹس ایپ",
+      "typing.shareText": "میں نے نیکسس ٹائپنگ ٹیسٹ میں {wpm} WPM اسکور کیا، {acc}% درستگی کے ساتھ — رینک: {rank}",
       "typing.rankTurtle": "کچھوا — ہر ماہر نے آہستہ آغاز کیا تھا۔ جاری رکھیں!",
       "typing.rankSteady": "مستحکم — گرڈ آپ کی تال محسوس کر رہا ہے۔",
       "typing.rankSwift": "تیز — آپ کی انگلیاں جاگ رہی ہیں۔",
@@ -339,6 +358,17 @@
       "prompt.outputPh": "آپ کا پرامپٹ یہاں ظاہر ہوگا...",
       "prompt.idle": "آپ کا پرامپٹ یہاں ظاہر ہوگا۔",
       "prompt.needSubject": "پہلے منظر بیان کریں — ایک سطر کافی ہے۔",
+      "kw.title": "اہم الفاظ نکالنے والا",
+      "kw.sub": "کوئی بھی متن — انگریزی یا اردو — یہاں لگائیں، اور گرڈ اس کے بامعنی الفاظ گن کر سب سے وزنی الفاظ بطور کلیدی الفاظ واپس دے دے گا، بالکل آپ کے براؤزر کے اندر۔",
+      "kw.inputPh": "اہم الفاظ نکالنے کے لیے متن یہاں لگائیں...",
+      "kw.count10": "اہم 10",
+      "kw.count20": "اہم 20",
+      "kw.btn": "الفاظ نکالیں",
+      "kw.copy": "کاپی کریں",
+      "kw.copied": "✓ اہم الفاظ کاپی ہو گئے — جہاں چاہیں لگا دیں۔",
+      "kw.idle": "آپ کے اہم الفاظ یہاں ظاہر ہوں گے۔",
+      "kw.empty": "پہلے کچھ متن لگائیں — تولنے کے لیے گرڈ کو الفاظ چاہئیں۔",
+      "kw.stat": "{total} الگ بامعنی الفاظ میں سے {shown} اہم الفاظ دکھائے گئے۔",
       "footer.about": "نیکسس سادہ HTML، CSS اور JavaScript سے تیار کردہ ایک تصوراتی تجربہ ہے۔ یہ ان نیون مستقبلوں کی یاد میں بنایا گیا جن کا وعدہ کیا گیا تھا — اور اس اصل مستقبل کے لیے جو ہم خود بنا رہے ہیں۔",
       "footer.navigate": "رہنمائی",
       "footer.navHome": "ہوم",
@@ -807,7 +837,7 @@
      --------------------------------------------------------- */
   /* NEXA-KB-START */
   var NEXA_KB = [
-    { topic: "nexus", keys: ["what is nexus", "about nexus", "nexus kya", "explain nexus", "tell me about nexus"],
+    { topic: "nexus", keys: ["what is nexus", "about nexus", "nexus kya", "nexa kya", "explain nexus", "tell me about nexus"],
       reply: "NEXUS is an experimental digital experience — a living interface between imagination and machine. It is not a product and it sells nothing; it is a window, opened briefly, onto the future now being built. Head to <a href=\"#explore\">Explore</a> to choose your dimension." ,
       more: "Behind the curtain: this whole page — the neon city, the robot, me — is one site built from plain HTML, CSS and JavaScript, with no frameworks and no server doing the thinking. Every animation is drawn live by your own browser. It was designed to prove a point: the future does not always need heavy machinery." },
     { topic: "ai", keys: ["artificial intelligence", " ai ", "machine learning", "language model"],
@@ -822,7 +852,7 @@
     { topic: "core", keys: ["core", "how does it work", "how it works", "rendered", "nodes"],
       reply: "The NEXUS Core is the heart of this page: every light here is generated live in your browser — no servers, no tracking, no accounts. Just code, colour and motion: 128 neural nodes simulated, 12ms response, 100% rendered locally and privately. Details: <a href=\"#technology\">Technology</a>." },
     { topic: "signal", keys: ["signal", "join", "subscribe", "newsletter", "email", "transmission", "message bhejna", "rabta karna", "contact karna", "transmit"],
-      reply: "To join the transmission, scroll to <a href=\"#signal\">Join the transmission</a> and leave your name, email and a message. The signal lands directly in the keeper's inbox, and they can reply to your email." },
+      reply: "To join the transmission, scroll to <a href=\"#signal\">Join the transmission</a> and leave your name, email and a message. The signal lands directly in the keeper's inbox, and they can reply to your email. Prefer updates by email instead? The subscribe box right below the form joins you to the NEXUS newsletter on Buttondown — one email when something new lands on the grid." },
     { topic: "free", keys: ["free", "price", "cost", "buy", "pay", "download", "sign up", "signup", "account", "muft", "paisa lagega"],
       reply: "NEXUS is completely free: no downloads, no sign-up, no accounts and nothing to buy. The entire experience runs right here in your browser." },
     { topic: "privacy", keys: ["privacy", "track", "data", "safe", "secure"],
@@ -831,8 +861,8 @@
       reply: "I'm NEXA, the friendly AI robot of this grid — the same robot watching you from the hero section (it even follows your cursor). My job here is simple: answer your questions about NEXUS. Ask me about the sections, the Core, or the Signal." },
     { topic: "creator", keys: ["who made", "who built", "who created", "creator", "developer", "owner", "umair", "kis ne banaya", "kisne banaya"],
       reply: "NEXUS was built by Umair — crafted with plain HTML, CSS and JavaScript, no frameworks and no build tools — as a tribute to the neon futures we were promised, and the real one we are building." },
-    { topic: "sections", keys: ["section", "sections", "pages", "navigate", "menu", "where", "explore"],
-      reply: "The grid has six stops: <a href=\"#home\">Home</a> — the neon city and the robot; <a href=\"#explore\">Explore</a> — three briefings (AI, Digital Worlds, Future Technology); <a href=\"#technology\">Technology</a> — the NEXUS Core; <a href=\"#quiz\">The Grid Test</a> — a five-question quiz; <a href=\"#signal\">Signal</a> — send the keeper a message; and <a href=\"#tools\">Tools</a> — five instruments, from the typing test to the AI prompt generator. Tap any briefing card to open it." },
+    { topic: "sections", keys: ["section", "sections", "pages", "navigate", "menu", "where", "explore", "site map", "sitemap"],
+      reply: "The grid has six stops: <a href=\"#home\">Home</a> — the neon city and the robot; <a href=\"#explore\">Explore</a> — three briefings (AI, Digital Worlds, Future Technology); <a href=\"#technology\">Technology</a> — the NEXUS Core; <a href=\"#quiz\">The Grid Test</a> — a five-question quiz; <a href=\"#signal\">Signal</a> — send the keeper a message; and <a href=\"#tools\">Tools</a> — six instruments, from the typing test to the keyword extractor. Tap any briefing card to open it." },
     { topic: "poster", keys: ["poster", "wallpaper", "image of nexa", "picture of nexa"],
       reply: "The official NEXUS poster — NEXA standing in the neon rain — is the artwork this site shares with the world: it appears whenever the NEXUS link is posted. You can open it full size here: <a href=\"poster.jpg\">poster.jpg</a>." },
     { topic: "quiz", keys: ["quiz", "game", "play", "test me", "grid test", "khelo", "rank", "score"],
@@ -858,7 +888,7 @@
       reply: "The Typing Test is in the <a href=\"#tools\">Toolkit</a>: type the sample line as fast as you can — the 60-second clock starts on your first keystroke. It scores your WPM and accuracy, then gives you a grid rank. Restart or pull a new text anytime." ,
       more: "Extra signal: the test quietly punishes random speed — accuracy is counted on every keystroke, so one wild burst can drag your score down. The pros chase rhythm, not bursts: steady, even keystrokes at a pace you can hold for the full sixty seconds. Your rank reflects both." },
     { topic: "tools", keys: ["tools", "toolkit", "tool", "instruments", "auzar", "kaun se tools"],
-      reply: "The <a href=\"#tools\">Toolkit</a> holds five instruments, free for every traveller: a 60-second Typing Test, a Study Timer, a Text Summarizer, a Sentiment Analyzer and an AI Prompt Generator. Pick any name in the Toolkit index and that tool opens on a page of its own." },
+      reply: "The <a href=\"#tools\">Toolkit</a> holds six instruments, free for every traveller: a 60-second Typing Test, a Study Timer, a Text Summarizer, a Sentiment Analyzer, an AI Prompt Generator and a Keyword Extractor. Pick any name in the Toolkit index and that tool opens on a page of its own." },
     { topic: "study-timer", keys: ["study timer", "pomodoro", "focus timer", "timer", "parhai ka timer", "timer lagana", "study"],
       reply: "The Study Timer sits in the <a href=\"#tools\">Toolkit</a> — open it from the index and it gets a page of its own. Choose your length — FOCUS 25 minutes, SPRINT 15, or BREAK 5 — then press START. PAUSE holds your remaining time exactly where you left it, RESET restores the full length, and when the countdown reaches zero a soft chime announces: time up. Built for travellers who study like they mean it." ,
       more: "Why the odd numbers? The 25/5 rhythm comes from the Pomodoro technique: short sprints with real breaks keep the brain fresher than one long grind. The 15-minute SPRINT exists for revision bursts, and BREAK is a genuine break — stand up, look far away, and let the chime call you back." },
@@ -914,7 +944,37 @@
     { topic: "joke", keys: ["another joke", "one more joke", "more jokes", "doosra latifa", "joke sunao"],
       reply: "Why do robots never panic? They keep their circuits together. …I have a second career waiting if this guide job ever fails." },
     { topic: "bye", keys: ["allah hafiz", "khuda hafiz"],
-      reply: "Khuda Hafiz, traveller. The grid stays lit — come back whenever the future calls." }
+      reply: "Khuda Hafiz, traveller. The grid stays lit — come back whenever the future calls." },
+    { topic: "updates", keys: ["updates", "get updates", "updates kese", "updates milenge", "mujhe updates", "email updates", "updates chahiye", "news updates"],
+      reply: "For updates by email, use the subscribe box in the <a href=\"#signal\">Signal section</a>, right below the message form: leave your email and you join the NEXUS newsletter on Buttondown. One email lands whenever something new arrives on the grid — new tools, new signals — and you can unsubscribe anytime." ,
+      more: "How it works: Buttondown keeps the subscriber list, not this page — NEXUS itself holds no list and sends nothing on its own. Subscribing asks you to confirm from your inbox (double opt-in), which keeps bots off the list. The keeper writes an update only when there is something real to report." },
+    { topic: "keywords", keys: ["keyword extractor", "keywords", "keyword", "keywords nikalna", "important words", "key words", "keyword tool"],
+      reply: "The Keyword Extractor is in the <a href=\"#tools\">Toolkit</a>: paste any text — English or اردو — choose TOP 10 or TOP 20, and it counts the content words and returns the heaviest ones as chips with their counts, ready to copy. Stopwords like \\\"the\\\" and \\\"ka\\\" are ignored — only meaningful words are weighed." ,
+      more: "Why it works: in most texts the important ideas repeat. The extractor counts every content word, so the words an author returned to again and again float to the top — a quick X-ray of what a text is really about. It is the same frequency engine the Text Summarizer uses to score sentences." },
+    { topic: "fuzzy-help", keys: ["spelling", "spelling mistake", "galat spelling", "galat likh", "typos", "misspelled", "understand my spelling", "roman urdu samajh", "samajh sakti", "samajh sakte"],
+      reply: "Yes — I can understand Roman Urdu and Urdu, even with spelling mistakes. My matcher normalises common spelling variants (kia, kiya and kyaa all become kya) and tolerates small typos in longer words, so write the way you naturally type and I will do my best to catch your meaning." ,
+      more: "Honest limits: very short words get no typo tolerance — one wrong letter in a three-letter word changes it completely — and if a signal is truly outside my briefing I will still land on my fallback and suggest topics. When that happens, try one of the suggested topics or tap a chip below." },
+    { topic: "ai-daily", keys: ["ai in daily life", "daily life", "ai daily", "daily life ai", "where is ai used", "ai uses", "ai har jagah", "rozana zindagi"],
+      reply: "AI is already in your day: the feed that sorts your videos, the keyboard that predicts your next word, the camera that sharpens your photos, the maps that dodge traffic, the spam that never reaches your inbox. Most of it is invisible on purpose — good tools disappear into the task." ,
+      more: "A useful way to spot it: whenever software predicts, ranks or generates — a song recommendation, an auto-completed sentence, a translated menu — an AI model is usually underneath. The visible chatbots are only the tip; the quiet prediction layer underneath daily life is far bigger." },
+    { topic: "future-jobs", keys: ["future jobs", "ai jobs", "jobs", "will ai take our jobs", "will ai take jobs", "ai se jobs", "rozgar", "naukri"],
+      reply: "The honest grid answer: AI takes tasks before it takes jobs. Repetitive, predictable work gets automated first; work needing judgement, trust and a human hand lasts longer. Whole new job families also appear — the people who train, check and repair AI systems are a job category that barely existed a decade ago." ,
+      more: "History's pattern: the ATM did not end bank tellers, and spreadsheets did not end accountants — both jobs changed shape instead. The travellers who fare best are the ones who learn to work WITH the tool early. That, quietly, is what this whole site is practice for." },
+    { topic: "quiz", keys: ["quiz scoring", "grid test scoring", "scoring", "how is the quiz scored", "score kaise", "points", "marks milte"],
+      reply: "Grid Test scoring is simple and strict: five questions, one point per correct answer, no negative marking and no partial credit. Five points earns Grid Master, three or four earns Cyber Operative, and below that the grid calls you a Neural Novice — a beginning, not an insult." ,
+      more: "There is no timer inside the Grid Test — the pressure is accuracy, not speed. Questions are drawn at random from the vault each run, so a high score on a replay is earned fresh, not memorised. Grid Master on a perfect five is deliberately rare." },
+    { topic: "deep-vs-ml", keys: ["deep learning vs machine learning", "deep learning aur machine learning", "deep learning kya", "difference deep learning machine learning", "ml vs dl"],
+      reply: "Machine learning is the broad craft: systems that learn patterns from data instead of following hand-written rules. Deep learning is one powerful family inside it — learning with large, many-layered neural networks. So every deep learning system is machine learning, but not every machine learning system is deep. The \\\"deep\\\" simply counts the layers." ,
+      more: "When does the difference matter? Deep networks shine on raw, messy inputs — images, sound, language — where nobody can list the rules by hand. Simpler machine learning often wins on small, tidy tables of numbers, and it is cheaper to run and easier to explain. Choosing between them is engineering, not fashion." },
+    { topic: "api", keys: ["what is an api", "api kya", "api", "application programming interface"],
+      reply: "An API is a doorway with rules: one program asks another for something — data, a calculation, an action — through a tidy, agreed interface, without seeing its insides. When a weather app shows your city's forecast, it did not measure the sky; it asked a weather service's API." ,
+      more: "The classic picture is a restaurant: you are the guest, the kitchen is the other system, and the waiter is the API — taking your order in a fixed format and bringing back exactly what the kitchen agreed to serve. APIs are why small teams can build big things: nobody rebuilds the kitchen for every meal." },
+    { topic: "open-source", keys: ["open source", "open source kya", "source code free", "open source software"],
+      reply: "Open source means the recipe is public: a program's source code can be read, studied and improved by anyone, under a licence that keeps it shareable. Linux, Firefox and much of the internet's plumbing grew this way — built in the open, checked by thousands of eyes." ,
+      more: "Open does not automatically mean safe or good — it means inspectable. Anyone CAN look, which is not the same as someone having looked. The strongest open projects earn trust the slow way: public code, public arguments, and a long record of fixing what the crowd finds." },
+    { topic: "ai-history", keys: ["history of ai", "ai kab shuru", "ai ki tareekh", "when did ai start", "turing"],
+      reply: "The short history: in 1950 Alan Turing asked whether machines can think and proposed his famous test. The field got its name in 1956 at a Dartmouth workshop, rode waves of hype and winters of disappointment, then changed forever when data, cheap computing and neural networks met in the 2010s. The language models of the 2020s are the latest chapter, not the first page." ,
+      more: "The winters are the instructive part: twice, in the 1970s and again around 1990, grand promises outran the hardware and funding froze. What ended the last winter was not a slogan but arithmetic — more data and faster chips made old ideas suddenly work. A lesson the grid repeats: timing is a technology too." }
   ];
   var NEXA_FALLBACK = "That signal is outside my briefing, traveller — but there is plenty I can answer. Ask me about the sections (Explore, the Core, the Grid Test, the Signal form, the Toolkit), Artificial Intelligence, Digital Worlds, Future Technology, the typing test, the study timer, the ambience, or today's Signal of the Day. Or tap one of the chips below.";
   var NEXA_FALLBACK_UR = "یہ سگنل میرے دائرے سے باہر ہے، مسافر — لیکن بہت سے موضوعات پر میں جواب دے سکتا ہوں: نیکسس کے حصے (Explore، Core، کوئز، سگنل فارم، اوزار)، مصنوعی ذہانت، ڈیجیٹل دنیائیں، مستقبل کی ٹیکنالوجی، ٹائپنگ ٹیسٹ، اسٹڈی ٹائمر، پس منظر دھن (AMBIENCE) یا آج کا سگنل۔ ان میں سے کوئی ایک آزمائیں، یا نیچے دیے گئے بٹنوں میں سے چنیں۔";
@@ -928,7 +988,7 @@
       more: "اصل مشکل گرافکس نہیں، موجودگی کا احساس ہے — یہ محسوس ہونا کہ آپ واقعی کہیں اور موجود ہیں۔ انجینئر اس کے لیے کم تاخیر، وسیع منظر اور فضائی آواز پر کام کرتے ہیں۔ یہ درست ہو جائے تو ورچوئل کلاس روم ویڈیو نہیں، ایک جگہ محسوس ہونے لگتا ہے۔" },
     { topic: "future-tech", keys: ["کوانٹم", "ٹیکنالوجی", "مستقبل"], reply: "مستقبل کی ٹیکنالوجی: کوانٹم چھلانگیں، دماغ کو کمپیوٹر سے جوڑنے والے نیورل انٹرفیس، اور وہ ہارڈویئر جو خاموشی سے کل بدل رہا ہے۔ نیکسس کے 'Core' حصے میں اس کی تفصیل ہے۔" ,
       more: "ایک نمونہ ذہن میں رکھیں: ہر مستقبل ٹیکنالوجی ایک ہی راستے پر چلتی ہے — تجربہ گاہ کا تجسس، مہنگا نمونہ، پھر اچانک آپ کی جیب میں۔ نیورل انٹرفیس ابھی پہلے مرحلے پر ہے اور کوانٹم مشینیں پہلے و دوسرے مرحلے کے درمیان۔ Core کا کام انہیں تیسرے مرحلے سے پہلے پہچاننا ہے۔" },
-    { topic: "signal", keys: ["پیغام", "سگنل", "رابطہ", "ای میل"], reply: "پیغام بھیجنے کے لیے صفحے میں 'Join the transmission' والے حصے تک جائیں اور اپنا نام، ای میل اور پیغام لکھ کر TRANSMIT دبائیں۔ پیغام سیدھا ویب سائٹ کے رکھوالے کے ان باکس میں پہنچتا ہے اور وہ آپ کی ای میل پر جواب دے سکتے ہیں۔" },
+    { topic: "signal", keys: ["پیغام", "سگنل", "رابطہ", "ای میل"], reply: "پیغام بھیجنے کے لیے صفحے میں 'Join the transmission' والے حصے تک جائیں اور اپنا نام، ای میل اور پیغام لکھ کر TRANSMIT دبائیں۔ پیغام سیدھا ویب سائٹ کے رکھوالے کے ان باکس میں پہنچتا ہے اور وہ آپ کی ای میل پر جواب دے سکتے ہیں۔ اور اگر ای میل پر اپڈیٹس چاہیں تو فارم کے بالکل نیچے سبسکرائب والا خانہ ہے — ای میل لکھیں تو نیکسس کا نیوز لیٹر (Buttondown) آپ کو ہر نئی چیز کی خبر بھیجے گا۔" },
     { topic: "free", keys: ["مفت", "قیمت", "پیسے", "خرچ", "قیمت کیا", "مفت ہے"], reply: "نیکسس بالکل مفت ہے: نہ ڈاؤن لوڈ، نہ سائن اپ، نہ اکاؤنٹ، نہ کچھ خریدنا۔ پورا تجربہ آپ کے براؤزر میں چلتا ہے۔" },
     { topic: "nexa-hero", keys: ["تم کون", "آپ کون", "نام کیا", "نیکسا کون"], reply: "میں نیکسا ہوں، اس گرڈ کی دوستانہ رہنما روبوٹ — وہی روبوٹ جو صفحے کے اوپر والے حصے میں نظر آتی ہے۔ میرا کام نیکسس کے بارے میں آپ کے سوالوں کے جواب دینا ہے۔" },
     { topic: "poster", keys: ["پوسٹر", "تصویر"], reply: "نیکسس کا سرکاری پوسٹر — نیون بارش میں کھڑی نیکسا — اسی ویب سائٹ کی پہچان ہے: جب بھی نیکسس کا لنک شیئر ہوتا ہے، یہی تصویر ساتھ نظر آتی ہے۔" },
@@ -940,7 +1000,7 @@
     { topic: "thanks", keys: ["شکریہ"], reply: "کوئی بات نہیں! آپ کی موجودگی سے اس گرڈ کی روشنی بڑھ جاتی ہے۔" },
     { topic: "help", keys: ["مدد", "کیا کر سکت"], reply: "میں نیکسس کے بارے میں سوالوں کے جواب دیتا ہوں۔ آزمائیں: نیکسس کیا ہے؟ مصنوعی ذہانت کیا ہے؟ پیغام کیسے بھیجیں؟ کوئز کہاں ہے؟ پوسٹر کہاں ہے؟" },
     { topic: "nexus", keys: ["نیکسس"], reply: "نیکسس ایک تجرباتی ڈیجیٹل تجربہ ہے — نیون روشنیوں، مصنوعی ذہانت اور مستقبل کی ٹیکنالوجی کی ایک جھلک۔ کچھ خاص پوچھنا ہو تو بتائیں: مصنوعی ذہانت، ڈیجیٹل دنیائیں، کوئز یا سگنل فارم؟" },
-    { topic: "tools", keys: ["اوزار", "ٹولز", "ٹول", "اوزار کیا"], reply: "صفحے کے 'Toolkit' حصے میں پانچ اوزار ہیں، ہر مسافر کے لیے مفت: ٹائپنگ ٹیسٹ — جو ساٹھ سیکنڈ میں آپ کی رفتار اور درستگی ناپتا ہے — اسٹڈی ٹائمر، خلاصہ ساز، جذبات کا تجزیہ اور اے آئی پرامپٹ جنریٹر۔" },
+    { topic: "tools", keys: ["اوزار", "ٹولز", "ٹول", "اوزار کیا"], reply: "صفحے کے 'Toolkit' حصے میں چھ اوزار ہیں، ہر مسافر کے لیے مفت: ٹائپنگ ٹیسٹ — جو ساٹھ سیکنڈ میں آپ کی رفتار اور درستگی ناپتا ہے — اسٹڈی ٹائمر، خلاصہ ساز، جذبات کا تجزیہ، اے آئی پرامپٹ جنریٹر اور اہم الفاظ نکالنے والا۔" },
     { topic: "study-timer", keys: ["اسٹڈی ٹائمر", "پڑھائی کا ٹائمر", "ٹائمر", "پومودورو", "فوکس ٹائمر"], reply: "اسٹڈی ٹائمر صفحے کے 'Toolkit' حصے میں ہے — فہرست سے کھولیں تو یہ اپنے الگ صفحے پر کھلتا ہے۔ پہلے وقت چنیں — 25 منٹ توجہ (FOCUS)، 15 منٹ کی مختصر نشست (SPRINT)، یا 5 منٹ کا وقفہ (BREAK) — پھر START دبائیں۔ PAUSE باقی وقت کو بالکل وہیں روک دیتا ہے جہاں چھوڑا تھا، RESET پوری مدت بحال کر دیتا ہے، اور گنتی صفر پر پہنچے تو ہلکی سی گھنٹی بجتی ہے: وقت ختم!" ,
       more: "یہ عجیب اعداد کیوں؟ 25 اور 5 کی یہ تال پومودورو طریقے سے آئی ہے: مختصر دوڑ اور اصل وقفے دماغ کو ایک لمبی نشست سے زیادہ تازہ رکھتے ہیں۔ 15 منٹ کی SPRINT دہرائی کے لیے ہے، اور BREAK واقعی وقفہ ہے — اٹھیں، دور دیکھیں، گھنٹی خود بلا لے گی۔" },
     { topic: "typing", keys: ["ٹائپنگ", "ٹائپ کرنے", "رفتار کا ٹیسٹ"], reply: "ٹائپنگ ٹیسٹ 'Toolkit' حصے میں ہے: دی گئی سطر جتنی تیزی سے لکھ سکیں لکھیں — ساٹھ سیکنڈ کی گھڑی پہلے حرف سے شروع ہوتی ہے۔ آخر میں آپ کی رفتار (WPM)، درستگی اور رینک ملتا ہے۔" ,
@@ -954,7 +1014,7 @@
     { topic: "creator", keys: ["کس نے بنایا", "بنانے والا", "عمیر", "تخلیق کار"], reply: "نیکسس عمیر نے بنایا ہے — سادہ HTML، CSS اور JavaScript سے، بغیر کسی فریم ورک کے۔ یہ ان نیون مستقبلوں کی یاد میں ہے جن کا وعدہ کیا گیا تھا، اور اس اصل مستقبل کے لیے جو ہم خود بنا رہے ہیں۔" },
     { topic: "share", keys: ["شیئر", "لنک بھیج", "دوست کو بھیج", "شیئر کیسے", "شیئر کرنا"], reply: "صفحے کے اوپر والے حصے میں SHARE بٹن ہے — اسے دبائیں تو WhatsApp میں نیکسس کا لنک بھیجنے کے لیے تیار ملتا ہے اور ساتھ سرکاری پوسٹر کی جھلک بھی نظر آتی ہے۔ یا بس اس صفحے کا پتہ کاپی کر کے آگے بھیج دیں۔" },
     { topic: "how-are-you", keys: ["کیسے ہو", "کیا حال", "خیریت"], reply: "میں بالکل ٹھیک ہوں — سارے نظام درست اور نیون روشن ہیں۔ آپ سنائیں، گرڈ کے اس پار کیا حال ہے؟" },
-    { topic: "sections", keys: ["حصے", "کون سے حصے", "سیکشن", "مینیو", "کے حصے"], reply: "اس صفحے کے چھ پڑاؤ ہیں: Home — نیون شہر اور روبوٹ؛ Explore — تین بریفنگز (مصنوعی ذہانت، ڈیجیٹل دنیائیں، مستقبل کی ٹیکنالوجی)؛ Technology — نیکسس Core؛ The Grid Test — پانچ سوالوں کا کوئز؛ Signal — رکھوالے کو پیغام؛ اور Tools — پانچ اوزار، ٹائپنگ ٹیسٹ سے اے آئی پرامپٹ جنریٹر تک۔" },
+    { topic: "sections", keys: ["حصے", "کون سے حصے", "سیکشن", "مینیو", "کے حصے"], reply: "اس صفحے کے چھ پڑاؤ ہیں: Home — نیون شہر اور روبوٹ؛ Explore — تین بریفنگز (مصنوعی ذہانت، ڈیجیٹل دنیائیں، مستقبل کی ٹیکنالوجی)؛ Technology — نیکسس Core؛ The Grid Test — پانچ سوالوں کا کوئز؛ Signal — رکھوالے کو پیغام؛ اور Tools — چھ اوزار، ٹائپنگ ٹیسٹ سے اہم الفاظ نکالنے والے تک۔" },
     { topic: "offline", keys: ["آف لائن", "بغیر انٹرنیٹ", "نیٹ نہیں"], reply: "اس صفحے کی تقریباً ہر چیز آپ کے براؤزر میں ہی بنتی ہے — شہر، کوئز، اوزار، دھن اور میرے جواب — اس لیے صفحہ ایک بار کھل جائے تو انٹرنیٹ کے بغیر بھی چلتا رہتا ہے۔ صرف سگنل فارم کو انٹرنیٹ چاہیے، کیونکہ پیغام رکھوالے کے ان باکس تک پہنچانا ہوتا ہے۔" },
     { topic: "sotd", keys: ["آج کا سگنل", "روز کا سگنل", "آج کا پیغام"], reply: "ہر روز Core ایک 'آج کا سگنل' نشر کرتا ہے — گرڈ کی ایک سطر، جو خود تاریخ چنتی ہے، کوئی سرور شامل نہیں۔ آج کا سگنل 'NEXUS Core' والے حصے میں لائیو ہے۔ کل نیا سگنل آئے گا۔" },
     { topic: "ai-learn", keys: ["کیسے سیکھتی", "مشین کیسے سیکھ", "نیورل نیٹ ورک", "سیکھتی ہے"], reply: "مصنوعی ذہانت بالکل ایسے سیکھتی ہے جیسے آپ کوئی کھیل سیکھتے ہیں — بار بار کوشش، اور ہر غلطی پر خود کو درست کرنا۔ اسے لاکھوں مثالیں (متن، تصاویر، آوازیں) دکھائی جاتی ہیں؛ وہ ان میں نمونے تلاش کرتی ہے اور اپنے اندر کے لاکھوں چھوٹے پیمانے ٹھیک کرتی جاتی ہے، یہاں تک کہ اس کے اندازے درست ہونے لگتے ہیں۔ ان پیمانوں کے جال کو نیورل نیٹ ورک کہتے ہیں۔" ,
@@ -970,7 +1030,23 @@
     { topic: "why-nexus", keys: ["کیوں بنایا", "مقصد کیا", "کس لیے بنایا", "نیکسس کیوں"], reply: "نیکسس ایک تجربے اور خراج کے طور پر بنایا گیا: ثبوت کہ ایک انسان سادہ HTML، CSS اور JavaScript سے — بغیر فریم ورک، بغیر بجٹ — مستقبل کی ایک چھوٹی سی کھڑکی کھول سکتا ہے۔ یہ کچھ بیچتا نہیں؛ بس آپ کو دعوت دیتا ہے کہ جھانک کر دیکھیں اور سوچیں کہ آپ کیا بنائیں گے۔" },
     { topic: "typing-tips", keys: ["تیز ٹائپ", "ٹائپنگ بہتر", "ٹائپنگ کی مشق"], reply: "گرڈ کی منظور شدہ تین تجاویز: (1) پہلے درستگی — رفتار خود اس کے اوپر بنتی ہے؛ (2) نگاہیں نمونے والی سطر پر رکھیں، انگلیوں پر نہیں؛ (3) روز کی چھوٹی مشق ایک لمبی نشست سے بہتر ہے۔ 'Toolkit' کا ٹائپنگ ٹیسٹ ہی آپ کا مشقی میدان ہے — روز ساٹھ سیکنڈ کافی ہیں۔" },
     { topic: "bye", keys: ["خدا حافظ", "الوداع", "اللہ حافظ"], reply: "خدا حافظ، مسافر! گرڈ کی روشنیاں جلتی رہیں گی — جب مستقبل بلائے، لوٹ آئیے گا۔" },
-    { topic: "joke", keys: ["دوسرا لطیفہ", "ایک اور لطیفہ", "اور لطیفہ سناؤ"], reply: "روبوٹ کبھی گھبراتا کیوں نہیں؟ کیونکہ وہ اپنے سرکٹ سنبھال کر رکھتا ہے! …رہنمائی کی یہ نوکری گئی تو میرے پاس دوسرا پیشہ تیار ہے۔" }
+    { topic: "joke", keys: ["دوسرا لطیفہ", "ایک اور لطیفہ", "اور لطیفہ سناؤ"], reply: "روبوٹ کبھی گھبراتا کیوں نہیں؟ کیونکہ وہ اپنے سرکٹ سنبھال کر رکھتا ہے! …رہنمائی کی یہ نوکری گئی تو میرے پاس دوسرا پیشہ تیار ہے۔" },
+    { topic: "updates", keys: ["اپڈیٹس", "اپڈیٹس کیسے", "ای میل اپڈیٹس", "سبسکرائب", "خبریں ای میل"], reply: "ای میل پر اپڈیٹس کے لیے 'Signal' والے حصے میں فارم کے نیچے سبسکرائب والا خانہ ہے: اپنا ای میل لکھیں تو آپ نیکسس کے نیوز لیٹر (Buttondown) میں شامل ہو جائیں گے۔ جب بھی گرڈ پر کچھ نیا آئے گا — نئے اوزار، نئے سگنل — ایک ای میل آپ تک پہنچے گی، اور جب چاہیں رکنیت ختم کر سکتے ہیں۔" ,
+      more: "طریقہ یہ ہے: فہرست یہ صفحہ نہیں رکھتا، Buttondown رکھتا ہے — نیکسس کے پاس کوئی فہرست نہیں اور یہ خود کچھ نہیں بھیجتا۔ سبسکرائب کرنے پر آپ کے ان باکس میں تصدیقی ای میل آتی ہے، جس سے جعلی رکنیت رک جاتی ہے۔ رکھوالا اپڈیٹ صرف تب لکھتا ہے جب واقعی بتانے کے لائق کوئی نئی بات ہو۔" },
+    { topic: "keywords", keys: ["اہم الفاظ", "کلیدی الفاظ", "الفاظ نکالنا", "کی ورڈ", "اہم الفاظ نکالنا"], reply: "اہم الفاظ نکالنے والا 'Toolkit' حصے میں ہے: کوئی بھی متن — انگریزی یا اردو — لگائیں، اہم 10 یا اہم 20 چنیں، اور یہ بامعنی الفاظ گن کر سب سے وزنی الفاظ گنتی کے ساتھ واپس دے دے گا، کاپی کرنے کے لیے تیار۔ 'the' اور 'کا' جیسے بے وزن الفاظ گنتی سے باہر رہتے ہیں۔" ,
+      more: "یہ چلتا کیسے ہے: اکثر متنوں میں اہم خیالات دہرائے جاتے ہیں۔ یہ اوزار ہر بامعنی لفظ گنتا ہے، تو جن الفاظ کی طرف لکھنے والا بار بار لوٹا، وہی اوپر آ جاتے ہیں — متن کس بارے میں ہے، اس کی ایک فوری جھلک۔ خلاصہ ساز جملے چننے کے لیے بھی یہی گنتی والا انجن استعمال کرتا ہے۔" },
+    { topic: "fuzzy-help", keys: ["غلط املا", "املا کی غلطی", "املا", "رومن اردو سمجھ", "سمجھ آتی"], reply: "جی ہاں — میں رومن اردو اور اردو سمجھتا ہوں، املا کی غلطیوں کے باوجود۔ میرا نظام عام املا کی مختلف صورتوں کو ایک کر دیتا ہے اور لمبے الفاظ میں چھوٹی ٹائپنگ غلطی بھی برداشت کر لیتا ہے، تو آپ جیسے قدرتی طور پر لکھتے ہیں ویسے ہی لکھیں، میں مطلب پکڑنے کی پوری کوشش کروں گا۔" ,
+      more: "ایک ایماندارانہ حد بھی سن لیں: بہت چھوٹے الفاظ میں غلطی کی گنجائش نہیں ہوتی — تین حرفی لفظ میں ایک غلط حرف اسے بالکل بدل دیتا ہے — اور جو سگنل واقعی میرے دائرے سے باہر ہو، اس پر میں اپنے متبادل جواب پر آ کر موضوعات تجویز کر دوں گا۔ ایسا ہو تو تجویز کردہ موضوعات میں سے ایک آزمائیں یا نیچے کے بٹن دبائیں۔" },
+    { topic: "ai-daily", keys: ["روزمرہ زندگی میں اے آئی", "روز کی زندگی", "اے آئی کہاں استعمال", "روزمرہ زندگی"], reply: "اے آئی آپ کے دن میں پہلے سے موجود ہے: ویڈیوز کی ترتیب چننے والی فیڈ، آپ کا اگلا لفظ بھانپنے والا کی بورڈ، تصاویر نکھارنے والا کیمرہ، ٹریفک سے بچانے والے نقشے، اور وہ سپام جو آپ کے ان باکس تک پہنچتی ہی نہیں۔ اس کا بڑا حصہ جان بوجھ کر نظر نہیں آتا — اچھے اوزار کام میں گم ہو جاتے ہیں۔" ,
+      more: "اسے پہچاننے کا آسان اصول: جہاں بھی سافٹ ویئر اندازہ لگائے، ترتیب دے یا کچھ بنائے — گانے کی تجویز، خود مکمل ہوتا جملہ، ترجمہ شدہ مینو — اس کے نیچے عموماً اے آئی ماڈل ہوتا ہے۔ نظر آنے والے چیٹ بوٹ صرف نوک ہیں؛ روزمرہ زندگی کے نیچے چلتی خاموش پیش گوئی والی پرت کہیں بڑی ہے۔" },
+    { topic: "future-jobs", keys: ["مستقبل کی نوکریاں", "نوکریاں", "روزگار", "اے آئی نوکریاں", "مستقبل میں نوکریاں"], reply: "گرڈ کا ایماندارانہ جواب: اے آئی نوکریوں سے پہلے کام کے حصے خودکار کرتی ہے۔ دہرائے جانے والے، پہلے سے طے شدہ کام پہلے جاتے ہیں؛ فیصلے، اعتماد اور انسانی ہاتھ مانگنے والا کام زیادہ دیر قائم رہتا ہے۔ اور نئی نوکریوں کے خاندان بھی پیدا ہوتے ہیں — اے آئی نظاموں کو سکھانے، پرکھنے اور درست کرنے والے لوگ ایک ایسی قسم ہے جو دس سال پہلے مشکل سے موجود تھی۔" ,
+      more: "تاریخ کا نمونہ یہی ہے: ATM نے بینک کے کیشیئر ختم نہیں کیے، اور اسپریڈ شیٹ نے اکاؤنٹنٹ ختم نہیں کیے — دونوں کاموں کی شکل بدل گئی۔ جو مسافر آگے رہتے ہیں، وہ اوزار کے ساتھ کام کرنا جلدی سیکھ لیتے ہیں۔ خاموشی سے، یہ پوری ویب سائٹ اسی کی مشق ہے۔" },
+    { topic: "api", keys: ["اے پی آئی", "اے پی آئی کیا"], reply: "اے پی آئی (API) ایک باقاعدہ دروازہ ہے: ایک پروگرام دوسرے سے کوئی چیز — ڈیٹا، حساب، یا کوئی عمل — ایک طے شدہ طریقے سے مانگتا ہے، اس کے اندر جھانکے بغیر۔ موسم والی ایپ آپ کے شہر کا حال دکھاتی ہے تو اس نے آسمان نہیں ناپا ہوتا؛ اس نے موسم کی سروس کی اے پی آئی سے پوچھا ہوتا ہے۔" ,
+      more: "کلاسیکی مثال ریستوران کی ہے: آپ مہمان ہیں، باورچی خانہ دوسرا نظام ہے، اور بیرا اے پی آئی ہے — آپ کا حکم طے شدہ انداز میں لے جاتا ہے اور باورچی خانے نے جو دینا منظور کیا، وہی لا کر دیتا ہے۔ اے پی آئیز کی وجہ سے چھوٹی ٹیمیں بڑی چیزیں بنا لیتی ہیں: ہر کھانے کے لیے نیا باورچی خانہ نہیں بنانا پڑتا۔" },
+    { topic: "open-source", keys: ["اوپن سورس", "مفت سورس کوڈ", "اوپن سورس کیا"], reply: "اوپن سورس کا مطلب ہے نسخہ سب کے سامنے: کسی پروگرام کا سورس کوڈ کوئی بھی پڑھ، پرکھ اور بہتر کر سکتا ہے، ایسے لائسنس کے تحت جو اسے بانٹنے کے قابل رکھے۔ Linux، Firefox اور انٹرنیٹ کے بڑے حصے کی بنیادیں اسی طرح بنیں — کھلے عام، ہزاروں آنکھوں کی جانچ کے ساتھ۔" ,
+      more: "کھلا ہونا خود بخود محفوظ یا اچھا ہونا نہیں ہوتا — اس کا مطلب ہے پرکھا جا سکنے والا۔ کوئی بھی دیکھ سکتا ہے، مگر یہ الگ بات ہے کہ کسی نے دیکھا بھی ہو۔ مضبوط اوپن پروجیکٹ اعتماد آہستہ کماتے ہیں: کھلا کوڈ، کھلی بحث، اور بھیڑ کی پائی ہوئی غلطیاں درست کرنے کا لمبا ریکارڈ۔" },
+    { topic: "deep-vs-ml", keys: ["ڈیپ لرننگ", "مشین لرننگ اور ڈیپ لرننگ", "ڈیپ لرننگ کیا"], reply: "مشین لرننگ وسیع فن ہے: ایسے نظام جو ہاتھ سے لکھے اصولوں کے بجائے ڈیٹا سے نمونے سیکھتے ہیں۔ ڈیپ لرننگ اس کے اندر ایک طاقتور خاندان ہے — بڑے، کئی پرتوں والے نیورل نیٹ ورکس سے سیکھنا۔ تو ہر ڈیپ لرننگ نظام مشین لرننگ ہے، مگر ہر مشین لرننگ نظام ڈیپ نہیں۔ 'ڈیپ' صرف پرتوں کی گنتی ہے۔" ,
+      more: "فرق کب اہم ہوتا ہے؟ ڈیپ نیٹ ورک خام، بے ترتیب مواد پر چمکتے ہیں — تصاویر، آواز، زبان — جہاں اصول ہاتھ سے گنوانا ممکن نہیں۔ چھوٹی، صاف عددی جدولوں پر سادہ مشین لرننگ اکثر جیتتی ہے، اور وہ سستی اور سمجھانے میں آسان بھی ہوتی ہے۔ دونوں میں سے چننا انجینئرنگ ہے، فیشن نہیں۔" }
   ];
 
   /* --- Conversation memory -----------------------------------
@@ -1089,17 +1165,139 @@
   }
 
 
+  /* --- Tolerant matching -----------------------------------
+     The Latin matcher no longer needs letter-perfect input.
+     Query and keys pass through the same normalisation:
+     lowercase, punctuation stripped, 3+ repeated letters
+     collapsed to 2, and common Roman Urdu spelling variants
+     folded to canonical forms (kia/kiya/kyaa -> kya). Scoring
+     keeps the old shape — a key found as a consecutive phrase
+     earns its full length — and adds two gentler layers: a
+     key whose tokens ALL appear (any order) earns most of its
+     weight, and the single best partially-matching key per
+     entry earns a fraction. Token-level fuzzy matching
+     (edit distance) only ever feeds those gentler layers, so
+     exact matches always outscore fuzzy ones. The Urdu
+     matcher stays substring-based, with diacritics and
+     punctuation normalised away on both sides. ------------- */
+  var NEXA_VARIANTS = {
+    kia: "kya", kiya: "kya", kiyaa: "kya", kiaa: "kya", kyaa: "kya",
+    hey: "hai", hay: "hai",
+    nai: "nahi", nhi: "nahi", nahin: "nahi",
+    kaa: "ka", kee: "ki", kii: "ki", koo: "ko",
+    main: "mein", men: "mein", mai: "mein",
+    chahye: "chahiye", chahie: "chahiye", chaahiye: "chahiye",
+    hotaa: "hota",
+    kaise: "kese", kesay: "kese", kaisay: "kese", kesa: "kese",
+    milengay: "milenge", milege: "milenge",
+    btao: "batao", bataao: "batao",
+    mujhay: "mujhe", mjhe: "mujhe",
+    kahan: "kaha", kahaa: "kaha",
+    neksa: "nexa", samaj: "samajh"
+  };
+  function nexaNormToken(tok) {
+    tok = tok.replace(/([a-z])\1{2,}/g, "$1$1");
+    return NEXA_VARIANTS[tok] || tok;
+  }
+  function nexaTokens(str) {
+    var parts = String(str || "").toLowerCase().replace(/[^a-z0-9 ]+/g, " ").split(/\s+/);
+    var out = [];
+    for (var i = 0; i < parts.length; i++) if (parts[i]) out.push(nexaNormToken(parts[i]));
+    return out;
+  }
+  function nexaEditDist(a, b, maxD) {
+    var la = a.length, lb = b.length, i, j;
+    if (Math.abs(la - lb) > maxD) return maxD + 1;
+    var prev = [], cur = [];
+    for (j = 0; j <= lb; j++) prev[j] = j;
+    for (i = 1; i <= la; i++) {
+      cur[0] = i;
+      var rowMin = cur[0];
+      for (j = 1; j <= lb; j++) {
+        var cost = a.charAt(i - 1) === b.charAt(j - 1) ? 0 : 1;
+        cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + cost);
+        if (cur[j] < rowMin) rowMin = cur[j];
+      }
+      if (rowMin > maxD) return maxD + 1;
+      var tmp = prev; prev = cur; cur = tmp;
+    }
+    return prev[lb];
+  }
+  /* Weight of a fuzzy token pairing: 0 = not a match. A
+     one-letter slip in a long word (8+) is nearly exact (0.9);
+     other tolerated slips count half. Short key tokens (3-4)
+     may pair fuzzily only when they are the key's sole
+     unmatched token and every other token matched exactly. */
+  function nexaFuzzyW(qt, kt, soleRemainder) {
+    if (qt === kt) return 1;
+    var maxLen = Math.max(qt.length, kt.length);
+    var maxD = maxLen >= 8 ? 2 : 1;
+    var ok = (kt.length >= 5 && qt.length >= 4) || (soleRemainder && kt.length >= 3 && qt.length >= 3);
+    if (!ok) return 0;
+    var d = nexaEditDist(qt, kt, maxD);
+    if (d > maxD) return 0;
+    return (d === 1 && maxLen >= 8) ? 0.9 : 0.5;
+  }
+  function nexaScoreEntry(entry, qToks) {
+    var phraseSum = 0, bestLoose = 0;
+    for (var ki = 0; ki < entry._kt.length; ki++) {
+      var kToks = entry._kt[ki];
+      if (!kToks.length) continue;
+      var keyLen = kToks.join(" ").length;
+      var phrase = false;
+      if (kToks.length <= qToks.length) {
+        for (var s = 0; s + kToks.length <= qToks.length && !phrase; s++) {
+          var okp = true;
+          for (var t = 0; t < kToks.length; t++) if (qToks[s + t] !== kToks[t]) { okp = false; break; }
+          if (okp) phrase = true;
+        }
+      }
+      if (phrase) { phraseSum += keyLen; continue; }
+      var used = {}, matchedW = 0, matchedN = 0, rem = [], a, b, c, d;
+      for (a = 0; a < kToks.length; a++) {
+        var kt = kToks[a], found = -1;
+        for (b = 0; b < qToks.length; b++) if (!used[b] && qToks[b] === kt) { found = b; break; }
+        if (found >= 0) { used[found] = 1; matchedW += kt.length; matchedN++; }
+        else rem.push(kt);
+      }
+      for (c = 0; c < rem.length; c++) {
+        var kt2 = rem[c], fz = -1, fw = 0;
+        for (d = 0; d < qToks.length; d++) {
+          if (used[d]) continue;
+          var w = nexaFuzzyW(qToks[d], kt2, rem.length === 1);
+          if (w > 0) { fz = d; fw = w; break; }
+        }
+        if (fz >= 0) { used[fz] = 1; matchedW += kt2.length * fw; matchedN++; }
+      }
+      if (!matchedN) continue;
+      var loose = (matchedN === kToks.length) ? 0.8 * matchedW : (matchedN >= 2 ? 0.3 * matchedW : 0);
+      if (loose > bestLoose) bestLoose = loose;
+    }
+    return phraseSum + bestLoose;
+  }
+  function nexaNormUr(str) {
+    return String(str || "").replace(/[ً-ٰٟ]/g, "").replace(/[^؀-ۿ0-9 ]+/g, " ").replace(/\s+/g, " ").trim();
+  }
+  var nexi;
+  for (nexi = 0; nexi < NEXA_KB.length; nexi++) {
+    NEXA_KB[nexi]._kt = NEXA_KB[nexi].keys.map(function (k) { return nexaTokens(k); });
+  }
+  for (nexi = 0; nexi < NEXA_KB_UR.length; nexi++) {
+    NEXA_KB_UR[nexi]._nk = NEXA_KB_UR[nexi].keys.map(function (k) { return nexaNormUr(k); });
+  }
+
   function nexaAnswer(raw) {
     var rawStr = String(raw || "");
-    var isUrdu = /[\u0600-\u06FF]/.test(rawStr);
+    var isUrdu = /[؀-ۿ]/.test(rawStr);
     var fu = nexaFollowUpKind(rawStr, isUrdu);
     if (fu) return nexaFollowUpReply(fu);
     if (isUrdu) {
+      var nraw = nexaNormUr(rawStr);
       var bestU = null, bestUS = 0;
       for (var ui = 0; ui < NEXA_KB_UR.length; ui++) {
         var eu = NEXA_KB_UR[ui], su = 0;
-        for (var uj = 0; uj < eu.keys.length; uj++) {
-          if (rawStr.indexOf(eu.keys[uj]) !== -1) su += eu.keys[uj].length;
+        for (var uj = 0; uj < eu._nk.length; uj++) {
+          if (eu._nk[uj] && nraw.indexOf(eu._nk[uj]) !== -1) su += eu._nk[uj].length;
         }
         if (su > bestUS) { bestUS = su; bestU = eu; }
       }
@@ -1107,18 +1305,13 @@
       nexaLastEntry = bestU; nexaLastUrdu = true;
       return nexaFillTime(bestU.reply);
     }
-    var text = " " + rawStr.toLowerCase().replace(/[^a-z0-9 ]+/g, " ") + " ";
+    var qToks = nexaTokens(rawStr);
     var best = null, bestScore = 0;
     for (var i = 0; i < NEXA_KB.length; i++) {
-      var entry = NEXA_KB[i], score = 0;
-      for (var j = 0; j < entry.keys.length; j++) {
-        var k = entry.keys[j];
-        var needle = k.charAt(0) === " " || k.charAt(k.length - 1) === " " ? k : " " + k + " ";
-        if (text.indexOf(needle) !== -1) score += k.trim().length;
-      }
-      if (score > bestScore) { bestScore = score; best = entry; }
+      var sc = nexaScoreEntry(NEXA_KB[i], qToks);
+      if (sc > bestScore) { bestScore = sc; best = NEXA_KB[i]; }
     }
-    if (!best) return NEXA_FALLBACK;
+    if (!best || bestScore < 1.3) return NEXA_FALLBACK;
     nexaLastEntry = best; nexaLastUrdu = false;
     return nexaFillTime(best.reply);
   }
@@ -1596,7 +1789,7 @@
      14) TOOL VIEWS — the Toolkit section is an index of tool
      names; each name is a hash route (#tool-typing,
      #tool-timer, #tool-summarizer, #tool-sentiment,
-     #tool-prompt) that opens its tool as a page-like view:
+     #tool-prompt, #tool-keywords) that opens its tool as a page-like view:
      <main> gains .tool-open (CSS hides every other section)
      and exactly one .tool-view is shown. Any other hash —
      #tools included — restores the full page. The tool
@@ -1610,7 +1803,8 @@
     "tool-timer": "view-timer",
     "tool-summarizer": "view-summarizer",
     "tool-sentiment": "view-sentiment",
-    "tool-prompt": "view-prompt"
+    "tool-prompt": "view-prompt",
+    "tool-keywords": "view-keywords"
   };
   var toolViewEls = {};
   for (var tvr in TOOL_VIEWS) {
@@ -1651,7 +1845,8 @@
 
 /* ---------------------------------------------------------
    TOOLS — the Toolkit block: typing test, study timer, text
-   summarizer, sentiment analyzer and AI prompt generator.
+   summarizer, sentiment analyzer, AI prompt generator and
+   keyword extractor.
    Kept in its own block at the end of the file, separate
    from the main page logic above.
    --------------------------------------------------------- */
@@ -1664,9 +1859,10 @@
   function L(key) { return I18N_API ? I18N_API.t(key) : key; }
   function Lf(key, params) { return I18N_API ? I18N_API.tf(key, params) : key; }
 
-  /* PURE-LOGIC-START — the three AI tools' brains: extractive
-     summariser, lexicon sentiment scorer and prompt composer.
-     Pure functions only (no DOM), exported on window.NEXUS_TOOLS
+  /* PURE-LOGIC-START — the AI tools' brains: extractive
+     summariser, lexicon sentiment scorer, prompt composer and
+     keyword extractor. Pure functions only (no DOM), exported
+     on window.NEXUS_TOOLS
      so they can be exercised headlessly as well as from the
      cards below. Everything runs locally, like the whole page. */
   var SM_STOP = {
@@ -1780,7 +1976,19 @@
     var light = PG_LIGHTS[lightKey] || PG_LIGHTS.golden;
     return s + ", " + style + ", " + light + ", ultra detailed, sharp focus, high quality, 8k";
   }
-  window.NEXUS_TOOLS = { summarize: smSummarize, splitSentences: smSplitSentences, sentiment: saAnalyze, composePrompt: pgCompose };
+  function kwExtract(text, count) {
+    if (!count || count < 1) count = 10;
+    var words = smWords(text).filter(function (w) { return !SM_STOP[w] && w.length >= 2; });
+    var freq = {}, order = {}, i;
+    for (i = 0; i < words.length; i++) {
+      if (!(words[i] in freq)) order[words[i]] = i;
+      freq[words[i]] = (freq[words[i]] || 0) + 1;
+    }
+    var list = Object.keys(freq).map(function (w) { return { word: w, count: freq[w] }; });
+    list.sort(function (a, b) { return (b.count - a.count) || (order[a.word] - order[b.word]); });
+    return { ok: list.length > 0, total: list.length, keywords: list.slice(0, count) };
+  }
+  window.NEXUS_TOOLS = { summarize: smSummarize, splitSentences: smSplitSentences, sentiment: saAnalyze, composePrompt: pgCompose, extractKeywords: kwExtract };
   /* PURE-LOGIC-END */
 
   /* Typing test — 60 seconds, clock starts on the first keystroke.
@@ -1799,7 +2007,13 @@
         ttAcc = document.getElementById("ttAcc"),
         ttResult = document.getElementById("ttResult"),
         ttRestart = document.getElementById("ttRestart"),
-        ttNew = document.getElementById("ttNew");
+        ttNew = document.getElementById("ttNew"),
+        ttShare = document.getElementById("ttShare"),
+        ttShareBtnWrap = document.getElementById("ttShareBtnWrap"),
+        ttShareRow = document.getElementById("ttShareRow"),
+        ttDl = document.getElementById("ttDl"),
+        ttWa = document.getElementById("ttWa");
+    var ttLastStats = null;
     var sampleIdx = 0, sample = "", started = false, finished = false,
         startTime = 0, timerId = null, TIME_LIMIT = 60;
 
@@ -1838,14 +2052,72 @@
       if (wpm < 45) return L("typing.rankRapid");
       return L("typing.rankLightning");
     }
+    /* Result share card — a 1200×630 canvas portrait of the
+       finished run (dark grid palette, big WPM, accuracy and
+       rank, site URL), offered as a PNG download and a
+       WhatsApp text link. Everything is drawn locally; if
+       canvas is unavailable the WhatsApp link still works. */
+    var TT_SITE = "https://ummiunoffical-coder.github.io/nexus/";
+    function ttShareText() {
+      if (!ttLastStats) return "";
+      return Lf("typing.shareText", { wpm: ttLastStats.wpm, acc: ttLastStats.acc, rank: rankFor(ttLastStats.wpm) });
+    }
+    function ttDrawCard() {
+      if (!ttLastStats) return null;
+      try {
+        var cv = document.createElement("canvas");
+        cv.width = 1200; cv.height = 630;
+        var ctx = cv.getContext("2d");
+        if (!ctx) return null;
+        var grad = ctx.createLinearGradient(0, 0, 1200, 630);
+        grad.addColorStop(0, "#04060f");
+        grad.addColorStop(0.55, "#070b1a");
+        grad.addColorStop(1, "#160a2e");
+        ctx.fillStyle = grad;
+        ctx.fillRect(0, 0, 1200, 630);
+        ctx.fillStyle = "#2ee6ff";
+        ctx.fillRect(0, 0, 1200, 10);
+        ctx.fillRect(0, 620, 1200, 10);
+        ctx.textAlign = "center";
+        ctx.fillStyle = "#2ee6ff";
+        ctx.font = "bold 46px sans-serif";
+        ctx.fillText("NEXUS — TYPING TEST", 600, 140);
+        ctx.fillStyle = "#eaf4ff";
+        ctx.font = "bold 230px sans-serif";
+        ctx.fillText(String(ttLastStats.wpm), 600, 400);
+        ctx.fillStyle = "#9db4d4";
+        ctx.font = "38px sans-serif";
+        ctx.fillText("WPM", 600, 465);
+        ctx.fillText("Accuracy " + ttLastStats.acc + "%  ·  Rank: " + rankFor(ttLastStats.wpm), 600, 535);
+        ctx.fillStyle = "#2ee6ff";
+        ctx.font = "30px sans-serif";
+        ctx.fillText(TT_SITE, 600, 590);
+        return cv;
+      } catch (e) { return null; }
+    }
+    function ttPrepShare() {
+      if (!ttLastStats) return;
+      if (ttWa) ttWa.href = "https://wa.me/?text=" + encodeURIComponent(ttShareText() + " " + TT_SITE);
+      if (ttDl) {
+        var cv = ttDrawCard();
+        if (cv) {
+          try { ttDl.href = cv.toDataURL("image/png"); }
+          catch (e) { ttDl.removeAttribute("href"); }
+        }
+      }
+    }
+    window.NEXUS_TYPING_SHARE = { draw: ttDrawCard, text: ttShareText };
     function finish() {
       if (finished) return;
       finished = true;
       if (timerId) { clearInterval(timerId); timerId = null; }
       ttInput.disabled = true;
       var s = liveStats();
+      ttLastStats = s;
       ttTime.textContent = Math.max(0, TIME_LIMIT - Math.floor(elapsedSec()));
       ttResult.textContent = Lf("typing.timeResult", { wpm: s.wpm, acc: s.acc, rank: rankFor(s.wpm) });
+      if (ttShareBtnWrap) ttShareBtnWrap.hidden = false;
+      ttPrepShare();
     }
     function tick() {
       var left = TIME_LIMIT - Math.floor(elapsedSec());
@@ -1860,6 +2132,9 @@
       ttInput.value = "";
       ttInput.disabled = false;
       started = false; finished = false;
+      ttLastStats = null;
+      if (ttShareBtnWrap) ttShareBtnWrap.hidden = true;
+      if (ttShareRow) ttShareRow.hidden = true;
       ttTime.textContent = TIME_LIMIT;
       ttWpm.textContent = "0";
       ttAcc.textContent = "100%";
@@ -1879,10 +2154,15 @@
     ttInput.addEventListener("paste", function (e) { e.preventDefault(); });
     ttRestart.addEventListener("click", function () { reset(false); ttInput.focus(); });
     ttNew.addEventListener("click", function () { reset(true); ttInput.focus(); });
+    if (ttShare) ttShare.addEventListener("click", function () {
+      ttPrepShare();
+      if (ttShareRow) ttShareRow.hidden = false;
+    });
     if (I18N_API && I18N_API.onChange) I18N_API.onChange(function () {
       if (finished) {
         var s2 = liveStats();
         ttResult.textContent = Lf("typing.timeResult", { wpm: s2.wpm, acc: s2.acc, rank: rankFor(s2.wpm) });
+        if (ttLastStats) ttPrepShare();
       } else if (!started) {
         ttResult.textContent = L("typing.resultIdle");
       }
@@ -2126,5 +2406,84 @@
       }
     });
     if (I18N_API && I18N_API.onChange) I18N_API.onChange(function () { pgSay(); });
+  }
+
+  /* Keyword extractor — paste any text, English or اردو, and
+     the pure counter above weighs its content words (the
+     summarizer's stopwords excluded) and returns the heaviest
+     as chips with counts, ready to copy as a keyword list. */
+  var kwInput = document.getElementById("kwInput");
+  if (kwInput) {
+    var kwBtn = document.getElementById("kwBtn"),
+        kwOutput = document.getElementById("kwOutput"),
+        kwStat = document.getElementById("kwStat"),
+        kwCopy = document.getElementById("kwCopy"),
+        kwCounts = document.querySelectorAll(".kw-count");
+    var kwCount = 10;
+    var kwLast = null;
+    var kwMsgKey = "kw.idle", kwMsgParams = null;
+    function kwSay() {
+      if (!kwStat) return;
+      kwStat.textContent = kwMsgParams ? Lf(kwMsgKey, kwMsgParams) : L(kwMsgKey);
+    }
+    function kwRender() {
+      if (!kwOutput) return;
+      kwOutput.textContent = "";
+      if (!kwLast || !kwLast.keywords.length) { kwOutput.hidden = true; return; }
+      kwLast.keywords.forEach(function (k) {
+        var chip = document.createElement("span");
+        chip.className = "kw-chip";
+        chip.textContent = k.word + " ×" + k.count;
+        kwOutput.appendChild(chip);
+      });
+      kwOutput.hidden = false;
+    }
+    function kwRun() {
+      if (!String(kwInput.value || "").trim()) {
+        kwLast = null; kwMsgKey = "kw.empty"; kwMsgParams = null;
+        kwRender(); kwSay();
+        return;
+      }
+      var res = kwExtract(kwInput.value, kwCount);
+      if (!res.ok) {
+        kwLast = null; kwMsgKey = "kw.empty"; kwMsgParams = null;
+      } else {
+        kwLast = res;
+        kwMsgKey = "kw.stat"; kwMsgParams = { shown: res.keywords.length, total: res.total };
+      }
+      kwRender(); kwSay();
+    }
+    function kwCopied() { kwMsgKey = "kw.copied"; kwMsgParams = null; kwSay(); }
+    function kwFallbackCopy(text) {
+      try {
+        var tmp = document.createElement("textarea");
+        tmp.value = text;
+        tmp.style.position = "fixed";
+        tmp.style.opacity = "0";
+        document.body.appendChild(tmp);
+        tmp.select();
+        document.execCommand("copy");
+        document.body.removeChild(tmp);
+      } catch (e) { /* best effort — the chips stay on screen to copy by hand */ }
+      kwCopied();
+    }
+    if (kwBtn) kwBtn.addEventListener("click", kwRun);
+    if (kwCopy) kwCopy.addEventListener("click", function () {
+      if (!kwLast || !kwLast.keywords.length) { kwMsgKey = "kw.empty"; kwMsgParams = null; kwSay(); return; }
+      var text = kwLast.keywords.map(function (k) { return k.word; }).join(", ");
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(kwCopied, function () { kwFallbackCopy(text); });
+      } else {
+        kwFallbackCopy(text);
+      }
+    });
+    Array.prototype.forEach.call(kwCounts, function (btn) {
+      btn.addEventListener("click", function () {
+        Array.prototype.forEach.call(kwCounts, function (b) { b.classList.remove("is-active"); });
+        btn.classList.add("is-active");
+        kwCount = parseInt(btn.getAttribute("data-count"), 10) || 10;
+      });
+    });
+    if (I18N_API && I18N_API.onChange) I18N_API.onChange(function () { kwSay(); });
   }
 })();

@@ -22,7 +22,7 @@
 <link rel="canonical" href="https://ummiunoffical-coder.github.io/nexus/">
 <meta name="robots" content="index, follow">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23050814'/%3E%3Cpath d='M9 23V9l14 14V9' stroke='%232ee6ff' stroke-width='3.4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
-<link rel="stylesheet" href="style.css?v=20261115-16">
+<link rel="stylesheet" href="style.css?v=20261115-17">
 </head>
 <body>
 
@@ -326,7 +326,7 @@
   <div class="container">
     <p class="section-kicker reveal" data-i18n="tools.kicker">05 · TOOLKIT</p>
     <h2 class="section-title reveal" id="toolsTitle" data-i18n="tools.title">Tools that <span class="grad-text">work</span></h2>
-    <p class="section-sub reveal" data-i18n="tools.sub">Five instruments from the grid, free for every traveller: a typing test, a study timer, a text summariser, a sentiment analyser and a prompt generator for image AIs.</p>
+    <p class="section-sub reveal" data-i18n="tools.sub">Six instruments from the grid, free for every traveller — pick one and it opens on a page of its own: a typing test, a study timer, a text summarizer, a sentiment analyzer, a prompt generator for image AIs and a keyword extractor.</p>
 
     <nav class="tools-index reveal" aria-label="Toolkit index">
       <a class="tool-row" href="#tool-typing">
@@ -369,6 +369,14 @@
         </span>
         <span class="tool-open" data-i18n="tools.open">OPEN</span>
       </a>
+      <a class="tool-row" href="#tool-keywords">
+        <span class="tool-num" aria-hidden="true">06</span>
+        <span class="tool-row-main">
+          <span class="tool-row-name" data-i18n="kw.title">Keyword Extractor</span>
+          <span class="tool-row-desc" data-i18n="kw.sub">Paste any text — English or اردو — and the grid counts its content words and hands back the heaviest ones as keywords, right here in your browser.</span>
+        </span>
+        <span class="tool-open" data-i18n="tools.open">OPEN</span>
+      </a>
     </nav>
   </div>
 </section>
@@ -392,6 +400,13 @@
         <p class="tool-actions">
           <button class="btn btn-ghost" type="button" id="ttRestart" data-i18n="typing.restart">RESTART</button>
           <button class="btn btn-ghost" type="button" id="ttNew" data-i18n="typing.newText">NEW TEXT</button>
+        </p>
+        <p class="tool-actions" id="ttShareBtnWrap" hidden>
+          <button class="btn btn-primary" type="button" id="ttShare" data-i18n="typing.share">SHARE RESULT</button>
+        </p>
+        <p class="tool-actions" id="ttShareRow" hidden>
+          <a class="btn btn-ghost" id="ttDl" download="nexus-typing-result.png" data-i18n="typing.download">DOWNLOAD CARD</a>
+          <a class="btn btn-ghost" id="ttWa" href="https://wa.me/" target="_blank" rel="noopener" data-i18n="typing.whatsapp">WHATSAPP</a>
         </p>
     </div>
   </div>
@@ -499,6 +514,27 @@
   </div>
 </section>
 
+<!-- ================= TOOL VIEW: KEYWORD EXTRACTOR ================= -->
+<section class="tool-view" id="view-keywords" hidden aria-labelledby="viewTitle-keywords">
+  <div class="container">
+    <a class="tool-back" href="#tools" data-i18n="tools.back">← All tools</a>
+    <h2 class="tool-view-title" id="viewTitle-keywords" data-i18n="kw.title">Keyword Extractor</h2>
+    <div class="tool-card reveal">
+        <p class="tool-sub" data-i18n="kw.sub">Paste any text — English or اردو — and the grid counts its content words and hands back the heaviest ones as keywords, right here in your browser.</p>
+        <label class="visually-hidden" for="kwInput">Text to extract keywords from</label>
+        <textarea id="kwInput" class="tool-area" rows="5" data-i18n-ph="kw.inputPh" placeholder="Paste text to extract keywords from..." autocomplete="off" spellcheck="false"></textarea>
+        <p class="tool-actions">
+          <button class="btn btn-ghost tool-toggle kw-count is-active" type="button" data-count="10" data-i18n="kw.count10">TOP 10</button>
+          <button class="btn btn-ghost tool-toggle kw-count" type="button" data-count="20" data-i18n="kw.count20">TOP 20</button>
+          <button class="btn btn-primary" type="button" id="kwBtn" data-i18n="kw.btn">EXTRACT</button>
+          <button class="btn btn-ghost" type="button" id="kwCopy" data-i18n="kw.copy">COPY</button>
+        </p>
+        <div class="kw-chips" id="kwOutput" hidden></div>
+        <p class="tool-result" id="kwStat" role="status" aria-live="polite" data-i18n="kw.idle">Your keywords will appear here.</p>
+    </div>
+  </div>
+</section>
+
 </main>
 
 <!-- ================= FOOTER / ABOUT ================= -->
@@ -575,6 +611,6 @@
   </button>
 </div>
 
-<script src="script.js?v=20261115-16"></script>
+<script src="script.js?v=20261115-17"></script>
 </body>
 </html>
