@@ -1927,7 +1927,7 @@
      names; each name is a hash route (#tool-typing,
      #tool-timer, #tool-summarizer, #tool-sentiment,
      #tool-prompt, #tool-keywords) that opens its tool as a page-like view:
-     <main> gains .tool-open (CSS hides every other section)
+     <main> gains .view-open (CSS hides every other section)
      and exactly one .tool-view is shown. Any other hash —
      #tools included — restores the full page. The tool
      cards are never moved, rebuilt or re-initialised; only
@@ -1970,8 +1970,8 @@
       view.hidden = !active;
       view.classList.toggle("open", active);
     }
-    if (mainEl) mainEl.classList.toggle("tool-open", !!route);
-    if (document.body) document.body.classList.toggle("tool-open", !!route);
+    if (mainEl) mainEl.classList.toggle("view-open", !!route);
+    if (document.body) document.body.classList.toggle("view-open", !!route);
     if (route) {
       window.scrollTo(0, 0);
     } else if (wasOpen && hash) {
