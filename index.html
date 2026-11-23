@@ -22,7 +22,7 @@
 <link rel="canonical" href="https://ummiunoffical-coder.github.io/nexus/">
 <meta name="robots" content="index, follow">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23050814'/%3E%3Cpath d='M9 23V9l14 14V9' stroke='%232ee6ff' stroke-width='3.4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
-<link rel="stylesheet" href="style.css?v=20261115-18">
+<link rel="stylesheet" href="style.css?v=20261115-19">
 </head>
 <body>
 
@@ -321,6 +321,17 @@
   </div>
 </section>
 
+<!-- ================= MEET NEXA ================= -->
+<section class="section nexa-promo-section" aria-labelledby="nexaPromoTitle">
+  <div class="container">
+    <div class="nexa-promo reveal">
+      <h2 class="nexa-promo-title" id="nexaPromoTitle" data-i18n="nexaPromo.title">Meet NEXA — a real AI</h2>
+      <p class="nexa-promo-sub" data-i18n="nexaPromo.sub">Ask anything. NEXA now answers with live AI, in English, Roman Urdu and اردو.</p>
+      <a class="btn btn-primary" href="#nexa" data-i18n="nexaPromo.btn">ASK NEXA</a>
+    </div>
+  </div>
+</section>
+
 <!-- ================= TOOLS ================= -->
 <section class="section" id="tools" aria-labelledby="toolsTitle">
   <div class="container">
@@ -535,6 +546,48 @@
   </div>
 </section>
 
+<!-- ================= NEXA VIEW: LIVE AI ================= -->
+<section class="tool-view" id="view-nexa" hidden aria-labelledby="viewTitle-nexa">
+  <div class="container">
+    <a class="tool-back" href="#" data-i18n="nexaView.back">← Back</a>
+    <h2 class="tool-view-title" id="viewTitle-nexa" data-i18n="nexaView.title">NEXA — Live AI</h2>
+    <div class="nexa-panel" id="nexaPanel" role="dialog" aria-label="Chat with NEXA, the NEXUS guide bot">
+      <div class="nexa-head">
+        <div class="nexa-avatar" aria-hidden="true">N</div>
+        <div class="nexa-head-copy">
+          <p class="nexa-name">NEXA</p>
+          <p class="nexa-status"><span class="status-dot" aria-hidden="true"></span><span data-i18n="nexa.status">Online · answers NEXUS questions</span></p>
+        </div>
+        <button class="nexa-voice" id="nexaVoice" type="button" aria-pressed="false" aria-label="Hear NEXA replies aloud" title="Hear NEXA replies aloud"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z" fill="currentColor" stroke="none"/><path class="nexa-voice-waves" d="M15.5 8.5a5 5 0 0 1 0 7"/><path class="nexa-voice-waves" d="M18.4 5.8a9.2 9.2 0 0 1 0 12.4"/></svg></button>
+        <button class="nexa-close" id="nexaClose" type="button" aria-label="Close chat">&times;</button>
+      </div>
+      <div class="nexa-msgs" id="nexaMsgs" aria-live="polite"></div>
+      <div class="nexa-chips" id="nexaChips">
+        <button type="button" class="nexa-chip" data-q="What is NEXUS?">What is NEXUS?</button>
+        <button type="button" class="nexa-chip" data-q="Tell me about Artificial Intelligence">Artificial Intelligence</button>
+        <button type="button" class="nexa-chip" data-q="Is NEXUS free?">Is it free?</button>
+        <button type="button" class="nexa-chip" data-q="How do I join the signal?">Join the signal</button>
+        <button type="button" class="nexa-chip" lang="ur" data-q="نیکسس کیا ہے؟">نیکسس کیا ہے؟</button>
+        <button type="button" class="nexa-chip" data-q="What is the signal of the day?">Signal of the Day</button>
+        <button type="button" class="nexa-chip" lang="ur" data-q="ٹائپنگ ٹیسٹ کیا ہے؟">ٹائپنگ ٹیسٹ</button>
+        <button type="button" class="nexa-chip" lang="ur" data-q="آج کا سگنل کیا ہے؟">آج کا سگنل</button>
+      </div>
+      <div class="nexa-suggest" id="nexaSuggest">
+        <button type="button" class="nexa-chip nexa-sug" data-i18n="nexa.sug1">What is AI?</button>
+        <button type="button" class="nexa-chip nexa-sug" data-i18n="nexa.sug2">What is a black hole?</button>
+        <button type="button" class="nexa-chip nexa-sug" data-i18n="nexa.sug3">How will AI change jobs?</button>
+        <button type="button" class="nexa-chip nexa-sug" data-i18n="nexa.sug4">Tell me about the future of space travel</button>
+      </div>
+      <form class="nexa-form" id="nexaForm">
+        <label class="visually-hidden" for="nexaInput">Ask NEXA a question</label>
+        <input type="text" id="nexaInput" data-i18n-ph="nexa.placeholder" placeholder="Ask NEXA about NEXUS..." autocomplete="off" maxlength="300">
+        <button class="nexa-mic" id="nexaMic" type="button" aria-pressed="false" aria-label="Ask NEXA by voice" title="Ask by voice"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2.5" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0"/><path d="M12 17.5V21"/></svg></button>
+        <button class="nexa-send" type="submit" aria-label="Send message">&#10148;</button>
+      </form>
+    </div>
+  </div>
+</section>
+
 </main>
 
 <!-- ================= FOOTER / ABOUT ================= -->
@@ -576,41 +629,13 @@
 
 <!-- ================= NEXA GUIDE BOT ================= -->
 <div class="nexa" id="nexa">
-  <div class="nexa-panel" id="nexaPanel" hidden role="dialog" aria-label="Chat with NEXA, the NEXUS guide bot">
-    <div class="nexa-head">
-      <div class="nexa-avatar" aria-hidden="true">N</div>
-      <div class="nexa-head-copy">
-        <p class="nexa-name">NEXA</p>
-        <p class="nexa-status"><span class="status-dot" aria-hidden="true"></span><span data-i18n="nexa.status">Online · answers NEXUS questions</span></p>
-      </div>
-      <button class="nexa-voice" id="nexaVoice" type="button" aria-pressed="false" aria-label="Hear NEXA replies aloud" title="Hear NEXA replies aloud"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z" fill="currentColor" stroke="none"/><path class="nexa-voice-waves" d="M15.5 8.5a5 5 0 0 1 0 7"/><path class="nexa-voice-waves" d="M18.4 5.8a9.2 9.2 0 0 1 0 12.4"/></svg></button>
-      <button class="nexa-close" id="nexaClose" type="button" aria-label="Close chat">&times;</button>
-    </div>
-    <div class="nexa-msgs" id="nexaMsgs" aria-live="polite"></div>
-    <div class="nexa-chips" id="nexaChips">
-      <button type="button" class="nexa-chip" data-q="What is NEXUS?">What is NEXUS?</button>
-      <button type="button" class="nexa-chip" data-q="Tell me about Artificial Intelligence">Artificial Intelligence</button>
-      <button type="button" class="nexa-chip" data-q="Is NEXUS free?">Is it free?</button>
-      <button type="button" class="nexa-chip" data-q="How do I join the signal?">Join the signal</button>
-      <button type="button" class="nexa-chip" lang="ur" data-q="نیکسس کیا ہے؟">نیکسس کیا ہے؟</button>
-      <button type="button" class="nexa-chip" data-q="What is the signal of the day?">Signal of the Day</button>
-      <button type="button" class="nexa-chip" lang="ur" data-q="ٹائپنگ ٹیسٹ کیا ہے؟">ٹائپنگ ٹیسٹ</button>
-      <button type="button" class="nexa-chip" lang="ur" data-q="آج کا سگنل کیا ہے؟">آج کا سگنل</button>
-    </div>
-    <form class="nexa-form" id="nexaForm">
-      <label class="visually-hidden" for="nexaInput">Ask NEXA a question</label>
-      <input type="text" id="nexaInput" data-i18n-ph="nexa.placeholder" placeholder="Ask NEXA about NEXUS..." autocomplete="off" maxlength="300">
-      <button class="nexa-mic" id="nexaMic" type="button" aria-pressed="false" aria-label="Ask NEXA by voice" title="Ask by voice"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2.5" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0"/><path d="M12 17.5V21"/></svg></button>
-      <button class="nexa-send" type="submit" aria-label="Send message">&#10148;</button>
-    </form>
-  </div>
-  <button class="nexa-launch" id="nexaLaunch" type="button" aria-expanded="false" aria-controls="nexaPanel" aria-label="Open chat with NEXA">
+  <button class="nexa-launch" id="nexaLaunch" type="button" aria-controls="nexaPanel" aria-label="Open chat with NEXA">
     <span class="nexa-launch-mark" aria-hidden="true">N</span>
     <span class="nexa-launch-text" data-i18n="nexa.ask">Ask NEXA</span>
     <span class="nexa-launch-dot" aria-hidden="true"></span>
   </button>
 </div>
 
-<script src="script.js?v=20261115-18"></script>
+<script src="script.js?v=20261115-19"></script>
 </body>
 </html>

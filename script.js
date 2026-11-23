@@ -210,7 +210,16 @@
       "nexa.status": "Online · answers NEXUS questions",
       "nexa.placeholder": "Ask NEXA about NEXUS...",
       "nexa.ask": "Ask NEXA",
-      "nexa.thinking": "NEXA is thinking…"
+      "nexa.thinking": "NEXA is thinking…",
+      "nexa.sug1": "What is AI?",
+      "nexa.sug2": "What is a black hole?",
+      "nexa.sug3": "How will AI change jobs?",
+      "nexa.sug4": "Tell me about the future of space travel",
+      "nexaView.title": "NEXA — Live AI",
+      "nexaView.back": "← Back",
+      "nexaPromo.title": "Meet NEXA — a real AI",
+      "nexaPromo.sub": "Ask anything. NEXA now answers with live AI, in English, Roman Urdu and اردو.",
+      "nexaPromo.btn": "ASK NEXA"
     },
     ur: {
       "skip": "مواد پر جائیں",
@@ -388,7 +397,16 @@
       "nexa.status": "آن لائن · نیکسس کے سوالوں کے جواب دیتی ہے",
       "nexa.placeholder": "نیکسس کے بارے میں نیکسا سے پوچھیں...",
       "nexa.ask": "نیکسا سے پوچھیں",
-      "nexa.thinking": "NEXA سوچ رہا ہے…"
+      "nexa.thinking": "NEXA سوچ رہا ہے…",
+      "nexa.sug1": "مصنوعی ذہانت کیا ہے؟",
+      "nexa.sug2": "بلیک ہول کیا ہے؟",
+      "nexa.sug3": "مصنوعی ذہانت ملازمتوں کو کیسے بدلے گی؟",
+      "nexa.sug4": "خلائی سفر کے مستقبل کے بارے میں بتائیں",
+      "nexaView.title": "NEXA — لائیو AI",
+      "nexaView.back": "واپس ←",
+      "nexaPromo.title": "نیکسا سے ملیں — ایک اصلی AI",
+      "nexaPromo.sub": "کچھ بھی پوچھیں۔ نیکسا اب لائیو AI سے جواب دیتی ہے — انگریزی، رومن اردو اور اردو میں۔",
+      "nexaPromo.btn": "نیکسا سے پوچھیں"
     }
   };
   var curLang = "en";
@@ -1335,6 +1353,7 @@
   var nexaForm = document.getElementById("nexaForm");
   var nexaInput = document.getElementById("nexaInput");
   var nexaChips = document.getElementById("nexaChips");
+  var nexaSuggest = document.getElementById("nexaSuggest");
   var nexaVoiceBtn = document.getElementById("nexaVoice");
   var nexaMicBtn = document.getElementById("nexaMic");
   var nexaGreeted = false;
@@ -1520,26 +1539,36 @@
         nexaReply(q);
       }
     }
-    function nexaOpen() {
-      nexaPanel.hidden = false;
-      nexaLaunch.setAttribute("aria-expanded", "true");
+    /* --- NEXA lives on her own page now: the #nexa view ---
+       The launch button (and the home promo band) navigate
+       to the view; entering it greets once, exactly as the
+       old popup did, and leaving it stops speech and
+       listening — the old close button's side-effects. ----- */
+    var nexaInView = false;
+    function nexaEnterView() {
       if (!nexaGreeted) {
         nexaGreeted = true;
         nexaReply("hello", true);
       }
       setTimeout(function () { nexaInput.focus(); }, 60);
     }
-    function nexaShut() {
+    function nexaLeaveView() {
       nexaStopSpeaking();
       if (nexaListening && nexaRec) { try { nexaRec.stop(); } catch (err) {} }
-      nexaPanel.hidden = true;
-      nexaLaunch.setAttribute("aria-expanded", "false");
-      nexaLaunch.focus();
     }
+    function nexaGoHome() { window.location.hash = ""; }
+    function nexaSyncRoute() {
+      var inView = (window.location.hash === "#nexa");
+      if (inView && !nexaInView) { nexaInView = true; nexaEnterView(); }
+      else if (!inView && nexaInView) { nexaInView = false; nexaLeaveView(); }
+    }
+    window.addEventListener("hashchange", nexaSyncRoute);
+    nexaSyncRoute();
     nexaLaunch.addEventListener("click", function () {
-      if (nexaPanel.hidden) { nexaOpen(); } else { nexaShut(); }
+      window.location.hash = "nexa";
+      nexaSyncRoute();
     });
-    if (nexaClose) nexaClose.addEventListener("click", nexaShut);
+    if (nexaClose) nexaClose.addEventListener("click", nexaGoHome);
     nexaForm.addEventListener("submit", function (e) {
       e.preventDefault();
       var q = nexaInput.value;
@@ -1551,6 +1580,19 @@
         var btn = e.target;
         while (btn && btn !== nexaChips && !btn.getAttribute("data-q")) btn = btn.parentNode;
         if (btn && btn.getAttribute) nexaAsk(btn.getAttribute("data-q"));
+      });
+    }
+    /* Suggestion chips: the label IS the question, in whichever
+       language is on screen — a click sends it through the same
+       nexaAsk path as a typed question. */
+    if (nexaSuggest) {
+      nexaSuggest.addEventListener("click", function (e) {
+        var btn = e.target;
+        while (btn && btn !== nexaSuggest &&
+               !(btn.classList && btn.classList.contains("nexa-sug"))) btn = btn.parentNode;
+        if (btn && btn.classList && btn.classList.contains("nexa-sug")) {
+          nexaAsk(btn.textContent.replace(/\s+/g, " ").trim());
+        }
       });
     }
     /* --- NEXA voice input: ask by microphone (SpeechRecognition) ---
@@ -1623,7 +1665,7 @@
     }
 
     document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape" && !nexaPanel.hidden) nexaShut();
+      if (e.key === "Escape" && nexaInView) nexaGoHome();
     });
   }
 
@@ -1892,6 +1934,9 @@
      their view containers are shown and hidden, so a study
      timer left running or a typing test left half-typed
      survives the trip to a view and back untouched.
+     The same mechanics carry one page view of their own:
+     #nexa opens NEXA's full-page chat (view-nexa), whose
+     back link returns to the home view (empty hash).
      --------------------------------------------------------- */
   var TOOL_VIEWS = {
     "tool-typing": "view-typing",
@@ -1901,15 +1946,21 @@
     "tool-prompt": "view-prompt",
     "tool-keywords": "view-keywords"
   };
+  var PAGE_VIEWS = {
+    "nexa": "view-nexa"
+  };
+  var ROUTE_VIEWS = {};
+  for (var rvm in TOOL_VIEWS) ROUTE_VIEWS[rvm] = TOOL_VIEWS[rvm];
+  for (var pvm in PAGE_VIEWS) ROUTE_VIEWS[pvm] = PAGE_VIEWS[pvm];
   var toolViewEls = {};
-  for (var tvr in TOOL_VIEWS) {
-    toolViewEls[tvr] = document.getElementById(TOOL_VIEWS[tvr]);
+  for (var tvr in ROUTE_VIEWS) {
+    toolViewEls[tvr] = document.getElementById(ROUTE_VIEWS[tvr]);
   }
   var mainEl = document.querySelector("main");
   var currentToolRoute = null;
   function applyRoute() {
     var hash = (window.location.hash || "").replace(/^#/, "");
-    var route = Object.prototype.hasOwnProperty.call(TOOL_VIEWS, hash) ? hash : null;
+    var route = Object.prototype.hasOwnProperty.call(ROUTE_VIEWS, hash) ? hash : null;
     var wasOpen = currentToolRoute !== null;
     currentToolRoute = route;
     for (var r in toolViewEls) {
